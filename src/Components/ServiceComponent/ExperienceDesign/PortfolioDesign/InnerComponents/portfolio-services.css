@@ -1,0 +1,156 @@
+/* portfolio-services.css */
+.portfolio-services-section {
+  padding: 50px 0;
+  background: #050505;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+.prism-text {
+  background: linear-gradient(90deg, #00ecff, #ff00d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px rgba(0, 236, 255, 0.3));
+}
+
+.services-header p {
+  color: #888;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* PRISM GRID */
+.prism-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.prism-card-wrapper {
+  perspective: 1000px;
+}
+
+.prism-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 40px 30px;
+  position: relative;
+  transition:
+    transform 0.5s,
+    box-shadow 0.5s;
+  overflow: hidden;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform-style: preserve-3d;
+}
+
+.prism-card:hover {
+  transform: translateY(-10px) rotateX(5deg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.prism-content {
+  position: relative;
+  z-index: 2;
+  transform: translateZ(20px); /* Parallax text */
+}
+
+.prism-icon {
+  font-size: 3rem;
+  margin-bottom: 25px;
+  transition: transform 0.3s;
+}
+
+.prism-card:hover .prism-icon {
+  transform: scale(1.2) translateZ(30px);
+}
+
+.prism-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.prism-card p {
+  color: #ccc;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Effects */
+.prism-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.prism-card:hover .prism-overlay {
+  opacity: 1;
+}
+
+.prism-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: 0.5s;
+  z-index: 3;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.prism-card:hover .prism-border {
+  opacity: 1;
+  box-shadow: 0 0 20px currentColor; /* Outer glow matching color */
+}
+
+/* Shine */
+.prism-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: 0.5s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.prism-card:hover::before {
+  opacity: 1;
+  top: -100%;
+  left: -100%; /* Move shine */
+}

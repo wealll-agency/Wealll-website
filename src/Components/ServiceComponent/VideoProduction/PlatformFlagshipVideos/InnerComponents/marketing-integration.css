@@ -1,0 +1,333 @@
+.marketing-integration-section {
+  padding: 100px 0;
+  background-color: #0b1121;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background Ambient Glows */
+.mi-ambient-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 0;
+  opacity: 0.2;
+  pointer-events: none;
+}
+
+.mi-ambient-glow.left {
+  background: #3b82f6;
+  top: -100px;
+  left: -200px;
+  animation: float-glow 8s infinite alternate ease-in-out;
+}
+
+.mi-ambient-glow.right {
+  background: #8b5cf6;
+  bottom: -200px;
+  right: -200px;
+  animation: float-glow 10s infinite alternate-reverse ease-in-out;
+}
+
+@keyframes float-glow {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* Typography & Headers */
+.mi-step-badge {
+  display: inline-block;
+  padding: 6px 18px;
+  background: rgba(45, 212, 191, 0.1);
+  border: 1px solid rgba(45, 212, 191, 0.4);
+  color: #2dd4bf;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.mi-main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.mi-neon-text {
+  color: #2dd4bf;
+  text-shadow: 0 0 20px rgba(45, 212, 191, 0.5);
+  font-weight: 900;
+}
+
+.mi-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #d1d5db;
+  margin-bottom: 25px;
+}
+
+.mi-desc {
+  font-size: 1.1rem;
+  color: #9ca3af;
+  line-height: 1.7;
+}
+
+/* Matrix Ecosystem */
+.mi-matrix-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-top: 60px;
+  z-index: 2;
+}
+
+/* Hub Node */
+.mi-hub-node {
+  position: relative;
+  background: linear-gradient(135deg, #1e1b4b, #312e81);
+  border: 2px solid #6366f1;
+  border-radius: 20px;
+  padding: 25px 40px;
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+  z-index: 3;
+  animation: hub-pulse 3s infinite;
+}
+
+@keyframes hub-pulse {
+  0% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(99, 102, 241, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+  }
+}
+
+.mi-hub-content {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.mi-hub-icon {
+  font-size: 2rem;
+  color: #c7d2fe;
+}
+
+.mi-hub-content h5 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Connecting Beams (Pipeline) */
+.mi-connection-lines {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mi-vertical-beam {
+  width: 4px;
+  height: 60px;
+  background: linear-gradient(180deg, #6366f1, #2dd4bf);
+  position: relative;
+  box-shadow: 0 0 10px #2dd4bf;
+}
+
+.mi-horizontal-beam {
+  width: 75%;
+  height: 4px;
+  background: #2dd4bf;
+  box-shadow: 0 0 10px #2dd4bf;
+  position: relative;
+}
+
+.mi-drop-beams {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.mi-drop-beam {
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #2dd4bf, transparent);
+  box-shadow: 0 0 8px #2dd4bf;
+}
+
+/* Destination Channel Nodes */
+.mi-channels-grid {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  margin-top: -10px;
+  position: relative;
+  z-index: 3;
+}
+
+.mi-channel-node {
+  flex: 1;
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+  cursor: pointer;
+}
+
+.mi-channel-node::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: var(--theme-color);
+  box-shadow: 0 0 10px var(--theme-color);
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.mi-channel-node:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.mi-channel-node:hover::before {
+  opacity: 1;
+}
+
+.mi-node-glow {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  background: var(--theme-color);
+  filter: blur(40px);
+  opacity: 0.1;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.mi-channel-node:hover .mi-node-glow {
+  opacity: 0.3;
+}
+
+.mi-node-icon {
+  font-size: 2.2rem;
+  color: var(--theme-color);
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.mi-channel-node:hover .mi-node-icon {
+  transform: scale(1.1);
+}
+
+.mi-node-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Visibility animations */
+.mi-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.mi-reveal.mi-reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 991px) {
+  .mi-main-title {
+    font-size: 2.8rem;
+  }
+  .mi-horizontal-beam {
+    width: 90%;
+  }
+  .mi-drop-beams {
+    width: 90%;
+  }
+  .mi-channels-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .mi-channel-node {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mi-main-title {
+    font-size: 2rem;
+  }
+  .mi-horizontal-beam {
+    display: none;
+  }
+  .mi-drop-beams {
+    display: none;
+  }
+  .mi-vertical-beam {
+    height: 40px;
+  }
+  .mi-connection-lines {
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .mi-channels-grid {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    gap: 15px;
+  }
+  .mi-channel-node {
+    width: 100%;
+    max-width: 320px;
+  }
+  .marketing-integration-section {
+    padding: 30px 0 20px;
+  }
+}

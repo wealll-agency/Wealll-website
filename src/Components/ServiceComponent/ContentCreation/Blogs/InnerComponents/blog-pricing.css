@@ -1,0 +1,400 @@
+/* Blog Pricing Section - Premium Redesign */
+.blog-pricing-section {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-pricing-header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.blog-pricing-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  letter-spacing: -1px;
+}
+
+.blog-pricing-header p {
+  color: #666;
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* --- Pricing Cards --- */
+.blog-pricing-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 40px 30px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  border: 1px solid #e1e1e1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.blog-pricing-card.featured {
+  background: #050505;
+  color: #fff;
+  border-color: #fdb914;
+  transform: scale(1.05);
+  z-index: 2;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.blog-pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.blog-pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-20px);
+  border-color: #eb4038 !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(235, 64, 56, 0.4) !important;
+  background: rgba(10, 10, 10, 1);
+}
+
+.blog-pricing-card.featured:hover h3,
+.blog-pricing-card.featured:hover .check-icon {
+  color: #eb4038 !important;
+}
+
+/* Shine Effect for Featured Card */
+.blog-pricing-card.featured::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(235, 64, 56, 0.2),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.blog-pricing-card.featured:hover::after {
+  left: 150%;
+  transition: 0.8s ease-in-out;
+}
+
+/* Header & Price */
+.pricing-title-area {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 25px;
+}
+
+.blog-pricing-card.featured .pricing-title-area {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.pricing-title-area h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.blog-pricing-card.featured .pricing-title-area h3 {
+  color: #fff;
+}
+
+.popular-tag {
+  background: #fdb914;
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.pricing-price {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1;
+  margin-top: 15px;
+}
+
+.blog-pricing-card.featured .pricing-price {
+  color: #fff;
+}
+
+.pricing-currency {
+  font-size: 1.5rem;
+  vertical-align: super;
+  margin-right: 5px;
+}
+
+/* Features List */
+.pricing-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  flex-grow: 1;
+}
+
+.pricing-features-list li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.blog-pricing-card.featured .pricing-features-list li {
+  color: #ccc;
+}
+
+.check-icon {
+  margin-right: 12px;
+  color: #fdb914;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* CTA Button */
+.pricing-btn {
+  width: 100%;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.pricing-btn.outline {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.pricing-btn.outline:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
+
+.pricing-btn.filled {
+  background: #fdb914;
+  color: #000;
+}
+
+.pricing-btn.filled:hover {
+  background: #ffcc00;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(253, 185, 20, 0.3);
+}
+
+/* --- Add-ons Section: "Neon Magnetic" Redesign --- */
+
+.blog-addons-area {
+  margin-top: 120px;
+  background: #0a0a0a;
+  padding: 50px 40px;
+  border-radius: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.addons-header h3 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.addons-header h3::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #fdb914;
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* Grid */
+.addons-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+/* Magnetic Card */
+.addon-card-modern {
+  background: #fff;
+  border-radius: 24px;
+  padding: 40px 40px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+
+/* The Animated Border Gradient - ALWAYS VISIBLE */
+.addon-card-modern::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 24px;
+  padding: 2px; /* Border width */
+  background: linear-gradient(
+    45deg,
+    #fdb914,
+    transparent 20%,
+    #fdb914,
+    transparent 50%,
+    #fdb914
+  );
+  background-size: 200% 200%;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 1; /* Always visible */
+  animation: borderShine 4s linear infinite; /* Smooth continuous animation */
+  pointer-events: none;
+}
+
+@keyframes borderShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+/* Hover - Black Background & Lift */
+.addon-card-modern:hover {
+  background: #111; /* Black background on hover */
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Animation */
+.addon-icon-box {
+  width: 70px;
+  height: 70px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 1px solid #eee;
+}
+
+/* Hover: IconBox goes Dark/Gold */
+.addon-card-modern:hover .addon-icon-box {
+  background: #222;
+  color: #fdb914;
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 10px 25px rgba(253, 185, 20, 0.2);
+  border-color: #333;
+}
+
+/* Text Colors on Hover */
+.addon-content h4 {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+  transition: color 0.3s;
+}
+
+.addon-card-modern:hover .addon-content h4 {
+  color: #fff; /* White title on hover */
+}
+
+.addon-content p {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  transition: color 0.3s;
+}
+
+.addon-card-modern:hover .addon-content p {
+  color: #aaa; /* Gray text on hover */
+}
+
+/* Action Link */
+.addon-action {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: #fdb914;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.addon-card-modern:hover .addon-action {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 1400px) {
+  .blog-addons-area {
+    padding: 30px 20px;
+  }
+  .addons-grid-modern {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    gap: 15px !important;
+  }
+  .popular-tag {
+    width: 60%;
+  }
+}

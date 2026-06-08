@@ -1,0 +1,371 @@
+/* Main Container */
+.social-media-reach-container {
+  padding: 80px 20px;
+  background-color: #0b0b0b; /* Dark background matching reference */
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+}
+
+.reach-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr 1fr; /* Adjusted column ratios */
+  gap: 25px;
+  max-width: 1400px;
+  width: 100%;
+  align-items: center;
+}
+
+/* Title Section */
+.reach-title-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 30px;
+}
+
+.reach-title-card h2 {
+  font-size: 75px; /* Larger font */
+  font-weight: 800;
+  line-height: 75px;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.girl-img-wrapper {
+  background-color: #e8eb39;
+  border-radius: 20px;
+  height: 350px;
+}
+
+.girl-img-wrapper img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.boost-badge {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.rocket-icon-img {
+  width: 60px;
+  margin-left: 10px;
+  transform: rotate(-16deg);
+}
+
+/* Common Card Styles */
+.reach-card {
+  border-radius: 20px; /* More rounded */
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%; /* Taller cards */
+}
+
+/* Staggered Animation */
+.reach-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.reach-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.reach-card:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.reach-card:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.card-content-top {
+  flex-grow: 1;
+}
+
+.card-stat-large {
+  font-size: 42px; /* Bigger stats */
+  font-weight: 800;
+  margin-bottom: 5px;
+  line-height: 1;
+}
+
+.card-sub-text {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 25px;
+  opacity: 0.9;
+}
+
+.card-footer-text {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 20px;
+  color: #fff;
+}
+/* Purple Card - Revenue */
+.card-purple {
+  color: #000;
+}
+
+.card-purple .card-content-top {
+  display: flex;
+  flex-direction: column;
+  background: #c084fc;
+  padding: 30px 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.progress-section {
+  margin-top: 0px;
+  width: 90%;
+  position: absolute;
+  bottom: 30px;
+  left: 15px;
+}
+
+.progress-row {
+  margin-bottom: 25px;
+}
+
+.progress-section .progress-row:last-child {
+  margin-bottom: 0;
+}
+
+.progress-label {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.progress-track {
+  background-color: rgba(255, 255, 255, 0.4);
+  height: 12px;
+  border-radius: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Green Card - Insights */
+
+.card-green .card-content-top {
+  background-color: #7be338;
+  padding: 30px 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.gauge-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  margin-top: 0px;
+  position: absolute;
+  bottom: 20px;
+}
+
+.gauge-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.gauge-needle-group {
+  transform-origin: 50px 50px;
+  transform: rotate(-90deg); /* Start at 0 */
+  animation: sweepNeedle 1.5s ease-out forwards;
+  animation-delay: 0.6s;
+}
+
+@keyframes sweepNeedle {
+  0% {
+    transform: rotate(-90deg);
+  } /* Left */
+  80% {
+    transform: rotate(50deg);
+  } /* Overshoot slightly */
+  100% {
+    transform: rotate(40deg);
+  } /* Settle at position */
+}
+
+/* Orange Card - Ad Impact */
+
+.card-orange .card-content-top {
+  padding: 30px 20px;
+  border-radius: 20px;
+  background-color: #fb9e34;
+}
+
+.chart-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 180px;
+  padding: 0 5px;
+  margin-top: 20px;
+}
+
+.chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 6px;
+  height: 100%;
+  width: 100%;
+  padding: 0 0 22px 0;
+  box-sizing: border-box;
+}
+
+.bar {
+  position: relative;
+  width: 25px;
+  height: 45px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 20px;
+  overflow: visible;
+}
+
+.fill {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  transform-origin: bottom;
+  animation: grow 1.6s ease-in-out infinite alternate;
+  animation-delay: 0s;
+}
+
+.label {
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffdcb0;
+  color: #3a2d1c;
+  font-weight: 700;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleY(0.1);
+  }
+  60% {
+    transform: scaleY(1.05);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.chart-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 14%;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.chart-bar-wrapper {
+  height: 80%; /* Space for bars */
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+}
+
+.chart-bar {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px; /* Fully rounded pills */
+  height: 0;
+  animation: growBar 1s ease-out forwards;
+}
+
+.chart-col:last-child .chart-bar {
+  background-color: #fff; /* Last bar is white */
+}
+
+.chart-label {
+  width: 28px;
+  height: 28px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .reach-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  .reach-title-card {
+    grid-column: span 2;
+    text-align: center;
+    align-items: center;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+  .reach-title-card h2 br {
+    display: none;
+  }
+  .smm-packages-section .sp-cards-container {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .reach-grid {
+    grid-template-columns: 1fr;
+    padding: 0 5px; /* Reduced padding */
+  }
+
+  .social-media-reach-container {
+    padding: 40px 10px; /* Reduced container padding */
+  }
+
+  .reach-title-card {
+    grid-column: span 1;
+    margin-bottom: 40px;
+  }
+
+  .reach-title-card h2 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .reach-card {
+    height: auto;
+    min-height: 400px;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

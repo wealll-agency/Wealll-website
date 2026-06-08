@@ -1,0 +1,227 @@
+/* Commercial Ad Section - Cinematic Dark Theme */
+.commercial-ad-container {
+  padding: 100px 20px;
+  background-color: #000000;
+  font-family: "Outfit", sans-serif;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Grain Effect */
+.commercial-ad-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.commercial-ad-content {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Header Styles */
+.commercial-header h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  line-height: 1;
+  color: #fff;
+}
+
+.commercial-header h2 b {
+  color: transparent;
+  -webkit-text-stroke: 1px #ffd700; /* Yellow Stroke */
+  font-weight: 900;
+}
+
+.commercial-header p {
+  font-size: 1.2rem;
+  color: #aaa;
+  max-width: 600px;
+  margin: 0 auto;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* Layout Grid Adjustments */
+.first_col_row {
+  margin-top: 40px;
+}
+
+/* Why Advertise Box - "Script" Style */
+.why-advertise-box {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #ffd700; /* Yellow Border */
+  padding: 30px;
+  border-radius: 12px;
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.why-advertise-box:hover {
+  transform: translateX(10px);
+  background: rgba(30, 30, 30, 0.9);
+}
+
+.why-advertise-box h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.why-advertise-box h2 b {
+  color: #ffd700; /* Yellow Text */
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0 0;
+}
+
+.features-list li {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  color: #ccc;
+}
+
+.features-list li::before {
+  content: "►";
+  color: #ffd700; /* Yellow Bullet */
+  margin-right: 15px;
+  font-size: 0.8rem;
+}
+
+/* Image Boxes - "Viewfinder" Style */
+.green-screen-box,
+.cinema-box,
+.commercial-right-col {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* REC Indicator - Keeping it Red or Yellow? 
+   User asked for "Yellow Color Here" (implied title), but for consistency let's make it Yellow. */
+.green-screen-box::after,
+.cinema-box::after,
+.commercial-right-col::after {
+  content: "REC ●";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #ffd700; /* Yellow REC */
+  font-weight: 700;
+  font-size: 0.8rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 4px;
+  opacity: 0;
+  transition:
+    opacity 0.3s,
+    background 0.3s;
+  animation: blinkRec 2s infinite;
+}
+
+.green-screen-box:hover::after,
+.cinema-box:hover::after,
+.commercial-right-col:hover::after {
+  opacity: 1;
+}
+
+@keyframes blinkRec {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.green-screen-box img,
+.cinema-box img,
+.commercial-right-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  filter: brightness(0.8) contrast(1.1);
+}
+
+.green-screen-box:hover img,
+.cinema-box:hover img,
+.commercial-right-col:hover img {
+  transform: scale(1.05);
+  filter: brightness(1) contrast(1.2);
+}
+
+/* Cinema Box adjustments */
+.cinema-box {
+  margin-top: 24px;
+}
+
+/* Right Column Poster - "Lightbox" */
+.commercial-right-col {
+  height: 100%;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+}
+
+.commercial-right-col:hover {
+  box-shadow: 0 0 80px rgba(255, 215, 0, 0.15); /* Yellow Shadow */
+  border-color: #ffd700; /* Yellow Border */
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .commercial-right-col {
+    min-height: 400px;
+    margin-top: 24px;
+  }
+  .features-list li {
+    font-size: 1rem;
+  }
+  .commercial-header h2 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .commercial-ad-container {
+    padding: 40px 15px;
+  }
+
+  .commercial-header h2 {
+    font-size: 2rem;
+  }
+
+  .commercial-header p br {
+    display: none;
+  }
+
+  .first_col_row {
+    margin-top: 10px;
+  }
+
+  .why-advertise-box {
+    padding: 30px 15px;
+  }
+}

@@ -1,0 +1,249 @@
+.feature-clarification-sec {
+  padding: 100px 0;
+  background-color: #050508;
+  color: #fff;
+  overflow: hidden;
+}
+
+.text-hl-yellow {
+  color: #fdb914;
+}
+
+/* Animations */
+.fc-reveal {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.fc-visual-wrapper.fc-reveal {
+  transform: translateX(-40px);
+}
+
+.fc-animate-visible .fc-reveal {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Content */
+.fc-subtitle {
+  font-size: 1.1rem;
+  color: #fdb914;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.fc-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.fc-desc {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+  line-height: 1.7;
+}
+
+/* Grid */
+.fc-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.fc-grid-item {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(253, 185, 20, 0.2);
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+.fc-grid-item:hover {
+  background: rgba(253, 185, 20, 0.1);
+  border-color: rgba(253, 185, 20, 0.5);
+  transform: translateY(-3px);
+}
+
+.fc-icon {
+  font-size: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.fc-grid-item span {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.fc-tagline {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  color: #dfdfdf;
+}
+
+/* Visual Mockup */
+.fc-visual-wrapper {
+  position: relative;
+  padding: 30px;
+}
+
+.fc-image-box {
+  position: relative;
+  z-index: 2;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.fc-main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+  transition: transform 0.5s ease;
+}
+
+.fc-image-box:hover .fc-main-img {
+  transform: scale(1.03);
+}
+
+.fc-overlay-card {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid #fdb914;
+  padding: 15px 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  backdrop-filter: blur(5px);
+}
+
+.fc-mini-graph {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 30px;
+}
+
+.fc-mini-graph .bar {
+  width: 6px;
+  background: #fdb914;
+  border-radius: 2px 2px 0 0;
+  animation: fc-grow 2s infinite alternate ease-in-out;
+}
+
+.fc-mini-graph .bar.b1 {
+  height: 10px;
+  animation-delay: 0s;
+}
+.fc-mini-graph .bar.b2 {
+  height: 20px;
+  animation-delay: 0.5s;
+}
+.fc-mini-graph .bar.b3 {
+  height: 30px;
+  animation-delay: 1s;
+}
+
+@keyframes fc-grow {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.fc-overlay-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.fc-overlay-card strong {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.fc-glow-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(253, 185, 20, 0.1);
+  border-radius: 50%;
+  z-index: 1;
+  animation: fc-spin 20s linear infinite;
+}
+
+.fc-glow-ring::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: #fdb914;
+  border-radius: 50%;
+  box-shadow: 0 0 20px #fdb914;
+}
+
+@keyframes fc-spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes fc-float-anim {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.fc-float {
+  animation: fc-float-anim 3s infinite alternate ease-in-out;
+}
+
+@media (max-width: 991px) {
+  .fc-title {
+    font-size: 2.2rem;
+  }
+  .fc-grid-container {
+    grid-template-columns: 1fr;
+  }
+  .fc-overlay-card {
+    bottom: 10px;
+    left: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .fc-glow-ring {
+    display: none;
+  }
+  .fc-visual-wrapper {
+    padding: 10px 0;
+  }
+}

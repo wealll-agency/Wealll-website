@@ -1,0 +1,354 @@
+/* email-strategy.css */
+.email-strategy-section {
+  padding: 60px 0;
+  background: #0d0f1b;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  font-family: "Outfit", sans-serif;
+  perspective: 1000px; /* For 3D elements */
+}
+
+/* Background Dynamic Field */
+.strategy-bg-field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(64, 58, 255, 0.1) 1px,
+      rgba(64, 58, 255, 0.1) 2px
+    );
+  background-size:
+    100% 100%,
+    100% 40px;
+  z-index: 0;
+  pointer-events: none;
+  animation: scanlineScroll 10s linear infinite;
+}
+
+@keyframes scanlineScroll {
+  from {
+    background-position:
+      0 0,
+      0 0;
+  }
+  to {
+    background-position:
+      0 0,
+      0 40px;
+  }
+}
+
+.strategy-header {
+  text-align: center;
+  margin-bottom: 100px;
+  z-index: 2;
+  position: relative;
+}
+
+.strategy-header h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  background: linear-gradient(180deg, #fff, #444);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+.strategy-header p {
+  font-size: 1.2rem;
+  color: #403aff;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* The Cyber-Spine Container */
+.cyber-spine-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  z-index: 2;
+}
+
+/* The Central Glowing Spine */
+.cyber-spine-line {
+  position: absolute;
+  top: -50px;
+  bottom: -50px;
+  left: 50%;
+  width: 4px;
+  background: rgba(64, 58, 255, 0.2);
+  transform: translateX(-50%);
+  box-shadow: 0 0 20px rgba(64, 58, 255, 0.2);
+  z-index: 0;
+}
+
+.cyber-spine-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15vh;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    #00f0ff,
+    transparent
+  ); /* Cyan Energy Pulse */
+  box-shadow: 0 0 15px #00f0ff;
+  animation: spinePulse 3s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+@keyframes spinePulse {
+  0% {
+    top: -20%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: 120%;
+    opacity: 0;
+  }
+}
+
+/* Strategy Nodes (Rows) */
+.strategy-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 80px;
+  width: 100%;
+}
+
+.strategy-row:nth-child(even) {
+  flex-direction: row-reverse;
+  left: -80px;
+}
+
+/* Connection Line (Arm) */
+.connection-arm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0; /* Animated width */
+  height: 2px;
+  background: rgba(64, 58, 255, 0.5);
+  z-index: -1;
+  transform-origin: left center;
+  animation: flowOut 1s forwards;
+}
+
+.strategy-row:nth-child(odd) .connection-arm {
+  transform: translateY(-50%) rotate(0deg); /* Right */
+}
+.strategy-row:nth-child(even) .connection-arm {
+  transform: translateY(-50%) rotate(180deg); /* Left */
+}
+
+/* Card Styling */
+.cyber-card {
+  /* width: 45%; */
+  width: 60%;
+  background: rgba(10, 10, 10, 0.8);
+  border: 1px solid rgba(64, 58, 255, 0.3);
+  border-radius: 0;
+  padding: 2px; /* For gradient border effect */
+  position: relative;
+  clip-path: polygon(
+    10% 0,
+    100% 0,
+    100% 90%,
+    90% 100%,
+    0 100%,
+    0 10%
+  ); /* Sci-fi Shape */
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+}
+
+.cyber-card-inner {
+  background: #050505;
+  padding: 30px;
+  clip-path: polygon(10% 0, 100% 0, 100% 90%, 90% 100%, 0 100%, 0 10%);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* Hover Glitch Effect */
+.cyber-card:hover {
+  transform: scale(1.02) translateX(10px);
+  border-color: #00f0ff;
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
+}
+.strategy-row:nth-child(even) .cyber-card:hover {
+  transform: scale(1.02) translateX(-10px);
+}
+
+.cyber-card-inner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 240, 255, 0.1),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.5s;
+}
+
+.cyber-card:hover .cyber-card-inner::before {
+  left: 150%;
+  transition: left 0.5s;
+}
+
+/* Content */
+.cyber-title {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.cyber-icon {
+  color: #00f0ff;
+  font-size: 1.5rem;
+  filter: drop-shadow(0 0 5px #00f0ff);
+}
+
+.cyber-desc {
+  color: #888;
+  line-height: 1.6;
+  font-size: 1rem;
+  border-left: 2px solid #333;
+  padding-left: 15px;
+  margin-top: 15px;
+}
+
+/* Central Node (The ' Vertebrae') */
+.spine-node {
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border: 3px solid #403aff;
+  border-radius: 50%;
+  /* position: absolute;
+  left: 50%;
+  top: 50%; */
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  box-shadow: 0 0 15px #403aff;
+  transition: all 0.3s ease;
+}
+
+.strategy-row:nth-child(even) .spine-node {
+  position: absolute;
+  left: 58%;
+  transform: translateX(-50%);
+}
+
+.strategy-row:hover .spine-node {
+  background: #00f0ff;
+  border-color: #fff;
+  box-shadow: 0 0 30px #00f0ff;
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cyber-spine-line {
+    left: 20px;
+  }
+
+  .spine-node {
+    left: 20px;
+  }
+
+  .strategy-row,
+  .strategy-row:nth-child(even) {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 60px;
+    margin-bottom: 40px;
+  }
+
+  .cyber-card {
+    width: 100%;
+    transform: none !important;
+  }
+
+  .spine-node {
+    top: 30px; /* Align with top of card approx */
+  }
+}
+
+@media (max-width: 767px) {
+  .cyber-card-inner {
+    flex-direction: column;
+  }
+
+  .cyber-spine-line {
+    left: 6px;
+  }
+
+  .strategy-header h2 {
+    font-size: 2rem !important;
+  }
+
+  .strategy-row {
+    left: 22px;
+    width: 92%;
+    padding-left: 0;
+  }
+
+  .strategy-row .spine-node,
+  .strategy-row:nth-child(even) .spine-node {
+    position: absolute;
+    left: -25px;
+    transform: translateX(0%);
+  }
+
+  .strategy-row,
+  .strategy-row:nth-child(even) {
+    padding-left: 0;
+    margin-bottom: 0;
+  }
+
+  .strategy-row:nth-child(even) {
+    left: 22px;
+  }
+
+  .strategy-row:nth-child(even) .cyber-card {
+    left: 0px;
+  }
+}

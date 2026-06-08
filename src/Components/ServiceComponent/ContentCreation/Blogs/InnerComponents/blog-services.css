@@ -1,0 +1,125 @@
+/* Blog Services Section - Premium Dark Styling */
+.blog-services-section {
+  padding: 80px 0;
+  background-color: #0d0f1b;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-services-header {
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.blog-services-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.blog-services-header p {
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Service Card */
+.blog-service-card {
+  background: #111;
+  padding: 40px 30px;
+  border-radius: 24px;
+  border: 1px solid #333;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-service-card:hover {
+  transform: translateY(-10px);
+  border-color: #fdb914;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Gradient Overlay on Hover */
+.blog-service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(253, 185, 20, 0.05) 0%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.blog-service-card:hover::before {
+  opacity: 1;
+}
+
+/* Icon Styling */
+.blog-service-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  color: #fdb914;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.blog-service-card:hover .blog-service-icon {
+  background: #fdb914;
+  color: #000;
+  transform: rotateY(180deg);
+}
+
+.blog-service-icon svg {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.4s ease;
+}
+
+/* Text Styling */
+.blog-service-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.blog-service-card p {
+  font-size: 1rem;
+  color: #aaa;
+  line-height: 1.6;
+  margin-bottom: 0;
+  flex-grow: 1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 767px) {
+  .blog-services-section {
+    padding: 50px 0;
+  }
+  .blog-services-header h2 {
+    font-size: 2.2rem;
+  }
+}

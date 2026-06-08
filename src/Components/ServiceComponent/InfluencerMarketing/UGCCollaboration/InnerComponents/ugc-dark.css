@@ -1,0 +1,419 @@
+/* === UGC Collaboration Premium Dark Styles === */
+
+.ugc-dark-bg {
+  background-color: #06070d;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Common Gradients */
+.ugc-gradient-text {
+  background: linear-gradient(135deg, #ba68c8, #4fc3f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* === 1. The Seamless Bento Grid (Why Works) === */
+.ugc-bento-glass {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 24px;
+  padding: 35px 30px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.ugc-bento-glass::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.ugc-bento-glass:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.ugc-bento-glass:hover::before {
+  opacity: 1;
+}
+
+.bento-icon-glow {
+  width: 65px;
+  height: 65px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* === 2. Typographic Hover Canvas (Strategy) === */
+.ugc-hover-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ugc-hover-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 30px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  opacity: 0.4;
+  position: relative;
+}
+
+.ugc-hover-item::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 0;
+  background: linear-gradient(180deg, #ba68c8, #4fc3f7);
+  transition: height 0.4s ease;
+  border-radius: 4px;
+}
+
+.ugc-hover-item:hover,
+.ugc-hover-item.active {
+  opacity: 1;
+  padding-left: 20px;
+  border-bottom-color: rgba(255, 255, 255, 0.15);
+}
+
+.ugc-hover-item:hover::before,
+.ugc-hover-item.active::before {
+  height: 50%;
+}
+
+.hover-num {
+  font-size: 1.2rem;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 2px;
+  color: #4fc3f7;
+  font-weight: bold;
+  min-width: 40px;
+}
+
+.hover-title {
+  font-size: 40px;
+  font-weight: 900;
+  margin: 0;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.7);
+  transition: all 0.4s ease;
+  letter-spacing: 0px;
+  line-height: 1;
+}
+
+.ugc-hover-item:hover .hover-title,
+.ugc-hover-item.active .hover-title {
+  color: #fff;
+  -webkit-text-stroke: 0;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.ugc-holographic-display {
+  position: relative;
+  background: rgba(4, 6, 15, 0.7);
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 60px 50px;
+  border-radius: 8px; /* Sharp technical look */
+  overflow: hidden;
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.holo-corner {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+.holo-corner.top-left {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+  border-top-left-radius: 8px;
+}
+.holo-corner.top-right {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+  border-top-right-radius: 8px;
+}
+.holo-corner.bottom-left {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+  border-bottom-left-radius: 8px;
+}
+.holo-corner.bottom-right {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+  border-bottom-right-radius: 8px;
+}
+
+.holo-ambient-orb {
+  position: absolute;
+  inset: -50%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.holo-watermark-num {
+  position: absolute;
+  bottom: -30px;
+  right: -20px;
+  font-size: 18rem;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.03);
+  line-height: 0.8;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.holo-content-wrapper {
+  position: relative;
+  z-index: 5;
+}
+
+.holo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+.holo-icon-ring {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+}
+
+.ring-inner,
+.ring-outer {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+  opacity: 0.4;
+}
+
+.ring-inner {
+  border-style: dashed;
+  animation: spinRight 10s linear infinite;
+}
+
+.ring-outer {
+  inset: -10px;
+  border-style: solid;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
+  animation: spinLeft 15s linear infinite;
+}
+
+@keyframes spinRight {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinLeft {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+.holo-meta {
+  text-align: right;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.holo-id {
+  color: #8a8f9c;
+  letter-spacing: 2px;
+}
+
+.holo-status {
+  font-weight: bold;
+  letter-spacing: 2px;
+  animation: holo-blink 2s infinite;
+}
+
+@keyframes holo-blink {
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 10px currentColor;
+  }
+  50% {
+    opacity: 0.4;
+    text-shadow: none;
+  }
+}
+
+.holo-title {
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.holo-divider {
+  height: 2px;
+  width: 80px;
+  margin-bottom: 30px;
+  border-radius: 2px;
+}
+
+.holo-desc {
+  font-size: 1.15rem;
+  color: #a0a5b5;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.holo-insight-module {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px 25px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.insight-pulse {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  animation: insight-pulse 2s infinite;
+}
+
+.insight-label {
+  font-size: 0.75rem;
+  color: #8a8f9c;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.insight-value {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+@keyframes insight-pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+@media (max-width: 1440px) {
+  .ugc-benefit-pillars {
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)) !important;
+    gap: 30px !important;
+  }
+  .benefit-pillar h3 {
+    font-size: 1.4rem !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .ugc-holographic-display {
+    margin-top: 40px;
+    padding: 40px 30px;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .ugc-why-matrix {
+    padding: 50px 0 !important;
+  }
+
+  .ugc-why-matrix h2 {
+    font-size: 30px !important;
+  }
+  .ugc-strategy-matrix {
+    padding: 50px 0 !important;
+  }
+  .ugc-strategy-matrix h2 {
+    font-size: 30px !important;
+  }
+  .ugc-hover-item {
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .hover-title {
+    font-size: 26px;
+  }
+  .holo-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .ugc-benefits-section {
+    padding: 50px 0 !important;
+  }
+  .ugc-benefits-section h2 {
+    font-size: 30px !important;
+  }
+  .benifit_title {
+    margin-bottom: 50px !important;
+  }
+}

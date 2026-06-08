@@ -1,0 +1,295 @@
+/* success-story-pricing.css - Isolated replicated styles */
+.ss-pricing-section {
+  padding: 60px 0 100px 0;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background: #080a0e;
+}
+
+.ss-pricing-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.ss-pricing-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.ss-pricing-header p {
+  color: #aaa;
+  font-size: 1.1rem;
+}
+
+/* Card Styles */
+.ss-pricing-card {
+  background: #fff;
+  color: #000;
+  border-radius: 15px;
+  padding: 40px 30px;
+  position: relative;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.ss-pricing-card.featured {
+  background: #000;
+  color: #fff;
+  border: 2px solid #e74c3c;
+  transform: scale(1.05);
+  z-index: 2;
+  box-shadow: 0 10px 40px rgba(231, 76, 60, 0.2);
+}
+
+.ss-pricing-card:hover {
+  transform: translateY(-10px);
+}
+.ss-pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-20px);
+  border-color: #eb4038 !important;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(235, 64, 56, 0.4) !important;
+  background: rgba(10, 10, 10, 1);
+}
+
+.ss-pricing-card.featured:hover h3,
+.ss-pricing-card.featured:hover .ss-check-icon {
+  color: #eb4038 !important;
+}
+
+/* Shine Effect for Featured card */
+.ss-pricing-card.featured::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(235, 64, 56, 0.2),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.ss-pricing-card.featured:hover::after {
+  left: 150%;
+  transition: 0.8s ease-in-out;
+}
+
+.ss-pricing-title-area {
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.ss-popular-tag {
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e74c3c;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.ss-pricing-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.ss-pricing-card h4 {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 400;
+}
+.ss-pricing-card.featured h4 {
+  color: #ddd;
+}
+.ss-pricing-card.featured h3 {
+  color: #fff;
+}
+
+/* Features List */
+.ss-pricing-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  flex-grow: 1;
+}
+
+.ss-pricing-features-list li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #333;
+}
+.ss-pricing-card.featured .ss-pricing-features-list li {
+  color: #ddd;
+}
+
+.ss-check-icon {
+  color: #e74c3c;
+  margin-right: 12px;
+  font-weight: bold;
+}
+
+/* Button */
+.ss-pricing-btn {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.ss-pricing-btn.outline {
+  background: #000;
+  color: #fff;
+  border: 2px solid #000;
+}
+.ss-pricing-btn.outline:hover {
+  background: #333;
+  border-color: #333;
+  color: #fff;
+}
+
+.ss-pricing-btn.filled {
+  background: #e74c3c;
+  color: #fff;
+  border: 2px solid #e74c3c;
+}
+.ss-pricing-btn.filled:hover {
+  background: #c0392b;
+  border-color: #c0392b;
+  color: #fff;
+}
+
+/* Addons Area */
+.ss-addons-area {
+  margin-top: 80px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.ss-addons-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.ss-addons-header h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.ss-addons-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.ss-addon-card-premium {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  transition: transform 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ss-addon-card-premium:hover {
+  transform: translateY(-5px);
+  border-color: #e74c3c;
+}
+
+.ss-addon-icon-box {
+  background: rgba(231, 76, 60, 0.1);
+  color: #e74c3c;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  font-size: 1.5rem;
+}
+
+.ss-addon-content h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.ss-addon-content p {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 1400px) {
+  .ss-pricing-card {
+    padding: 30px 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ss-pricing-section {
+    padding: 50px 0;
+  }
+  .ss-pricing-header h2 {
+    font-size: 1.8rem;
+  }
+  .ss-pricing-title-area {
+    margin-bottom: 30px;
+  }
+  .ss-pricing-features-list li {
+    padding: 6px 0;
+  }
+  .ss-pricing-card {
+    margin-bottom: 30px;
+  }
+  .ss-pricing-section .col-md-6:last-child .ss-pricing-card {
+    margin-bottom: 0;
+  }
+  .ss-addons-area {
+    padding: 30px 15px;
+  }
+  .ss-addons-header h3 {
+    font-size: 2rem;
+  }
+  .ss-addon-card-premium {
+    padding: 25px 15px;
+  }
+}

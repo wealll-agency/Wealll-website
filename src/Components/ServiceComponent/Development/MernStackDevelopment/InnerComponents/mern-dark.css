@@ -1,0 +1,176 @@
+/* Custom Dark Theme for MERN Stack Development */
+:root {
+  --mern-bg-dark: #070913;
+  --mern-accent-blue: #61dafb; /* React Blue */
+  --mern-accent-green: #47a248; /* Mongo/Node Green */
+  --mern-glow-blue: rgba(97, 218, 251, 0.3);
+  --mern-glow-green: rgba(71, 162, 72, 0.3);
+}
+
+.mern-page-wrapper {
+  background-color: var(--mern-bg-dark);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+.choose_mern_stack {
+  z-index: 10;
+  position: relative;
+}
+
+.mern-gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--mern-accent-blue) 0%,
+    var(--mern-accent-green) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+/* Base Card Styling */
+.mern-glow-card {
+  background: linear-gradient(
+    180deg,
+    rgba(20, 22, 35, 0.95) 0%,
+    rgba(13, 15, 27, 0.98) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  height: 100%;
+}
+
+.mern-glow-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(97, 218, 251, 0.3);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    0 0 30px var(--mern-glow-blue) inset;
+}
+
+.mern-card-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  transition: all 0.4s ease;
+  color: var(--mern-accent-blue);
+}
+
+.mern-glow-card:hover .mern-card-icon {
+  transform: scale(1.1);
+  color: var(--mern-accent-green);
+  border-color: rgba(71, 162, 72, 0.3);
+  background: rgba(71, 162, 72, 0.1);
+  box-shadow: 0 0 20px var(--mern-glow-green);
+}
+
+/* Process Timeline (Horizontal / Grid Layout approach) */
+.mern-process-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media (min-width: 768px) {
+  .mern-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .mern-process-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.mern-process-item {
+  position: relative;
+  padding: 30px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.mern-process-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--mern-accent-blue);
+}
+
+.mern-process-step-num {
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  font-size: 60px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.mern-process-item:hover .mern-process-step-num {
+  color: rgba(97, 218, 251, 0.15);
+  transform: scale(1.1);
+}
+
+.mern-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: transparent;
+  border: 1px solid var(--mern-accent-blue);
+  color: var(--mern-accent-blue);
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.mern-btn-outline:hover {
+  background: var(--mern-accent-blue);
+  color: #070913;
+  box-shadow: 0 0 20px var(--mern-glow-blue);
+}
+
+.mern-cta-section h2 {
+  font-size: 42px;
+}
+
+@media (max-width: 767px) {
+  .process-step-item {
+    margin-bottom: 0px;
+    padding-left: 70px;
+  }
+  .mern-cta-section h2 {
+    font-size: 24px;
+  }
+  .what_we_do {
+    padding-bottom: 0 !important;
+    padding-top: 10px !important;
+  }
+  .choose_mern_stack {
+    padding-bottom: 0 !important;
+  }
+  .premium-service-wrapper .col-lg-6 {
+    margin-top: 15px !important;
+  }
+  .web-dev-dark-bg .container-fluid {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}

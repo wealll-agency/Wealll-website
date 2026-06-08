@@ -1,0 +1,258 @@
+.client-growth-sec {
+  padding: 50px 0;
+  background-color: #0b0c10;
+  color: #fff;
+  overflow: hidden;
+}
+
+.cg-text-hl {
+  color: #fdb914;
+}
+
+/* Animations */
+.cg-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.cg-animate-visible .cg-reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Content */
+.cg-subtitle {
+  font-size: 1.1rem;
+  color: #fdb914;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.cg-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.cg-desc {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  line-height: 1.7;
+}
+
+.cg-challenges-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.cg-box-title {
+  font-size: 1.15rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.cg-challenges-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cg-challenges-list li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px 15px;
+  border-radius: 8px;
+  border-left: 2px solid #fdb914;
+  transition: all 0.3s ease;
+}
+
+.cg-challenges-list li:hover {
+  background: rgba(253, 185, 20, 0.1);
+  transform: translateX(5px);
+}
+
+.cg-icon-circle {
+  width: 30px;
+  height: 30px;
+  background: rgba(253, 185, 20, 0.15);
+  color: #fdb914;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.cg-conclusion p {
+  color: #fdb914;
+  font-size: 1.05rem;
+  font-style: italic;
+  border-left: 3px solid #fdb914;
+  padding-left: 15px;
+}
+
+/* Visual Grid */
+.cg-visual-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding-left: 40px;
+}
+
+.cg-grid-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.cg-col-left {
+  margin-top: 50px;
+  width: 55%;
+}
+
+.cg-col-right {
+  width: 45%;
+}
+
+.cg-img-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease;
+}
+
+.cg-img-card:hover {
+  transform: translateY(-5px);
+}
+
+.cg-img-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  aspect-ratio: 4/5;
+}
+
+.cg-card-small img {
+  aspect-ratio: 1/1;
+}
+
+.cg-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+}
+
+.cg-badge {
+  display: inline-block;
+  background: #fdb914;
+  color: #000;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.cg-badge-alt {
+  background: #2ed573;
+}
+
+/* Glass Stat */
+.cg-glass-stat {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.cg-glass-stat span {
+  font-weight: 600;
+  color: #e0e0e0;
+  letter-spacing: 1px;
+}
+
+.stat-circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.circular-chart {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  animation: progress 2s ease-out forwards;
+}
+
+.circular-chart.orange .circle {
+  stroke: #fdb914;
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+@media (max-width: 991px) {
+  .cg-title {
+    font-size: 2.5rem;
+  }
+  .cg-visual-grid {
+    padding-left: 0;
+    align-items: center;
+  }
+  .cg-col-left {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .cg-title {
+    font-size: 2rem;
+  }
+  .cg-challenges-box {
+    padding: 25px 15px;
+  }
+}

@@ -1,0 +1,206 @@
+/* smm-portfolio.css */
+.smm-portfolio-section {
+  padding: 100px 0;
+  background: #000;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  position: relative;
+  overflow: hidden;
+  min-height: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Background Effect */
+.smm-bg-mirror {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at bottom right, #1a1a2e, #000);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.smm-header {
+  text-align: center;
+  margin-bottom: 50px;
+  z-index: 2;
+  position: relative;
+}
+
+.smm-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+}
+
+.smm-header p {
+  color: #aaa;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Expandable Gallery Container */
+.smm-gallery-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  gap: 10px;
+  position: relative;
+  z-index: 5;
+  padding: 0 20px;
+}
+
+/* Individual Panel */
+.smm-panel {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.smm-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  filter: grayscale(100%) brightness(0.6);
+}
+
+/* Hover State */
+.smm-panel:hover {
+  flex: 4; /* Grow significantly */
+  border-color: #403aff;
+  box-shadow: 0 0 40px rgba(64, 58, 255, 0.4);
+}
+
+.smm-panel:hover img {
+  transform: scale(1.1);
+  filter: grayscale(0%) brightness(1);
+}
+
+/* Overlay Content (Hidden by default, shown on active) */
+.smm-panel-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s 0.1s ease; /* Delay slighty */
+}
+
+.smm-panel:hover .smm-panel-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.smm-panel-overlay h3 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.smm-panel-overlay p {
+  font-size: 1rem;
+  color: #ffb500;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Text Rotation for Inactive State */
+.smm-panel-label {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  transform-origin: bottom left;
+  transform: rotate(-90deg) translate(0, 100%);
+  opacity: 1;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  transition: opacity 0.3s;
+  pointer-events: none;
+  display: block; /* Show vertical label */
+}
+
+.smm-panel:hover .smm-panel-label {
+  opacity: 0; /* Hide vertical label on hover */
+}
+
+/* Bottom Text */
+.smm-results-text {
+  text-align: center;
+  margin-top: 50px;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .smm-gallery-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .smm-panel {
+    height: 250px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .smm-panel:hover {
+    flex: 1; /* Disable flex growth logic on mobile */
+  }
+  .smm-panel-label {
+    display: none;
+  }
+  .smm-panel-overlay {
+    opacity: 1;
+    transform: translateY(0);
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .smm-panel img {
+    filter: grayscale(0%) brightness(0.8);
+  }
+}
+
+@media (max-width: 768px) {
+  .smm-portfolio-section {
+    padding: 40px 0;
+  }
+
+  .smm-header h2 {
+    font-size: 2rem;
+  }
+
+  .smm-panel {
+    height: auto;
+  }
+
+  .smm-panel-overlay {
+    padding: 10px 15px;
+  }
+
+  .smm-panel-overlay h3 {
+    font-size: 1.5rem;
+  }
+}

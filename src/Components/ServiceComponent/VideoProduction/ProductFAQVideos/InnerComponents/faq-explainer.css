@@ -1,0 +1,221 @@
+.faq-explainer-sec {
+  padding: 100px 0;
+  background-color: #0b0c10;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.text-hl {
+  color: #45f3ff;
+}
+
+/* Animations */
+.q-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.q-animate-visible .q-reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Content */
+.q-subtitle {
+  font-size: 1.1rem;
+  color: #45f3ff;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.q-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.q-desc {
+  font-size: 1.1rem;
+  color: #c5c6c7;
+  line-height: 1.7;
+}
+
+.q-bullet-title {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.q-bullet-list {
+  list-style: none;
+  padding: 0;
+}
+
+.q-bullet-list li {
+  margin-bottom: 12px;
+  font-size: 1.05rem;
+  color: #dfdfdf;
+  display: flex;
+  align-items: center;
+}
+
+.q-bullet-list li i {
+  color: #45f3ff;
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+.q-highlight-box {
+  background: rgba(69, 243, 255, 0.05);
+  border-left: 4px solid #45f3ff;
+  padding: 20px;
+  border-radius: 0 8px 8px 0;
+}
+
+.q-highlight-box p {
+  margin: 0;
+  font-style: italic;
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+/* Visual Mockup */
+.q-visual-wrapper {
+  position: relative;
+  padding: 20px;
+}
+
+.q-glass-monitor {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.q-monitor-top {
+  height: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  gap: 8px;
+}
+
+.q-monitor-top span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #45f3ff;
+}
+
+.q-monitor-top span:nth-child(2) {
+  background: #fdb914;
+}
+.q-monitor-top span:nth-child(3) {
+  background: #ff5e62;
+}
+
+.q-monitor-screen {
+  position: relative;
+  padding: 10px;
+  height: 350px;
+}
+
+.q-demo-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.q-floating-card {
+  position: absolute;
+  background: rgba(11, 12, 16, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(69, 243, 255, 0.3);
+  padding: 12px 20px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  font-size: 0.9rem;
+  font-weight: 600;
+  width: 230px;
+}
+
+.q-floating-card.top-left {
+  top: -20px;
+  left: -20px;
+}
+
+.q-floating-card.bottom-right {
+  bottom: -20px;
+  right: -20px;
+}
+
+.q-bg-blob {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(
+    circle,
+    rgba(69, 243, 255, 0.2) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  z-index: 1;
+  filter: blur(40px);
+}
+
+@keyframes q-float1 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes q-float2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}
+
+.q-float-anim-1 {
+  animation: q-float1 3s infinite ease-in-out alternate;
+}
+.q-float-anim-2 {
+  animation: q-float2 3s infinite ease-in-out alternate;
+  animation-delay: 1.5s;
+}
+
+@media (max-width: 991px) {
+  .q-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .faq-explainer-sec {
+    padding: 50px 0;
+  }
+  .q-title {
+    font-size: 2rem;
+  }
+  .q-title br {
+    display: none;
+  }
+}

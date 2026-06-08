@@ -1,0 +1,97 @@
+/* SEO Why Choose Section - Premium Dark/Gold Theme */
+.seo-why-section {
+  padding: 50px 0;
+  background-color: #0b0b0b; /* Match BrandVisibility Dark */
+  overflow: hidden;
+}
+
+.seo-why-header h2 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.seo-why-header p {
+  color: #b0b0b0;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+/* Feature Grid */
+.seo-feature-card {
+  background: rgba(22, 22, 22, 0.6);
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid #333;
+  text-align: left;
+  transition: all 0.3s ease;
+  height: 100%;
+  backdrop-filter: blur(10px);
+}
+
+.seo-feature-card:hover {
+  border-color: #fdb914;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 40px rgba(253, 185, 20, 0.15);
+}
+
+.seo-feature-icon {
+  margin-bottom: 30px;
+  display: inline-block;
+  padding: 15px;
+  background: rgba(253, 185, 20, 0.1);
+  border-radius: 16px;
+  color: #fdb914;
+}
+
+.seo-feature-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.seo-feature-card h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.seo-feature-card p {
+  color: #ccc; /* Improved contrast */
+  line-height: 1.8;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+/* Gradient highlight on hover */
+.seo-feature-card:hover .seo-feature-icon {
+  background: #fdb914;
+  color: #000;
+}
+
+/* Stats Row */
+.seo-stats-row {
+  margin-top: 80px;
+  border-top: 1px solid #333;
+  padding-top: 60px;
+}
+
+.seo-stat-item h4 {
+  font-size: 4.5rem; /* Larger size */
+  font-weight: 800;
+  color: #fdb914; /* Solid Gold for better visibility */
+  margin-bottom: 10px;
+  line-height: 1;
+  text-shadow: 0 0 20px rgba(253, 185, 20, 0.3);
+}
+
+.seo-stat-item p {
+  color: #fff; /* White text for labels */
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 16px;
+  opacity: 0.9;
+}

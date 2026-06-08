@@ -1,0 +1,197 @@
+.campaign-strategy-sec {
+  padding: 50px 0;
+  background-color: #050508;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cs-text-hl {
+  color: #9b59b6;
+}
+
+/* Animations */
+.cs-reveal {
+  opacity: 0;
+  transform: translateY(30px) scale(0.95);
+  transition: all 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.cs-animate-visible .cs-reveal {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Content */
+.cs-badge {
+  display: inline-block;
+  color: #9b59b6;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.cs-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.cs-desc {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  line-height: 1.7;
+}
+
+/* Roadmap Grid */
+.cs-roadmap-container {
+  position: relative;
+  padding: 40px 0;
+}
+
+.cs-connecting-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 0;
+  display: none; /* Hide on mobile by default, show on tablet+ via MQ */
+}
+
+.cs-connecting-line path {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.05);
+  stroke-width: 4;
+}
+
+.cs-connecting-line .cs-line-animated {
+  stroke: #9b59b6;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
+  animation: drawPath 4s infinite linear;
+}
+
+@keyframes drawPath {
+  0% {
+    stroke-dashoffset: 1200;
+  }
+  100% {
+    stroke-dashoffset: -1200;
+  }
+}
+
+.cs-node {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cs-node-point {
+  width: 40px;
+  height: 40px;
+  background: #050508;
+  border: 2px solid #9b59b6;
+  color: #9b59b6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(155, 89, 182, 0.4);
+  transition: all 0.3s ease;
+}
+
+.cs-node:hover .cs-node-point {
+  background: #9b59b6;
+  color: #000;
+  transform: scale(1.1);
+}
+
+.cs-node-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 25px 20px;
+  text-align: center;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.cs-node:hover .cs-node-card {
+  background: rgba(155, 89, 182, 0.05);
+  border-color: rgba(155, 89, 182, 0.3);
+  transform: translateY(-10px);
+}
+
+.cs-node-icon {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.cs-node-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.cs-node-desc {
+  font-size: 0.95rem;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+/* Conclusion */
+.cs-conclusion {
+  display: inline-block;
+  padding: 15px 30px;
+  border-left: 4px solid #9b59b6;
+  font-size: 1.15rem;
+  color: #dfdfdf;
+  background: linear-gradient(90deg, rgba(155, 89, 182, 0.1), transparent);
+}
+
+.cs-ambient-glow {
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(155, 89, 182, 0.15),
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (min-width: 768px) {
+  .cs-connecting-line {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .cs-title {
+    font-size: 1.8rem;
+  }
+  .cs-title br {
+    display: none;
+  }
+  .cs-roadmap-container {
+    padding: 0;
+  }
+}

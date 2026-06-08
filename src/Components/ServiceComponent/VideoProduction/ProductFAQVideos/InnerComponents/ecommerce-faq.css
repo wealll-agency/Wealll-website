@@ -1,0 +1,195 @@
+.ecom-faq-sec {
+  padding: 100px 0;
+  background-color: #0c0f12;
+  color: #fff;
+  overflow: hidden;
+}
+
+.text-hl-green {
+  color: #2ed573;
+}
+
+/* Animations */
+.ecom-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.ecom-animate .ecom-reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Content */
+.ecom-subtitle {
+  font-size: 1.1rem;
+  color: #2ed573;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.ecom-title {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.ecom-desc {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  line-height: 1.7;
+}
+
+/* List */
+.ecom-list-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 12px 20px;
+  border-radius: 8px;
+  border-left: 3px solid #2ed573;
+  transition: all 0.3s ease;
+}
+
+.ecom-list-item:hover {
+  background: rgba(46, 213, 115, 0.1);
+  transform: translateX(10px);
+}
+
+.ecom-list-item .check-box {
+  width: 25px;
+  height: 25px;
+  background: #2ed573;
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+.ecom-list-item span {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+/* Visual Mockup */
+.ecom-visual {
+  position: relative;
+  padding: 20px;
+}
+
+.ecom-mockup-wrapper {
+  position: relative;
+  border-radius: 20px;
+  /* overflow: hidden; */
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.ecom-img-main {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.ecom-mockup-wrapper:hover .ecom-img-main {
+  transform: scale(1.05);
+}
+
+/* Overlay Elements */
+.ecom-play-btn-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ecom-play-btn-overlay:hover {
+  background: #2ed573;
+  border-color: #2ed573;
+  box-shadow: 0 0 20px rgba(46, 213, 115, 0.6);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.ecom-float {
+  position: absolute;
+  background: #fff;
+  color: #000;
+  padding: 8px 15px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: ecom-bob 3s infinite alternate ease-in-out;
+}
+
+.ecom-float i {
+  color: #2ed573;
+}
+
+.ecom-float.tag-1 {
+  top: 20px;
+  left: -15px;
+  animation-delay: 0s;
+}
+.ecom-float.tag-2 {
+  bottom: 30px;
+  right: -15px;
+  animation-delay: 1.5s;
+  background: #2ed573;
+  color: #fff;
+}
+.ecom-float.tag-2 i {
+  color: #fff;
+}
+
+@keyframes ecom-bob {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-12px);
+  }
+}
+
+@media (max-width: 991px) {
+  .ecom-title {
+    font-size: 2.2rem;
+  }
+  .ecom-float.tag-1 {
+    left: 10px;
+  }
+  .ecom-float.tag-2 {
+    right: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ecom-faq-sec {
+    padding: 50px 0;
+  }
+  .ecom-title {
+    font-size: 2rem;
+  }
+}

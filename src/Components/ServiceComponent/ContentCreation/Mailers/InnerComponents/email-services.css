@@ -1,0 +1,195 @@
+/* email-services.css */
+.email-services-section {
+  padding: 50px 0;
+  background: #0d0f1b;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Background Nebula Effect */
+.services-bg-nebula {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150vw;
+  height: 150vh;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(
+    circle,
+    rgba(64, 58, 255, 0.05) 0%,
+    rgba(0, 0, 0, 1) 70%
+  );
+  z-index: -1;
+  pointer-events: none;
+  animation: nebulaPulse 10s infinite alternate;
+}
+
+@keyframes nebulaPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.es-header {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.es-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #fff, #888);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.es-header p {
+  color: #888;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid Layout */
+.es-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Holographic Card */
+.es-card {
+  background: rgba(255, 255, 255, 0.03); /* Ultra transparent */
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.es-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.es-card:hover::before {
+  left: 100%;
+  transition: left 0.7s;
+}
+
+/* Hover Effect: Glow & Lift */
+.es-card:hover {
+  background: rgba(255, 255, 255, 0.07);
+  transform: translateY(-10px);
+  border-color: rgba(64, 58, 255, 0.5); /* Electric Blue Accent */
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(64, 58, 255, 0.1);
+}
+
+.es-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: rgba(64, 58, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  color: #403aff; /* Electric Blue */
+  font-size: 1.8rem;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(64, 58, 255, 0.2);
+}
+
+.es-card:hover .es-icon-wrapper {
+  background: #403aff;
+  color: #fff;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 20px rgba(64, 58, 255, 0.4);
+}
+
+.es-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.es-desc {
+  font-size: 1rem;
+  color: #aaa;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* "Read More" Line */
+.es-line {
+  width: 40px;
+  height: 2px;
+  background: #403aff;
+  margin-top: auto;
+  transition: width 0.3s ease;
+}
+
+.es-card:hover .es-line {
+  width: 100%;
+  background: #fff;
+}
+
+@media (max-width: 1400px) {
+  .es-card {
+    padding: 30px 15px;
+  }
+  .es-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .services-bg-nebula {
+    display: none;
+  }
+  .es-header h2 {
+    font-size: 2.5rem;
+  }
+  .es-icon-wrapper {
+    margin-bottom: 0;
+  }
+  .es-grid {
+    padding: 20px 0;
+  }
+}

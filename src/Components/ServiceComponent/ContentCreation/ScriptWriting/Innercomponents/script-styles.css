@@ -1,0 +1,496 @@
+/* Script Styles Section - Ultra Premium Redesign */
+.script-styles-section {
+  padding: 80px 0;
+  background-color: #050505;
+  position: relative;
+  overflow: visible; /* Allow 3D elements to pop out */
+  color: #fff;
+  perspective: 1500px; /* Enhanced perspective */
+}
+
+/* Dynamic Background - Nebular Glow */
+.script-styles-section::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150vw;
+  height: 150vw;
+  background: radial-gradient(
+    circle,
+    rgba(253, 185, 20, 0.05) 0%,
+    rgba(0, 0, 0, 0) 60%
+  );
+  transform: translate(-50%, -50%);
+  animation: pulseGlow 10s ease-in-out infinite alternate;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes pulseGlow {
+  0% {
+    opacity: 0.5;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.script-styles-header {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 60px;
+}
+
+.script-styles-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+/* --- Left Column: Tone Selector --- */
+.tone-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  perspective: 1000px;
+  position: relative;
+  z-index: 5;
+}
+
+.tone-item {
+  background: rgba(20, 20, 20, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 20px 25px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.tone-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #fdb914;
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+  transform-origin: bottom;
+}
+
+.tone-item:hover,
+.tone-item.active {
+  background: rgba(30, 30, 30, 0.9);
+  border-color: rgba(253, 185, 20, 0.3);
+  transform: translateX(20px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.tone-item:hover::before,
+.tone-item.active::before {
+  transform: scaleY(1);
+}
+
+.tone-icon {
+  color: #666;
+  transition: all 0.4s ease;
+}
+
+.tone-item:hover .tone-icon,
+.tone-item.active .tone-icon {
+  color: #fdb914;
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 0 8px rgba(253, 185, 20, 0.6));
+}
+
+.tone-item h4 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #aaa;
+  transition: color 0.3s;
+}
+
+.tone-item:hover h4,
+.tone-item.active h4 {
+  color: #fff;
+}
+
+/* --- Right Column: The "Living" Script Visual (STUNNING PART) --- */
+.script-visual-wrapper {
+  position: relative;
+  width: 100%;
+  height: 650px; /* Taller for more float room */
+  display: flex;
+  justify-content: center;
+  transform-style: preserve-3d;
+  perspective: 2000px;
+}
+
+/* Background Atmosphere around paper */
+.visual-glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(253, 185, 20, 0.15),
+    transparent 70%
+  );
+  filter: blur(60px);
+  animation: breathe 8s infinite alternate;
+  z-index: 0;
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* The Paper Container - Handles rotation */
+.script-paper-container {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: heroFloat 8s ease-in-out infinite;
+  z-index: 10;
+}
+
+@keyframes heroFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotateX(5deg) rotateY(-5deg);
+  }
+  50% {
+    transform: translateY(-30px) rotateX(0deg) rotateY(5deg);
+  }
+}
+
+/* The Paper Itself */
+.script-paper {
+  background: #ffffff;
+  width: 420px;
+  height: 560px;
+  border-radius: 8px; /* Slightly sharper for document look */
+  padding: 60px 50px;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.05),
+    /* Thin border outline */ 0 20px 50px rgba(0, 0, 0, 0.4),
+    /* Deep shadow */ 0 50px 100px rgba(0, 0, 0, 0.2),
+    /* Connecting shadow */ inset 0 0 60px rgba(0, 0, 0, 0.02); /* Inner curve depth */
+  position: relative;
+  transform-style: preserve-3d;
+  overflow: hidden; /* For the scanning effect */
+}
+
+/* Holographic Shine/Scan Effect */
+.script-paper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+  transform: skewX(-25deg);
+  animation: shineScan 6s cubic-bezier(0.19, 1, 0.22, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes shineScan {
+  0%,
+  70% {
+    left: -150%;
+  } /* Pause */
+  100% {
+    left: 150%;
+  } /* Swipe */
+}
+
+/* Paper Header */
+.paper-header {
+  border-bottom: 3px solid #000;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.paper-title {
+  font-family: "Courier New", monospace;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.paper-meta {
+  font-family: "Courier New", monospace;
+  color: #888;
+  font-size: 0.75rem;
+  background: #f0f0f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+/* Typing Animation - Enhanced Glow */
+.typewriter-line {
+  height: 14px;
+  background: #e0e0e0;
+  margin-bottom: 18px;
+  border-radius: 3px;
+  width: 0;
+  animation: typeLine 4s ease-out infinite;
+  position: relative;
+}
+
+/* Current typing line gets a cursor */
+.typewriter-line::after {
+  content: "";
+  position: absolute;
+  right: -5px;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background: #fdb914;
+  opacity: 0;
+  animation: blinkCursor 0.1s infinite; /* Super fast flicker like computer processing */
+  display: none; /* Only show on active line via animation keyframes ideally, keeping simple for now */
+}
+
+.tw-scene {
+  width: 45%;
+  background: #000;
+  animation-delay: 0.2s;
+}
+.tw-char {
+  width: 35%;
+  background: #444;
+  margin: 30px auto 10px;
+  animation-delay: 1.2s;
+}
+.tw-dialogue {
+  width: 85%;
+  margin: 0 auto;
+  animation-delay: 1.8s;
+  height: 12px;
+}
+.tw-dialogue-2 {
+  width: 75%;
+  margin: 0 auto;
+  animation-delay: 2.1s;
+  height: 12px;
+}
+
+@keyframes typeLine {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  20% {
+    width: var(--target-width);
+  }
+  90% {
+    width: var(--target-width);
+    opacity: 1;
+  }
+  100% {
+    width: var(--target-width);
+    opacity: 0;
+  }
+}
+
+.tw-scene {
+  --target-width: 45%;
+}
+.tw-char {
+  --target-width: 35%;
+}
+.tw-dialogue {
+  --target-width: 85%;
+}
+.tw-dialogue-2 {
+  --target-width: 75%;
+}
+
+/* Floating Pills - 3D Pop-out Cards */
+.format-pill {
+  position: absolute;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  /* 3D Placement */
+  transform: translateZ(80px);
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(253, 185, 20, 0.1); /* Subtle halo */
+
+  animation: pillFloat 6s ease-in-out infinite;
+  /* Glass effect */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.format-pill svg {
+  width: 16px;
+  height: 16px;
+  color: #fdb914;
+}
+
+.fp-1 {
+  top: 15%;
+  right: -50px;
+  animation-delay: 0s;
+  border-right: 4px solid #fdb914; /* Accent */
+}
+
+.fp-2 {
+  bottom: 25%;
+  left: -60px;
+  animation-delay: 2s;
+  background: #fdb914;
+  color: #000;
+  border: none;
+  box-shadow: 0 10px 30px rgba(253, 185, 20, 0.4);
+}
+.fp-2 svg {
+  color: #000;
+}
+
+.fp-3 {
+  bottom: 8%;
+  right: -30px;
+  animation-delay: 4s;
+  border-left: 4px solid #fff;
+}
+
+@keyframes pillFloat {
+  0%,
+  100% {
+    transform: translateZ(80px) translateY(0);
+  }
+  50% {
+    transform: translateZ(80px) translateY(-15px);
+  }
+}
+
+/* Floating Particles/Elements in background */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.p-1 {
+  width: 8px;
+  height: 8px;
+  background: #fdb914;
+  top: 10%;
+  left: 20%;
+  animation: floatParticle 10s infinite;
+}
+.p-2 {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  bottom: 20%;
+  right: 10%;
+  animation: floatParticle 15s infinite reverse;
+}
+.p-3 {
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  top: 40%;
+  right: 5%;
+  animation: floatParticle 8s infinite;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(20px, -20px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+  .script-styles-section {
+    padding: 60px 0;
+  }
+  .script-visual-wrapper {
+    height: 500px;
+    margin-top: 50px;
+    perspective: 1000px;
+  }
+  .script-paper {
+    width: 320px;
+    height: 480px; /* Smaller */
+    padding: 40px 30px;
+  }
+  .format-pill {
+    transform: translateZ(40px); /* Less depth on mobile */
+    padding: 8px 14px;
+    font-size: 0.75rem;
+  }
+  .fp-1 {
+    right: -20px;
+  }
+  .fp-2 {
+    left: -20px;
+  }
+  .fp-3 {
+    right: -10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .script-styles-header h2 {
+    font-size: 2.5rem;
+  }
+  .tone-item:hover,
+  .tone-item.active {
+    transform: translateX(0px);
+  }
+}

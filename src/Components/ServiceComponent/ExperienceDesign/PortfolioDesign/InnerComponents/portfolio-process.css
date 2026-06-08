@@ -1,0 +1,196 @@
+/* portfolio-process.css */
+.portfolio-process-section {
+  padding: 50px 0;
+  background: #000;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.process-header {
+  text-align: center;
+  margin-bottom: 80px;
+  z-index: 2;
+  position: relative;
+}
+
+.process-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+
+.flow-text {
+  color: #00ffcc;
+  text-shadow: 0 0 20px rgba(0, 255, 204, 0.4);
+}
+
+.process-header p {
+  color: #888;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* NEON TIMELINE */
+.neon-timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.center-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.center-line::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%; /* Animated height in real production with JS, fixed for now */
+  background: linear-gradient(to bottom, #00ffcc, #00d4ff);
+  box-shadow: 0 0 15px #00ffcc;
+  animation: flow-down 4s infinite linear;
+}
+
+@keyframes flow-down {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+.timeline-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
+  width: 100%;
+}
+
+.timeline-row.left {
+  flex-direction: row-reverse;
+}
+
+.timeline-content {
+  width: 45%;
+  position: relative;
+}
+
+/* DOT */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border: 3px solid #00ffcc;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.5);
+  transition: 0.3s;
+}
+
+.timeline-row:hover .timeline-dot {
+  background: #00ffcc;
+  box-shadow: 0 0 30px rgba(0, 255, 204, 0.8);
+  transform: translateX(-50%) scale(1.3);
+}
+
+/* CRYSTAL CARD */
+.crystal-card {
+  background: rgba(20, 20, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.crystal-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ffcc, transparent);
+  transform: scaleX(0);
+  transition: 0.4s;
+}
+
+.timeline-row:hover .crystal-card {
+  transform: translateY(-5px);
+  background: rgba(30, 30, 30, 0.9);
+  border-color: rgba(0, 255, 204, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-row:hover .crystal-card::before {
+  transform: scaleX(1);
+}
+
+.step-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  line-height: 1;
+}
+
+.step-icon {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.crystal-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.crystal-card p {
+  color: #aaa;
+  line-height: 1.6;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .center-line {
+    left: 30px;
+  }
+  .timeline-row {
+    flex-direction: column;
+    align-items: flex-end; /* Align cards to right */
+    margin-bottom: 40px;
+  }
+  .timeline-row.left {
+    flex-direction: column;
+  }
+  .timeline-content {
+    width: calc(100% - 60px); /* Leave space for line */
+  }
+  .timeline-dot {
+    left: 30px;
+  }
+}

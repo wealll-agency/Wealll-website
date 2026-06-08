@@ -1,0 +1,374 @@
+/* Rebuilding PR Pricing from Scratch in Dark Mode */
+.pr-pricing-dark-section {
+  background: #020202;
+  padding: 100px 0;
+  position: relative;
+  color: #ffffff;
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+}
+
+.pr-pricing-glow-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(
+    circle,
+    rgba(253, 185, 20, 0.05) 0%,
+    rgba(2, 2, 2, 0) 60%
+  );
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pr-pricing-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.pr-pricing-header h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #ffffff;
+  font-family: "Helvetica Compressed", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.pr-pricing-header p {
+  font-size: 1.15rem;
+  color: #aaaaaa;
+  max-width: 600px;
+  margin: 15px auto 0;
+}
+
+/* Base Card PR Pack - 3D Setups */
+.pr-pack-card {
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 24px;
+  padding: 50px 40px;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  /* Transform transition is handled dynamically by JS mostly, but fallback just in case */
+  transition:
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+  transform-style: preserve-3d; /* crucial for inner 3D effects */
+}
+
+/* The Gloss reflection overlay for 3D realism */
+.pr-pack-gloss {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0) 50%,
+    rgba(253, 185, 20, 0.02) 100%
+  );
+  border-radius: 23px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pr-pack-card > * {
+  z-index: 1; /* keep content above gloss */
+  transform: translateZ(30px); /* Creates 3D depth disparity */
+}
+
+.pr-pack-card:hover {
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(253, 185, 20, 0.05);
+  border-color: rgba(253, 185, 20, 0.3);
+}
+
+/* Featured Glow Card */
+.pr-pack-card.featured {
+  background: rgba(10, 10, 10, 0.8);
+  border: 1px solid rgba(253, 185, 20, 0.5);
+  z-index: 2;
+  box-shadow:
+    0 20px 60px rgba(253, 185, 20, 0.15),
+    inset 0 0 20px rgba(253, 185, 20, 0.05);
+}
+
+.pr-pack-card.featured:hover {
+  transform: translateY(-20px) scale(1.05);
+  border-color: #eb4038 !important;
+  box-shadow: 
+    0 30px 80px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(235, 64, 56, 0.4) !important;
+  background: rgba(10, 10, 10, 0.9);
+}
+
+.pr-pack-card.featured:hover h3,
+.pr-pack-card.featured:hover .pr-check-icon {
+  color: #eb4038 !important;
+}
+
+/* Shine Effect for Featured card */
+.pr-pack-card.featured::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(235, 64, 56, 0.2),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.pr-pack-card.featured:hover::after {
+  left: 150%;
+  transition: 0.8s ease-in-out;
+}
+
+.pr-pack-title-area {
+  margin-bottom: 30px;
+  position: relative;
+  text-align: center;
+}
+
+.pr-popular-tag {
+  position: absolute;
+  top: -75px;
+  left: 50%;
+  transform: translateX(-50%) translateZ(40px); /* Pop out even more */
+  background: #fdb914;
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 10px 20px rgba(253, 185, 20, 0.4);
+}
+
+.pr-pack-card h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+  color: #ffffff;
+  font-family: "Lexend", sans-serif;
+}
+
+.pr-pack-card h4 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #888888;
+  margin-bottom: 25px;
+  min-height: 48px;
+}
+
+.pr-pack-price {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  line-height: 1;
+  justify-content: center;
+  text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.pr-currency {
+  font-size: 1.8rem;
+  margin-top: 10px;
+  margin-right: 8px;
+  color: #fdb914;
+}
+
+.pr-pack-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  flex-grow: 1;
+}
+
+.pr-pack-features-list li {
+  font-size: 1.05rem;
+  color: #cccccc;
+  padding: 15px 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+}
+
+.pr-pack-features-list li:last-child {
+  border-bottom: none;
+}
+
+.pr-pack-features-list .pr-check-icon {
+  color: #fdb914;
+  margin-right: 15px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  filter: drop-shadow(0 0 5px rgba(253, 185, 20, 0.5));
+}
+
+/* Buttons */
+.pr-btn {
+  display: block;
+  text-align: center;
+  padding: 18px 0;
+  border-radius: 14px;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 1.15rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.pr-btn.outline {
+  background: rgba(255, 255, 255, 0.02);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.pr-btn.outline:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.pr-btn.filled {
+  background: #fdb914;
+  color: #000;
+  border: 1px solid #fdb914;
+}
+
+.pr-btn.filled:hover {
+  background: #fff;
+  color: #000;
+  border-color: #fff;
+  box-shadow: 0 10px 30px rgba(253, 185, 20, 0.4);
+}
+
+/* Dark Add-ons Area - Mimicking Exhibition Videos Exactly */
+.pr-addons-dark-area {
+  margin-top: 100px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 100px;
+}
+
+.pr-addons-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.pr-addons-header h3 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  font-family: "Helvetica Compressed", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.pr-addons-header p {
+  color: #888888;
+  font-size: 1.15rem;
+  margin-bottom: 0;
+}
+
+.pr-addons-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.pr-addon-bento-card {
+  background: rgba(20, 20, 20, 0.4);
+  border-radius: 16px;
+  padding: 30px;
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.01);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: crosshair;
+}
+
+.pr-addon-bento-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(253, 185, 20, 0.05);
+  border-color: rgba(253, 185, 20, 0.3);
+  background: rgba(30, 30, 30, 0.6);
+}
+
+.pr-addon-emoji-box {
+  width: 55px;
+  height: 55px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-right: 25px;
+  flex-shrink: 0;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pr-addon-bento-card:hover .pr-addon-emoji-box {
+  background: rgba(253, 185, 20, 0.15);
+  transform: scale(1.2) rotate(10deg);
+  border-color: rgba(253, 185, 20, 0.3);
+  box-shadow: 0 0 15px rgba(253, 185, 20, 0.2);
+}
+
+.pr-addon-text-content h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.pr-addon-text-content p {
+  color: #999999;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .pr-pack-card {
+    padding: 40px 25px;
+    transform: none !important; /* Disable 3D tilt on mobile */
+  }
+  .pr-pack-card.featured {
+    transform: scale(1) !important;
+  }
+  .pr-pack-card.featured:hover {
+    transform: translateY(-10px) !important;
+  }
+  .pr-pricing-header h2 {
+    font-size: 3rem;
+  }
+}

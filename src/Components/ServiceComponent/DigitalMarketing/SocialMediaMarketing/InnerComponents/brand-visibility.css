@@ -1,0 +1,147 @@
+/* Brand Visibility Section - Premium Design */
+.brand-visibility-section {
+  position: relative;
+  background-color: #0b0b0b;
+  margin-top: 40px;
+  padding: 70px 0;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Background Glow Effect */
+.brand-vis-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(
+    circle,
+    rgba(253, 185, 20, 0.08) 0%,
+    rgba(11, 11, 11, 0) 70%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.brand-visibility-section .container {
+  z-index: 1;
+}
+
+.brand-visibility-section .tri-1 {
+  background-color: #000;
+}
+
+/* Typography & Title */
+.brand-vis-title {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 4.5rem; /* Increased size */
+  line-height: 1.1;
+  font-weight: 800;
+  color: #e0e0e0;
+  margin-bottom: 40px;
+  letter-spacing: -1px;
+  text-transform: capitalize;
+}
+
+/* Gradient Text Effect for Emphasis */
+.brand-vis-title .highlight-gradient {
+  background: linear-gradient(135deg, #fdb914 0%, #ffcc00 50%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  position: relative;
+}
+
+/* Separator Line */
+.brand-vis-separator {
+  width: 0; /* Animated later */
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #fdb914, transparent);
+  margin: 0 auto 40px;
+  border-radius: 2px;
+  animation: expandWidth 1s ease-out forwards 0.5s;
+}
+
+/* Content Text */
+.brand-vis-content p {
+  color: #b0b0b0;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 0 auto;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+.brand-vis-content strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+.brand-vis-content .brand-name {
+  color: #fdb914; /* Brand Primary Color */
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.brand-vis-content .highlight-text {
+  color: #fff;
+  text-decoration: underline;
+  text-decoration-color: #fdb914;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* Animations */
+@keyframes expandWidth {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 120px;
+    opacity: 1;
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.delay-200 {
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .brand-vis-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-visibility-section {
+    padding: 40px 0;
+  }
+
+  .brand-vis-title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .brand-vis-content p {
+    font-size: 1.1rem;
+    padding: 0;
+  }
+}

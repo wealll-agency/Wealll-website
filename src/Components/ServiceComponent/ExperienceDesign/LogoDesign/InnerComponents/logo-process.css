@@ -1,0 +1,299 @@
+/* logo-process.css */
+.logo-process-section {
+  padding: 100px 0;
+  background: #000;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-process-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax feel */
+  z-index: 0;
+}
+
+.process-header {
+  text-align: center;
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 2;
+}
+
+.process-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.neon-text {
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #ff00de,
+    0 0 30px #ff00de,
+    0 0 40px #ff00de;
+  animation: neon-flicker 3s infinite alternate;
+}
+
+@keyframes neon-flicker {
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #ff00de,
+      0 0 30px #ff00de,
+      0 0 40px #ff00de;
+  }
+  20%,
+  24%,
+  55% {
+    text-shadow: none;
+  }
+}
+
+.process-header p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+/* Roadmap */
+.roadmap-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 2;
+  padding: 20px 0;
+}
+
+/* The neon line */
+.neon-path-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  background: #ff00de;
+  box-shadow: 0 0 20px #ff00de;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.roadmap-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.roadmap-step {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Beads */
+.step-bead {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 5;
+  box-shadow: 0 0 10px #fff;
+}
+
+.bead-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 0, 222, 0.5);
+  border-radius: 50%;
+  animation: bead-pulse 2s infinite;
+}
+
+@keyframes bead-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+/* Cards */
+.step-card {
+  width: 45%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  position: relative;
+  transition: all 0.4s;
+  overflow: hidden;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #ff00de;
+  box-shadow: 0 0 30px rgba(255, 0, 222, 0.2);
+}
+
+.step-card.left {
+  margin-right: auto;
+  text-align: right;
+}
+
+.step-card.right {
+  margin-left: auto;
+  text-align: left;
+}
+
+/* Connecting Beams (Pseudo elements) */
+.roadmap-step::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 5%;
+  height: 2px;
+  background: #ff00de;
+  z-index: 2;
+  box-shadow: 0 0 10px #ff00de;
+}
+
+.roadmap-step:has(.left)::before {
+  left: 45%;
+  width: 5%; /* connects card to center line */
+}
+
+.roadmap-step:has(.right)::before {
+  right: 45%;
+  width: 5%;
+}
+
+.step-number {
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.2);
+  position: absolute;
+  top: 0;
+  line-height: 1;
+}
+
+.left .step-number {
+  left: 20px;
+}
+.right .step-number {
+  right: 20px;
+}
+
+.step-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.step-card h3 {
+  margin: 5px 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.step-card p {
+  color: #ccc;
+  margin: 0;
+}
+
+/* Shine Hover */
+.card-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+.step-card:hover .card-shine {
+  left: 150%;
+  transition: 0.7s;
+}
+
+@media (max-width: 768px) {
+  .neon-path-line {
+    left: 20px;
+    transform: none;
+  }
+  .roadmap-steps {
+    gap: 40px;
+  }
+  .step-bead {
+    left: 20px;
+    transform: translate(-50%, -50%);
+  }
+  .step-card {
+    width: 85%;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+  }
+  .roadmap-step:has(.left)::before {
+    display: none;
+  }
+  .roadmap-step:has(.right)::before {
+    display: none;
+  }
+  .step-number {
+    right: 20px;
+    left: auto;
+  }
+  .logo-process-section {
+    padding: 50px 0;
+  }
+  .process-header h2 {
+    font-size: 2.2rem;
+  }
+  .process-header {
+    margin-bottom: 50px;
+  }
+  .left .step-number {
+    left: auto;
+  }
+}

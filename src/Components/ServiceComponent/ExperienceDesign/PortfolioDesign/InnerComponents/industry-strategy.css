@@ -1,0 +1,207 @@
+/* industry-strategy.css */
+.industry-strategy-section {
+  padding: 50px 0;
+  background: #000;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.strategy-header {
+  margin-bottom: 60px;
+}
+
+.strategy-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.strategy-header p {
+  font-size: 1.1rem;
+  color: #aaa;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.strategy-container {
+  display: flex;
+  gap: 50px;
+}
+
+/* TABS (LEFT SIDE) */
+.strategy-tabs {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.strategy-tab-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px 25px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 15px; /* updated border radius */
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: left;
+}
+
+.strategy-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(10px);
+}
+
+.strategy-tab-btn.active {
+  background: var(--tab-color);
+  color: #000;
+  border-color: var(--tab-color);
+  box-shadow: 0 0 20px var(--tab-color);
+  transform: scale(1.02);
+}
+
+.tab-icon {
+  font-size: 1.5rem;
+}
+
+/* DISPLAY (RIGHT SIDE) */
+.strategy-display {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.strategy-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  transition: 0.5s;
+  animation: fade-in 0.5s ease-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.strategy-card h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.strategy-card-icon {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 10rem;
+  opacity: 0.1;
+  transform: rotate(15deg);
+  z-index: 0;
+}
+
+.strategy-points {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.strat-point {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.point-check {
+  width: 25px;
+  height: 25px;
+  background: var(--card-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.strat-point span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.strategy-bg-effect {
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 200px;
+  height: 200px;
+  background: var(--card-color);
+  filter: blur(100px);
+  opacity: 0.2;
+  z-index: 0;
+}
+
+.strategy-info-text p {
+  color: #888;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+@media (max-width: 1400px) {
+  .strategy-card {
+    padding: 30px 20px;
+  }
+  .strategy-card h3 {
+    font-size: 1.8rem;
+  }
+  .strategy-points {
+    gap: 15px;
+  }
+  .strategy-container {
+    gap: 30px;
+  }
+  .strat-point {
+    gap: 15px 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .strategy-container {
+    flex-direction: column;
+  }
+  .strategy-card h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .strategy-points {
+    grid-template-columns: 1fr;
+  }
+}

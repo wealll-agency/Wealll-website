@@ -1,0 +1,168 @@
+.product-services-section {
+  padding: 80px 0;
+  background: #0f0f13;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Background Grid Pattern */
+.product-services-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.ps-header {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 1;
+}
+
+.ps-header h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.highlight-text {
+  background: linear-gradient(90deg, #fdb914, #ff00de);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ps-header p {
+  color: #aaa;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Grid Layout */
+.ps-shelf-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  perspective: 1000px;
+}
+
+/* Card Styles */
+.ps-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 30px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  backdrop-filter: blur(10px);
+  cursor: default;
+}
+
+.ps-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: var(--neon-color);
+  box-shadow: 0 10px 30px -10px var(--neon-color);
+}
+
+.ps-card-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ps-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.ps-card:hover .ps-icon-wrapper {
+  background: var(--neon-color);
+  color: #000;
+  transform: rotateY(180deg);
+}
+
+.ps-icon-wrapper svg {
+  transition: transform 0.3s ease;
+}
+
+.ps-card:hover .ps-icon-wrapper svg {
+  transform: rotateY(-180deg); /* Counter for icon */
+}
+
+.ps-title {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.ps-card:hover .ps-title {
+  color: var(--neon-color);
+}
+
+.ps-desc {
+  color: #bbb;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Inner Glow Effect */
+.ps-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, var(--neon-color) 0%, transparent 60%);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+  z-index: -1;
+  mix-blend-mode: soft-light;
+}
+
+.ps-card:hover .ps-glow {
+  opacity: 0.3; /* Subtle glow inside */
+}
+
+@media (max-width: 767px) {
+  .ps-header h2 {
+    font-size: 2rem;
+  }
+  .product-services-section {
+    padding: 50px 0;
+  }
+  .ps-header {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+  .ps-icon-wrapper {
+    margin-bottom: 0;
+  }
+}

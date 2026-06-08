@@ -1,0 +1,414 @@
+.investor-presentation-section {
+  padding: 100px 0;
+  background-color: #070707;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Background Grids and Glows */
+.inv-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(
+    circle,
+    rgba(212, 175, 55, 0.08) 0%,
+    transparent 60%
+  );
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.inv-bg-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 0;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Typography & Headers */
+.inv-step-badge {
+  display: inline-block;
+  padding: 6px 18px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: #d4af37;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.inv-main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 25px;
+}
+
+.inv-gold-text {
+  color: #e5c158;
+  text-shadow: 0 0 25px rgba(229, 193, 88, 0.4);
+  font-weight: 900;
+}
+
+.inv-subtitle {
+  font-size: 1.15rem;
+  color: #a1a1aa;
+  line-height: 1.7;
+}
+
+/* Left side: Data Cards */
+.inv-cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inv-data-card {
+  position: relative;
+  background: rgba(18, 18, 18, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 25px 30px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease;
+  cursor: pointer;
+}
+
+.inv-card-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.inv-card-info {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.inv-card-info h4 {
+  font-size: 1.25rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.inv-card-info p {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.inv-card-metric {
+  text-align: right;
+  min-width: 120px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 20px;
+}
+
+.inv-metric-val {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #e5c158;
+  margin-bottom: 5px;
+}
+
+.inv-metric-lbl {
+  display: block;
+  font-size: 0.75rem;
+  color: #71717a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.inv-data-card:hover {
+  transform: translateX(10px);
+  border-color: rgba(229, 193, 88, 0.3);
+}
+
+.inv-card-glow {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(229, 193, 88, 0.1),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  z-index: 1;
+}
+
+.inv-data-card:hover .inv-card-glow {
+  left: 150%;
+}
+
+/* Right side: Dashboard Video Mockup */
+.inv-dashboard-mockup {
+  background: #111111;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(229, 193, 88, 0.05);
+  overflow: hidden;
+  position: relative;
+  transform: perspective(1000px) rotateY(-5deg) translateY(-10px);
+  transition: transform 0.5s ease;
+}
+
+.inv-dashboard-mockup:hover {
+  transform: perspective(1000px) rotateY(0deg) translateY(0);
+}
+
+.inv-dash-header {
+  height: 40px;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  gap: 8px;
+}
+
+.inv-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.inv-dot.r {
+  background: #ff5f56;
+}
+.inv-dot.y {
+  background: #ffbd2e;
+}
+.inv-dot.g {
+  background: #27c93f;
+}
+
+.inv-dash-title {
+  margin-left: auto;
+  font-size: 0.75rem;
+  color: #666;
+  font-family: monospace;
+}
+
+.inv-dash-body {
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+}
+
+.inv-chart-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0 20px;
+  opacity: 0.3;
+}
+
+.inv-bar {
+  width: 12%;
+  background: linear-gradient(
+    180deg,
+    rgba(229, 193, 88, 0.8) 0%,
+    transparent 100%
+  );
+  height: 0;
+  border-radius: 4px 4px 0 0;
+  animation: bar-rise 2s ease-out forwards;
+}
+
+.inv-bar.b1 {
+  height: 40%;
+  animation-delay: 0.5s;
+}
+.inv-bar.b2 {
+  height: 30%;
+  animation-delay: 0.7s;
+}
+.inv-bar.b3 {
+  height: 60%;
+  animation-delay: 0.9s;
+}
+.inv-bar.b4 {
+  height: 80%;
+  animation-delay: 1.1s;
+}
+.inv-bar.b5 {
+  height: 100%;
+  animation-delay: 1.3s;
+}
+
+@keyframes bar-rise {
+  from {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  to {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+}
+
+.inv-video-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 70%;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  border: 1px solid rgba(229, 193, 88, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.inv-play-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: rgba(229, 193, 88, 0.2);
+  border: 2px solid #e5c158;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #e5c158;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  animation: gold-pulse 2s infinite;
+}
+
+.inv-play-btn:hover {
+  background: #e5c158;
+  color: #000;
+  transform: scale(1.1);
+}
+
+@keyframes gold-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(229, 193, 88, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(229, 193, 88, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(229, 193, 88, 0);
+  }
+}
+
+.inv-mock-text-overlay {
+  text-align: center;
+  width: 70%;
+}
+
+.inv-mock-text-overlay h5 {
+  font-size: 1rem;
+  letter-spacing: 3px;
+  color: #e5c158;
+  margin-bottom: 15px;
+}
+
+.inv-loading-line {
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.inv-loading-progress {
+  width: 65%;
+  height: 100%;
+  background: #e5c158;
+  box-shadow: 0 0 10px #e5c158;
+}
+
+/* Visibility animations */
+.inv-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.inv-reveal.inv-reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 991px) {
+  .inv-main-title {
+    font-size: 2.8rem;
+  }
+  .inv-dashboard-mockup {
+    transform: none;
+    margin-top: 40px;
+    height: 350px;
+  }
+  .inv-dash-body {
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .inv-card-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .inv-card-metric {
+    text-align: left;
+    min-width: auto;
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+    margin-top: 15px;
+    width: 100%;
+  }
+  .inv-main-title {
+    font-size: 2rem;
+  }
+  .investor-presentation-section {
+    padding: 30px 0 50px;
+  }
+}

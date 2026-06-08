@@ -1,0 +1,692 @@
+/* ================================================================
+   GMB OWNERSHIP RECOVERY — Master Premium Stylesheet
+   Theme: Digital Authority (Dark Mode, Google Brand Accents)
+   ================================================================ */
+:root {
+  /* Google Inspired Core Colors Tuned for Dark Mode */
+  --gmb-blue: #4285f4;
+  --gmb-blue-glow: rgba(66, 133, 244, 0.4);
+  --gmb-red: #ea4335;
+  --gmb-red-glow: rgba(234, 67, 53, 0.4);
+  --gmb-yellow: #fbbc05;
+  --gmb-yellow-glow: rgba(251, 188, 5, 0.4);
+  --gmb-green: #34a853;
+  --gmb-green-glow: rgba(52, 168, 83, 0.4);
+
+  --gmb-dark-bg: #050508;
+  --gmb-card-bg: rgba(66, 133, 244, 0.03);
+  --gmb-border: rgba(255, 255, 255, 0.08);
+}
+
+.gmb-dark-bg {
+  background-color: var(--gmb-dark-bg);
+  color: #fff;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.gmb-gradient-text-blue {
+  background: linear-gradient(135deg, #fff, var(--gmb-blue));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.gmb-gradient-text-primary {
+  background: linear-gradient(135deg, var(--gmb-blue), var(--gmb-green));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.gmb-section-label {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--gmb-border);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a0a0b0;
+  margin-bottom: 25px;
+}
+
+/* Base Overrides for existing components */
+.gmb-recovery-page .digital_marketing_intro .default-btn,
+.gmb-recovery-page .digital_marketing_intro .btn-primary {
+  /* background: linear-gradient(
+    135deg,
+    var(--gmb-blue),
+    var(--gmb-green)
+  ) !important; */
+  border: none !important;
+  color: #fff !important;
+  box-shadow: 0 4px 15px rgba(24, 119, 242, 0.3) !important;
+}
+
+.gmb-recovery-page .creative-bg {
+  /* background-image: none !important;
+    background: linear-gradient(120deg, var(--gmb-blue), var(--gmb-green)) !important; */
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block;
+  position: relative;
+  font-weight: 800;
+}
+
+/* Hero Network Animations */
+.gmb-hero-card {
+  background: rgba(15, 15, 20, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--gmb-border);
+  border-radius: 20px;
+  padding: 30px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.gmb-hero-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gmb-blue);
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px var(--gmb-card-bg);
+}
+
+.gmb-hero-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--gmb-card-bg);
+  border: 1px solid var(--gmb-border);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--gmb-blue);
+  margin-bottom: 20px;
+}
+
+.gmb-problem-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gmb-problem-list li {
+  padding: 15px;
+  border-bottom: 1px solid var(--gmb-border);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #a0a0b0;
+  font-size: 1.05rem;
+}
+
+.gmb-problem-list li:last-child {
+  border-bottom: none;
+}
+
+.gmb-problem-icon {
+  color: var(--gmb-red);
+  font-size: 1.2rem;
+}
+
+.gmb-solve-icon {
+  color: var(--gmb-green);
+  font-size: 1.2rem;
+}
+
+.cta_button i,
+.audit_cta_button i {
+  color: #fff !important;
+}
+
+/* ================================================================
+   REFACTORED UTILITY CLASSES (Replacing Inline Styles)
+   ================================================================ */
+
+/* Section Layouts */
+.gmb-section-py-80 {
+  padding: 80px 0;
+}
+.gmb-section-py-100 {
+  padding: 100px 0;
+}
+.gmb-section-pb-100 {
+  padding-bottom: 100px;
+}
+.gmb-relative {
+  position: relative;
+}
+.gmb-overflow-hidden {
+  overflow: hidden;
+}
+.gmb-z-2 {
+  z-index: 2;
+}
+
+/* Typography */
+.gmb-hero-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.gmb-section-title-lg {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+.gmb-section-title-md {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.gmb-subtext {
+  font-size: 1.2rem;
+  color: #a0a0b0;
+  max-width: 800px;
+  margin: 0 auto 30px;
+  line-height: 1.6;
+}
+
+.gmb-desc-text {
+  color: #a0a0b0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+/* Alert Boxes & Notifications */
+.gmb-alert-box {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 30px;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gmb-alert-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  border-radius: 8px;
+}
+
+.gmb-alert-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Cards & UI Modules */
+.gmb-stat-box {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid var(--gmb-border);
+}
+
+.gmb-stat-label {
+  color: #9090a0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.gmb-stat-value {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Bento & Specialized Containers */
+.gmb-vault-container {
+  background: linear-gradient(
+    145deg,
+    rgba(66, 133, 244, 0.05),
+    rgba(52, 168, 83, 0.05)
+  );
+  border: 1px solid var(--gmb-blue);
+  border-radius: 30px;
+  padding: 50px 40px;
+  position: relative;
+}
+
+.gmb-vault-badge {
+  position: absolute;
+  top: -25px;
+  right: 40px;
+  background: var(--gmb-green);
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  box-shadow: 0 10px 20px var(--gmb-green-glow);
+}
+
+.gmb-doc-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 15px 20px;
+  border-radius: 15px;
+  border: 1px solid var(--gmb-border);
+}
+
+.gmb-doc-icon-box {
+  width: 45px;
+  height: 45px;
+  background: var(--gmb-blue);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 1.2rem;
+}
+
+/* Timeline/Process Specifics */
+.gmb-timeline-bento {
+  background: radial-gradient(
+    circle at top right,
+    rgba(66, 133, 244, 0.1),
+    rgba(5, 5, 8, 0.95)
+  );
+  border: 1px solid rgba(66, 133, 244, 0.2);
+  border-radius: 30px;
+  padding: 50px 40px;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gmb-timeline-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.gmb-timeline-group {
+  margin-bottom: 30px;
+}
+
+.gmb-timeline-label {
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.gmb-timeline-value {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+}
+
+.gmb-timeline-unit {
+  font-size: 1.1rem;
+  color: #aaa;
+  font-weight: 500;
+}
+
+/* Audience Grid */
+.gmb-audience-card {
+  background: rgba(15, 15, 20, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 35px;
+  height: 100%;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.gmb-audience-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.gmb-icon-box-lg {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Security Matrix */
+.gmb-security-guarantee {
+  background: rgba(66, 133, 244, 0.05) !important;
+  border-left: 4px solid var(--gmb-blue) !important;
+  padding: 30px !important;
+  border-radius: 0 20px 20px 0 !important;
+}
+
+/* CTA Modules */
+.gmb-cta-container {
+  background: linear-gradient(45deg, #09090b, #111) !important;
+  border: 1px solid rgba(234, 67, 53, 0.2) !important;
+  border-radius: 40px !important;
+  padding: 80px 40px !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    inset 0 0 100px rgba(66, 133, 244, 0.05) !important;
+}
+
+.gmb-pulse-bg {
+  position: absolute !important;
+  top: -50% !important;
+  left: -50% !important;
+  width: 200% !important;
+  height: 200% !important;
+  background: radial-gradient(
+    circle,
+    rgba(66, 133, 244, 0.1) 0%,
+    transparent 50%
+  ) !important;
+  animation: fbPulse 6s infinite alternate !important;
+  pointer-events: none !important;
+}
+
+/* Combo Specific Adjustments */
+.gmb-combo-cta-section .gmb-cta-container,
+.gmb-combo-cta-section .gmb-vault-container {
+  padding: 60px 40px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gmb-combo-cta-section .gmb-section-title-md {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.gmb-combo-cta-section .gmb-desc-text {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+/* Button & Link Refinements */
+.gmb-btn-glow-blue {
+  box-shadow: 0 10px 20px var(--gmb-blue-glow);
+}
+
+.gmb-btn-glow-green {
+  box-shadow: 0 10px 20px var(--gmb-green-glow);
+}
+
+/* Terminal Overlay */
+.gmb-terminal {
+  background: #09090b;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  font-family: monospace;
+  color: #a0a0b0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.gmb-terminal-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gmb-terminal-body {
+  padding: 30px;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* Badges */
+.gmb-badge-red {
+  background: var(--gmb-red) !important;
+  color: #fff !important;
+  padding: 8px 20px !important;
+  font-size: 0.9rem !important;
+  border-radius: 50px !important;
+  letter-spacing: 2px !important;
+  text-transform: uppercase !important;
+  margin-bottom: 25px !important;
+}
+
+.gmb-badge-green {
+  background: var(--gmb-green) !important;
+  color: #fff !important;
+  padding: 8px 15px !important;
+  border-radius: 50px !important;
+  margin-bottom: 20px !important;
+}
+
+.gmb-badge-yellow {
+  background: var(--gmb-yellow) !important;
+  color: #000 !important;
+  padding: 8px 15px !important;
+  border-radius: 50px !important;
+  margin-bottom: 20px !important;
+}
+
+/* Optional Add-ons Grid (360 Marketing Style) */
+.gmb-addons-grid-modern {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  gap: 30px !important;
+  margin-top: 50px !important;
+}
+
+.gmb-addon-card-premium {
+  background: rgba(255, 255, 255, 0.02) !important;
+  padding: 30px !important;
+  border-radius: 15px !important;
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 20px !important;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) !important;
+  border: 1px solid var(--gmb-border) !important;
+  height: 100% !important;
+}
+
+.gmb-addon-card-premium:hover {
+  transform: translateY(-8px) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+  border-color: var(--gmb-blue) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.gmb-addon-icon-box {
+  background: rgba(66, 133, 244, 0.1) !important;
+  color: var(--gmb-blue) !important;
+  padding: 12px !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 50px !important;
+  height: 50px !important;
+  flex-shrink: 0 !important;
+  font-size: 1.5rem !important;
+}
+
+.gmb-addon-content h4 {
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+  color: #fff !important;
+  margin-bottom: 8px !important;
+  line-height: 1.2 !important;
+}
+
+.gmb-addon-content p {
+  font-size: 0.95rem !important;
+  color: #a0a0b0 !important;
+  margin-bottom: 15px !important;
+  line-height: 1.5 !important;
+}
+
+.gmb-custom-quote-link {
+  color: var(--gmb-blue) !important;
+  font-weight: 800 !important;
+  font-size: 1rem !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.gmb-custom-quote-link:hover {
+  opacity: 0.8 !important;
+  text-decoration: underline !important;
+}
+
+/* Animations */
+@keyframes fbPulseSlow {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Zigzag Image Wrappers */
+.gmb-hero-img-wrapper {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.02);
+  transition: transform 0.4s ease;
+}
+
+.gmb-hero-img-wrapper:hover {
+  transform: scale(1.02);
+}
+
+.gmb-hero-img-wrapper img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: block;
+  object-fit: cover;
+}
+
+.gmb-img-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gmb-hero-img-wrapper.problem .gmb-img-glow {
+  background: radial-gradient(
+    circle at center,
+    rgba(234, 67, 53, 0.15) 0%,
+    transparent 70%
+  );
+  box-shadow: inset 0 0 50px rgba(234, 67, 53, 0.1);
+}
+
+.gmb-hero-img-wrapper.solution .gmb-img-glow {
+  background: radial-gradient(
+    circle at center,
+    rgba(66, 133, 244, 0.15) 0%,
+    transparent 70%
+  );
+  box-shadow: inset 0 0 50px rgba(66, 133, 244, 0.1);
+}
+
+@media (max-width: 991px) {
+  .gmb-hero-img-wrapper {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width:767px){
+  .gmb-hero-title,
+  .gmb-section-title-lg,
+  .gmb-timeline-title
+  {
+    font-size: 2rem;
+  }
+  .gmb-hero-card,
+  .gmb-timeline-bento,
+  .gmb-vault-container,
+  .gmb-combo-cta-section .gmb-cta-container, .gmb-combo-cta-section .gmb-vault-container
+  {
+    padding: 30px 15px;
+  }
+  .gmb-dark-bg .top_info{
+    margin-bottom: 0 !important;
+  }
+  .gmb-section-title-md{
+    font-size: 24px !important;
+  }
+  .gmb-section-py-100 {
+    padding: 50px 0;
+}
+.gmb-cta-container{
+  padding: 40px 15px !important;
+}
+.gmb-btn-glow-blue{
+  padding: 10px 22px !important;
+  font-size: 14px !important;
+}
+}

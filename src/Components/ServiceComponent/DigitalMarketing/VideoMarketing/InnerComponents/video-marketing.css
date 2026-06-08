@@ -1,0 +1,521 @@
+/* Video Marketing CSS */
+
+/* --- General Section Styling --- */
+.vm-section {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.vm-section-dark {
+  padding: 50px 0;
+  background-color: #0b0b0b;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Background decorative elements */
+.vm-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 69, 0, 0.05) 0%,
+    /* Orange/Red tint for Video */ transparent 70%
+  );
+  z-index: 0;
+}
+
+.vm-header {
+  position: relative;
+  z-index: 1;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.vm-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  letter-spacing: -1px;
+}
+
+.vm-header.dark h2 {
+  color: #fff;
+}
+
+.vm-header p {
+  color: #666;
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.vm-header.dark p {
+  color: #b0b0b0;
+}
+
+.highlight-gradient-orange {
+  background: linear-gradient(135deg, #ff4500 0%, #ff8c00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+/* --- Benefits Card (Service Card Style) --- */
+.vm-benefit-card {
+  background: #111;
+  padding: 45px 35px;
+  border-radius: 24px;
+  border: 1px solid #333;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.vm-benefit-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  border-color: #ff4500;
+  background: #000;
+}
+
+.vm-benefit-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(255, 69, 0, 0.1),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.vm-benefit-card:hover::after {
+  opacity: 1;
+}
+
+.vm-benefit-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vm-benefit-card:hover .vm-benefit-icon {
+  background: #ff4500;
+  transform: rotate(10deg);
+  border-color: #ff4500;
+}
+
+.vm-benefit-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #ff4500;
+  transition: all 0.4s ease;
+}
+
+.vm-benefit-card:hover .vm-benefit-icon svg {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.vm-benefit-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.vm-benefit-card p {
+  color: #aaa;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.vm-learn-more {
+  font-size: 14px;
+  font-weight: 800;
+  color: #ff4500;
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.vm-learn-more svg {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  stroke-width: 3px;
+}
+
+.vm-benefit-card:hover .vm-learn-more svg {
+  transform: translateX(8px);
+}
+
+/* --- Process Steps (Process Style) --- */
+.vm-steps-row {
+  position: relative;
+  margin-top: 50px;
+}
+
+.vm-step-card {
+  background: #111;
+  border-radius: 24px;
+  padding: 50px 30px;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+.vm-step-card:hover {
+  transform: translateY(-20px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  border-color: #ff4500;
+  background: #000;
+}
+
+.vm-step-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at bottom left,
+    rgba(255, 69, 0, 0.1),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.vm-step-card:hover::after {
+  opacity: 1;
+}
+
+.vm-step-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  line-height: 0.8;
+  transition: all 0.5s ease;
+  z-index: -1;
+  font-family: sans-serif;
+}
+
+.vm-step-card:hover .vm-step-number {
+  color: rgba(255, 69, 0, 0.15);
+  transform: scale(1.2) rotate(-10deg);
+}
+
+.vm-step-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+  box-shadow: none;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.vm-step-card:hover .vm-step-icon {
+  background: linear-gradient(135deg, #ff4500 0%, #ff8c00 100%);
+  box-shadow: 0 10px 20px rgba(255, 69, 0, 0.4);
+  border-color: transparent;
+  transform: rotate(5deg);
+}
+
+.vm-step-icon svg {
+  width: 36px;
+  height: 36px;
+  fill: #ff4500;
+  transition: fill 0.3s ease;
+}
+
+.vm-step-card:hover .vm-step-icon svg {
+  fill: #fff;
+}
+
+.vm-step-card h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.vm-step-card p {
+  font-size: 15px;
+  color: #aaa;
+  line-height: 1.7;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 992px) {
+  .vm-steps-row::before {
+    content: "";
+    position: absolute;
+    top: 90px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: url("data:image/svg+xml,%3Csvg width='20' height='2' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 1h10' stroke='%23333' stroke-width='2' stroke-dasharray='5,5'/%3E%3C/svg%3E");
+    z-index: 0;
+    opacity: 0.3;
+  }
+}
+
+/* --- Zigzag Layout Strategy Section --- */
+.vm-zigzag-section {
+  padding: 50px 0;
+  background-color: #0b0b0b;
+  position: relative;
+  overflow: hidden;
+}
+
+.vm-zigzag-row {
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.vm-zigzag-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Images */
+.vm-zigzag-img-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: perspective(1000px) rotateY(0deg);
+  transition: all 0.5s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 85%;
+}
+
+.vm-zigzag-img-wrapper:hover {
+  transform: perspective(1000px) rotateY(5deg);
+  box-shadow: 0 30px 60px rgba(255, 69, 0, 0.15);
+  border-color: #ff4500;
+}
+
+.vm-zigzag-row.align-items-center.flex-row-reverse .vm-zigzag-img-wrapper {
+  margin-left: auto;
+}
+
+.vm-zigzag-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.vm-zigzag-img-wrapper:hover .vm-zigzag-img {
+  transform: scale(1.05);
+}
+
+.vm-img-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Content */
+.vm-zigzag-content {
+  position: relative;
+  z-index: 2;
+}
+
+.vm-zigzag-number {
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  line-height: 0.8;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.vm-zigzag-row:hover .vm-zigzag-number {
+  color: rgba(255, 69, 0, 0.1);
+  transform: translateY(-10px);
+}
+
+.vm-zigzag-content h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.vm-zigzag-content h3::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #ff4500;
+  margin-bottom: 15px;
+  border-radius: 2px;
+}
+
+.vm-zigzag-content p {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.vm-zigzag-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vm-zigzag-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  color: #ddd;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.vm-zigzag-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ff4500;
+  font-weight: 800;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+  .vm-zigzag-row {
+    margin-bottom: 60px;
+    flex-direction: column !important; /* Stack vertically */
+  }
+
+  .vm-zigzag-img-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .vm-zigzag-img {
+    height: 300px;
+  }
+
+  .vm-zigzag-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: left;
+  }
+
+  .vm-zigzag-number {
+    display: none;
+  }
+}
+
+/* --- Video Showcase Section --- */
+.vm-showcase-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.vm-video-container {
+  position: relative;
+  width: 100%;
+  height: 550px; /* Reduced height as requested */
+  overflow: hidden;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vm-showcase-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+}
+
+.vm-video-container:hover .vm-showcase-video {
+  opacity: 1;
+}
+
+.vm-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 11, 11, 0.8) 0%,
+    transparent 20%,
+    transparent 80%,
+    rgba(11, 11, 11, 0.8) 100%
+  );
+  pointer-events: none;
+}
+
+@media (max-width: 991px) {
+  .vm-video-container {
+    height: 300px;
+  }
+}

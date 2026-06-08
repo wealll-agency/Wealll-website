@@ -1,0 +1,747 @@
+/*
+  content-marketing-dark.css
+  Premium Dark Theme Styles for Content Marketing Expansion
+  Based on WeAlll 360/Website Development dark ecosystem
+*/
+
+:root {
+  --cm-bg-dark: #0a0e17;
+  --cm-bg-card: rgba(13, 17, 29, 0.7);
+  --cm-text-primary: #ffffff;
+  --cm-text-muted: #8b9bb4;
+  --cm-accent-primary: #00f2fe;
+  --cm-accent-secondary: #4facfe;
+  --cm-purple-accent: #b026ff;
+  --cm-gold-accent: #fdb914;
+  --cm-red-accent: #ff4b4b;
+}
+
+/* Global Container */
+.cm-dark-bg {
+  background-color: var(--cm-bg-dark);
+  color: var(--cm-text-primary);
+  font-family: "Inter", "Outfit", sans-serif;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.cm-dark-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(79, 172, 254, 0.04),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 85% 70%,
+      rgba(176, 38, 255, 0.04),
+      transparent 40%
+    );
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Typography Overrides */
+.cm-title-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--cm-accent-primary),
+    var(--cm-accent-secondary)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: 800;
+}
+
+.cm-section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.cm-text-muted {
+  color: var(--cm-text-muted) !important;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* --- Section 1: Why Content Marketing Matters --- */
+.cm-ambient-orb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 242, 254, 0.1) 0%,
+    transparent 60%
+  );
+  filter: blur(40px);
+  z-index: -1;
+}
+
+/* .cm-staggered-group .cm-glass-card {
+  position: relative;
+  z-index: 2;
+} */
+
+.cm-staggered-group .cm-glass-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50px;
+  pointer-events: none;
+  opacity: 0.1;
+}
+
+.why-card-1::before {
+  background: linear-gradient(90deg, #00f2fe, transparent);
+}
+.why-card-2::before {
+  background: linear-gradient(90deg, #b026ff, transparent);
+}
+.why-card-3::before {
+  background: linear-gradient(90deg, #fdb914, transparent);
+}
+
+/* --- Section 2: Cybernetic Neural Core (Services) --- */
+.cm-cyber-core-container {
+  height: 800px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cm-core-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.cm-data-link {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 2;
+  stroke-dasharray: 6 12;
+  animation: dataStream 30s linear infinite;
+}
+
+@keyframes dataStream {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+.cm-core-orb {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  background: rgba(13, 17, 29, 0.9);
+  border: 1px solid rgba(0, 242, 254, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow:
+    0 0 50px rgba(0, 242, 254, 0.3),
+    inset 0 0 20px rgba(0, 242, 254, 0.2);
+}
+
+.cm-core-rings {
+  position: absolute;
+  inset: -20px;
+  border: 1px dashed rgba(0, 242, 254, 0.4);
+  border-radius: 50%;
+  animation: spin 15s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.cm-node {
+  position: absolute;
+  width: 260px;
+  background: var(--cm-bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  z-index: 15;
+  transition: all 0.3s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.cm-node:hover {
+  transform: translateY(-5px) scale(1.02) !important;
+  border-color: #00f2fe;
+  box-shadow: 0 15px 40px rgba(0, 242, 254, 0.15);
+}
+
+.cm-node-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(0, 242, 254, 0.1);
+  color: #00f2fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.cm-node h5 {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.cm-node p {
+  color: #8b9bb4;
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Node Positioning */
+.pos-tl {
+  top: 0;
+  left: 0;
+  animation: float 6s ease-in-out infinite alternate;
+}
+.pos-tr {
+  top: 0;
+  right: 0;
+  animation: float 7s ease-in-out infinite alternate;
+  animation-delay: -1s;
+}
+.pos-ml {
+  top: 50%;
+  left: -5%;
+  margin-top: -75px;
+  animation: float 5s ease-in-out infinite alternate;
+}
+.pos-mr {
+  top: 50%;
+  right: -5%;
+  margin-top: -75px;
+  animation: float 8s ease-in-out infinite alternate;
+}
+.pos-bl {
+  bottom: 0;
+  left: 0;
+  animation: float 6s ease-in-out infinite alternate;
+  animation-delay: -2s;
+}
+.pos-br {
+  bottom: 0;
+  right: 0;
+  animation: float 7s ease-in-out infinite alternate;
+  animation-delay: -3s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+@media (max-width: 991px) {
+  .cm-cyber-core-container {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .cm-core-lines,
+  .cm-core-orb {
+    display: none;
+  }
+  .cm-node {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100%;
+    transform: none !important;
+    animation: none !important;
+  }
+}
+
+/* --- Section 3: Cinematic Reveal (Hire Premier) --- */
+.cm-btn-outline-glow {
+  background: transparent;
+  border: 1px solid rgba(0, 242, 254, 0.4);
+  color: #00f2fe;
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.cm-btn-outline-glow:hover {
+  background: rgba(0, 242, 254, 0.1);
+  box-shadow:
+    0 0 20px rgba(0, 242, 254, 0.2) inset,
+    0 0 20px rgba(0, 242, 254, 0.3);
+  color: #fff;
+}
+
+.cm-cinematic-frame {
+  position: relative;
+  border-radius: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.cm-cinematic-img {
+  border-radius: 12px;
+  width: 100%;
+  display: block;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.cm-cinematic-glow {
+  position: absolute;
+  inset: -20px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 242, 254, 0.2),
+    rgba(176, 38, 255, 0.2)
+  );
+  filter: blur(30px);
+  z-index: -1;
+  border-radius: 30px;
+}
+
+.cm-floating-badge {
+  position: absolute;
+  background: rgba(13, 17, 29, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  z-index: 5;
+}
+
+.cm-floating-badge.badge-1 {
+  top: 10%;
+  left: -10%;
+}
+.cm-floating-badge.badge-2 {
+  bottom: 10%;
+  right: -10%;
+}
+
+.badge-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 991px) {
+  .cm-floating-badge {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .cm-cinematic-frame {
+    margin-top: 30px;
+  }
+}
+
+/* --- Section 4: Vertical Holographic Timeline (Qualities) --- */
+.cm-timeline-track {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.cm-timeline-pulse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(180deg, transparent, #00f2fe, transparent);
+  animation: traceLine 6s linear infinite;
+}
+
+@keyframes traceLine {
+  0% {
+    top: -150px;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+.cm-timeline-card {
+  background: rgba(13, 17, 29, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.cm-timeline-card:hover {
+  border-color: rgba(176, 38, 255, 0.4);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+}
+
+.cm-timeline-number-bg {
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  font-size: 8rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  line-height: 1;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.flex-row-reverse .cm-timeline-number-bg {
+  right: auto;
+  left: 10px;
+}
+
+.cm-timeline-waypoint {
+  width: 40px;
+  height: 40px;
+  background: var(--cm-bg-dark);
+  border: 2px solid #00f2fe;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.3);
+}
+
+.waypoint-inner {
+  width: 14px;
+  height: 14px;
+  background: #00f2fe;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #00f2fe;
+}
+
+@media (max-width: 767px) {
+  .cm-timeline-track {
+    left: 20px;
+  }
+  .cm-timeline-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    margin-left: 40px;
+    margin-bottom: 30px !important;
+  }
+  .cm-timeline-row .col-md-5 {
+    text-align: left !important;
+    padding: 0 !important;
+    width: 100%;
+  }
+  .cm-timeline-waypoint {
+    position: absolute;
+    left: -60px;
+    top: 0;
+  }
+  .flex-row-reverse .cm-timeline-number-bg {
+    right: 10px;
+    left: auto;
+  }
+}
+
+/* --- Section 5: Premium Bento Box Dashboard (Spectrum) --- */
+.cm-bento-box {
+  background: var(--cm-bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 35px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bento-glow {
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: var(--bento-color);
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.15;
+  transition: all 0.5s;
+}
+
+.cm-bento-box:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.cm-bento-box:hover .bento-glow {
+  opacity: 0.3;
+  transform: scale(1.5);
+}
+
+.bento-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--bento-color);
+  transition: all 0.3s;
+}
+
+.cm-bento-box:hover .bento-icon {
+  background: var(--bento-color);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bento-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* --- Section 1 Update: High End 3-Column Grid Cards --- */
+.cm-premium-grid-card {
+  position: relative;
+  background: linear-gradient(
+    145deg,
+    rgba(13, 17, 29, 0.9),
+    rgba(6, 9, 15, 0.95)
+  );
+  border-radius: 20px;
+  padding: 40px 30px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  height: 100%;
+}
+
+.cm-premium-grid-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 50% -20%,
+    var(--card-glow),
+    transparent 60%
+  );
+  opacity: 0.1;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+.cm-premium-grid-card:hover {
+  transform: translateY(-15px);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+}
+
+.cm-premium-grid-card:hover::before {
+  opacity: 0.25;
+}
+
+.cm-premium-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  color: var(--card-glow);
+  transition: all 0.3s;
+}
+
+.cm-premium-grid-card:hover .cm-premium-icon-box {
+  background: var(--card-glow);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 10px 20px var(--card-glow);
+}
+
+.cm-card-num {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.15);
+  line-height: 1;
+  z-index: 1;
+  transition: color 0.4s;
+}
+
+.cm-premium-grid-card:hover .cm-card-num {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.cm-premium-title {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 2;
+}
+
+.cm-premium-text {
+  color: #8b9bb4;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  position: relative;
+  z-index: 2;
+}
+
+.cm-premium-border-glow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--card-glow);
+  transition: width 0.4s ease-out;
+}
+
+.cm-premium-grid-card:hover .cm-premium-border-glow {
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .cm-section-title {
+    font-size: 1.7rem;
+    display: inline;
+  }
+  .cm-premium-grid-card {
+    padding: 30px 15px;
+  }
+  .cm-node {
+    position: static;
+    margin-top: 0 !important;
+  }
+  .cm-services-section {
+    padding: 20px 0 !important;
+  }
+
+  .cm-services-section .mb-5 {
+    margin-bottom: 15px !important;
+  }
+
+  .cm-hire-section {
+    padding: 0 !important;
+  }
+  .cm-hire-section h2.cm-section-title {
+    display: inline-block;
+  }
+
+  .cm-hire-section .mb-5 {
+    margin-bottom: 20px !important;
+  }
+
+  .content-mastery-section {
+    padding: 40px 0;
+  }
+
+  .content-mastery-section .top-title h2 {
+    font-size: 32px;
+  }
+  .cm-dark-bg h2 br {
+    display: none;
+  }
+  .mk360-timeline-ribbon-container .row {
+    display: block;
+  }
+  .cm-spectrum-section {
+    padding: 0 !important;
+  }
+  .cm-spectrum-section .mb-5 {
+    margin-bottom: 15px !important;
+  }
+
+  .logo-pricing-section {
+    padding: 30px 0 !important;
+  }
+  .pricing-price {
+    font-size: 2rem !important;
+  }
+  .addon-content h4 {
+    margin-top: 0;
+  }
+  .addon-card-premium {
+    padding: 25px 15px;
+  }
+}

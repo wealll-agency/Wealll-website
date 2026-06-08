@@ -1,0 +1,218 @@
+/* SEO Audit Section - High Impact Dark/Gradient */
+.seo-audit-section {
+  padding: 60px 0;
+  background: radial-gradient(circle at 30% 50%, #1a1a1a 0%, #000000 100%);
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  border-top: 1px solid #222;
+}
+
+/* Animated Background Mesh */
+.seo-audit-section::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(
+    circle,
+    rgba(253, 185, 20, 0.1) 0%,
+    transparent 60%
+  );
+  border-radius: 50%;
+  z-index: 0;
+  animation: pulseGlow 8s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.seo-audit-content {
+  position: relative;
+  z-index: 1;
+  padding-right: 30px;
+}
+
+.seo-audit-tag {
+  display: inline-block;
+  background: linear-gradient(90deg, rgba(253, 185, 20, 0.2), transparent);
+  color: #fdb914;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  border-left: 3px solid #fdb914;
+}
+
+.seo-audit-content h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 25px;
+  line-height: 1.1;
+}
+
+.seo-audit-content h2 span {
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+
+/* Underline effect for 'Leading' */
+.seo-audit-content h2 span::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background: #fdb914;
+  z-index: -1;
+  transform: rotate(-2deg);
+  opacity: 0.8;
+}
+
+.seo-audit-content p {
+  font-size: 1.3rem;
+  color: #ccc;
+  margin-bottom: 45px;
+  max-width: 550px;
+  line-height: 1.6;
+}
+
+/* Visual Card Redesign */
+.audit-visual-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 30px;
+  padding: 40px;
+  position: relative;
+  backdrop-filter: blur(20px);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.audit-visual-card:hover {
+  transform: rotate(0deg) scale(1.05); /* Pop effect */
+  border-color: #fdb914;
+  box-shadow: 0 30px 60px rgba(253, 185, 20, 0.15);
+}
+
+/* Glowing Score Circle */
+.audit-score-circle {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #fdb914; /* Progress bar look */
+  border-right-color: #fdb914;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 30px;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #fff;
+  box-shadow: 0 0 30px rgba(253, 185, 20, 0.1);
+  position: relative;
+}
+
+/* Inner glow ring */
+.audit-score-circle::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  border-radius: 50%;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  animation: spinSlow 20s linear infinite;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.audit-checklist li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: #eee;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.audit-check-icon {
+  width: 24px;
+  height: 24px;
+  background: #fdb914; /* Gold Check */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  box-shadow: 0 5px 15px rgba(253, 185, 20, 0.4);
+}
+
+.audit-check-icon svg {
+  width: 14px;
+  height: 14px;
+  fill: #000;
+  font-weight: bold;
+}
+
+/* CTA Button Pulse */
+.seo-cta-btn {
+  padding: 14px 45px;
+  background: #fdb914;
+  color: #000;
+  font-weight: 800;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 0 rgba(253, 185, 20, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  animation: pulseBtn 2s infinite;
+}
+
+@keyframes pulseBtn {
+  0% {
+    box-shadow: 0 0 0 0 rgba(253, 185, 20, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(253, 185, 20, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(253, 185, 20, 0);
+  }
+}
+
+.seo-cta-btn:hover {
+  transform: translateY(-5px);
+  background: #fff;
+  animation: none;
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.3);
+}

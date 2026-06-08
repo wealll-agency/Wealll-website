@@ -1,0 +1,454 @@
+/* ========================================================
+   MASTERCLASS UI ARCHITECTURES
+   Created for the Ultimate WordPress Redesign
+   ======================================================== */
+
+/* --- 1. THE QUANTUM HEX-CORE MATRIX (WPCompanyStats) --- */
+
+/* --- 1. THE ASYMMETRIC MONOLITHS (WPCompanyStats) --- */
+
+.monolith-section {
+  background-color: #0b0c10;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* Deep Background Gradient */
+.monolith-bg {
+  background: radial-gradient(
+    circle at 80% 20%,
+    rgba(30, 41, 59, 1) 0%,
+    rgba(15, 23, 42, 1) 40%,
+    #0b0c10 100%
+  );
+}
+
+/* Background Glowing WordPress Watermark */
+.wp-watermark {
+  width: 600px;
+  height: 600px;
+  top: 10%;
+  left: -100px;
+  color: rgba(56, 189, 248, 0.4);
+  filter: drop-shadow(0 0 100px rgba(56, 189, 248, 0.2));
+  pointer-events: none;
+}
+
+/* Text Gradient for Headline */
+.text-gradient-wp {
+  background: linear-gradient(135deg, #38bdf8 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Monolith Grid Layout */
+.monolith-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  position: relative;
+}
+
+/* Asymmetric Staggering */
+.monolith-card-wrapper.wrapper-1,
+.monolith-card-wrapper.wrapper-3 {
+  margin-top: 60px; /* Push left column down */
+}
+
+/* The Monolith Cards */
+.monolith-card {
+  background: rgba(15, 23, 42, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02),
+    0 20px 40px -10px rgba(0, 0, 0, 0.8);
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: pointer;
+  min-height: 280px;
+}
+
+/* Neon Top Border Accent */
+.monolith-top-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+}
+
+/* Card Hover State */
+.monolith-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 255, 255, 0.1);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    0 30px 60px -15px rgba(0, 0, 0, 0.9);
+}
+
+.monolith-card:hover .monolith-top-accent {
+  opacity: 1;
+}
+
+/* Icon Box */
+.monolith-icon-box {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.monolith-card:hover .monolith-icon-box {
+  color: var(--icon-color);
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
+
+/* Icon Underglow */
+.icon-glow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  filter: blur(25px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.monolith-card:hover .icon-glow {
+  opacity: 0.4;
+}
+
+/* Abstract Decorative Background Elements */
+.monolith-deco-bg {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.03) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  transition: transform 0.6s ease;
+}
+
+.monolith-card:hover .monolith-deco-bg {
+  transform: scale(1.5);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .monolith-grid {
+    gap: 20px;
+  }
+
+  .monolith-card-wrapper.wrapper-1,
+  .monolith-card-wrapper.wrapper-3 {
+    margin-top: 0; /* Remove stagger on smaller screens */
+  }
+
+  .monolith-card {
+    min-height: auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .wp-watermark {
+    width: 400px;
+    height: 400px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.02 !important; /* Extremely subtle on mobile behind text */
+  }
+}
+
+@media (max-width: 575px) {
+  .monolith-grid {
+    grid-template-columns: 1fr; /* Stack cards vertically on mobile */
+  }
+}
+
+/* --- 2. THE SVG CONSTELLATION MAP (WPWhyLove) --- */
+.constellation-wrapper {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.constellation-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.c-line {
+  stroke-dasharray: 8, 12;
+  animation: march-line 1.5s linear infinite;
+  transition: all 0.5s ease;
+}
+.c-node:hover ~ .constellation-svg .c-line.target-1 {
+  stroke-width: 3px;
+  stroke-dasharray: none;
+}
+
+@keyframes march-line {
+  100% {
+    stroke-dashoffset: -40;
+  }
+}
+
+.c-node {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background: rgba(11, 13, 20, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.c-node.c-center {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  justify-content: center;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.2) inset;
+}
+.c-node.c-center:hover {
+  box-shadow: 0 0 60px rgba(255, 255, 255, 0.4) inset;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.c-node.c-feature:hover {
+  border-color: var(--n-color);
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.8),
+    0 0 30px var(--n-color) inset;
+  padding: 15px 30px;
+  z-index: 10;
+  background: rgba(20, 22, 35, 0.95);
+}
+
+.c-icon {
+  font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  transition: 0.5s ease;
+}
+.c-node.c-feature:hover .c-icon {
+  text-shadow: 0 0 20px var(--n-color);
+  transform: scale(1.1);
+}
+
+.c-content {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  transition:
+    max-width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.4s ease;
+  margin-left: 0;
+}
+.c-node.c-feature:hover .c-content {
+  max-width: 300px;
+  opacity: 1;
+  white-space: normal;
+  margin-left: 20px;
+}
+
+/* --- 3. THE LASER-PATH TIMELINE (WPWhyUs) --- */
+.laser-timeline {
+  position: relative;
+  padding: 50px 0;
+}
+
+.laser-center-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.laser-beam {
+  width: 100%;
+  background: linear-gradient(to bottom, transparent, #a855f7, #3b82f6);
+  box-shadow:
+    0 0 20px #a855f7,
+    0 0 40px #3b82f6;
+  border-radius: 10px;
+}
+
+.laser-card-wrapper {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 60px;
+}
+
+.laser-card {
+  background: linear-gradient(
+    135deg,
+    rgba(20, 22, 35, 0.95),
+    rgba(11, 12, 16, 0.98)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.laser-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.08),
+    transparent
+  );
+  transition: left 0.6s ease;
+  pointer-events: none;
+}
+
+.laser-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: var(--l-color, #fff);
+  background: rgba(30, 41, 59, 0.95);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.8),
+    0 0 30px var(--l-color, #fff) inset;
+}
+
+.laser-card:hover::before {
+  left: 100%;
+}
+
+.laser-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.4s ease;
+}
+
+.laser-card:hover .laser-icon-wrapper {
+  background: var(--l-color);
+  border-color: #fff;
+  box-shadow: 0 0 20px var(--l-color);
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Connecting dots to the center line */
+.laser-target-dot {
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: #0b0c10;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  transition: all 0.5s ease;
+}
+.laser-card-wrapper.left-side .laser-target-dot {
+  right: -40px;
+}
+.laser-card-wrapper.right-side .laser-target-dot {
+  left: -40px;
+}
+
+.laser-card:hover + .laser-target-dot {
+  background: var(--l-color);
+  border-color: #fff;
+  box-shadow: 0 0 20px var(--l-color);
+  transform: translateY(-50%) scale(1.3);
+}
+
+@media (max-width: 992px) {
+  .orbital-wrapper {
+    transform: scale(0.6);
+    height: 400px;
+  }
+  .laser-center-line {
+    display: none;
+  }
+  .laser-target-dot {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .laser-center-line {
+    display: block;
+  }
+  .left-side {
+    padding-right: 0;
+    text-align: left;
+  }
+  .laser-card-wrapper {
+    margin-bottom: 30px;
+  }
+  .laser-timeline {
+    padding: 0 15px;
+  }
+  .right-side {
+    padding-left: 0;
+  }
+  .laser-card {
+    padding: 30px 15px;
+  }
+}

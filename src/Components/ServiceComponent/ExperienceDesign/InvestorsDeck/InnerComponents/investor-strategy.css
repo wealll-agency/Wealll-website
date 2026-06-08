@@ -1,0 +1,419 @@
+.inv-strategy-section {
+  background-color: #0d0d11; /* Deep charcoal / matte black */
+  color: #fff;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.inv-strategy-text {
+  position: relative;
+  z-index: 2;
+}
+
+.cust-gap {
+  height: 40px;
+}
+
+.inv-subtitle {
+  color: #14a0fd; /* Electric blue accent */
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.inv-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.inv-highlight {
+  color: transparent;
+  background: linear-gradient(90deg, #14a0fd, #00f0ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.inv-strategy-section .tri-1,
+.tri-8,
+.tri-10,
+.tri-11,
+.tri-12,
+.tri-13,
+.tri-17,
+.tri-18,
+.tri-19,
+.tri-2,
+.tri-20,
+.tri-3,
+.tri-4,
+.tri-5,
+.tri-6,
+.tri-7,
+.tri-9,
+.tri-top-2,
+.tri-top-3,
+.tri-top-4,
+.tri-top-5,
+.tri-top-6,
+.tri-top-7,
+.tri-13,
+.tri-14,
+.tri-15,
+.tri-16,
+.tri-bottom-2,
+.tri-bottom-3,
+.tri-bottom-4,
+.tri-bottom-5,
+.tri-bottom-6,
+.tri-bottom-7 {
+  background: #000;
+}
+
+.inv-animated-underline {
+  width: 60px;
+  height: 4px;
+  background: #14a0fd;
+  margin-bottom: 30px;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.inv-animated-underline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.8),
+    transparent
+  );
+  animation: slide-glow 2s infinite;
+}
+
+@keyframes slide-glow {
+  100% {
+    left: 100%;
+  }
+}
+
+.inv-desc {
+  font-size: 1.1rem;
+  color: #b3b3b3;
+  line-height: 1.7;
+}
+
+.inv-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.inv-feature-list li {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.inv-dot {
+  width: 8px;
+  height: 8px;
+  background: #14a0fd;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 15px;
+  box-shadow: 0 0 10px rgba(20, 160, 253, 0.6);
+}
+
+.inv-tagline {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  border-left: 4px solid #14a0fd;
+  padding-left: 20px;
+}
+
+/* --- Animated Flow Diagram (Right Column) --- */
+.inv-flow-container {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+.inv-flow-glow-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(20, 160, 253, 0.15) 0%,
+    transparent 70%
+  );
+  filter: blur(40px);
+  z-index: 0;
+  animation: pulse-glow 4s infinite alternate;
+}
+
+@keyframes pulse-glow {
+  0% {
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+  }
+}
+
+.inv-flow-net {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.inv-flow-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.inv-line-path {
+  fill: none;
+  stroke: rgba(20, 160, 253, 0.3);
+  stroke-width: 2;
+  stroke-dasharray: 10;
+  animation: march 20s linear infinite;
+}
+
+@keyframes march {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+.inv-node {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  animation: float-node 6s ease-in-out infinite alternate;
+}
+
+.inv-node-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(13, 13, 17, 0.8);
+  border: 1px solid rgba(20, 160, 253, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #14a0fd;
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.5),
+    inset 0 0 15px rgba(20, 160, 253, 0.2);
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.inv-node:hover .inv-node-icon {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(20, 160, 253, 0.6);
+  border-color: #14a0fd;
+}
+
+.inv-node-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Positioning the nodes */
+.node-1 {
+  top: 15%;
+  left: 10%;
+  animation-delay: 0s;
+}
+.node-2 {
+  top: 40%;
+  left: 30%;
+  animation-delay: 1s;
+}
+.node-3 {
+  top: 65%;
+  left: 50%;
+  animation-delay: 2s;
+}
+.node-4 {
+  top: 30%;
+  left: 70%;
+  animation-delay: 1.5s;
+}
+.node-5 {
+  top: 20%;
+  left: 90%;
+  animation-delay: 0.5s;
+}
+
+@keyframes float-node {
+  0% {
+    transform: translate(-50%, -50%) translateY(-10px);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(10px);
+  }
+}
+
+/* Floating UI Cards for extra tech aesthetic */
+.inv-floating-ui {
+  position: absolute;
+  background: rgba(20, 20, 25, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  animation: float-ui 8s ease-in-out infinite alternate;
+}
+
+.ui-card-1 {
+  bottom: 10%;
+  left: 10%;
+  width: 100px;
+  height: 80px;
+  display: flex;
+  align-items: flex-end;
+  gap: 5px;
+  animation-delay: 2s;
+}
+
+.ui-chart-bar {
+  width: 20px;
+  background: linear-gradient(to top, #14a0fd, transparent);
+  border-radius: 2px 2px 0 0;
+  opacity: 0.7;
+}
+.ui-chart-bar.b1 {
+  height: 40%;
+  animation: bar-grow 3s infinite alternate;
+}
+.ui-chart-bar.b2 {
+  height: 70%;
+  animation: bar-grow 4s infinite alternate;
+}
+.ui-chart-bar.b3 {
+  height: 90%;
+  animation: bar-grow 2s infinite alternate;
+}
+
+.ui-card-2 {
+  top: 10%;
+  right: 20%;
+  width: 120px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  animation-delay: 1s;
+}
+
+.ui-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #00f0ff;
+}
+.ui-line {
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.ui-line.l1 {
+  width: 80%;
+}
+.ui-line.l2 {
+  width: 60%;
+}
+
+@keyframes bar-grow {
+  0% {
+    transform: scaleY(0.8);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(1.1);
+    transform-origin: bottom;
+  }
+}
+
+@keyframes float-ui {
+  0% {
+    transform: translateY(-15px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(15px) rotate(2deg);
+  }
+}
+
+@media (max-width: 991px) {
+  .inv-title {
+    font-size: 2.5rem;
+  }
+  .inv-flow-container {
+    height: 400px;
+    margin-top: 50px;
+  }
+  .node-1 {
+    left: 20%;
+  }
+  .node-5 {
+    left: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .inv-flow-container {
+    display: none;
+  } /* Hide complex diagram on mobile or simplify */
+  .inv-title {
+    font-size: 2.2rem;
+  }
+  .inv-strategy-text {
+    margin-bottom: 0 !important;
+  }
+}

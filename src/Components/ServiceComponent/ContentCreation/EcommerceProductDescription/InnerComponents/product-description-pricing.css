@@ -1,0 +1,304 @@
+.product-pricing-section {
+  padding: 80px 0;
+  background-color: #000; /* Matching Article Styling likely dark theme */
+  color: #fff;
+  position: relative;
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.pricing-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.product-pricing-section h2 {
+  color: #fff !important;
+}
+
+.pricing-header p {
+  color: #aaa;
+  font-size: 1.1rem;
+}
+
+/* Card Styles */
+.product-pricing-card {
+  background: #fff; /* White card */
+  color: #000; /* Black text */
+  border-radius: 15px;
+  padding: 40px 30px;
+  position: relative;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-pricing-card.featured {
+  background: #000;
+  color: #fff;
+  border: 2px solid #fdb914;
+  transform: scale(1.05); /* Slight pop for featured */
+  z-index: 2;
+  box-shadow: 0 10px 40px rgba(253, 185, 20, 0.2);
+}
+
+.product-pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-20px);
+  border-color: #eb4038 !important;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(235, 64, 56, 0.4) !important;
+  background: rgba(10, 10, 10, 1);
+}
+
+.product-pricing-card.featured:hover h3,
+.product-pricing-card.featured:hover .check-icon {
+  color: #eb4038 !important;
+}
+
+/* Shine Effect for Featured Card */
+.product-pricing-card.featured::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(235, 64, 56, 0.2),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.product-pricing-card.featured:hover::after {
+  left: 150%;
+  transition: 0.8s ease-in-out;
+}
+
+.product-pricing-card.featured .pricing-price {
+  color: #fff;
+}
+
+.product-pricing-card.featured h3 {
+  color: #fff;
+}
+
+.pricing-title-area {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.popular-tag {
+  position: absolute;
+  top: -55px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fdb914;
+  color: #000;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.product-pricing-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.product-pricing-card h4 {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.product-pricing-card.featured h4 {
+  color: #aaa;
+}
+
+.pricing-price {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.pricing-currency {
+  font-size: 1.5rem;
+  vertical-align: top;
+  margin-right: 2px;
+}
+
+/* Features List */
+.pricing-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  flex-grow: 1; /* Push button down */
+}
+
+.pricing-features-list li {
+  padding: 10px 0;
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #333;
+}
+
+.product-pricing-card.featured .pricing-features-list li {
+  color: #ddd;
+}
+
+.check-icon {
+  color: #fdb914;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+}
+
+/* Button */
+.pricing-btn {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.pricing-btn.outline {
+  background: #000;
+  color: #fff;
+  border: 2px solid #000;
+}
+
+.pricing-btn.outline:hover {
+  background: #333;
+  border-color: #333;
+}
+
+.pricing-btn.filled {
+  background: #fdb914;
+  color: #000;
+  border: 2px solid #fdb914;
+}
+
+.pricing-btn.filled:hover {
+  background: #e5a500;
+  border-color: #e5a500;
+}
+
+/* Addons Area */
+.product-addons-area {
+  margin-top: 80px;
+  background: #111;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.addons-header {
+  /* text-align: center; */
+  margin-bottom: 40px;
+}
+
+.addons-header h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.addons-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.addon-card-premium {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  transition: transform 0.3s;
+  border: 1px solid #333;
+}
+
+.addon-card-premium:hover {
+  transform: translateY(-5px);
+  border-color: #fdb914;
+}
+
+.addon-icon-box {
+  background: rgba(253, 185, 20, 0.1);
+  color: #fdb914;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+}
+
+.addon-icon-box svg {
+  width: 24px;
+  height: 24px;
+}
+
+.addon-content h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.addon-content p {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .pricing-header h2 {
+    font-size: 2rem;
+  }
+  .product-pricing-section {
+    padding: 40px 0;
+  }
+  .product-pricing-card {
+    margin: 20px 0;
+    padding: 30px 20px;
+  }
+  .product-pricing-card.featured {
+    transform: scale(1);
+  }
+  .product-pricing-section .mb-5 {
+    margin-bottom: 20px !important;
+  }
+  .product-addons-area {
+    margin-top: 30px;
+    padding: 30px 15px;
+  }
+}

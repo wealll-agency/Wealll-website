@@ -1,0 +1,758 @@
+/* paid-dark.css - Premium Dark Theme for Paid Collaboration */
+
+/* Core Variables for Paid Theme (Cyan/Indigo/Crimson) */
+:root {
+  --paid-cyan: #00f2fe;
+  --paid-indigo: #4facfe;
+  --paid-dark: #080910;
+  --paid-danger: #ff4b4b;
+  --paid-danger-glow: rgba(255, 75, 75, 0.4);
+}
+
+/* =========================================
+   1. PAID INTRO SECTION (Cinematic Aura)
+   ========================================= */
+.paid-intro-section {
+  background-color: var(--paid-dark);
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 160px 0 100px 0;
+}
+
+.paid-intro-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vw;
+  max-width: 1000px;
+  max-height: 1000px;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 242, 254, 0.15) 0%,
+    rgba(79, 172, 254, 0.05) 40%,
+    transparent 70%
+  );
+  z-index: 0;
+  pointer-events: none;
+  animation: pulseAura 8s ease-in-out infinite alternate;
+}
+
+@keyframes pulseAura {
+  0% {
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+}
+
+.paid-intro-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.paid-intro-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(0, 242, 254, 0.1);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  border-radius: 30px;
+  color: var(--paid-cyan);
+  font-weight: 700;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.paid-intro-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 30px;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.paid-intro-title .highlight-gradient {
+  background: linear-gradient(90deg, var(--paid-cyan), var(--paid-indigo));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.paid-intro-desc {
+  font-size: 1.3rem;
+  color: #a0a0b0;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+  .paid-intro-title {
+    font-size: 3rem;
+  }
+  .paid-intro-desc {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .paid-intro-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* =========================================
+   2. PAID PROBLEM SECTION (Hazard Grid)
+   ========================================= */
+.paid-problem-section {
+  background-color: #050508;
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background grid mapping */
+.paid-problem-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(rgba(255, 75, 75, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 75, 75, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+
+.problem-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.text-danger-glow {
+  color: var(--paid-danger);
+  text-shadow: 0 0 20px var(--paid-danger-glow);
+}
+
+.hazard-block {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 10, 10, 0.8) 0%,
+    rgba(10, 5, 5, 0.9) 100%
+  );
+  border: 1px solid rgba(255, 75, 75, 0.3);
+  border-left: 5px solid var(--paid-danger);
+  border-radius: 15px;
+  padding: 40px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.hazard-glow {
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 150px;
+  height: 150px;
+  background: var(--paid-danger);
+  filter: blur(60px);
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.hazard-block h4 {
+  color: #ff8a8a;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hazard-block h3 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.shattered-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  position: relative;
+  z-index: 2;
+}
+
+.shattered-card {
+  background: rgba(15, 15, 20, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 35px 30px;
+  position: relative;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+/* Jagged clip-path effect on hover */
+.shattered-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 75, 75, 0.5);
+  background: rgba(20, 10, 10, 0.8);
+  box-shadow: 0 15px 30px rgba(255, 75, 75, 0.1);
+}
+
+.shattered-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 4px;
+  background: var(--paid-danger);
+  transition: width 0.4s ease;
+}
+
+.shattered-card:hover::before {
+  width: 100%;
+}
+
+.shattered-num {
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  line-height: 1;
+  pointer-events: none;
+  transition: color 0.4s ease;
+}
+
+.shattered-card:hover .shattered-num {
+  color: rgba(255, 75, 75, 0.15);
+}
+
+.shattered-text {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .problem-title {
+    font-size: 2.5rem;
+    margin-top: 50px;
+  }
+  .shattered-grid {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+}
+
+/* =========================================
+   3. PAID PROCESS (Stacked Parallax Rolodex)
+   ========================================= */
+.paid-process-section {
+  background-color: var(--paid-dark);
+  position: relative;
+}
+
+.parallax-stack-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.parallax-card-wrapper {
+  width: 100%;
+}
+
+.parallax-glass-card {
+  background: linear-gradient(
+    145deg,
+    rgba(20, 25, 35, 0.95) 0%,
+    rgba(10, 10, 15, 1) 100%
+  );
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  padding: 60px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  transition: transform 0.4s ease;
+}
+
+.neo-badge-container {
+  display: inline-block;
+  padding: 8px 1px;
+}
+
+.neo-glow-badge {
+  padding: 8px 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #fff;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+.neo-bento-card {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.8),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: #0b0c10;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+.neo-left-panel {
+  padding: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.neo-panel-bg-glow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  opacity: 0.15;
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.neo-left-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.neo-number-cluster {
+  display: flex;
+  align-items: center;
+}
+
+.neo-number {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 0.8;
+  letter-spacing: -2px;
+}
+
+.neo-title-sidebar {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.neo-heading {
+  font-size: 2.8rem;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.neo-desc {
+  font-size: 1.15rem;
+  color: #a0a0b0;
+  line-height: 1.6;
+}
+
+.neo-insight-block {
+  margin-top: 40px;
+  padding-top: 30px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.insight-icon-pill {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.insight-text-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.insight-label {
+  color: #808090;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.insight-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.neo-right-panel {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.neo-list-header {
+  color: #606070;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
+
+.neo-list-grid {
+  margin-bottom: 40px;
+}
+
+.neo-list-item {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.neo-list-item:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-3px);
+}
+
+.neo-list-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.neo-takeaway-box {
+  padding: 24px 30px;
+  border-radius: 12px;
+  border-left: 4px solid;
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 600;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .parallax-card-wrapper {
+    position: relative !important;
+    top: 0 !important;
+    margin-bottom: 30px !important;
+  }
+  .neo-left-panel,
+  .neo-right-panel {
+    padding: 40px 30px;
+  }
+  .neo-heading {
+    font-size: 2.2rem;
+  }
+}
+
+/* =========================================
+   4. PAID BENEFITS (Horizontal Accordion)
+   ========================================= */
+.paid-benefits-section {
+  background-color: #050508;
+  padding: 80px 0;
+  position: relative;
+}
+
+.benefits-accordion-container {
+  display: flex;
+  height: 500px;
+  width: 100%;
+  gap: 15px;
+}
+
+.benefit-slice {
+  position: relative;
+  flex: 1;
+  background: rgba(20, 25, 35, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  cursor: pointer;
+}
+
+.slice-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(8, 9, 16, 0.95) 0%,
+    rgba(8, 9, 16, 0.5) 50%,
+    rgba(8, 9, 16, 0.6) 100%
+  );
+  z-index: 1;
+  transition:
+    opacity 0.5s ease,
+    background 0.5s ease;
+}
+
+.benefit-slice:hover {
+  flex: 3;
+  border-color: rgba(0, 242, 254, 0.5);
+  box-shadow: 0 0 50px rgba(0, 242, 254, 0.2);
+}
+
+.benefit-slice:hover .slice-overlay {
+  opacity: 0.9;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 242, 254, 0.3) 0%,
+    rgba(8, 9, 16, 0.85) 100%
+  );
+}
+
+.slice-icon {
+  font-size: 2.5rem;
+  margin-bottom: auto;
+  opacity: 0.7;
+  transition: opacity 0.5s;
+}
+
+.benefit-slice:hover .slice-icon {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.slice-content {
+  position: relative;
+  z-index: 2;
+}
+
+.slice-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+  transition: all 0.4s;
+}
+
+.benefit-slice:hover .slice-title {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.slice-desc {
+  font-size: 1.1rem;
+  color: #fff;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+  line-height: 1.5;
+}
+
+.benefit-slice:hover .slice-desc {
+  opacity: 1;
+  max-height: 150px;
+}
+
+@media (max-width: 991px) {
+  .benefits-accordion-container {
+    flex-direction: column;
+    height: 800px;
+  }
+}
+
+/* =========================================
+   5. PAID PRICING & ADDONS
+   ========================================= */
+.paid-pricing-section {
+  background-color: var(--paid-dark);
+}
+
+.paid-pricing-section .pricing-header h2 span {
+  background: linear-gradient(90deg, var(--paid-cyan), var(--paid-indigo));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.paid-pricing-section .logo-pricing-card.featured {
+  border-color: var(--paid-cyan);
+}
+
+.paid-pricing-section .logo-pricing-card .pricing-header {
+  margin-bottom: 30px;
+}
+
+.paid-pricing-section .popular-tag {
+  background: linear-gradient(90deg, var(--paid-cyan), var(--paid-indigo));
+  top: -25px;
+  color: #fff;
+}
+
+.paid-pricing-section .check-icon {
+  color: var(--paid-cyan);
+}
+
+.paid-pricing-section .pricing-btn.filled {
+  background: linear-gradient(90deg, var(--paid-cyan), var(--paid-indigo));
+  border: none;
+  color: #fff;
+}
+
+.paid-pricing-section .pricing-btn.outline {
+  border-color: var(--paid-cyan);
+  color: var(--paid-cyan);
+}
+
+.paid-pricing-section .addon-card-premium:hover {
+  border-color: var(--paid-cyan);
+}
+
+.paid-pricing-section .addon-icon-box {
+  background: rgba(0, 242, 254, 0.1);
+  color: var(--paid-cyan);
+}
+
+@media (max-width: 767px) {
+  .paid-intro-section {
+    padding: 50px 0;
+  }
+  .paid-intro-badge {
+    padding: 8px 12px;
+  }
+  .paid-intro-title {
+    font-size: 1.8rem;
+  }
+  .paid-problem-section {
+    padding: 50px 0;
+  }
+  .paid-problem-section .problem-title {
+    margin-top: 0;
+    font-size: 1.8rem;
+  }
+  .hazard-block {
+    padding: 30px 15px;
+  }
+  .shattered-grid {
+    margin-top: 0;
+  }
+  .shattered-card {
+    padding: 18px 15px;
+  }
+  .shattered-text {
+    font-size: 1.1rem;
+  }
+  .shattered-num {
+    font-size: 2rem;
+  }
+  .paid-process-section h2 {
+    font-size: 32px !important;
+  }
+  .paid-process-section .row {
+    margin-bottom: 0 !important;
+  }
+  .neo-left-panel,
+  .neo-right-panel {
+    padding: 30px 15px;
+  }
+  .neo-heading {
+    font-size: 1.7rem;
+  }
+  .neo-insight-block {
+    margin-top: 10px;
+  }
+  .neo-takeaway-box {
+    margin-top: 30px;
+  }
+  .neo-takeaway-box {
+    padding: 20px 15px;
+  }
+  .parallax-stack-container {
+    padding-bottom: 0 !important;
+  }
+  .paid-benefits-section h2 {
+    font-size: 1.8rem !important;
+  }
+  .benefit-slice {
+    padding: 15px;
+  }
+  .paid-pricing-section .row {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  .paid-pricing-section .row.mt-5.pt-5 {
+    margin-top: 0 !important;
+  }
+}

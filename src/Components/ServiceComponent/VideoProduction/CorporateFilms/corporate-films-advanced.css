@@ -1,0 +1,523 @@
+/* ... (Keep existing CSS up to Section 4) ... */
+
+/* --- Advanced 5. Production Specifics (Rotor Showcase) --- */
+.production-rotor-container {
+  margin-top: 50px;
+  position: relative;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.production-list-modern {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: relative;
+}
+
+.prod-list-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 25px;
+  background: transparent;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 3px solid transparent;
+  opacity: 0.6;
+}
+
+.prod-list-item:hover,
+.prod-list-item.active {
+  background: rgba(253, 185, 20, 0.1);
+  border-left-color: #fdb914;
+  opacity: 1;
+  transform: translateX(10px);
+}
+
+.prod-list-icon {
+  font-size: 2rem;
+  filter: grayscale(100%);
+  transition: all 0.4s ease;
+}
+
+.prod-list-item.active .prod-list-icon,
+.prod-list-item:hover .prod-list-icon {
+  filter: grayscale(0%);
+  transform: scale(1.2);
+  text-shadow: 0 0 15px rgba(253, 185, 20, 0.5);
+}
+
+.prod-list-text h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.production-showcase-modern {
+  position: relative;
+  height: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.prod-showcase-panel {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.05) translateZ(0);
+  transition:
+    opacity 0.8s ease,
+    visibility 0.8s ease,
+    transform 6s linear;
+}
+
+.prod-showcase-panel.active {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1) translateZ(0); /* Slowly zooms out while active */
+}
+
+.prod-panel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  padding: 50px;
+}
+
+.panel-blur-box {
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 4px solid #fdb914;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 600px;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: 0.3s;
+}
+
+.prod-showcase-panel.active .panel-blur-box {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.panel-blur-box h2 {
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.panel-blur-box p {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.panel-line {
+  height: 2px;
+  background: linear-gradient(90deg, #fdb914, transparent);
+  width: 0;
+  margin-top: 20px;
+  transition: width 1s ease 0.6s;
+}
+
+.prod-showcase-panel.active .panel-line {
+  width: 100%;
+}
+
+/* --- Advanced 6. Distribution Specifics (Hologram Orbit) --- */
+.distribution-hologram-container {
+  height: 700px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+  margin-top: 50px;
+  overflow: hidden;
+}
+
+.hologram-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -100px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(
+    circle at center,
+    rgba(253, 185, 20, 0.2) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transform-style: preserve-3d;
+  animation: corePulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes corePulse {
+  0% {
+    transform: translateY(0) scale(1);
+    filter: drop-shadow(0 0 20px rgba(253, 185, 20, 0.4));
+  }
+  100% {
+    transform: translateY(-15px) scale(1.05);
+    filter: drop-shadow(0 0 50px rgba(253, 185, 20, 0.8));
+  }
+}
+
+.core-glow {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(135deg, #fdb914 0%, #d4980a 100%);
+  border-radius: 50%;
+  box-shadow:
+    inset -10px -10px 20px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(253, 185, 20, 0.6);
+  z-index: 1;
+}
+
+.core-text {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  text-align: center;
+}
+
+.core-text h4 {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Connective Beams */
+.beam {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(253, 185, 20, 0.8) 0%,
+    transparent 100%
+  );
+  transform-origin: left center;
+  z-index: 0;
+  opacity: 0.3;
+  animation: beamScan 3s linear infinite;
+}
+
+@keyframes beamScan {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 10px #fdb914;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+
+.beam-1 {
+  width: 300px;
+  transform: rotate(0deg);
+  animation-delay: 0s;
+}
+.beam-2 {
+  width: 280px;
+  transform: rotate(60deg);
+  animation-delay: 0.5s;
+}
+.beam-3 {
+  width: 320px;
+  transform: rotate(120deg);
+  animation-delay: 1s;
+}
+.beam-4 {
+  width: 290px;
+  transform: rotate(180deg);
+  animation-delay: 1.5s;
+}
+.beam-5 {
+  width: 310px;
+  transform: rotate(240deg);
+  animation-delay: 2s;
+}
+.beam-6 {
+  width: 270px;
+  transform: rotate(300deg);
+  animation-delay: 2.5s;
+}
+
+/* Orbital Nodes */
+.hologram-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -300px;
+  margin-left: -300px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.5);
+  animation: orbitRotate 40s linear infinite;
+  z-index: 5;
+}
+
+@keyframes orbitRotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.orbit-node {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #111;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  /* Counter-rotate to keep nodes upright */
+  animation: counterRotate 40s linear infinite;
+}
+
+@keyframes counterRotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+/* Positioning nodes around the circle */
+.orbit-node-1 {
+  top: -30px;
+  left: calc(50% - 30px);
+}
+.orbit-node-2 {
+  top: 105px;
+  right: 10px;
+}
+.orbit-node-3 {
+  bottom: 105px;
+  right: 10px;
+}
+.orbit-node-4 {
+  bottom: -30px;
+  left: calc(50% - 30px);
+}
+.orbit-node-5 {
+  bottom: 105px;
+  left: 10px;
+}
+.orbit-node-6 {
+  top: 105px;
+  left: 10px;
+}
+
+.node-icon-wrapper i {
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.orbit-node:hover {
+  background: #000;
+  transform: scale(
+    1.3
+  ) !important; /* Overrides the counter-rotate momentarily */
+  border-color: #fdb914;
+  box-shadow: 0 0 20px rgba(253, 185, 20, 0.4);
+  z-index: 20;
+}
+
+.orbit-node:hover .node-icon-wrapper i {
+  text-shadow: 0 0 10px currentColor;
+}
+
+/* Hover Information Cards linking to Nodes */
+.node-hover-card {
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  width: 250px;
+  background: rgba(15, 15, 15, 0.95);
+  border: 1px solid rgba(253, 185, 20, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  pointer-events: none;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+}
+
+.node-hover-card::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 10px 10px 0;
+  border-style: solid;
+  border-color: rgba(253, 185, 20, 0.3) transparent transparent transparent;
+}
+
+.orbit-node:hover .node-hover-card {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.node-hover-card h5 {
+  color: #fdb914;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.node-hover-card p {
+  color: #aaa;
+  font-size: 0.85rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Responsive Overrides for new designs */
+@media (max-width: 991px) {
+  .production-showcase-modern {
+    height: 400px;
+    margin-top: 30px;
+  }
+  .production-list-modern {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .hologram-orbit {
+    width: 300px;
+    height: 300px;
+    margin: 0;
+    margin-top: -150px;
+    margin-left: -150px;
+    inset: auto;
+  }
+  .orbit-node-1 {
+    top: -30px;
+    left: calc(50% - 30px);
+  }
+  .orbit-node-2 {
+    top: 40px;
+    right: -20px;
+  }
+  .orbit-node-3 {
+    bottom: 40px;
+    right: -20px;
+  }
+  .orbit-node-4 {
+    bottom: -30px;
+    left: calc(50% - 30px);
+  }
+  .orbit-node-5 {
+    bottom: 40px;
+    left: -20px;
+  }
+  .orbit-node-6 {
+    top: 40px;
+    left: -20px;
+  }
+  .beam {
+    display: none;
+  } /* Hide beams on mobile for cleaner look */
+  .node-hover-card {
+    width: 200px;
+  }
+}
+@media (max-width: 768px) {
+  .production-list-modern {
+    grid-template-columns: 1fr;
+  }
+  .prod-panel-overlay {
+    padding: 20px;
+  }
+  .panel-blur-box {
+    padding: 20px;
+  }
+  .panel-blur-box h2 {
+    font-size: 1.5rem;
+  }
+  .production-rotor-container {
+    padding: 30px 0;
+  }
+  .prod-list-item:hover,
+  .prod-list-item.active {
+    transform: translateX(0px);
+  }
+  .prod-list-item {
+    padding: 15px 5px;
+    gap: 8px;
+  }
+  .distribution-hologram-container {
+    height: 450px;
+    margin-top: 0;
+    overflow: visible;
+    margin-bottom: -110px;
+  }
+  .hologram-orbit {
+    width: 270px;
+    height: 270px;
+    margin-left: 10px;
+  }
+  .core-text h4 {
+    font-size: 0.8rem;
+  }
+  .hologram-core {
+    margin-top: -170px;
+    margin-left: -90px;
+  }
+}

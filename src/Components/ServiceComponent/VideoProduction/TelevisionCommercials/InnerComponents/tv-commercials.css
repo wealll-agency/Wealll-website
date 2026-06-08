@@ -1,0 +1,301 @@
+/* tv-commercials.css - VideoProduction Standard Advanced Layout */
+
+.tvc-page-wrapper {
+  background-color: #030305;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.tvc-section {
+  padding: 100px 0;
+  position: relative;
+  z-index: 20;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+.tvc-section-v2 {
+  margin-top: 60px;
+}
+
+.tvc-bg-dark {
+  background-color: #050508;
+}
+
+.tvc-bg-darker {
+  background-color: #020203;
+}
+
+/* Animations */
+.tvc-reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.tvc-animate-visible .tvc-reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Typography */
+.tvc-subtitle {
+  color: #fdb914;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.tvc-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.tvc-text-hl {
+  background: linear-gradient(90deg, #fdb914, #ff8c00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.tvc-desc {
+  font-size: 1.15rem;
+  color: #b0b0b0;
+  line-height: 1.6;
+}
+
+/* Lists and Boxes */
+.tvc-box {
+  background: rgba(20, 20, 25, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.tvc-box-title {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.tvc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tvc-list li {
+  font-size: 1.05rem;
+  color: #ddd;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.tvc-list li i {
+  color: #fdb914;
+  font-size: 1.1rem;
+  margin-right: 15px;
+  min-width: 20px;
+  text-align: center;
+}
+
+.tvc-list-2col {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tvc-list-2col li {
+  width: 50%;
+}
+
+.tvc-footer-text {
+  font-size: 1rem;
+  color: #aaa;
+  border-left: 3px solid #fdb914;
+  padding-left: 15px;
+}
+
+/* 3D Parallax Wrappers */
+.tvc-3d-wrapper {
+  position: relative;
+  perspective: 1000px;
+  padding: 20px;
+}
+
+.tvc-parallax-element {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  z-index: 2;
+}
+
+.tvc-main-img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+}
+
+.border-gold {
+  border: 1px solid rgba(253, 185, 20, 0.3);
+}
+
+/* Floating Chips & Stats */
+.tvc-float-chip {
+  position: absolute;
+  background: rgba(10, 10, 15, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateZ(50px);
+  animation: floatUpDown 4s ease-in-out infinite alternate;
+}
+
+.tvc-float-chip i {
+  color: #fdb914;
+  font-size: 1.2rem;
+}
+
+.chip-top-left {
+  top: -20px;
+  left: -20px;
+}
+.chip-top-right {
+  top: -20px;
+  right: -20px;
+  animation-delay: 1s;
+}
+.chip-bottom-left {
+  bottom: -20px;
+  left: -20px;
+  animation-delay: 2s;
+}
+.chip-bottom-right {
+  bottom: -20px;
+  right: -20px;
+}
+
+@keyframes floatUpDown {
+  from {
+    transform: translateZ(50px) translateY(0px);
+  }
+  to {
+    transform: translateZ(50px) translateY(-15px);
+  }
+}
+
+.tvc-glass-stat {
+  position: absolute;
+  background: rgba(253, 185, 20, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(253, 185, 20, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  bottom: -30px;
+  right: -20px;
+  text-align: center;
+  transform: translateZ(60px);
+}
+
+.tvc-stat-huge {
+  bottom: 20px;
+  left: -30px;
+  right: auto;
+  background: rgba(10, 10, 15, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tvc-progress-float {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  right: 40px;
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 20px;
+  transform: translateZ(40px);
+}
+
+.tvc-glow-backdrop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(
+    circle,
+    rgba(253, 185, 20, 0.15) 0%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  filter: blur(40px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .tvc-title {
+    font-size: 2.2rem;
+  }
+  .tvc-desc {
+    font-size: 1rem;
+  }
+  .tvc-3d-wrapper {
+    padding: 0;
+    margin-top: 40px;
+  }
+  .tvc-list-2col li {
+    width: 100%;
+  }
+  .tvc-float-chip {
+    display: none;
+  } /* Hide on mobile to prevent overflow */
+  .tvc-glass-stat {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-top: -30px;
+  }
+  .tvc-progress-float {
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .tvc-section {
+    padding: 50px 0;
+  }
+  .tvc-title {
+    font-size: 1.8rem;
+  }
+  .tvc-box {
+    padding: 30px 15px;
+  }
+  .tvc-box-title {
+    line-height: 27px;
+  }
+  .tvc-reveal {
+    margin-bottom: 30px !important;
+  }
+  .tvc-glass-stat {
+    width: 90%;
+    margin: -80px auto 0;
+  }
+}

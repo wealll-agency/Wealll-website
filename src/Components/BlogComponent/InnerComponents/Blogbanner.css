@@ -1,0 +1,122 @@
+.blog-banner {
+  width: 100%;
+  margin: 120px 0 0;
+  padding: 40px 20px;
+  position: relative;
+}
+
+.blog-banner-swiper {
+  width: 100%;
+  height: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.blog-banner-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.slide-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content to bottom */
+  align-items: flex-start; /* Align content to left */
+  padding: 60px;
+}
+
+.center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.slide-date {
+  font-size: 16px;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.slide-title {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  max-width: 800px;
+  text-align: left;
+}
+
+.swiper-nav-buttons {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  z-index: 10;
+  display: flex;
+  gap: 15px;
+}
+
+.blog-banner .nav-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #ffd700;
+  background: transparent;
+  color: #ffd700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #ffd700;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .blog-banner-swiper {
+    height: 350px;
+  }
+
+  .center-text {
+    font-size: 40px;
+  }
+
+  .slide-title {
+    font-size: 28px;
+  }
+
+  .slide-content {
+    padding: 30px;
+  }
+}

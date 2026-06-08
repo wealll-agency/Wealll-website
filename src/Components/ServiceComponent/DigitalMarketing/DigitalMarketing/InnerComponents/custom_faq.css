@@ -1,0 +1,65 @@
+/* Digital Marketing FAQ CSS */
+.dm-faq-section {
+  padding: 40px 0 60px;
+  background-color: #fffaf3; /* Matching the light cream/yellow tint if visible, or white. Let's stick to white or very light as reference looked clean. Reference has yellow header, but FAQ section bg looks white/light. */
+}
+
+.faq-main-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.faq-item {
+  border-bottom: 1px solid #e5e5e5;
+  padding: 24px 0;
+}
+
+.faq-item:first-child {
+  border-top: 0;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.faq-question h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: #000;
+}
+
+.faq-icon {
+  font-size: 28px;
+  font-weight: 400;
+  color: #000;
+  min-width: 24px;
+  text-align: center;
+  line-height: 1;
+}
+
+.faq-answer {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding-right: 20px;
+}
+
+.faq-answer p {
+  margin-top: 15px;
+  margin-bottom: 0;
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 767px) {
+  .faq-main-title {
+    font-size: 27px;
+    margin-bottom: 10px;
+  }
+}

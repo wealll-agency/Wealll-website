@@ -1,0 +1,277 @@
+.inv-port-section {
+  background-color: #030305;
+  color: #fff;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+  font-family: inherit;
+}
+
+.inv-port-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1200px;
+  height: 800px;
+  background: radial-gradient(
+    ellipse,
+    rgba(20, 160, 253, 0.05) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* -------------------------------------
+   THE CINEMATIC EXPANDING ACCORDION
+-------------------------------------- */
+.inv-accordion-showcase {
+  display: flex;
+  width: 100%;
+  height: 650px;
+  gap: 15px; /* Slight gap between strips */
+  margin-top: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.inv-acc-panel {
+  position: relative;
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  /* Extremely smooth curve for "expensive" feeling expansion */
+  transition:
+    flex 0.8s cubic-bezier(0.25, 1, 0.3, 1),
+    box-shadow 0.8s ease,
+    border 0.8s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: #111;
+}
+
+/* Base Idle State */
+.inv-acc-panel.acc-idle {
+  flex: 1;
+  box-shadow: none;
+}
+
+/* Active State (expanded) */
+.inv-acc-panel.acc-active {
+  flex: 6; /* 6x the size of the idle columns */
+  border-color: rgba(20, 160, 253, 0.4);
+  box-shadow: 0 0 50px rgba(20, 160, 253, 0.15);
+}
+
+/* Image Wrapping and Scaling */
+.inv-img-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.inv-acc-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensure image covers the expanded width even when idle, 
+     preventing squishing */
+  object-position: center;
+  transition:
+    transform 0.8s cubic-bezier(0.25, 1, 0.3, 1),
+    filter 0.8s ease;
+  filter: grayscale(80%) brightness(0.6);
+  transform: scale(1.1);
+}
+
+.inv-acc-panel.acc-active .inv-acc-bg {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1);
+}
+
+/* Gradient Overlay */
+.inv-acc-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
+  z-index: 2;
+  transition: background 0.8s ease;
+}
+
+.inv-acc-panel.acc-idle .inv-acc-overlay {
+  background: rgba(0, 0, 0, 0.8); /* extra dimming */
+}
+
+.inv-acc-panel.acc-active .inv-acc-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+
+/* The Huge Background Number */
+.inv-acc-num {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.3);
+  z-index: 3;
+  line-height: 1;
+  transition:
+    color 0.8s ease,
+    transform 0.8s ease;
+}
+
+.inv-acc-panel.acc-active .inv-acc-num {
+  color: rgba(20, 160, 253, 0.7);
+  transform: scale(1.2) translate(-10px, 10px);
+}
+
+/* Vertical Title (Hidden when active) */
+.inv-acc-vertical-title {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 3;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.inv-acc-panel.acc-active .inv-acc-vertical-title {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.inv-acc-vertical-title span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Full Content Panel (Revealed when active) */
+.inv-acc-full-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px;
+  z-index: 4;
+  opacity: 0;
+  transform: translateY(30px);
+  /* Delayed transition so content enters after expansion finishes */
+  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s;
+  pointer-events: none;
+}
+
+.inv-acc-panel.acc-active .inv-acc-full-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Glassmorphism Text Container */
+.inv-acc-glass-box {
+  background: rgba(10, 15, 25, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 450px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.inv-acc-stage {
+  color: #14a0fd;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  display: inline-block;
+  background: rgba(20, 160, 253, 0.1);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.inv-acc-name {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 10px 0;
+  line-height: 1.2;
+}
+
+.inv-acc-tagline {
+  color: #ccc;
+  font-size: 1.05rem;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.inv-acc-btn {
+  background: #14a0fd;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.inv-acc-btn:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .inv-accordion-showcase {
+    flex-direction: column; /* Stack vertically on mobile */
+    height: 1000px;
+  }
+  .inv-acc-vertical-title {
+    bottom: 50%;
+    left: 40px;
+    transform: translateY(50%);
+  }
+  .inv-acc-vertical-title span {
+    writing-mode: horizontal-tb;
+    transform: none;
+  }
+  .inv-acc-full-content {
+    padding: 20px;
+  }
+  .inv-acc-glass-box {
+    padding: 20px;
+    max-width: 100%;
+  }
+  .inv-acc-name {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,409 @@
+/* ================================================================
+   Instagram Collaboration — Premium Pink/Purple Dark Theme
+   Matching the Influencer Marketing design system
+   ================================================================ */
+
+/* Base */
+.instagram-dark-bg {
+  background-color: #050505;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* Gradient Text — Instagram Brand */
+.instagram-gradient-text {
+  background: linear-gradient(
+    135deg,
+    #f09433,
+    #e6683c,
+    #dc2743,
+    #cc2366,
+    #bc1888
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 8px;
+}
+
+/* Label */
+.ig-label {
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #f09433;
+  display: block;
+  margin-bottom: 14px;
+}
+
+/* Light Leaks */
+.ig-glow-right {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(220, 39, 67, 0.1) 0%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  top: -10%;
+  right: -10%;
+  pointer-events: none;
+  z-index: 0;
+}
+.ig-glow-left {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(188, 24, 136, 0.08) 0%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  bottom: -10%;
+  left: -10%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* CTA Button */
+.ig-cta-btn {
+  display: inline-block;
+  padding: 15px 35px;
+  background: linear-gradient(135deg, #f09433, #dc2743, #bc1888);
+  color: #fff !important;
+  font-weight: 800;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+.ig-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px rgba(220, 39, 67, 0.4);
+}
+
+/* ================================================================
+   WHY WORKS — Split Visual
+   ================================================================ */
+.ig-why-section {
+  padding: 120px 0;
+  position: relative;
+}
+
+.ig-why-section h2 {
+  font-size: 48px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  padding: 0;
+  margin: 0 0 25px;
+}
+
+.ig-why-image {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 30px;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 40px 80px rgba(220, 39, 67, 0.25));
+}
+
+.ig-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(220, 39, 67, 0.08);
+  border: 1px solid rgba(220, 39, 67, 0.2);
+  padding: 8px 20px;
+  border-radius: 50px;
+  margin-bottom: 30px;
+}
+.ig-badge span {
+  color: #f09433;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.ig-punchline {
+  padding: 20px 30px;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 4px solid #dc2743;
+  border-radius: 0 12px 12px 0;
+  font-size: 1.1rem;
+  color: #c0c0d0;
+  font-style: italic;
+  margin-top: 30px;
+}
+
+.ig-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+.ig-check-dot {
+  width: 8px;
+  height: 8px;
+  background: #dc2743;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 8px;
+  box-shadow: 0 0 10px #dc2743;
+}
+
+/* ================================================================
+   STRATEGY — Premium Sticky Stacker
+   ================================================================ */
+.ig-strategy-section {
+  padding: 80px 0 150px 0;
+  background: linear-gradient(180deg, #050505, #0a0508);
+  position: relative;
+}
+
+.ig-strategy-stack-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px; /* Reduced gap to allow them to overlap cleanly */
+  position: relative;
+  z-index: 2;
+}
+
+.ig-strategy-stack-card {
+  position: sticky;
+  top: 15vh;
+  background: rgba(15, 10, 15, 0.6);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid rgba(220, 39, 67, 0.5);
+  border-radius: 40px;
+  padding: 60px;
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.5),
+    0 0 40px rgba(188, 24, 136, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  transform-origin: top center;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+}
+
+.ig-strategy-stack-card::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(220, 39, 67, 0.15) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ig-strategy-stack-card:hover {
+  transform: scale(1.02);
+  border-top-color: #f09433;
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(220, 39, 67, 0.2);
+}
+
+.ig-stack-num {
+  font-size: 8rem;
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.2)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  flex-shrink: 0;
+}
+
+.ig-stack-content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.ig-stack-tag {
+  display: inline-block;
+  padding: 6px 18px;
+  background: rgba(220, 39, 67, 0.1);
+  border: 1px solid rgba(220, 39, 67, 0.3);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #f09433;
+  margin-bottom: 20px;
+}
+
+.ig-stack-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.ig-stack-desc {
+  font-size: 1.15rem;
+  color: #a0a0b0;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ================================================================
+   BENEFITS — Accordion
+   ================================================================ */
+.ig-benefits-section {
+  padding: 120px 0;
+  position: relative;
+  background: #050505;
+}
+
+.ig-benefit-accordion {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+.ig-benefit-accordion.active {
+  border-color: rgba(220, 39, 67, 0.2);
+  background: rgba(220, 39, 67, 0.02);
+}
+.ig-benefit-header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 28px 40px;
+  cursor: pointer;
+}
+.ig-benefit-num {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #dc2743;
+  font-family: monospace;
+  min-width: 40px;
+}
+.ig-benefit-title {
+  flex: 1;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  margin: 0;
+}
+.ig-benefit-toggle {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a0a0b0;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+.ig-benefit-accordion.active .ig-benefit-toggle {
+  background: rgba(220, 39, 67, 0.1);
+  border-color: #dc2743;
+  color: #dc2743;
+}
+.ig-benefit-body {
+  padding: 0 40px 30px 105px;
+  color: #9090a0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* ================================================================
+   INSTAGRAM PRICING — Override for brand color
+   ================================================================ */
+.ig-pricing-section {
+  background-color: #0d0f1b;
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 992px) {
+  .ig-strategy-step {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .ig-step-number {
+    font-size: 3rem;
+    min-width: auto;
+  }
+  .ig-benefit-body {
+    padding: 0 20px 20px 20px;
+  }
+  .ig-benefit-header {
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .ig-strategy-section {
+    padding: 50px 0;
+  }
+  .ig-why-section h2 {
+    font-size: 30px;
+  }
+  .ig-strategy-section h2 {
+    font-size: 30px !important;
+  }
+  .ig-glow-left {
+    width: 100%;
+    height: auto;
+  }
+  .ig-stack-tag {
+    margin-bottom: 20px;
+  }
+  .ig-strategy-stack-container {
+    gap: 30px;
+  }
+  .ig-benefits-section {
+    padding: 50px 0;
+  }
+  .ig-benefits-section h2 {
+    font-size: 30px !important;
+  }
+  .ig-strategy-stack-card {
+    position: static;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px 15px;
+    gap: 30px;
+  }
+  .ig-stack-num {
+    font-size: 4rem;
+  }
+  .ig-stack-title {
+    font-size: 1.8rem;
+  }
+}

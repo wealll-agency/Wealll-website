@@ -1,0 +1,294 @@
+/* portfolio-packages.css */
+.portfolio-packages-section {
+  padding: 50px 0;
+  background: #000;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+}
+
+.packages-header {
+  margin-bottom: 60px;
+}
+
+.packages-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.packages-header p {
+  font-size: 1.1rem;
+  color: #aaa;
+  max-width: 600px;
+  margin: 10px auto 0;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* CARD STYLES */
+.package-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: 0.3s;
+}
+
+.package-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.package-card.featured {
+  background: #000;
+  border: 2px solid #403aff;
+  transform: scale(1.05);
+  z-index: 2;
+  box-shadow: 0 10px 40px rgba(64, 58, 255, 0.2);
+}
+
+.package-card.featured:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.popular-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #403aff;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  box-shadow: 0 5px 15px rgba(64, 58, 255, 0.4);
+}
+
+.pkg-header h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.pkg-subtitle {
+  font-size: 0.9rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pkg-price {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 30px 0;
+  color: #fff;
+}
+
+.pkg-price .currency {
+  font-size: 1.5rem;
+  vertical-align: top;
+  margin-right: 5px;
+  color: #aaa;
+}
+
+.pkg-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  flex: 1;
+}
+
+.pkg-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #ccc;
+  font-size: 1rem;
+}
+
+.check-icon {
+  color: #00ffcc;
+  display: flex;
+  align-items: center;
+}
+
+.pkg-btn {
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1rem;
+  text-transform: uppercase;
+  width: 100%;
+  border: none;
+}
+
+.pkg-btn.primary {
+  background: #403aff;
+  color: #fff;
+}
+
+.pkg-btn.primary:hover {
+  background: #332fd6;
+}
+
+.pkg-btn.outline {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.pkg-btn.outline:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* REPLICATED LOGO PAGE STYLES FOR ADDONS & INCLUSIONS */
+.logo-addons-area {
+  background: #111;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.addons-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* 4 Columns for Tablet (1024px) */
+@media (min-width: 900px) and (max-width: 1024px) {
+  .addons-grid-modern {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 10px;
+    gap: 15px;
+  }
+  .addon-card-premium {
+    padding: 15px;
+  }
+  .addon-icon-box {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+  }
+  .addon-content h4 {
+    font-size: 0.9rem;
+  }
+  .addon-content p {
+    font-size: 0.75rem;
+  }
+}
+.addons-header h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.addons-grid-modern {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.addon-card-premium {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  transition: transform 0.3s;
+  border: 1px solid #333;
+}
+
+.addon-card-premium:hover {
+  transform: translateY(-5px);
+  border-color: #403aff; /* Changed to Blue for this page */
+}
+
+.addon-icon-box {
+  background: rgba(64, 58, 255, 0.1); /* Changed to Blue */
+  color: #403aff;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  font-size: 1.5rem;
+}
+
+.addon-content h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.addon-content p {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0;
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .packages-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+  }
+}
+
+/* 4 Columns for Tablet (1024px) */
+@media (min-width: 900px) and (max-width: 1024px) {
+  .addons-grid-modern {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 10px;
+    gap: 15px;
+  }
+  .addon-card-premium {
+    padding: 15px;
+  }
+  .addon-icon-box {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+  }
+  .addon-content h4 {
+    font-size: 0.9rem;
+  }
+  .addon-content p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .packages-header h2 {
+    font-size: 2.2rem;
+  }
+  .pkg-header h3 {
+    margin-top: 0;
+  }
+  .package-card {
+    margin-bottom: 0;
+  }
+  .package-card.featured {
+    transform: scale(1);
+  }
+  .package-card:last-child {
+    margin-bottom: 0;
+  }
+}

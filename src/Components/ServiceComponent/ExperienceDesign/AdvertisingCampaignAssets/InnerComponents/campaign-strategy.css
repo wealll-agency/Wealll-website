@@ -1,0 +1,395 @@
+.campaign-strategy-section {
+  position: relative;
+  background-color: #050505;
+  padding: 120px 0;
+  color: #fff;
+  overflow: hidden;
+}
+
+.strategy-circuit-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgba(253, 185, 20, 0.05) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.strategy-header {
+  margin-bottom: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+.target-icon {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.target-pulse {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #fdb914;
+  border-radius: 50%;
+  animation: targetPing 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.target-center {
+  width: 20px;
+  height: 20px;
+  background: #fdb914;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #fdb914;
+}
+
+.strategy-title {
+  font-size: 3rem;
+  font-family: "Syne", sans-serif;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.strategy-desc {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.strategy-nodes-wrapper {
+  position: relative;
+  height: 700px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.strategy-connector {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.path-line {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 2;
+  stroke-dasharray: 10 10;
+  animation: flowLine 20s linear infinite;
+}
+
+.path-glow {
+  fill: none;
+  stroke: #fdb914;
+  stroke-width: 4;
+  filter: blur(8px);
+  opacity: 0.3;
+}
+
+.stunning-core-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.core-image-wrapper {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow:
+    0 0 50px rgba(253, 185, 20, 0.4),
+    inset 0 0 20px rgba(253, 185, 20, 0.6);
+  z-index: 10;
+  animation: floatOrb 6s ease-in-out infinite alternate;
+  background: #000;
+}
+
+.strategy-orb-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.1); /* Slight zoom to hide edges */
+  animation: subtleZoom 10s ease-in-out infinite alternate;
+}
+
+/* Energy Rings */
+.energy-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  pointer-events: none;
+}
+
+.ring-1 {
+  width: 200px;
+  height: 200px;
+  border-top: 2px solid rgba(253, 185, 20, 0.8);
+  border-bottom: 2px solid rgba(253, 185, 20, 0.2);
+  animation: rotateRing 8s linear infinite;
+  box-shadow: 0 0 15px rgba(253, 185, 20, 0.2);
+}
+
+.ring-2 {
+  width: 230px;
+  height: 230px;
+  border-left: 2px solid rgba(253, 185, 20, 0.5);
+  border-right: 2px solid rgba(253, 185, 20, 0.1);
+  animation: rotateRingReverse 12s linear infinite;
+}
+
+.ring-3 {
+  width: 270px;
+  height: 270px;
+  border: 1px dashed rgba(253, 185, 20, 0.3);
+  animation: rotateRing 20s linear infinite;
+  opacity: 0.5;
+}
+
+.strategy-nodes-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.strategy-node {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.node-content {
+  background: rgba(15, 15, 15, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 10px 20px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.strategy-node:hover .node-content {
+  background: rgba(253, 185, 20, 0.1);
+  border-color: rgba(253, 185, 20, 0.5);
+  transform: scale(1.05);
+}
+
+.node-number {
+  color: #fdb914;
+  font-weight: 700;
+  margin-right: 12px;
+  font-family: "Syne", sans-serif;
+}
+
+.node-text {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+}
+
+.node-connection-dot {
+  width: 12px;
+  height: 12px;
+  background: #555;
+  border-radius: 50%;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.strategy-node:hover .node-connection-dot {
+  background: #fdb914;
+  box-shadow: 0 0 10px #fdb914;
+}
+
+/* Positioning the 10 nodes logically around the curved path */
+.pos-1 {
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.pos-2 {
+  top: 15%;
+  right: 15%;
+  transform: translate(50%, -50%);
+  flex-direction: row-reverse;
+}
+.pos-3 {
+  top: 35%;
+  right: 5%;
+  transform: translate(50%, -50%);
+  flex-direction: row-reverse;
+}
+.pos-4 {
+  top: 55%;
+  right: 5%;
+  transform: translate(50%, -50%);
+  flex-direction: row-reverse;
+}
+.pos-5 {
+  top: 75%;
+  right: 15%;
+  transform: translate(50%, -50%);
+  flex-direction: row-reverse;
+}
+.pos-6 {
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.pos-7 {
+  top: 75%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+.pos-8 {
+  top: 55%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+.pos-9 {
+  top: 35%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+.pos-10 {
+  top: 15%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes targetPing {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes flowLine {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+@keyframes corePulse {
+  0% {
+    filter: drop-shadow(0 0 5px #fdb914);
+  }
+  100% {
+    filter: drop-shadow(0 0 15px #fdb914);
+  }
+}
+
+@keyframes floatOrb {
+  0% {
+    transform: translateY(0px) scale(1);
+    box-shadow:
+      0 0 30px rgba(253, 185, 20, 0.3),
+      inset 0 0 10px rgba(253, 185, 20, 0.3);
+  }
+  100% {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow:
+      0 0 60px rgba(253, 185, 20, 0.6),
+      inset 0 0 30px rgba(253, 185, 20, 0.8);
+  }
+}
+
+@keyframes subtleZoom {
+  0% {
+    transform: scale(1.05) rotate(0deg);
+  }
+  100% {
+    transform: scale(1.15) rotate(5deg);
+  }
+}
+
+@keyframes rotateRing {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateRingReverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 991px) {
+  .strategy-nodes-wrapper {
+    height: auto;
+  }
+  .strategy-connector,
+  .stunning-core-container {
+    display: none;
+  }
+  .strategy-nodes-grid {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+  .strategy-node {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    flex-direction: row !important;
+    width: 100%;
+    justify-content: center;
+  }
+  .node-connection-dot {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .campaign-strategy-section {
+    padding: 50px 0;
+  }
+  .strategy-title {
+    font-size: 2.2rem;
+  }
+}

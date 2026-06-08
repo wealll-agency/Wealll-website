@@ -1,0 +1,381 @@
+/* Script Pricing Section - Premium Redesign */
+.script-pricing-section {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.script-pricing-header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 70px;
+}
+
+.script-pricing-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  letter-spacing: -1px;
+}
+
+.script-pricing-header p {
+  color: #666;
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* --- Pricing Cards --- */
+.script-pricing-card {
+  background: #fff;
+  border-radius: 24px;
+  padding: 40px 30px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  border: 1px solid #e1e1e1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.script-pricing-card.featured {
+  background: #111;
+  color: #fff;
+  border-color: #fdb914;
+  transform: scale(1.05);
+  z-index: 2;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.script-pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.script-pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-20px);
+  border-color: #eb4038 !important;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(235, 64, 56, 0.4) !important;
+  background: rgba(10, 10, 10, 1);
+}
+
+.script-pricing-card.featured:hover h3,
+.script-pricing-card.featured:hover .check-icon,
+.script-pricing-card.featured:hover .pricing-check {
+  color: #eb4038 !important;
+}
+
+/* Shine Effect for Featured Card */
+.script-pricing-card.featured::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(235, 64, 56, 0.2),
+    transparent
+  );
+  transform: skewX(-20deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.script-pricing-card.featured:hover::after {
+  left: 150%;
+  transition: 0.8s ease-in-out;
+}
+
+/* Header & Price */
+.pricing-header {
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 25px;
+}
+
+.script-pricing-card.featured .pricing-header {
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+.pricing-header h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.script-pricing-card.featured .pricing-header h3 {
+  color: #ccc;
+}
+
+.pricing-price {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1;
+}
+
+.script-pricing-card.featured .pricing-price {
+  color: #fff;
+}
+
+.pricing-currency {
+  font-size: 1.5rem;
+  vertical-align: super;
+  margin-right: 5px;
+}
+
+.popular-badge {
+  background: #fdb914;
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* Features List */
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+  flex-grow: 1;
+}
+
+.pricing-features li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.script-pricing-card.featured .pricing-features li {
+  color: #ccc;
+}
+
+.pricing-check {
+  margin-right: 12px;
+  color: #fdb914;
+  display: flex;
+  align-items: center;
+}
+
+.pricing-check svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 3;
+}
+
+/* CTA Button */
+.pricing-cta {
+  width: 100%;
+  padding: 18px;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.pricing-cta.primary {
+  background: #1a1a1a;
+  color: #fff;
+}
+
+.pricing-cta.primary:hover {
+  background: #000;
+  transform: translateY(-2px);
+}
+
+.pricing-cta.gold {
+  background: #fdb914;
+  color: #000;
+}
+
+.pricing-cta.gold:hover {
+  background: #ffcc00;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(253, 185, 20, 0.3);
+}
+
+/* --- Add-ons Section (Redesigned) --- */
+.pricing-addons-section {
+  margin-top: 80px;
+  position: relative;
+}
+
+.addons-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.addons-title h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+}
+
+/* Add-ons Grid - Dark Glassmorphism / Neon Accent */
+.addons-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.addon-card-premium {
+  background: #111;
+  border-radius: 16px;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #333;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.addon-card-premium:hover {
+  transform: translateY(-10px);
+  border-color: #fdb914;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Neon glow effect on hover */
+.addon-card-premium::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #fdb914, #ff6b00);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.addon-card-premium:hover::before {
+  opacity: 1;
+}
+
+.addon-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: #fdb914;
+  transition: all 0.3s ease;
+}
+
+.addon-card-premium:hover .addon-icon {
+  background: #fdb914;
+  color: #000;
+  transform: rotate(10deg);
+}
+
+.addon-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.addon-card-premium h4 {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.addon-card-premium p {
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Background element for addons area */
+.pricing-addons-wrapper {
+  background: #000; /* Dark background only for addons if we want full contrast, or stick to cards on light */
+  /* Let's keep it clean: cards themselves are dark, placed on the section bg. 
+     To make them pop, we can add a dark container or just let them stand out.
+     The user asked for "very attractive and premium".
+     Let's wrap the addons in a dark container.
+  */
+  background: #0a0a0a;
+  padding: 60px;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-addons-wrapper::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(253, 185, 20, 0.05) 0%,
+    transparent 60%
+  );
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pricing-addons-wrapper .addons-title h3 {
+  color: #fff;
+}
+
+@media (max-width: 1400px) {
+  .pricing-addons-wrapper {
+    padding: 40px 30px;
+  }
+  .addons-grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+  }
+  .script-pricing-card {
+    overflow: visible;
+  }
+  .popular-badge {
+    width: 180px;
+    top: -60px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .addons-grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 10px;
+  }
+  .script-pricing-card {
+    padding: 40px 15px;
+  }
+  .pricing-cta {
+    padding: 10px 15px;
+  }
+}

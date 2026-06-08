@@ -1,0 +1,38 @@
+
+> wealll-react@0.0.0 build
+> vite build
+
+[36mvite v7.2.4 [32mbuilding client environment for production...[36m[39m
+<script src="assets/js/swiper-bundle.min.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="assets/js/pix-js.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="assets/js/TweenMax.min.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="assets/js/appear.min.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="assets/js/odometer.min.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="assets/js/gsap.min.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="assets/js/ScrollTrigger.min.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="assets/js/main.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="assets/js/custom.js"> in "/index.html" can't be bundled without type="module" attribute
+
+assets/css/menu-main.css doesn't exist at build time, it will remain unchanged to be resolved at runtime
+
+assets/css/menu-new.css doesn't exist at build time, it will remain unchanged to be resolved at runtime
+
+assets/css/swiper-bundle.min.css doesn't exist at build time, it will remain unchanged to be resolved at runtime
+
+assets/css/animate.min.css doesn't exist at build time, it will remain unchanged to be resolved at runtime
+
+assets/css/odometer.min.css doesn't exist at build time, it will remain unchanged to be resolved at runtime
+
+assets/css/style.css doesn't exist at build time, it will remain unchanged to be resolved at runtime
+
+assets/css/responsive.css doesn't exist at build time, it will remain unchanged to be resolved at runtime
+transforming...
+[32m✓[39m 123 modules transformed.
+[31m✗[39m Build failed in 723ms
+[31merror during build:
+[31mCould not resolve "../../../MetaTag/MetaTag" from "src/Components/ServiceComponent/Development/MobileAppDevelopment/MobileAppDevelopment.jsx"[31m
+file: [36mD:/Kaustav/Projects/wealll_company_website/WeAlll_React/src/Components/ServiceComponent/Development/MobileAppDevelopment/MobileAppDevelopment.jsx[31m
+    at getRollupError (file:///D:/Kaustav/Projects/wealll_company_website/WeAlll_React/node_modules/rollup/dist/es/shared/parseAst.js:401:41)
+    at error (file:///D:/Kaustav/Projects/wealll_company_website/WeAlll_React/node_modules/rollup/dist/es/shared/parseAst.js:397:42)
+    at ModuleLoader.handleInvalidResolvedId (file:///D:/Kaustav/Projects/wealll_company_website/WeAlll_React/node_modules/rollup/dist/es/shared/node-entry.js:21590:24)
+    at file:///D:/Kaustav/Projects/wealll_company_website/WeAlll_React/node_modules/rollup/dist/es/shared/node-entry.js:21550:26[39m

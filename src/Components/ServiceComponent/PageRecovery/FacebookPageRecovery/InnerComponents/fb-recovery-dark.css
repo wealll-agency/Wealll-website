@@ -1,0 +1,974 @@
+/* ================================================================
+   FACEBOOK PAGE RECOVERY — Master Premium Stylesheet
+   Theme: Cybersecurity Rescue (Dark Mode, Danger Red > Safe Blue)
+   ================================================================ */
+:root {
+  /* Standard Meta-Blue Branding */
+  --fb-electric: #1877f2; /* The core Facebook Blue */
+  --fb-safe: #00d2ff; /* Electric Cyan for safety/trust */
+  --fb-dark-bg: #050508; /* Deepest Space Black */
+  --fb-card-bg: rgba(24, 119, 242, 0.05);
+
+  /* Purging Red & Yellow - Redirecting to Blue Shades */
+  --fb-danger: #1877f2; /* No longer red */
+  --fb-danger-glow: rgba(24, 119, 242, 0.4);
+  --fb-warning: #00d2ff; /* No longer yellow */
+  --fb-warning-glow: rgba(0, 210, 255, 0.4);
+  --fb-border: rgba(255, 255, 255, 0.1);
+}
+
+/* ================================================================
+   REFACTORED UTILITY CLASSES (Replacing Inline Styles)
+   ================================================================ */
+
+/* Section Layouts */
+.fb-section-py-50 {
+  padding: 50px 0;
+}
+.fb-section-py-80 {
+  padding: 80px 0;
+}
+.fb-section-py-100 {
+  padding: 100px 0;
+}
+.fb-section-pb-100 {
+  padding-bottom: 100px;
+}
+.fb-section-pb-150 {
+  padding-bottom: 150px;
+}
+
+.fb-relative {
+  position: relative;
+}
+.fb-overflow-hidden {
+  overflow: hidden;
+}
+.fb-z-2 {
+  z-index: 2;
+}
+
+/* Typography */
+.fb-hero-title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 900;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.fb-section-title-lg {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.fb-section-title-md {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.fb-subtext {
+  font-size: 1.2rem;
+  color: #a0a0b0;
+  line-height: 1.6;
+}
+
+.fb-desc-text {
+  color: #a0a0b0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.fb-list-item {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.02);
+  margin-bottom: 15px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px;
+}
+
+/* Specialized Containers */
+.fb-solve-card {
+  background: linear-gradient(
+    135deg,
+    rgba(24, 119, 242, 0.1),
+    rgba(24, 119, 242, 0.05)
+  );
+  padding: 60px;
+  border-radius: 30px;
+  border: 1px solid rgba(24, 119, 242, 0.2);
+}
+
+.fb-timeline-value {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
+  margin: 0;
+}
+
+.fb-timeline-unit {
+  font-size: 1.2rem;
+  color: #aaa;
+  font-weight: 500;
+}
+
+/* Labels & Badges */
+.fb-label-accent {
+  color: #1877f2 !important;
+  border-color: rgba(24, 119, 242, 0.3) !important;
+}
+
+/* Pricing Overrides */
+.fb-pricing-section {
+  --lar-accent: var(--fb-safe) !important;
+  background-color: var(--fb-dark-bg, #050508) !important;
+}
+
+.fb-accent-text {
+  color: var(--lar-accent) !important;
+}
+
+.fb-popular-tag {
+  color: #fff !important;
+}
+
+.fb-price-plus {
+  font-size: 1.2rem !important;
+  margin-left: 5px !important;
+}
+
+.fb-pricing-btn-filled {
+  color: #fff !important;
+}
+
+.fb-pricing-btn-outline {
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Addons Section */
+.fb-addon-section {
+  --lar-accent: var(--fb-safe) !important;
+  background-color: var(--fb-dark-bg, #050508) !important;
+  padding-bottom: 100px !important;
+}
+
+.fb-addon-icon-box {
+  color: var(--lar-accent) !important;
+  background: rgba(24, 119, 242, 0.1) !important;
+  font-size: 1.5rem !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Global Overrides for this page to purge red/yellow from shared components */
+.fb-recovery-page .digital_marketing_intro .default-btn,
+.fb-recovery-page .digital_marketing_intro .btn-primary {
+  /* background: linear-gradient(
+    135deg,
+    var(--fb-electric),
+    var(--fb-safe)
+  ) !important; */
+  border: none !important;
+  color: #fff !important;
+  box-shadow: 0 4px 15px rgba(24, 119, 242, 0.3) !important;
+}
+
+.fb-recovery-page .creative-bg {
+  /* background-image: none !important;
+  background: linear-gradient(120deg, var(--fb-electric), var(--fb-safe)) !important; */
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block;
+  position: relative;
+  font-weight: 800;
+}
+
+.fa-phone,
+.fa-whatsapp,
+.fa-phone-volume {
+  color: var(--fb-safe) !important;
+}
+
+.fb-dark-bg {
+  background-color: var(--fb-dark-bg);
+  color: #fff;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+.what_we_solve h3 {
+  line-height: 48px;
+}
+
+.fb-gradient-text-danger {
+  background: linear-gradient(45deg, #fff, var(--fb-electric)) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.fb-gradient-text-safe {
+  background: linear-gradient(135deg, var(--fb-electric), var(--fb-safe));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.fb-section-label {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--fb-border);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a0a0b0;
+  margin-bottom: 25px;
+}
+
+/* ================================================================
+   1. HERO / PROBLEM RIBBON FRAMEWORK (Inspired by 360 Growth)
+   ================================================================ */
+.fb-ribbon-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 450px;
+  margin-top: 100px;
+}
+
+.fb-ribbon-track {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--fb-electric),
+    var(--fb-safe),
+    var(--fb-electric),
+    transparent
+  ) !important;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.fb-ribbon-track::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 0;
+  height: 4px;
+  width: 200px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--fb-danger),
+    transparent
+  );
+  animation: fbRibbonPulse 4s linear infinite;
+  border-radius: 10px;
+}
+
+@keyframes fbRibbonPulse {
+  0% {
+    left: -200px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+.fb-ribbon-col {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.fb-ribbon-node {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid var(--fb-dark-bg);
+  z-index: 5;
+  background: var(--fb-danger);
+  box-shadow: 0 0 20px var(--fb-danger-glow);
+}
+
+.fb-node-number {
+  color: var(--fb-safe) !important;
+  font-weight: 900;
+  font-size: 1rem;
+}
+
+.fb-ribbon-card {
+  background: rgba(15, 15, 20, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(24, 119, 242, 0.1);
+  border-radius: 20px;
+  padding: 25px 20px;
+  width: 95%;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: absolute;
+  left: 2.5%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.fb-ribbon-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  border-color: var(--fb-safe);
+  box-shadow: 0 20px 50px var(--fb-safe-glow);
+  background: rgba(20, 20, 25, 0.95);
+}
+
+.fb-card-top {
+  bottom: 90px;
+  border-top: 4px solid var(--fb-danger);
+}
+
+.fb-card-bottom {
+  top: 90px;
+  border-bottom: 4px solid var(--fb-danger);
+}
+
+.fb-ribbon-title {
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 5px;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.fb-ribbon-subtitle {
+  color: #a0a0b0;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.fb-ribbon-stem {
+  background: var(--fb-safe) !important;
+  box-shadow: 0 0 15px var(--fb-safe-glow) !important;
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  z-index: 3;
+}
+
+.fb-stem-top {
+  bottom: 50%;
+  height: 90px;
+}
+
+.fb-stem-bottom {
+  top: 50%;
+  height: 90px;
+}
+
+@media (max-width: 991px) {
+  .fb-ribbon-container {
+    min-height: auto;
+    flex-direction: column;
+    padding-left: 20px;
+  }
+  .fb-ribbon-track {
+    left: 45px;
+    right: auto;
+    width: 4px;
+    height: 100%;
+    top: 0;
+    transform: none;
+    bottom: 0;
+  }
+  .fb-ribbon-track::after {
+    top: -200px;
+    left: -1px;
+    width: 6px;
+    height: 200px;
+    background: linear-gradient(
+      180deg,
+      transparent,
+      var(--fb-safe),
+      transparent
+    );
+    animation: fbRibbonPulseVertical 4s linear infinite;
+  }
+  .fb-ribbon-col {
+    display: block;
+    width: 100%;
+    min-height: 160px;
+    margin-bottom: 40px;
+  }
+  .fb-ribbon-node {
+    top: 40px;
+    left: 45px;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+  .fb-ribbon-card {
+    position: relative;
+    left: 90px;
+    top: 0;
+    bottom: 0;
+    width: calc(100% - 110px);
+    border: 1px solid rgba(234, 67, 53, 0.1);
+    border-left: 4px solid var(--fb-safe) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+  }
+  .fb-ribbon-stem {
+    display: none;
+  }
+}
+
+@keyframes fbRibbonPulseVertical {
+  0% {
+    top: -200px;
+    opacity: 0;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+/* ================================================================
+   2. PROCESS — Neural Network Orbit
+   ================================================================ */
+.fb-neural-wrapper {
+  position: relative;
+  padding: 40px 0;
+  min-height: 600px;
+}
+
+.fb-neural-col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.fb-neural-node {
+  background: rgba(10, 10, 15, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 25px 30px;
+  position: relative;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.fb-neural-node:hover {
+  border-color: rgba(24, 119, 242, 0.5);
+  background: rgba(24, 119, 242, 0.05);
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(24, 119, 242, 0.1);
+}
+
+.fb-n-num {
+  font-size: 0.9rem;
+  color: var(--fb-safe);
+  font-weight: 800;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.fb-n-title {
+  font-size: 1.25rem;
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.fb-n-desc {
+  font-size: 0.95rem;
+  color: #a0a0b0;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.fb-neural-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  height: 100%;
+}
+
+.fb-core-pulsar {
+  width: 140px;
+  height: 140px;
+  background: #000;
+  border: 2px solid var(--fb-safe);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 50px var(--fb-safe-glow),
+    inset 0 0 20px var(--fb-safe-glow);
+  position: relative;
+  z-index: 5;
+  animation: fbPulseSlow 4s infinite alternate;
+}
+
+@keyframes fbPulseSlow {
+  0% {
+    box-shadow:
+      0 0 30px var(--fb-safe-glow),
+      inset 0 0 10px var(--fb-safe-glow);
+  }
+  100% {
+    box-shadow:
+      0 0 70px rgba(24, 119, 242, 0.4),
+      inset 0 0 30px rgba(24, 119, 242, 0.3);
+  }
+}
+
+.fb-core-icon {
+  font-size: 3rem;
+  filter: drop-shadow(0 0 10px var(--fb-safe));
+}
+
+.fb-neural-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.fb-neural-line {
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 2;
+  stroke-dasharray: 8 8;
+  fill: none;
+  animation: fbDashAnim 30s linear infinite;
+}
+
+@keyframes fbDashAnim {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+/* ================================================================
+   3. TIMELINE & AUDIENCE — High-End Bento Grid
+   ================================================================ */
+.fb-bento-timeline {
+  background: radial-gradient(
+    circle at top right,
+    rgba(24, 119, 242, 0.1),
+    rgba(10, 10, 15, 0.95)
+  );
+  border: 1px solid rgba(24, 119, 242, 0.2);
+  border-radius: 30px;
+  padding: 50px 40px;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.fb-bento-target {
+  background: rgba(15, 15, 20, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 35px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  height: 100%;
+}
+
+.fb-bento-target:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.fb-bento-icon-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* ================================================================
+   4. PRICING & ADDONS — Reference Style
+   ================================================================ */
+.fb-pricing-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 60px;
+}
+
+.fb-pricing-card {
+  flex: 1;
+  min-width: 320px;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 50px 40px;
+  text-align: center;
+  position: relative;
+  transition: all 0.4s ease;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  min-height: 550px;
+}
+
+.fb-pricing-card.featured {
+  background: #000;
+  color: #fff;
+  border: 2px solid var(--fb-warn);
+  transform: scale(1.05);
+  z-index: 2;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.fb-pricing-badge {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--fb-warn);
+  color: #000;
+  padding: 6px 25px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.fb-pricing-amount {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.fb-pricing-amount span {
+  font-size: 1.8rem;
+  margin-top: 8px;
+  margin-right: 5px;
+}
+.fb-pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  text-align: left;
+  flex: 1;
+}
+.fb-pricing-features li {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  line-height: 1.4;
+}
+.fb-pricing-features li::before {
+  content: "✓";
+  color: var(--fb-warn);
+  font-weight: 900;
+}
+.fb-pricing-btn {
+  display: block;
+  width: 100%;
+  padding: 18px;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+}
+.fb-pricing-card:not(.featured) .fb-pricing-btn {
+  background: #000;
+  color: #fff;
+}
+.fb-pricing-card.featured .fb-pricing-btn {
+  background: var(--fb-warn);
+  color: #000;
+}
+.fb-pricing-btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+/* ================================================================
+   5. CTA BANNER
+   ================================================================ */
+.fb-cta-wrapper {
+  background: linear-gradient(45deg, #09090b, #111);
+  border: 1px solid rgba(234, 67, 53, 0.2);
+  border-radius: 40px;
+  padding: 80px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.5),
+    inset 0 0 100px rgba(24, 119, 242, 0.05);
+}
+
+.fb-cta-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(24, 119, 242, 0.1) 0%,
+    transparent 50%
+  );
+  animation: fbPulse 6s infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes fbPulse {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.fb-cta-btn {
+  display: inline-block;
+  padding: 20px 50px;
+  background: var(--fb-safe);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  border-radius: 50px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px var(--fb-safe-glow);
+}
+.fb-cta-btn:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(24, 119, 242, 0.4);
+  color: #fff;
+}
+/* ================================================================
+   6. SECURITY MATRIX — Why Us Section
+   ================================================================ */
+.fb-matrix-node {
+  background: rgba(10, 10, 15, 0.8);
+  border: 1px solid rgba(24, 119, 242, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  position: relative;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  height: 100%;
+}
+
+.fb-matrix-node:hover {
+  transform: translateY(-5px);
+  border-color: var(--fb-safe);
+  box-shadow: 0 10px 30px var(--fb-safe-glow);
+  background: rgba(24, 119, 242, 0.05);
+}
+
+.fb-matrix-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(24, 119, 242, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--fb-electric);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.fb-matrix-node:hover .fb-matrix-icon {
+  background: var(--fb-safe);
+  color: #fff;
+  box-shadow: 0 0 15px var(--fb-safe-glow);
+}
+
+.fb-shield-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(24, 119, 242, 0.2) 0%,
+    transparent 70%
+  );
+  filter: blur(40px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.fb-security-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(24, 119, 242, 0.1);
+  color: var(--fb-safe);
+  padding: 5px 15px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  border: 1px solid rgba(24, 119, 242, 0.2);
+}
+
+@media (max-width:768px){
+ .fb-section-py-100{
+  padding: 50px 0 0;
+ }
+ .fb-hero-title{
+  font-size: 32px;
+ }
+  .fb-hero-title br{
+    display: none;
+  }
+  .fb-ribbon-container .row {
+    flex-direction: column;
+  }
+  .fb-ribbon-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .fb-ribbon-container{
+    padding-left: 0;
+    margin-top: 30px;
+  }
+  .fb-ribbon-node{
+    left: 25px;
+  }
+  .fb-ribbon-card{
+    left: 60px;
+    width: calc(100% - 60px);
+  }
+  .fb-ribbon-track{
+    left: 25px;
+  }
+
+  .fb-solve-card,
+  .fb-bento-timeline,
+  .fb-bento-target
+  {
+    padding: 30px 15px;
+  }
+  .fb-section-title-md,
+  .fb-section-title-lg
+  {
+    font-size: 2rem;
+  }
+  .fb-section-label{
+    margin-bottom: 10px;
+  }
+  .fb-section-pb-100 {
+    padding-bottom: 0;
+}
+.fb-section-py-80 {
+    padding: 30px 0;
+}
+.fb-bento-timeline .mb-5{
+  margin-bottom: 20px !important;
+}
+
+.fb-section-title-md{
+  font-size: 24px !important;
+}
+
+.fb-bento-target h4{
+  font-size: 20px I !important;
+}
+
+.fb-cta-wrapper{
+      padding: 40px 15px;
+}
+.fb-cta-btn{
+  padding: 10px 20px;
+  font-size: 13px;
+}
+.fb-section-pb-150 {
+    padding-bottom: 10px;
+}
+
+.logo-pricing-card h3{
+ margin-top: 5px;
+}
+
+.fb-dark-bg .top_info{
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+}

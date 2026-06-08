@@ -1,0 +1,458 @@
+.production-execution-section {
+  background-color: #070707;
+  padding: 80px 0 120px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  background-image:
+    linear-gradient(
+      45deg,
+      rgba(20, 20, 20, 1) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(20, 20, 20, 1) 75%
+    ),
+    linear-gradient(
+      45deg,
+      rgba(20, 20, 20, 1) 25%,
+      transparent 25%,
+      transparent 75%,
+      rgba(20, 20, 20, 1) 75%
+    );
+  background-size: 100px 100px;
+  background-position:
+    0 0,
+    50px 50px;
+}
+
+.director-monitor-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  perspective: 1200px;
+}
+
+.monitor-frame-outer {
+  background: #111;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.8),
+    inset 0 2px 2px rgba(255, 255, 255, 0.1),
+    inset 0 -2px 5px rgba(0, 0, 0, 0.5),
+    0 0 0 2px #222;
+  transform: rotateX(5deg);
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.monitor-frame-outer:hover {
+  transform: rotateX(0deg) scale(1.02);
+}
+
+.monitor-screen {
+  background: #000;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  border: 4px solid #050505;
+}
+
+.screen-visual-background {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.set-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  filter: sepia(0.2) contrast(1.2) brightness(0.8);
+  transition: all 1s ease;
+}
+
+.monitor-frame-outer:hover .set-image {
+  opacity: 0.7;
+  filter: sepia(0) contrast(1.1) brightness(0.9);
+  transform: scale(1.05);
+}
+
+.set-overlay-gradient {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    transparent 30%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+/* Viewfinder Elements */
+.vf-corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  z-index: 5;
+  pointer-events: none;
+}
+
+.vf-corner.top-left {
+  top: 20px;
+  left: 20px;
+  border-right: none;
+  border-bottom: none;
+}
+.vf-corner.top-right {
+  top: 20px;
+  right: 20px;
+  border-left: none;
+  border-bottom: none;
+}
+.vf-corner.bottom-left {
+  bottom: 20px;
+  left: 20px;
+  border-right: none;
+  border-top: none;
+}
+.vf-corner.bottom-right {
+  bottom: 20px;
+  right: 20px;
+  border-left: none;
+  border-top: none;
+}
+
+.vf-center-crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 24px;
+  font-weight: 300;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.vf-top-info {
+  position: absolute;
+  top: 30px;
+  left: 80px;
+  right: 80px;
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
+
+.vf-rec {
+  color: #ff3333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vf-rec .dot {
+  width: 10px;
+  height: 10px;
+  background: #ff3333;
+  border-radius: 50%;
+  animation: recBlink 1s infinite;
+}
+
+@keyframes recBlink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.vf-bottom-audio {
+  position: absolute;
+  bottom: 30px;
+  left: 80px;
+  right: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
+
+.audio-bars {
+  display: flex;
+  gap: 3px;
+  align-items: flex-end;
+  height: 20px;
+}
+
+.audio-bars span {
+  width: 4px;
+  background: #4caf50;
+  border-radius: 1px;
+}
+.audio-bars span:nth-child(even) {
+  animation: audioBounce 0.5s infinite alternate;
+}
+.audio-bars span:nth-child(odd) {
+  animation: audioBounce 0.7s infinite alternate-reverse;
+}
+.audio-bars span:nth-child(7),
+.audio-bars span:nth-child(8) {
+  background: #ff9800;
+  animation: audioBounceHigh 0.6s infinite alternate;
+}
+
+@keyframes audioBounce {
+  0% {
+    height: 4px;
+  }
+  100% {
+    height: 16px;
+  }
+}
+@keyframes audioBounceHigh {
+  0% {
+    height: 10px;
+  }
+  100% {
+    height: 20px;
+  }
+}
+
+/* Services UI Overlay */
+.monitor-services-ui {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  padding: 60px 80px;
+  gap: 40px;
+}
+
+.services-list-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.services-title {
+  font-family: "Syne", sans-serif;
+  color: #fdb914;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.services-list-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 16px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  background: rgba(20, 20, 20, 0.6);
+}
+
+.service-item.active {
+  background: rgba(253, 185, 20, 0.15);
+  border-color: rgba(253, 185, 20, 0.5);
+}
+
+.srv-icon {
+  font-size: 1.2rem;
+}
+
+.srv-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.service-item.active .srv-name {
+  color: #fff;
+  font-weight: 600;
+}
+
+.srv-highlight-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #fdb914;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.service-item.active .srv-highlight-bar {
+  transform: translateX(0);
+}
+
+.active-service-display {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.display-card.glass-panel {
+  background: rgba(10, 10, 10, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  animation: floatCard 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatCard {
+  0% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+.glass-reflection {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: glassShine 8s infinite;
+}
+
+@keyframes glassShine {
+  0%,
+  70% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+.display-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 10px rgba(253, 185, 20, 0.5));
+}
+
+.display-card h3 {
+  font-family: "Syne", sans-serif;
+  color: #fdb914;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.display-card p {
+  color: #aaa;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(76, 175, 80, 0.1);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-family: monospace;
+  letter-spacing: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .monitor-services-ui {
+    flex-direction: column;
+    padding: 30px 40px;
+    gap: 20px;
+  }
+
+  .services-list-container ul {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  .display-card.glass-panel {
+    padding: 20px;
+  }
+
+  .display-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  .display-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .monitor-screen {
+    aspect-ratio: auto;
+    height: 600px;
+  }
+  .monitor-services-ui {
+    padding: 20px;
+  }
+  .vf-top-info,
+  .vf-bottom-audio {
+    left: 20px;
+    right: 20px;
+  }
+  .vf-res,
+  .vf-lens {
+    display: none;
+  }
+  .production-execution-section {
+    padding: 30px 0 70px;
+  }
+}

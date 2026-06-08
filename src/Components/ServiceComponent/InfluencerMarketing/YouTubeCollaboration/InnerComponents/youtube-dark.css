@@ -1,0 +1,1010 @@
+/* ================================================================
+   YouTube Collaboration — Premium Dark Theme
+   Inspired by 360-Marketing and Barter Collaboration design systems
+   ================================================================ */
+
+/* Background & Base */
+.youtube-dark-bg {
+  background-color: #050505;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+.youtube-dark-bg h2 {
+  font-size: 48px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.youtube-dark-bg h2 span {
+  margin-left: 8px;
+}
+
+/* Gradient Text */
+.youtube-gradient-text {
+  background: linear-gradient(135deg, #ff0000, #7000ff, #00f2ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Section Labels ── */
+.yt-label {
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: #00f2ff;
+  display: block;
+  margin-bottom: 14px;
+}
+
+/* ── Glow Button ── */
+.youtube-glow-btn {
+  display: inline-block;
+  padding: 15px 35px;
+  background: linear-gradient(135deg, #ff0000, #7000ff);
+  color: #fff;
+  font-weight: 800;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(112, 0, 255, 0.3);
+}
+.youtube-glow-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 50px rgba(112, 0, 255, 0.5);
+}
+
+/* ── Light Leaks ── */
+.yt-glow-top-right {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(112, 0, 255, 0.12) 0%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  top: -10%;
+  right: -10%;
+  pointer-events: none;
+  z-index: 0;
+}
+.yt-glow-bottom-left {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 242, 255, 0.08) 0%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  bottom: -10%;
+  left: -10%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ================================================================
+   WHY WORKS — Cinematic Visual with Floating Cards
+   ================================================================ */
+.yt-why-section {
+  padding: 70px 0;
+  position: relative;
+  background: #050505;
+}
+
+.yt-visual-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.yt-main-asset {
+  width: 100%;
+  max-width: 550px;
+  filter: drop-shadow(0 0 50px rgba(255, 0, 0, 0.3));
+  animation: yt-float 8s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes yt-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+.yt-metric-bubble {
+  position: absolute;
+  background: rgba(15, 15, 25, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 25px;
+  border-radius: 20px;
+  z-index: 3;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.yt-metric-bubble:hover {
+  transform: scale(1.1) translateZ(50px);
+  border-color: #ff0000;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.2);
+}
+
+.yt-bubble-val {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #fff;
+  display: block;
+}
+
+.yt-bubble-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #7070a0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ================================================================
+   STRATEGY — HUD Grid Pattern
+   ================================================================ */
+.yt-strategy-section {
+  padding: 70px 0;
+  background: linear-gradient(180deg, #050505, #080810);
+  position: relative;
+  overflow: hidden;
+}
+
+.yt-hud-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  position: relative;
+  margin-top: 60px;
+}
+
+.yt-hud-card {
+  background: rgba(10, 10, 15, 0.7);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.yt-hud-card:nth-child(even) {
+  margin-top: 50px;
+}
+
+.yt-hud-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #ff0000, transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.yt-hud-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  border-color: rgba(255, 0, 0, 0.2);
+  box-shadow: 0 30px 60px rgba(255, 0, 0, 0.1);
+}
+
+.yt-hud-card:hover::before {
+  opacity: 1;
+}
+
+.yt-hud-num {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  font-size: 10rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.02);
+  pointer-events: none;
+  line-height: 1;
+}
+
+.yt-hud-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: rgba(255, 0, 0, 0.08);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ff0000;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.yt-hud-title {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  line-height: 1.2;
+}
+
+.yt-hud-desc {
+  color: #9090a0;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ================================================================
+   INTEGRATION — Hover-Expand Accordion Gallery
+   ================================================================ */
+.yt-gallery-container {
+  display: flex;
+  gap: 20px;
+  height: 600px;
+  width: 100%;
+  margin-top: 50px;
+}
+.yt-gallery-panel {
+  flex: 1;
+  border-radius: 40px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.yt-gallery-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(5, 5, 5, 1) 0%,
+    rgba(5, 5, 5, 0.7) 30%,
+    rgba(5, 5, 5, 0.3) 100%
+  );
+  z-index: 1;
+  transition: all 0.5s ease;
+}
+.yt-gallery-panel:hover,
+.yt-gallery-panel.active {
+  flex: 5;
+  border-color: rgba(255, 0, 0, 0.5);
+  box-shadow: 0 0 50px rgba(255, 0, 0, 0.15);
+}
+.yt-gallery-panel:hover::before,
+.yt-gallery-panel.active::before {
+  background: linear-gradient(
+    0deg,
+    rgba(5, 5, 5, 0.95) 0%,
+    rgba(5, 5, 5, 0.6) 40%,
+    transparent 100%
+  );
+}
+.yt-gallery-content {
+  padding: 50px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+}
+.yt-gallery-panel:hover .yt-gallery-content,
+.yt-gallery-panel.active .yt-gallery-content {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+  pointer-events: auto;
+}
+.yt-gallery-icon-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4.5rem;
+  opacity: 0.3;
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.yt-gallery-panel:hover .yt-gallery-icon-wrapper,
+.yt-gallery-panel.active .yt-gallery-icon-wrapper {
+  top: 40px;
+  left: 40px;
+  transform: translate(0, 0);
+  opacity: 1;
+  font-size: 3rem;
+}
+.yt-gallery-title-vertical {
+  position: absolute;
+  bottom: 200px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+  transform-origin: bottom center;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #fff;
+  transition: all 0.5s ease;
+  z-index: 2;
+  letter-spacing: 2px;
+}
+.yt-gallery-panel:hover .yt-gallery-title-vertical,
+.yt-gallery-panel.active .yt-gallery-title-vertical {
+  opacity: 0;
+}
+.yt-gallery-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+.yt-gallery-desc {
+  font-size: 1.15rem;
+  color: #d0d0e0;
+  margin-bottom: 30px;
+  max-width: 600px;
+  line-height: 1.7;
+}
+.yt-gallery-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  max-width: 700px;
+}
+.yt-gallery-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.05rem;
+  color: #fff;
+  font-weight: 500;
+}
+.yt-gallery-list li::before {
+  content: "✓";
+  color: #ff0000;
+  font-weight: 900;
+}
+
+/* ================================================================
+   CONTENT INTEGRATION — Tabbed Showcase
+   ================================================================ */
+.yt-integration-section {
+  padding: 60px 0;
+  position: relative;
+  background: #050505;
+}
+.yt-tab-pills {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+.yt-tab-pill {
+  padding: 12px 28px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50px;
+  color: #a0a0b8;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.yt-tab-pill.active,
+.yt-tab-pill:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(112, 0, 255, 0.3),
+    rgba(0, 242, 255, 0.15)
+  );
+  border-color: #7000ff;
+  color: #fff;
+}
+.yt-tab-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  min-height: 350px;
+}
+.yt-tab-visual {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 30px;
+  padding: 60px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  position: relative;
+  overflow: hidden;
+}
+.yt-tab-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(112, 0, 255, 0.1),
+    transparent 70%
+  );
+}
+.yt-tab-info h3 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.yt-tab-info p {
+  color: #9090a0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+.yt-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.yt-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #c0c0d0;
+  margin-bottom: 14px;
+  font-size: 1rem;
+}
+.yt-check-list li::before {
+  content: "✓";
+  color: #00f2ff;
+  font-weight: 900;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ================================================================
+   ANALYSIS — Glassmorphic Dashboard
+   ================================================================ */
+.yt-analysis-section {
+  padding: 60px 0;
+  background: linear-gradient(180deg, #080810, #050505);
+  position: relative;
+}
+.yt-stats-panel {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 40px;
+  padding: 60px;
+  backdrop-filter: blur(30px);
+  position: relative;
+  overflow: hidden;
+}
+.yt-stats-panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 100% 50%,
+    rgba(0, 242, 255, 0.06) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+.yt-stat-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.yt-stat-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(0, 242, 255, 0.2);
+  transform: translateY(-5px);
+}
+.yt-stat-value {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #fff;
+  display: block;
+  margin-bottom: 5px;
+}
+.yt-stat-label-small {
+  font-size: 0.75rem;
+  color: #7070a0;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.yt-stat-sub {
+  font-size: 0.85rem;
+  color: #5050a0;
+  margin-top: 5px;
+  font-family: monospace;
+}
+.yt-analysis-cta {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+/* ================================================================
+   BENEFITS — Asymmetric Floating Monoliths
+   ================================================================ */
+.yt-monolith-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.yt-monolith-card {
+  width: calc(33.333% - 20px);
+  min-width: 320px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 30px;
+  padding: 50px 40px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  z-index: 1;
+}
+
+.yt-monolith-card:nth-child(even) {
+  margin-top: 80px;
+}
+
+.yt-monolith-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 2px rgba(255, 0, 0, 0);
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+.yt-monolith-card:hover {
+  transform: translateY(-20px);
+  background: linear-gradient(
+    145deg,
+    rgba(25, 10, 10, 0.8) 0%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  border-color: rgba(255, 0, 0, 0.3);
+  box-shadow:
+    0 30px 60px rgba(255, 0, 0, 0.15),
+    0 10px 20px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.yt-monolith-card:hover::after {
+  box-shadow: inset 0 0 0 1px rgba(255, 0, 0, 0.4);
+}
+
+.yt-mono-icon {
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+  display: inline-block;
+  filter: drop-shadow(0 0 15px rgba(255, 0, 0, 0.3));
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.yt-monolith-card:hover .yt-mono-icon {
+  transform: scale(1.1) rotate(5deg);
+  filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.6));
+}
+
+.yt-mono-num {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  font-size: 1.5rem;
+  font-family: monospace;
+  font-weight: 800;
+  color: rgba(255, 0, 0, 0.4);
+  letter-spacing: 2px;
+}
+
+.yt-mono-title {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.yt-mono-desc {
+  font-size: 1.1rem;
+  color: #a0a0b0;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ================================================================
+   PRICING — YouTube Themed
+   ================================================================ */
+.yt-pricing-featured {
+  border-color: #ff0000 !important;
+  box-shadow: 0 20px 60px rgba(255, 0, 0, 0.15) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 0, 0, 1) 0%,
+    rgba(5, 5, 5, 1) 100%
+  ) !important;
+}
+
+.yt-pricing-featured .pricing-btn.filled {
+  background: #ff0000 !important;
+}
+
+/* ================================================================
+   PRICING — Reference-Style (Crisis Management Inspired)
+   ================================================================ */
+.yt-pricing-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 50px;
+}
+
+.yt-pricing-card {
+  flex: 1;
+  min-width: 320px;
+  max-width: 400px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 50px 40px;
+  text-align: center;
+  position: relative;
+  transition: all 0.4s ease;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  min-height: 650px;
+}
+
+.yt-pricing-card.featured {
+  background: #000;
+  color: #fff;
+  border: 2px solid #ffbb00;
+  transform: scale(1.05);
+  z-index: 2;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.yt-pricing-badge {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffbb00;
+  color: #000;
+  padding: 6px 25px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.yt-pricing-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.yt-pricing-subtitle {
+  font-size: 0.95rem;
+  opacity: 0.7;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.yt-pricing-amount {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 35px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.yt-pricing-amount span {
+  font-size: 2rem;
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+.yt-pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+  text-align: left;
+  flex: 1;
+}
+
+.yt-pricing-features li {
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.yt-pricing-features li::before {
+  content: "✓";
+  color: #ffbb00;
+  font-weight: 900;
+}
+
+.logo-pricing-section h2 {
+  font-size: 3rem !important;
+}
+
+.yt-pricing-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+}
+
+.yt-pricing-card:not(.featured) .yt-pricing-btn {
+  background: #000;
+  color: #fff;
+}
+
+.yt-pricing-card.featured .yt-pricing-btn {
+  background: #ffbb00;
+  color: #000;
+}
+
+.yt-pricing-btn:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.1);
+}
+
+/* ================================================================
+   EXECUTION SECTION
+   ================================================================ */
+.yt-execution-section {
+  padding: 120px 0;
+  background: linear-gradient(180deg, #050505, #08080f);
+  position: relative;
+}
+.yt-process-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 40px 30px;
+  text-align: center;
+  height: 100%;
+  position: relative;
+  transition: all 0.4s ease;
+}
+.yt-process-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(112, 0, 255, 0.3);
+  transform: translateY(-10px);
+}
+.yt-process-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(112, 0, 255, 0.2),
+    rgba(0, 242, 255, 0.1)
+  );
+  border: 1px solid rgba(112, 0, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 20px;
+}
+.yt-process-num {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  line-height: 1;
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+@media (max-width: 992px) {
+  .yt-tab-content {
+    grid-template-columns: 1fr;
+  }
+  .yt-strategy-step {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .yt-step-number {
+    font-size: 3rem;
+    min-width: auto;
+  }
+  .yt-stats-panel {
+    padding: 30px;
+  }
+  .yt-benefit-body {
+    padding: 0 20px 20px 20px;
+  }
+  .yt-benefit-header {
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .yt-why-section {
+    padding: 50px 0;
+  }
+  .yt-why-section h2 {
+    font-size: 30px !important;
+  }
+  .yt-metric-bubble:first-child {
+    top: -8% !important;
+    left: 0 !important;
+  }
+  .yt-metric-bubble:nth-child(2) {
+    left: 0% !important;
+  }
+  .youtube-dark-bg h2 {
+    font-size: 30px;
+  }
+  .yt-hud-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+  .yt-hud-card:nth-child(even) {
+    margin-top: 10px;
+  }
+  .yt-hud-card {
+    padding: 30px 15px;
+  }
+  .yt-hud-title {
+    font-size: 1.8rem;
+  }
+  .yt-strategy-section {
+    padding: 50px 0;
+  }
+  .yt-gallery-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .yt-gallery-panel {
+    min-height: 400px;
+    height: 400px;
+    justify-content: center;
+  }
+  .yt-gallery-panel:hover,
+  .yt-gallery-panel.active {
+    height: auto;
+  }
+  .yt-gallery-list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+  .yt-gallery-content {
+    padding: 30px 15px;
+  }
+  .yt-gallery-desc {
+    line-height: 1.4;
+  }
+  .yt-gallery-panel.active .yt-gallery-icon-wrapper {
+    display: none;
+  }
+  .yt-gallery-title {
+    font-size: 1.6rem;
+  }
+  .youtube-dark-bg {
+    padding: 50px 0 !important;
+  }
+  .yt-bento-unit {
+    padding: 30px 0 !important;
+  }
+  .yt-stats-panel {
+    padding: 30px 15px;
+  }
+  .yt-stats-panel .col-6 {
+    width: 100%;
+  }
+  .yt-monolith-card {
+    padding: 30px 15px;
+  }
+  .yt-mono-title {
+    font-size: 1.4rem;
+  }
+  .yt-monolith-card:nth-child(even) {
+    margin-top: 0;
+  }
+  .yt-monolith-card h4 {
+    font-size: 1.5rem !important;
+  }
+  .logo-pricing-section h2 {
+    font-size: 2rem !important;
+  }
+  .yt-pricing-card {
+    padding: 30px 15px;
+    min-height: auto;
+  }
+  .yt-pricing-card.featured {
+    transform: scale(1);
+  }
+  .yt-pricing-amount {
+    font-size: 2rem;
+    margin-bottom: 15px !important;
+  }
+}

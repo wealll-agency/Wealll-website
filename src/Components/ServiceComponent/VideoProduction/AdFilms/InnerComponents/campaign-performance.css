@@ -1,0 +1,346 @@
+.campaign-performance-section {
+  background-color: #080808;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.performance-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.perf-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.pf-check {
+  width: 30px;
+  height: 30px;
+  background: rgba(253, 185, 20, 0.1);
+  color: #fdb914;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(253, 185, 20, 0.2);
+}
+
+.perf-feature h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.perf-feature p {
+  font-size: 0.95rem;
+  color: #999;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Analytics Dashboard UI */
+.analytics-dashboard-ui {
+  background: #111;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
+  transition: all 0.5s ease;
+}
+
+.analytics-dashboard-ui:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+  box-shadow:
+    0 40px 80px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(253, 185, 20, 0.1);
+}
+
+.dash-header {
+  background: rgba(20, 20, 20, 1);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dash-dots {
+  display: flex;
+  gap: 6px;
+  margin-right: 20px;
+}
+
+.dash-dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.dash-dots span:nth-child(1) {
+  background: #ff5f56;
+}
+.dash-dots span:nth-child(2) {
+  background: #ffbd2e;
+}
+.dash-dots span:nth-child(3) {
+  background: #27c93f;
+}
+
+.dash-title {
+  font-family: monospace;
+  color: #666;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+}
+
+.dash-body {
+  padding: 30px;
+}
+
+.metrics-cards-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.metric-card {
+  background: rgba(25, 25, 25, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 20px 15px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+  background: rgba(30, 30, 30, 0.8);
+  border-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.metric-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--accent);
+}
+
+.metric-icon {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metric-value-container {
+  display: flex;
+  align-items: baseline;
+  gap: 3px;
+}
+
+.metric-value {
+  font-family: "Syne", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.metric-suffix {
+  color: #aaa;
+  font-weight: 600;
+}
+
+.metric-trend {
+  color: #4caf50;
+  font-size: 0.9rem;
+  margin-left: auto;
+  font-weight: bold;
+}
+
+/* Chart Container UI */
+.chart-container-ui {
+  background: rgba(20, 20, 20, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ccc;
+}
+
+.chart-badge {
+  background: rgba(253, 185, 20, 0.1);
+  color: #fdb914;
+  padding: 4px 10px;
+  border-radius: 30px;
+  font-size: 0.75rem;
+  border: 1px solid rgba(253, 185, 20, 0.3);
+}
+
+.chart-area {
+  position: relative;
+  height: 200px;
+  display: flex;
+}
+
+.chart-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 40px;
+  border-right: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.chart-grid span {
+  font-size: 0.7rem;
+  color: #666;
+  transform: translateY(-50%);
+}
+
+.chart-svg-wrapper {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+.chart-svg-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
+.chart-line-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+.analytics-dashboard-ui.animate .chart-line-path {
+  animation: drawLine 2s cubic-bezier(0.175, 0.885, 0.32, 1) forwards;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.chart-area-fill {
+  opacity: 0;
+}
+
+.analytics-dashboard-ui.animate .chart-area-fill {
+  animation: fadeArea 1.5s ease 1s forwards;
+}
+
+@keyframes fadeArea {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Data Points */
+.data-point {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border: 2px solid #fdb914;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(253, 185, 20, 0.8);
+  opacity: 0;
+  transform: scale(0);
+}
+
+.analytics-dashboard-ui.animate .data-point {
+  animation: popPoint 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.p-1 {
+  top: 17.5%;
+  left: 20%;
+  animation-delay: 1.2s !important;
+}
+.p-2 {
+  top: 20%;
+  left: 40%;
+  animation-delay: 1.4s !important;
+}
+.p-3 {
+  top: 25%;
+  left: 60%;
+  animation-delay: 1.6s !important;
+}
+.p-4 {
+  top: 30%;
+  left: 80%;
+  animation-delay: 1.8s !important;
+}
+
+@keyframes popPoint {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.chart-x-axis {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-top: 10px;
+  color: #666;
+  font-size: 0.7rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .analytics-dashboard-ui {
+    transform: none;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .metrics-cards-row {
+    grid-template-columns: 1fr;
+  }
+  .dash-body {
+    padding: 20px 15px;
+  }
+  .campaign-performance-section {
+    padding: 50px 0;
+  }
+}

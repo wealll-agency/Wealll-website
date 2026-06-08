@@ -1,0 +1,160 @@
+/* SEO Process Section - Premium Dark Styling (Matching Services) */
+.seo-process-section {
+  padding: 50px 0;
+  background-color: #e1e1e1; /* Light Layout Background */
+  position: relative;
+  overflow: hidden;
+}
+
+.seo-process-title h2 {
+  font-size: 3.8rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+.seo-process-title .highlight-gold {
+  background: linear-gradient(135deg, #fdb914 0%, #ff6b00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+/* Steps Grid */
+.seo-steps-container {
+  margin-top: 80px;
+}
+
+/* Premium Dark Card Design */
+.seo-step-card {
+  background: #111; /* Dark Background */
+  border-radius: 24px;
+  padding: 50px 30px;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); /* Darker Shadow */
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+/* Dynamic Hover Effect */
+.seo-step-card:hover {
+  transform: translateY(-20px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  border-color: #fdb914;
+  background: #000;
+}
+
+.seo-step-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at bottom left,
+    rgba(253, 185, 20, 0.1),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.seo-step-card:hover::after {
+  opacity: 1;
+}
+
+/* Step Number styling */
+.seo-step-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05); /* Subtle white number */
+  line-height: 0.8;
+  transition: all 0.5s ease;
+  z-index: -1;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.seo-step-card:hover .seo-step-number {
+  color: rgba(253, 185, 20, 0.15);
+  transform: scale(1.2) rotate(-10deg);
+}
+
+/* Icon Styling */
+.seo-step-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+  box-shadow: none;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.seo-step-card:hover .seo-step-icon {
+  background: linear-gradient(135deg, #fdb914 0%, #ff6b00 100%);
+  box-shadow: 0 10px 20px rgba(253, 185, 20, 0.4);
+  border-color: transparent;
+  transform: rotate(5deg);
+}
+
+.seo-step-icon svg {
+  width: 36px;
+  height: 36px;
+  fill: #fdb914;
+  transition: fill 0.3s ease;
+}
+
+.seo-step-card:hover .seo-step-icon svg {
+  fill: #fff;
+}
+
+/* Content Styling */
+.seo-step-card h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #fff; /* White Text */
+  letter-spacing: -0.5px;
+}
+
+.seo-step-card p {
+  font-size: 15px;
+  color: #aaa; /* Off-white Text */
+  line-height: 1.7;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+/* Connector Line (Desktop Only) */
+@media (min-width: 992px) {
+  .seo-steps-row {
+    position: relative;
+  }
+  .seo-steps-row::before {
+    content: "";
+    position: absolute;
+    top: 90px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: url("data:image/svg+xml,%3Csvg width='20' height='2' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 1h10' stroke='%23333' stroke-width='2' stroke-dasharray='5,5'/%3E%3C/svg%3E");
+    z-index: 0;
+    opacity: 0.3;
+  }
+}

@@ -1,0 +1,249 @@
+/* Blog Strategy - Restored Columnar Layout iteration 10 */
+.blog-strategy-restore {
+  padding: 100px 0;
+  background-color: #0d0f1b; /* Consistent dark bg */
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  font-family: "Outfit", sans-serif;
+}
+
+.strategy-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.highlight-gold {
+  color: #fdb914;
+  text-shadow: 0 0 20px rgba(253, 185, 20, 0.4);
+}
+
+.strategy-subtitle {
+  color: #a0a0b0;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.strategy-columnar-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  position: relative;
+  gap: 0;
+}
+
+.strategy-side-col {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 0 0 350px;
+}
+
+/* Strategy Cards */
+.strategy-card-premium {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 15px 25px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.strategy-card-premium:hover {
+  background: rgba(253, 185, 20, 0.08);
+  border-color: #fdb914;
+  transform: translateY(-5px);
+}
+
+.strategy-card-premium.left-align {
+  justify-content: flex-end;
+}
+.strategy-card-premium.right-align {
+  justify-content: flex-start;
+}
+
+.card-text {
+  font-weight: 600;
+  color: #eee;
+  font-size: 1rem;
+}
+
+.card-icon-well {
+  width: 44px;
+  height: 44px;
+  background: rgba(253, 185, 20, 0.1);
+  border: 1px solid rgba(253, 185, 20, 0.2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 15px;
+  font-size: 1.2rem;
+}
+
+/* Connector Lines */
+.connector-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(253, 185, 20, 0.5), transparent);
+  width: 100px;
+  z-index: -1;
+}
+
+.connector-line.l {
+  right: -100px;
+  top: 50%;
+  background: linear-gradient(90deg, transparent, rgba(253, 185, 20, 0.5));
+}
+.connector-line.r {
+  left: -100px;
+  top: 50%;
+}
+
+/* Center Hub */
+.strategy-center-hub {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hub-orbital-system {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.n-ring {
+  position: absolute;
+  border: 1px solid rgba(253, 185, 20, 0.1);
+  border-radius: 50%;
+}
+
+.r-outer {
+  width: 500px;
+  height: 500px;
+  border-style: dashed;
+  animation: orbitSpin 40s linear infinite;
+}
+.r-mid {
+  width: 380px;
+  height: 380px;
+  border-color: rgba(255, 107, 0, 0.1);
+  animation: orbitSpin 30s linear reverse infinite;
+}
+.r-inner {
+  width: 280px;
+  height: 280px;
+}
+
+@keyframes orbitSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.core-earth-orb {
+  width: 160px;
+  height: 160px;
+  background: #000;
+  border: 2px solid #fdb914;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.orb-glass {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(253, 185, 20, 0.2),
+    transparent
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.world-svg {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 0 10px #fdb914);
+}
+
+.orb-aura {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(253, 185, 20, 0.1), transparent 70%);
+  animation: auraBreath 4s ease-in-out infinite;
+}
+
+@keyframes auraBreath {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scale(1.2);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 1100px) {
+  .strategy-columnar-grid {
+    flex-direction: column;
+  }
+  .strategy-center-hub {
+    order: -1;
+    width: 100%;
+    height: 350px;
+    margin-bottom: 40px;
+  }
+  .r-outer {
+    width: 400px;
+    height: 400px;
+  }
+  .connector-line {
+    display: none;
+  }
+  .strategy-side-col {
+    width: 100%;
+    flex: none;
+  }
+  .strategy-card-premium {
+    justify-content: center !important;
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-strategy-restore {
+    padding: 50px 0;
+  }
+  .strategy-title {
+    font-size: 2.2rem;
+  }
+}

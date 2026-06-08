@@ -1,0 +1,99 @@
+/* email-overview.css */
+/* Reskinning to light theme matching ContentMastery */
+
+.email-overview-section {
+  padding: 80px 0;
+  position: relative;
+  background-color: #fff; /* White background */
+  overflow: hidden;
+}
+
+/* Removing the dark glow, maybe adding a light one or removing entirely */
+.email-vis-bg-glow {
+  display: none;
+}
+
+.email-vis-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1a1a1a; /* Sharper black */
+  margin-bottom: 30px;
+  line-height: 1.1;
+  position: relative;
+  z-index: 1;
+}
+
+.email-vis-title .highlight-gradient {
+  /* Using the gold/orange gradient but ensuring visibility on white */
+  background: linear-gradient(90deg, #ffd700 0%, #ff4500 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.email-vis-separator {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #ffd700, #ff4500);
+  margin: 0 auto 40px;
+  border-radius: 2px;
+  position: relative;
+  z-index: 1;
+}
+
+.email-vis-content {
+  font-size: 1.2rem;
+  color: #555; /* Darker grey for readability on white */
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.email-vis-content strong {
+  color: #000;
+  font-weight: 600;
+}
+
+.email-vis-content .brand-name {
+  color: #d1b000; /* Darker gold for contrast */
+  font-weight: 700;
+}
+
+.email-vis-content .highlight-text {
+  color: #ff4500; /* Red-Orange */
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .email-vis-title {
+    font-size: 2.2rem;
+  }
+  .email-overview-section {
+    padding: 60px 0;
+  }
+}

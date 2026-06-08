@@ -1,0 +1,865 @@
+/* Whatsapp Marketing CSS - Replicated from SEO Premium Dark Theme */
+
+/* --- General Section Styling --- */
+.whatsapp-section {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
+}
+
+.whatsapp-section-dark {
+  padding: 50px 0;
+  background-color: #0b0b0b;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Background decorative elements */
+.whatsapp-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(37, 211, 102, 0.05) 0%,
+    /* Whatsapp Green Tint */ transparent 70%
+  );
+  z-index: 0;
+}
+
+.whatsapp-header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.whatsapp-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+  letter-spacing: -1px;
+}
+
+.whatsapp-header.dark h2 {
+  color: #fff;
+}
+
+.whatsapp-header p {
+  color: #666;
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.whatsapp-header.dark p {
+  color: #b0b0b0;
+}
+
+.highlight-green {
+  color: #25d366; /* Whatsapp Green */
+}
+
+.highlight-gradient-green {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+/* --- Benefits Card (Service Card Style) --- */
+.wa-benefit-card {
+  background: #111;
+  padding: 45px 35px;
+  border-radius: 24px;
+  border: 1px solid #333;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.wa-benefit-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  border-color: #25d366;
+  background: #000;
+}
+
+.wa-benefit-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(37, 211, 102, 0.1),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.wa-benefit-card:hover::after {
+  opacity: 1;
+}
+
+.wa-benefit-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.wa-benefit-card:hover .wa-benefit-icon {
+  background: #25d366;
+  transform: rotate(10deg);
+  border-color: #25d366;
+}
+
+.wa-benefit-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #25d366;
+  transition: all 0.4s ease;
+}
+
+.wa-benefit-card:hover .wa-benefit-icon svg {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.wa-benefit-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.wa-benefit-card p {
+  color: #aaa;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.wa-learn-more {
+  font-size: 14px;
+  font-weight: 800;
+  color: #25d366;
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.wa-learn-more svg {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  stroke-width: 3px;
+}
+
+.wa-benefit-card:hover .wa-learn-more svg {
+  transform: translateX(8px);
+}
+
+/* --- Strategy Card (Fearure/WhyChoose Style) --- */
+.wa-strategy-card {
+  background: rgba(22, 22, 22, 0.6);
+  padding: 40px;
+  border-radius: 24px;
+  border: 1px solid #333;
+  text-align: left;
+  transition: all 0.3s ease;
+  height: 100%;
+  backdrop-filter: blur(10px);
+}
+
+.wa-strategy-card:hover {
+  border-color: #25d366;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 40px rgba(37, 211, 102, 0.15);
+}
+
+.wa-strategy-icon {
+  margin-bottom: 30px;
+  display: inline-block;
+  padding: 15px;
+  background: rgba(37, 211, 102, 0.1);
+  border-radius: 16px;
+  color: #25d366;
+}
+
+.wa-strategy-icon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.wa-strategy-card h3 {
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.wa-strategy-card p {
+  color: #ccc;
+  line-height: 1.8;
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.wa-strategy-card:hover .wa-strategy-icon {
+  background: #25d366;
+  color: #fff;
+}
+
+/* --- Process Steps (Process Style) --- */
+.wa-steps-row {
+  position: relative;
+  margin-top: 50px;
+}
+
+.wa-step-card {
+  background: #111;
+  border-radius: 24px;
+  padding: 50px 30px;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  border: 1px solid #333;
+}
+
+.wa-step-card:hover {
+  transform: translateY(-20px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  border-color: #25d366;
+  background: #000;
+}
+
+.wa-step-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at bottom left,
+    rgba(37, 211, 102, 0.1),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.wa-step-card:hover::after {
+  opacity: 1;
+}
+
+.wa-step-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  line-height: 0.8;
+  transition: all 0.5s ease;
+  z-index: -1;
+  font-family: sans-serif;
+}
+
+.wa-step-card:hover .wa-step-number {
+  color: rgba(37, 211, 102, 0.15);
+  transform: scale(1.2) rotate(-10deg);
+}
+
+.wa-step-icon {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 35px;
+  box-shadow: none;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.wa-step-card:hover .wa-step-icon {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+  box-shadow: 0 10px 20px rgba(37, 211, 102, 0.4);
+  border-color: transparent;
+  transform: rotate(5deg);
+}
+
+.wa-step-icon svg {
+  width: 36px;
+  height: 36px;
+  fill: #25d366;
+  transition: fill 0.3s ease;
+}
+
+.wa-step-card:hover .wa-step-icon svg {
+  fill: #fff;
+}
+
+.wa-step-card h3 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.wa-step-card p {
+  font-size: 15px;
+  color: #aaa;
+  line-height: 1.7;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+@media (min-width: 992px) {
+  .wa-steps-row::before {
+    content: "";
+    position: absolute;
+    top: 90px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: url("data:image/svg+xml,%3Csvg width='20' height='2' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 1h10' stroke='%23333' stroke-width='2' stroke-dasharray='5,5'/%3E%3C/svg%3E");
+    z-index: 0;
+    opacity: 0.3;
+  }
+}
+
+/* --- Zigzag Layout Strategy Section --- */
+.wa-zigzag-section {
+  padding: 50px 0;
+  background-color: #0b0b0b;
+  position: relative;
+  overflow: hidden;
+}
+
+.wa-zigzag-row {
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.wa-zigzag-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Images */
+.wa-zigzag-img-wrapper {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transform: perspective(1000px) rotateY(0deg);
+  transition: all 0.5s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.wa-zigzag-img-wrapper:hover {
+  transform: perspective(1000px) rotateY(5deg);
+  box-shadow: 0 30px 60px rgba(37, 211, 102, 0.15);
+  border-color: #25d366;
+}
+
+.wa-zigzag-row .wa-zigzag-img-wrapper {
+  width: 85%;
+}
+
+.row.wa-zigzag-row.flex-row-reverse .wa-zigzag-img-wrapper {
+  margin-left: auto;
+}
+
+.wa-zigzag-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  /* Removed brightness filter for HD look */
+}
+
+.wa-zigzag-img-wrapper:hover .wa-zigzag-img {
+  transform: scale(1.05);
+}
+
+.wa-img-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Removed overlay to make image clearer */
+  background: transparent;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Content */
+.wa-zigzag-content {
+  position: relative;
+  z-index: 2;
+}
+
+.wa-zigzag-number {
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  line-height: 0.8;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.wa-zigzag-row:hover .wa-zigzag-number {
+  color: rgba(37, 211, 102, 0.1);
+  transform: translateY(-10px);
+}
+
+.wa-zigzag-content h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.wa-zigzag-content h3::before {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background: #25d366;
+  margin-bottom: 15px;
+  border-radius: 2px;
+}
+
+.wa-zigzag-content p {
+  font-size: 1.1rem;
+  color: #b0b0b0;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.wa-zigzag-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.wa-zigzag-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  color: #ddd;
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.wa-zigzag-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #25d366;
+  font-weight: 800;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+  .wa-zigzag-row {
+    margin-bottom: 60px;
+    flex-direction: column !important; /* Stack vertically */
+  }
+
+  .wa-zigzag-img-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .wa-zigzag-img {
+    height: 300px;
+  }
+
+  .wa-zigzag-content {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    text-align: left;
+  }
+
+  .wa-zigzag-number {
+    display: none;
+  }
+}
+
+/* --- Premium Neon Glass Strategy Section --- */
+.wa-strategy-section {
+  padding: 100px 0;
+  background-color: #050505;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Glows */
+.wa-strategy-section::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(37, 211, 102, 0.08) 0%,
+    transparent 70%
+  );
+  z-index: 0;
+  animation: pulse-glow 10s infinite alternate;
+}
+
+.wa-strategy-section::after {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(18, 140, 126, 0.08) 0%,
+    transparent 70%
+  );
+  z-index: 0;
+  animation: pulse-glow 10s infinite alternate-reverse;
+}
+
+@keyframes pulse-glow {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+.wa-strategy-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1140px; /* Bootstrap container width */
+  margin: 0 auto;
+  padding: 0 15px; /* Bootstrap padding */
+}
+
+.wa-strategy-row {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content */
+  margin-bottom: 120px;
+  position: relative;
+}
+
+.wa-strategy-row:last-child {
+  margin-bottom: 0;
+}
+
+/* Reverse layout for even rows */
+.wa-strategy-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* --- Image Container --- */
+.wa-strategy-img-box {
+  flex: 0 0 55%; /* width */
+  position: relative;
+  z-index: 1;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.wa-strategy-img-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  padding: 2px;
+  background: linear-gradient(135deg, #25d366, transparent, #25d366);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.wa-strategy-img-box:hover::before {
+  opacity: 1;
+}
+
+.wa-strategy-img-box:hover {
+  transform: scale(1.02) translateY(-5px);
+  box-shadow: 0 30px 60px rgba(37, 211, 102, 0.15);
+}
+
+.wa-strategy-img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+
+.wa-strategy-img-box:hover .wa-strategy-img {
+  transform: scale(1.08); /* slight zoom */
+}
+
+/* --- Content Card (Glassmorphism) --- */
+.wa-strategy-content {
+  flex: 0 0 50%; /* Overlap width */
+  margin-left: -10%; /* Negative margin for overlap */
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 4px solid #25d366; /* Neon Accent */
+  padding: 50px;
+  border-radius: 24px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+/* Fix overlap for reverse rows */
+.wa-strategy-row.reverse .wa-strategy-content {
+  margin-left: 0;
+  margin-right: -10%;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 4px solid #25d366;
+}
+
+.wa-strategy-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  background: rgba(30, 30, 30, 0.7);
+}
+
+/* Background Number */
+.wa-bg-number {
+  position: absolute;
+  top: -40px;
+  right: 20px;
+  font-size: 8rem;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.05);
+  z-index: -1;
+  line-height: 1;
+  font-family: "Outfit", sans-serif;
+  transition: all 0.4s ease;
+}
+
+.wa-strategy-content:hover .wa-bg-number {
+  -webkit-text-stroke: 2px rgba(37, 211, 102, 0.2);
+  transform: scale(1.1) rotate(5deg);
+}
+
+.wa-strategy-row.reverse .wa-bg-number {
+  right: auto;
+  left: 20px;
+}
+
+/* Content Text */
+.wa-strategy-content h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #fff, #bbb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.wa-strategy-content p {
+  color: #b0b0b0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+/* Feature List */
+.wa-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.wa-feature-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: #ddd;
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  transition: background 0.3s ease;
+}
+
+.wa-feature-item:hover {
+  background: rgba(37, 211, 102, 0.1);
+  color: #fff;
+}
+
+.wa-check-icon {
+  width: 24px;
+  height: 24px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  box-shadow: 0 0 10px rgba(37, 211, 102, 0.4);
+}
+
+.wa-check-icon svg {
+  width: 14px;
+  height: 14px;
+  fill: #000;
+  stroke-width: 3px;
+}
+
+/* Mobile Responsiveness */
+
+@media (max-width: 1200px) {
+  .wa-step-card h3,
+  .wa-benefit-card h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .wa-strategy-row {
+    flex-direction: column;
+    margin-bottom: 80px;
+  }
+
+  .wa-strategy-row.reverse {
+    flex-direction: column;
+  }
+
+  .wa-strategy-img-box {
+    flex: 0 0 100%;
+    width: 100%;
+    margin-bottom: -40px; /* Pull content up */
+  }
+
+  .wa-strategy-img {
+    height: 300px;
+  }
+
+  .wa-strategy-content {
+    flex: 0 0 100%;
+    width: 90%;
+    margin: 0 auto; /* Center content */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+  }
+
+  .wa-strategy-row.reverse .wa-strategy-content {
+    margin: 0 auto;
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    border-left: 4px solid #25d366;
+  }
+
+  .wa-bg-number {
+    font-size: 6rem;
+    top: -30px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .whatsapp-header h2 {
+    font-size: 2rem;
+  }
+
+  .wa-benefit-card {
+    padding: 25px 20px;
+  }
+
+  .wa-strategy-container {
+    padding: 0;
+  }
+
+  .wa-strategy-row {
+    margin-bottom: 40px;
+  }
+
+  .wa-step-icon {
+    margin-bottom: 20px;
+  }
+
+  .wa-strategy-section,
+  .whatsapp-section,
+  .whatsapp-section-dark {
+    padding: 40px 0;
+  }
+
+  .wa-strategy-content {
+    width: 100%;
+    padding: 30px 15px;
+  }
+
+  .service_intro .main-title .creative-bg {
+    display: inline !important;
+  }
+
+  .whatsapp-header {
+    margin-bottom: 30px;
+  }
+}

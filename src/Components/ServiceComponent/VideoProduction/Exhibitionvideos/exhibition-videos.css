@@ -1,0 +1,1071 @@
+/* Exhibition Videos Master CSS */
+
+/* General Section Styling */
+.exhib-section {
+  padding: 100px 0;
+  background-color: #050505;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.exhib-section-darker {
+  background-color: #000000;
+}
+
+.exhib-container {
+  margin-top: 60px;
+}
+
+.exhib-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(253, 185, 20, 0.1);
+  color: #fdb914;
+  border: 1px solid rgba(253, 185, 20, 0.3);
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.exhib-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #fff 0%, #888 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.exhib-title span {
+  color: #fdb914;
+  -webkit-text-fill-color: #fdb914;
+}
+
+.exhib-desc {
+  font-size: 1.1rem;
+  color: #999;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  max-width: 600px;
+}
+
+/* Animations */
+@keyframes exhibFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes exhibGlow {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(253, 185, 20, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(253, 185, 20, 0.7));
+  }
+  100% {
+    filter: drop-shadow(0 0 5px rgba(253, 185, 20, 0.3));
+  }
+}
+
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 1. Booth Highlight Specifics (Kinetic Slice Reveal Gallery) */
+.slice-gallery-container {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.slice-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.slice-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  opacity: 0.6;
+}
+
+.slice-menu-item:last-child {
+  border-bottom: none;
+}
+
+.slice-menu-item::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #fdb914;
+  transform: scaleY(0);
+  transition: transform 0.4s ease;
+}
+
+.slice-menu-item:hover,
+.slice-menu-item.active {
+  opacity: 1;
+  padding-left: 15px;
+}
+
+.slice-menu-item.active::before {
+  transform: scaleY(1);
+}
+
+.slice-number {
+  font-size: 1.5rem;
+  font-family: monospace;
+  font-weight: 700;
+  color: #444;
+  transition: color 0.4s ease;
+}
+
+.slice-menu-item.active .slice-number {
+  color: #fdb914;
+}
+
+.slice-text h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  transition: color 0.4s ease;
+}
+
+.slice-menu-item.active .slice-text h4 {
+  color: #fdb914;
+}
+
+.slice-text p {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.slice-image-wrapper {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.slice-image-group {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  pointer-events: none;
+}
+
+.slice-image-group.active {
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.slice-strip {
+  flex: 1;
+  height: 100%;
+  background-size: 500% 100%;
+  background-repeat: no-repeat;
+  transition:
+    transform 0.8s cubic-bezier(0.8, 0, 0.2, 1),
+    opacity 0.4s ease;
+  opacity: 0;
+}
+
+/* Base states for off-screen */
+.slice-image-group .slice-1 {
+  background-position: 0% 50%;
+  transform: translateY(-100%);
+  transition-delay: 0s;
+}
+.slice-image-group .slice-2 {
+  background-position: 25% 50%;
+  transform: translateY(100%);
+  transition-delay: 0.1s;
+}
+.slice-image-group .slice-3 {
+  background-position: 50% 50%;
+  transform: translateY(-100%);
+  transition-delay: 0.2s;
+}
+.slice-image-group .slice-4 {
+  background-position: 75% 50%;
+  transform: translateY(100%);
+  transition-delay: 0.3s;
+}
+.slice-image-group .slice-5 {
+  background-position: 100% 50%;
+  transform: translateY(-100%);
+  transition-delay: 0.4s;
+}
+
+/* Active states for on-screen */
+.slice-image-group.active .slice-strip {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slice-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  opacity: 0;
+  transition: opacity 0.5s ease 0.6s;
+}
+
+.slice-image-group.active .slice-overlay {
+  opacity: 1;
+}
+
+.slice-tag {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 12px 24px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid rgba(253, 185, 20, 0.3);
+  transform: translateY(20px);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.6s;
+}
+
+.slice-image-group.active .slice-tag {
+  transform: translateY(0);
+}
+
+.slice-tag span {
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.slice-tag i {
+  color: #fdb914;
+  font-size: 1.2rem;
+}
+
+/* 2. Product Demo Specifics (Interactive Neon Accordion) */
+.demo-accordion {
+  display: flex;
+  height: 500px;
+  gap: 10px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto 0;
+}
+
+.demo-panel {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  filter: grayscale(60%) brightness(0.6);
+}
+
+.demo-panel.active {
+  flex: 4;
+  filter: grayscale(0%) brightness(1);
+  box-shadow: 0 0 30px rgba(253, 185, 20, 0.3);
+  border: 2px solid #fdb914;
+}
+
+.demo-panel-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    transparent 100%
+  );
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.5s ease 0.2s;
+}
+
+.demo-panel.active .demo-panel-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.demo-panel h3 {
+  color: #fdb914;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.demo-panel p {
+  color: #ddd;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.demo-vertical-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.demo-panel.active .demo-vertical-title {
+  opacity: 0;
+}
+
+/* 3. Testimonials Specifics (Animated Gradient Border Cards) */
+.premium-review-card {
+  position: relative;
+  background: #000;
+  border-radius: 24px;
+  padding: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 280px;
+  z-index: 1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  transition: transform 0.4s ease;
+}
+
+.premium-review-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-border-gradient {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(transparent, var(--card-glow), transparent 30%);
+  animation: rotateGradient 4s linear infinite;
+  z-index: -2;
+  opacity: 0.4;
+  transition: opacity 0.4s ease;
+}
+
+@keyframes rotateGradient {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.premium-review-card:hover .card-border-gradient {
+  opacity: 1;
+  animation: rotateGradient 2s linear infinite;
+}
+
+.card-inner-bg {
+  position: absolute;
+  inset: 2px;
+  background: #111;
+  border-radius: 22px;
+  z-index: -1;
+  transition: background 0.4s ease;
+}
+
+.premium-review-card:hover .card-inner-bg {
+  background: #0a0a0a;
+}
+
+.review-content {
+  position: relative;
+  z-index: 2;
+}
+
+.review-top-area {
+  margin-bottom: 20px;
+}
+
+.review-icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 0 10px var(--card-glow));
+}
+
+.review-quote {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.review-bottom-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+.review-author {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.review-audio-line {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 20px;
+}
+
+.review-audio-line span {
+  display: block;
+  width: 3px;
+  background: var(--card-glow);
+  border-radius: 3px;
+  animation: exhibPulse 1s infinite alternate;
+}
+
+.review-audio-line span:nth-child(1) {
+  height: 40%;
+  animation-delay: 0.1s;
+}
+.review-audio-line span:nth-child(2) {
+  height: 80%;
+  animation-delay: 0.3s;
+}
+.review-audio-line span:nth-child(3) {
+  height: 100%;
+  animation-delay: 0.5s;
+}
+.review-audio-line span:nth-child(4) {
+  height: 60%;
+  animation-delay: 0.2s;
+}
+.review-audio-line span:nth-child(5) {
+  height: 30%;
+  animation-delay: 0.4s;
+}
+
+/* 4. Pre-Event Teaser Specifics (Neon Timeline) */
+.teaser-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 50px auto 0;
+  padding-left: 40px;
+  border-left: 2px dashed rgba(253, 185, 20, 0.3);
+}
+
+.teaser-point {
+  position: relative;
+  margin-bottom: 40px;
+  background: rgba(15, 15, 15, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.teaser-point:hover {
+  background: rgba(253, 185, 20, 0.05);
+  border-color: #fdb914;
+  transform: translateX(10px);
+}
+
+.teaser-dot {
+  position: absolute;
+  left: -51px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: #000;
+  border: 3px solid #fdb914;
+  border-radius: 50%;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.teaser-point:hover .teaser-dot {
+  background: #fdb914;
+  box-shadow: 0 0 15px #fdb914;
+}
+
+.teaser-point h4 {
+  color: #fdb914;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.teaser-point p {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* 5. Post-Event Specifics (Masonry Video Grid) */
+.post-masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 250px;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.masonry-item {
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.masonry-item.tall {
+  grid-row: span 2;
+}
+.masonry-item.wide {
+  grid-column: span 2;
+}
+
+.masonry-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(2px);
+}
+
+.masonry-item:hover .masonry-overlay {
+  opacity: 1;
+}
+
+.masonry-play {
+  width: 60px;
+  height: 60px;
+  background: rgba(253, 185, 20, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  font-size: 24px;
+  margin-bottom: 15px;
+  transform: scale(0.5);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.masonry-item:hover .masonry-play {
+  transform: scale(1);
+}
+
+.masonry-overlay h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transform: translateY(20px);
+  transition: all 0.3s ease 0.1s;
+}
+
+.masonry-item:hover .masonry-overlay h4 {
+  transform: translateY(0);
+}
+
+/* 6. Integration Specifics (Data Flow Hexagons) */
+.integration-hex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.hex-item {
+  width: 200px;
+  height: 220px;
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: rgba(25, 25, 25, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.hex-item::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  -webkit-clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background: #0d0d0d;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.hex-item:hover {
+  transform: translateY(-10px);
+  background: #fdb914;
+}
+
+.hex-item:hover::before {
+  background: rgba(15, 15, 15, 0.95);
+}
+
+.hex-icon {
+  font-size: 2.5rem;
+  color: #555;
+  margin-bottom: 10px;
+  transition: all 0.4s ease;
+}
+
+.hex-item:hover .hex-icon {
+  color: #fdb914;
+  animation: exhibGlow 2s infinite;
+}
+
+.hex-title {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+@media (max-width: 991px) {
+  .test-card-floating {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    animation: none !important;
+  }
+  .testimonial-center-badge {
+    display: none;
+  }
+  .post-masonry-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .demo-accordion {
+    flex-direction: column;
+    height: auto;
+  }
+  .demo-panel {
+    height: 100px;
+  }
+  .demo-panel.active {
+    height: 300px;
+  }
+  .demo-vertical-title {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  .post-masonry-grid {
+    grid-template-columns: 1fr;
+  }
+  .masonry-item.wide {
+    grid-column: span 1;
+  }
+}
+/* 1. Booth Highlight Specifics (Kinetic Slice Reveal Gallery) */
+.slice-gallery-container {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+}
+
+.slice-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.slice-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  opacity: 0.6;
+}
+
+.slice-menu-item:last-child {
+  border-bottom: none;
+}
+
+.slice-menu-item::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #fdb914;
+  transform: scaleY(0);
+  transition: transform 0.4s ease;
+}
+
+.slice-menu-item:hover,
+.slice-menu-item.active {
+  opacity: 1;
+  padding-left: 15px;
+}
+
+.slice-menu-item.active::before {
+  transform: scaleY(1);
+}
+
+.slice-number {
+  font-size: 1.5rem;
+  font-family: monospace;
+  font-weight: 700;
+  color: #444;
+  transition: color 0.4s ease;
+}
+
+.slice-menu-item.active .slice-number {
+  color: #fdb914;
+}
+
+.slice-text h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  transition: color 0.4s ease;
+}
+
+.slice-menu-item.active .slice-text h4 {
+  color: #fdb914;
+}
+
+.slice-text p {
+  color: #aaa;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.slice-image-wrapper {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.slice-image-group {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  pointer-events: none;
+}
+
+.slice-image-group.active {
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.slice-strip {
+  flex: 1;
+  height: 100%;
+  background-size: 500% 100%;
+  background-repeat: no-repeat;
+  transition:
+    transform 0.8s cubic-bezier(0.8, 0, 0.2, 1),
+    opacity 0.4s ease;
+  opacity: 0;
+}
+
+.slice-image-group .slice-1 {
+  background-position: 0% 50%;
+  transform: translateY(-100%);
+  transition-delay: 0s;
+}
+.slice-image-group .slice-2 {
+  background-position: 25% 50%;
+  transform: translateY(100%);
+  transition-delay: 0.1s;
+}
+.slice-image-group .slice-3 {
+  background-position: 50% 50%;
+  transform: translateY(-100%);
+  transition-delay: 0.2s;
+}
+.slice-image-group .slice-4 {
+  background-position: 75% 50%;
+  transform: translateY(100%);
+  transition-delay: 0.3s;
+}
+.slice-image-group .slice-5 {
+  background-position: 100% 50%;
+  transform: translateY(-100%);
+  transition-delay: 0.4s;
+}
+
+.slice-image-group.active .slice-strip {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.slice-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, transparent 100%);
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+  opacity: 0;
+  transition: opacity 0.5s ease 0.6s;
+}
+
+.slice-image-group.active .slice-overlay {
+  opacity: 1;
+}
+
+.slice-tag {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 12px 24px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid rgba(253, 185, 20, 0.3);
+  transform: translateY(20px);
+  transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.6s;
+}
+
+.slice-image-group.active .slice-tag {
+  transform: translateY(0);
+}
+
+.slice-tag span {
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.slice-tag i {
+  color: #fdb914;
+  font-size: 1.2rem;
+}
+
+/* 3. Testimonials Specifics (Animated Gradient Border Cards) */
+.premium-review-card {
+  position: relative;
+  background: #000;
+  border-radius: 24px;
+  padding: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 280px;
+  z-index: 1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  transition: transform 0.4s ease;
+}
+
+.premium-review-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-border-gradient {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(transparent, var(--card-glow), transparent 30%);
+  animation: rotateGradient 4s linear infinite;
+  z-index: -2;
+  opacity: 0.4;
+  transition: opacity 0.4s ease;
+}
+
+@keyframes rotateGradient {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.premium-review-card:hover .card-border-gradient {
+  opacity: 1;
+  animation: rotateGradient 2s linear infinite;
+}
+
+.card-inner-bg {
+  position: absolute;
+  inset: 2px;
+  background: #111;
+  border-radius: 22px;
+  z-index: -1;
+  transition: background 0.4s ease;
+}
+
+.premium-review-card:hover .card-inner-bg {
+  background: #0a0a0a;
+}
+
+.review-content {
+  position: relative;
+  z-index: 2;
+}
+
+.review-top-area {
+  margin-bottom: 20px;
+}
+
+.review-icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 0 10px var(--card-glow));
+}
+
+.review-quote {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.6;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.review-bottom-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+.review-author {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+.review-audio-line {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: 20px;
+}
+
+.review-audio-line span {
+  display: block;
+  width: 3px;
+  background: var(--card-glow);
+  border-radius: 3px;
+  animation: exhibPulse 1s infinite alternate;
+}
+
+.review-audio-line span:nth-child(1) {
+  height: 40%;
+  animation-delay: 0.1s;
+}
+.review-audio-line span:nth-child(2) {
+  height: 80%;
+  animation-delay: 0.3s;
+}
+.review-audio-line span:nth-child(3) {
+  height: 100%;
+  animation-delay: 0.5s;
+}
+.review-audio-line span:nth-child(4) {
+  height: 60%;
+  animation-delay: 0.2s;
+}
+.review-audio-line span:nth-child(5) {
+  height: 30%;
+  animation-delay: 0.4s;
+}
+
+@media (max-width: 767px) {
+  .exhib-section {
+    padding: 50px 0;
+  }
+  .slice-image-wrapper {
+    height: 400px;
+  }
+  .exhib-title {
+    font-size: 2rem;
+  }
+  .teaser-timeline {
+    padding-left: 20px;
+  }
+  .teaser-dot {
+    left: -30px;
+  }
+}

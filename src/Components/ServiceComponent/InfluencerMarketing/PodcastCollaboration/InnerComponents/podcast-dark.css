@@ -1,0 +1,389 @@
+/* Podcast Collaboration Premium 3.0 - Bento & Cinematic Studio Styles */
+
+.podcast-dark-root {
+  /* background-color: #0d0f1b; */
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+/* --- Phase 31: Cinematic Studio Aura (Highlight Section) --- */
+.podcast-aura-section {
+  padding: 120px 0;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 50%, #1a1d33 0%, #0d0f1b 100%);
+}
+
+.studio-grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(186, 104, 200, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(186, 104, 200, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+  z-index: 0;
+}
+
+/* Floating Audio Elements - Refined */
+.audio-floating-ornament {
+  position: absolute;
+  background: linear-gradient(
+    135deg,
+    rgba(186, 104, 200, 0.1),
+    rgba(79, 195, 247, 0.1)
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.live-badge-premium {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 59, 59, 0.1);
+  border: 1px solid rgba(255, 59, 59, 0.3);
+  padding: 10px 24px;
+  border-radius: 50px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 30px rgba(255, 59, 59, 0.1);
+}
+
+.live-dot-pulse {
+  width: 10px;
+  height: 10px;
+  background: #ff3b3b;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #ff3b3b;
+  animation: livePulse 2s infinite;
+}
+
+@keyframes livePulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.podcast-h1-premium {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: 25px;
+  letter-spacing: -2px;
+  background: linear-gradient(135deg, #ffffff 0%, #b0b0b0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- Phase 35: The Acoustic Synchronizer Dial --- */
+.acoustic-dial-section {
+  padding: 160px 0;
+  background: #06070d;
+  position: relative;
+  overflow: hidden;
+}
+
+.dial-hub-wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: 80px auto 0;
+  padding-bottom: 50px;
+}
+
+/* Semi-Circle Arch */
+.dial-arch-container {
+  width: 70%;
+  margin: 0 auto;
+  aspect-ratio: 2 / 1;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.dial-arch-line {
+  position: absolute;
+  inset: 0;
+  border: 2px dashed rgba(255, 255, 255, 0.1);
+  border-bottom: none;
+  border-radius: 900px 900px 0 0;
+  box-shadow: 0 0 50px rgba(186, 104, 200, 0.05) inset;
+}
+
+/* Navigation Nodes on the Arch */
+.dial-node-raw {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.raw-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  transition: 0.4s;
+  line-height: 1;
+}
+
+.raw-title {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  transition: 0.4s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 15px;
+  white-space: nowrap;
+}
+
+.dial-node-raw:hover .raw-number {
+  -webkit-text-stroke: 1px rgba(186, 104, 200, 0.6);
+}
+
+.dial-node-raw.active .raw-number {
+  -webkit-text-stroke: 1px transparent;
+  background: linear-gradient(135deg, #ba68c8, #4fc3f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  transform: scale(1.1);
+}
+
+.dial-node-raw.active .raw-title {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(186, 104, 200, 0.5);
+}
+
+/* Center Content Display */
+.dial-content-display {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+  padding: 60px 40px;
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(186, 104, 200, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dial-center-icon {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 30px;
+  text-shadow: 0 0 30px rgba(79, 195, 247, 0.8);
+  display: inline-block;
+}
+
+.dial-center-icon i {
+  background: linear-gradient(135deg, #ba68c8, #4fc3f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dial-content-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+
+.dial-content-desc {
+  font-size: 1.25rem;
+  color: #a0a5b5;
+  line-height: 1.8;
+}
+
+/* Audio Pulse EQ inside Content */
+.dial-audio-pulse {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 4px;
+  height: 40px;
+  margin-top: 40px;
+  opacity: 0.5;
+}
+
+.dial-pulse-bar {
+  width: 4px;
+  background: linear-gradient(to top, #4fc3f7, #ba68c8);
+  border-radius: 2px;
+  animation: acousticPulse 1.2s infinite alternate ease-in-out;
+}
+
+@keyframes acousticPulse {
+  0% {
+    height: 10px;
+  }
+  100% {
+    height: 40px;
+  }
+}
+
+/* Mobile Fallback: Hide the arch, use a clean scrolling navigation */
+@media (max-width: 992px) {
+  .dial-arch-container {
+    aspect-ratio: auto;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    padding-bottom: 30px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .dial-arch-container::-webkit-scrollbar {
+    height: 4px;
+  }
+  .dial-arch-container::-webkit-scrollbar-thumb {
+    background: rgba(186, 104, 200, 0.5);
+  }
+
+  .dial-arch-line {
+    display: none;
+  }
+
+  .dial-node-raw {
+    position: relative;
+    transform: none !important;
+    left: auto !important;
+    top: auto !important;
+    flex-shrink: 0;
+    padding-right: 20px;
+  }
+
+  .dial-content-display {
+    background: transparent;
+    border-top: none;
+    padding: 0 20px;
+  }
+
+  .raw-number {
+    font-size: 2.5rem;
+  }
+}
+
+/* --- Why Section Upgrades --- */
+.authority-pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.authority-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 40px;
+  border-radius: 28px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.authority-card:hover {
+  background: rgba(186, 104, 200, 0.05);
+  border-color: #ba68c8;
+}
+
+.pillar-icon {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #ba68c8, #4fc3f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 25px;
+  display: inline-block;
+}
+
+/* Responsive */
+
+@media (max-width: 1440px) {
+  .authority-card {
+    padding: 30px 15px;
+  }
+  .authority-pillar-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .bento-span-8,
+  .bento-span-4,
+  .bento-span-6 {
+    grid-column: span 12;
+  }
+}
+
+@media (max-width: 767px) {
+  .podcast-aura-section {
+    padding: 50px 0;
+  }
+  .podcast-h1-premium {
+    font-size: 2rem;
+  }
+  .podcast-why-section h2 {
+    margin-top: 0 !important;
+  }
+  .podcast-aura-section p {
+    margin-bottom: 0 !important;
+  }
+  .podcast-why-section {
+    padding: 50px 0 !important;
+  }
+  .pricing-title {
+    font-size: 2rem !important;
+  }
+  .podcast-why-section .mt-5.pt-4 {
+    margin-top: 0 !important;
+  }
+  .acoustic-dial-section {
+    padding: 60px 0;
+  }
+  .acoustic-dial-section h2 {
+    font-size: 26px !important;
+  }
+  .custom-wave-header {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .dial-arch-container {
+    gap: 20px;
+    padding-bottom: 20px;
+  }
+  .dial-content-desc {
+    font-size: 1.05rem;
+  }
+  .raw-number {
+    font-size: 1.8rem;
+  }
+  .raw-title {
+    font-size: 14px;
+  }
+  .dial-hub-wrapper {
+    padding-bottom: 20px;
+  }
+}

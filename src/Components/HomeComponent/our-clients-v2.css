@@ -1,0 +1,780 @@
+/* our-clients-v2.css (NPDigital Clone) */
+.np-clients-section {
+  background: linear-gradient(to bottom, #000000 0%, #1a0804 100%);
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 80px 0 120px;
+  position: relative;
+  z-index: 0;
+}
+
+.np-clients-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Header typography matching NPDigital exactly */
+.np-clients-header {
+  margin-bottom: 70px;
+}
+
+.np-clients-header h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.np-clients-header h2 span {
+  color: #ff5c35; /* Exact NP Digital Orange */
+}
+
+.np-clients-header p {
+  font-size: 1.25rem;
+  color: #cccccc;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  font-weight: 400;
+}
+
+.np-btn-primary {
+  display: inline-block;
+  background-color: #ff5c35;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 11px 40px;
+  border-radius: 4px; /* Slightly square like NP */
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.np-btn-primary:hover {
+  background-color: #e64a26;
+  color: #ffffff;
+}
+
+/* Animated Floating Logos Wrapper */
+.p-relative-override {
+  position: relative;
+}
+
+.floating-logos-wrapper {
+  position: relative;
+  width: 100%;
+  height: 600px; /* Increased height for more wandering room */
+  overflow: visible;
+}
+
+.floating-text-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Final state is translate(-50%, -50%) but we start from top via animation */
+  transform: translate(-50%, -50%);
+  font-family: "Georgia", "Times New Roman", serif;
+  font-size: 4rem;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #fff;
+  text-align: center;
+  z-index: 100;
+  text-shadow: 0 5px 20px rgba(0, 0, 0, 1);
+  letter-spacing: -1px;
+  width: max-content;
+  animation: textDropFromTop 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Individual word animation span */
+.word-anim {
+  display: inline-block;
+  opacity: 0;
+  transform: scale(4.5);
+  filter: blur(8px);
+  animation: wordZoomOut 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes textDropFromTop {
+  0% {
+    transform: translate(-50%, -350px);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes wordZoomOut {
+  0% {
+    opacity: 0;
+    transform: scale(10) translateZ(0);
+    filter: blur(15px);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateZ(0);
+    filter: blur(0);
+  }
+}
+
+/* Container for position and entrance animation */
+.bubble-container {
+  position: absolute;
+  opacity: 0;
+  animation: entranceAnim 1.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  z-index: 5;
+}
+
+/* Bubble shape and continuous floating */
+.floating-bubble {
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.6),
+    inset 0 0 15px rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: 100%;
+  height: 100%;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.floating-bubble:hover {
+  background-color: #2a2a2a;
+  border-color: #ff5c35;
+  box-shadow: 0 15px 40px rgba(255, 92, 53, 0.4);
+  z-index: 200 !important;
+  transform: scale(1.1);
+}
+
+.floating-bubble img {
+  max-width: 60%;
+  max-height: 60%;
+  object-fit: contain;
+  /* Genious filter block to make all color/white-bg logos into white transparent logos */
+  filter: grayscale(100%) invert(100%) contrast(1.5);
+  mix-blend-mode: screen;
+  opacity: 0.8;
+  transition:
+    opacity 0.3s ease,
+    filter 0.3s ease;
+}
+.floating-bubble:hover img {
+  opacity: 1;
+  filter: grayscale(100%) invert(100%) contrast(2);
+}
+
+/* Entrance Animation from the Top */
+@keyframes entranceAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(-400px) scale(0.5); /* Drop from top */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* High-Travel Continuous Floating Animations (Attractive & Fast) */
+@keyframes continuousDrift1 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(50px, -30px) rotate(8deg) scale(1.05);
+  }
+  50% {
+    transform: translate(15px, 60px) rotate(-4deg) scale(0.95);
+  }
+  75% {
+    transform: translate(-40px, 20px) rotate(5deg) scale(1.02);
+  }
+}
+
+@keyframes continuousDrift2 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translate(-50px, -15px) rotate(-8deg) scale(0.95);
+  }
+  66% {
+    transform: translate(25px, -60px) rotate(6deg) scale(1.05);
+  }
+}
+
+@keyframes continuousDrift3 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(30px, 50px) rotate(4deg) scale(1.08);
+  }
+  50% {
+    transform: translate(-25px, 35px) rotate(-5deg) scale(0.92);
+  }
+  75% {
+    transform: translate(-50px, -25px) rotate(3deg) scale(1.05);
+  }
+}
+
+@keyframes continuousDrift4 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translate(70px, 15px) rotate(6deg) scale(1.05);
+  }
+  66% {
+    transform: translate(-15px, 70px) rotate(-6deg) scale(0.95);
+  }
+}
+
+@keyframes continuousDrift5 {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translate(-50px, -40px) rotate(-4deg) scale(1.02);
+  }
+  50% {
+    transform: translate(-70px, 10px) rotate(5deg) scale(0.98);
+  }
+  75% {
+    transform: translate(15px, -50px) rotate(-3deg) scale(1.06);
+  }
+}
+
+.float-anim-1 {
+  animation: continuousDrift1 10s infinite ease-in-out;
+}
+.float-anim-2 {
+  animation: continuousDrift2 12s infinite ease-in-out;
+}
+.float-anim-3 {
+  animation: continuousDrift3 11s infinite ease-in-out;
+}
+.float-anim-4 {
+  animation: continuousDrift4 14s infinite ease-in-out;
+}
+.float-anim-5 {
+  animation: continuousDrift5 13s infinite ease-in-out;
+}
+
+/* Positions uniformly scattered around the center text in rings */
+.bubble-pos-1 {
+  width: 140px;
+  height: 140px;
+  top: 5%;
+  left: 10%;
+  z-index: 3;
+}
+.bubble-pos-2 {
+  width: 95px;
+  height: 95px;
+  top: 0%;
+  left: 45%;
+  z-index: 2;
+}
+.bubble-pos-3 {
+  width: 115px;
+  height: 115px;
+  top: 5%;
+  left: 75%;
+  z-index: 4;
+}
+
+.bubble-pos-4 {
+  width: 150px;
+  height: 150px;
+  top: 25%;
+  left: 0%;
+  z-index: 5;
+}
+.bubble-pos-5 {
+  width: 85px;
+  height: 85px;
+  top: 20%;
+  left: 85%;
+  z-index: 2;
+}
+
+.bubble-pos-6 {
+  width: 120px;
+  height: 120px;
+  top: 45%;
+  left: -5%;
+  z-index: 6;
+}
+.bubble-pos-7 {
+  width: 130px;
+  height: 130px;
+  top: 50%;
+  left: 80%;
+  z-index: 5;
+}
+
+.bubble-pos-8 {
+  width: 100px;
+  height: 100px;
+  top: 70%;
+  left: 5%;
+  z-index: 4;
+}
+.bubble-pos-9 {
+  width: 115px;
+  height: 115px;
+  top: 75%;
+  left: 85%;
+  z-index: 6;
+}
+
+.bubble-pos-10 {
+  width: 140px;
+  height: 140px;
+  top: 85%;
+  left: 30%;
+  z-index: 5;
+}
+.bubble-pos-11 {
+  width: 125px;
+  height: 125px;
+  top: 85%;
+  left: 60%;
+  z-index: 4;
+}
+
+/* Inner ring, tighter around the center text */
+.bubble-pos-12 {
+  width: 110px;
+  height: 110px;
+  top: 20%;
+  left: 25%;
+  z-index: 10;
+}
+.bubble-pos-13 {
+  width: 90px;
+  height: 90px;
+  top: 25%;
+  left: 65%;
+  z-index: 9;
+}
+.bubble-pos-14 {
+  width: 130px;
+  height: 130px;
+  top: 65%;
+  left: 20%;
+  z-index: 11;
+}
+.bubble-pos-15 {
+  width: 105px;
+  height: 105px;
+  top: 60%;
+  left: 65%;
+  z-index: 10;
+}
+
+/* Right Side Form Container */
+.np-form-container {
+  background-color: #f6f6f6;
+  border-radius: 8px;
+  padding: 50px;
+  color: #333333;
+  max-width: 600px;
+  margin-left: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.np-form-container h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #111111;
+}
+
+/* 3-Column Checkbox Grid */
+.np-options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.np-checkbox-label {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.np-checkbox-label:hover {
+  border-color: #ff5c35;
+  background-color: #fffaf9;
+}
+
+.np-checkbox-label.checked {
+  border-color: #ff5c35;
+  background-color: #fffaf9;
+  box-shadow: 0 2px 8px rgba(255, 92, 53, 0.15);
+}
+
+.np-checkbox-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #cccccc;
+  border-radius: 3px;
+  margin-right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ff5c35;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.np-checkbox-label.checked .np-checkbox-box {
+  border-color: #ff5c35;
+}
+
+/* Overriding the default button class for the form */
+.np-form-container .form-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  padding: 12px 0;
+  margin-top: 20px;
+}
+
+/* Trusted Clients Section */
+.trusted-clients-section {
+  background-color: transparent;
+  padding: 10px 0;
+  justify-content: center;
+}
+
+.trusted-images {
+  position: relative;
+  display: flex;
+}
+
+.trusted-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+  margin-left: -15px; /* Overlapping effect */
+  position: relative;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.trusted-img:first-child {
+  margin-left: 0;
+  z-index: 3;
+}
+
+.trusted-img:nth-child(2) {
+  z-index: 2;
+}
+
+.trusted-img:nth-child(3) {
+  z-index: 1;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 1199px) {
+  .np-clients-header h2 {
+    font-size: 2.8rem;
+  }
+  .np-form-container {
+    padding: 40px 30px;
+  }
+  .np-checkbox-label {
+    font-size: 0.9rem;
+    padding: 12px 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .np-clients-section {
+    padding: 60px 0 80px;
+  }
+  .np-logos-grid {
+    margin-bottom: 60px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .np-form-container {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .np-clients-container {
+    padding: 0 20px;
+  }
+  .np-clients-header h2 {
+    font-size: 2.2rem;
+  }
+  .np-clients-header p {
+    font-size: 1.1rem;
+  }
+  .np-logos-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .np-options-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .np-form-container h3 {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+
+  .trusted-text {
+    margin-left: 24px !important;
+  }
+}
+
+/* Mobile Fixes for 575px and down (including 360px) */
+@media (max-width: 575px) {
+  .np-clients-section {
+    overflow-x: hidden;
+    padding: 50px 0 70px;
+  }
+  .np-clients-header h2 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+  .np-clients-header p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  .floating-logos-wrapper {
+    height: 450px;
+    margin-bottom: 30px;
+  }
+  .floating-text-center {
+    font-size: 2.2rem;
+    width: 95%;
+  }
+
+  /* Shrink all bubbles for mobile */
+  .bubble-pos-1 {
+    width: 70px;
+    height: 70px;
+    top: 5%;
+    left: 5%;
+  }
+  .bubble-pos-2 {
+    width: 55px;
+    height: 55px;
+    top: 0%;
+    left: 40%;
+  }
+  .bubble-pos-3 {
+    width: 60px;
+    height: 60px;
+    top: 5%;
+    left: 75%;
+  }
+  .bubble-pos-4 {
+    width: 80px;
+    height: 80px;
+    top: 25%;
+    left: -2%;
+  }
+  .bubble-pos-5 {
+    width: 55px;
+    height: 55px;
+    top: 20%;
+    left: 85%;
+  }
+  .bubble-pos-6 {
+    width: 65px;
+    height: 65px;
+    top: 45%;
+    left: -5%;
+  }
+  .bubble-pos-7 {
+    width: 75px;
+    height: 75px;
+    top: 50%;
+    left: 80%;
+  }
+  .bubble-pos-8 {
+    width: 55px;
+    height: 55px;
+    top: 70%;
+    left: 5%;
+  }
+  .bubble-pos-9 {
+    width: 65px;
+    height: 65px;
+    top: 75%;
+    left: 85%;
+  }
+  .bubble-pos-10 {
+    width: 75px;
+    height: 75px;
+    top: 85%;
+    left: 20%;
+  }
+  .bubble-pos-11 {
+    width: 70px;
+    height: 70px;
+    top: 85%;
+    left: 65%;
+  }
+  .bubble-pos-12 {
+    width: 60px;
+    height: 60px;
+    top: 25%;
+    left: 25%;
+  }
+  .bubble-pos-13 {
+    width: 55px;
+    height: 55px;
+    top: 30%;
+    left: 70%;
+  }
+  .bubble-pos-14 {
+    width: 75px;
+    height: 75px;
+    top: 65%;
+    left: 15%;
+  }
+  .bubble-pos-15 {
+    width: 60px;
+    height: 60px;
+    top: 60%;
+    left: 70%;
+  }
+
+  /* Mobile specific drift animations to prevent off-screen movement */
+  @keyframes continuousDrift1Mobile {
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    25% {
+      transform: translate(15px, -10px) rotate(4deg) scale(1.05);
+    }
+    50% {
+      transform: translate(5px, 15px) rotate(-2deg) scale(0.95);
+    }
+    75% {
+      transform: translate(-10px, 10px) rotate(3deg) scale(1.02);
+    }
+  }
+  @keyframes continuousDrift2Mobile {
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    33% {
+      transform: translate(-10px, -5px) rotate(-4deg) scale(0.95);
+    }
+    66% {
+      transform: translate(10px, -15px) rotate(3deg) scale(1.05);
+    }
+  }
+  @keyframes continuousDrift3Mobile {
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    25% {
+      transform: translate(10px, 10px) rotate(2deg) scale(1.08);
+    }
+    50% {
+      transform: translate(-10px, 8px) rotate(-3deg) scale(0.92);
+    }
+    75% {
+      transform: translate(-12px, -8px) rotate(2deg) scale(1.05);
+    }
+  }
+  @keyframes continuousDrift4Mobile {
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    33% {
+      transform: translate(15px, 5px) rotate(3deg) scale(1.05);
+    }
+    66% {
+      transform: translate(-5px, 15px) rotate(-3deg) scale(0.95);
+    }
+  }
+  @keyframes continuousDrift5Mobile {
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0deg) scale(1);
+    }
+    25% {
+      transform: translate(-10px, -10px) rotate(-2deg) scale(1.02);
+    }
+    50% {
+      transform: translate(-15px, 5px) rotate(3deg) scale(0.98);
+    }
+    75% {
+      transform: translate(5px, -10px) rotate(-2deg) scale(1.06);
+    }
+  }
+
+  .float-anim-1 {
+    animation: continuousDrift1Mobile 10s infinite ease-in-out;
+  }
+  .float-anim-2 {
+    animation: continuousDrift2Mobile 12s infinite ease-in-out;
+  }
+  .float-anim-3 {
+    animation: continuousDrift3Mobile 11s infinite ease-in-out;
+  }
+  .float-anim-4 {
+    animation: continuousDrift4Mobile 14s infinite ease-in-out;
+  }
+  .float-anim-5 {
+    animation: continuousDrift5Mobile 13s infinite ease-in-out;
+  }
+
+  .np-form-container {
+    padding: 30px 20px;
+    margin-top: 20px;
+  }
+  .np-options-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .np-checkbox-label {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+  .np-checkbox-box {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+}

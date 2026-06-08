@@ -1,0 +1,291 @@
+/* === Affiliate Collaboration Premium Dark Styles === */
+
+.affiliate-dark-bg {
+  background-color: #03050a;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* Gradients */
+.affiliate-gradient-text {
+  background: linear-gradient(135deg, #00e676, #00b0ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* === Context Section (Why Works) === */
+.affiliate-context-section {
+  padding: 120px 0;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.affiliate-crystal-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.aff-crystal-card {
+  background: rgba(10, 13, 25, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 40px 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.aff-crystal-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0%;
+  background: linear-gradient(180deg, #00e676, transparent);
+  transition: all 0.4s ease;
+}
+
+.aff-crystal-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(0, 230, 118, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.aff-crystal-card:hover::before {
+  height: 100%;
+}
+
+.aff-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: rgba(0, 230, 118, 0.1);
+  color: #00e676;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+}
+
+/* === Dashboard Strategy Section === */
+.affiliate-saas-container {
+  background: rgba(8, 11, 20, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  display: flex;
+  min-height: 600px;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+}
+
+/* Left Sidebar Navigation */
+.aff-saas-sidebar {
+  width: 35%;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.aff-nav-item {
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  color: #6c7280;
+  font-weight: 600;
+}
+
+.aff-nav-item:hover {
+  background: rgba(255, 255, 255, 0.02);
+  color: #fff;
+}
+
+.aff-nav-item.active {
+  background: linear-gradient(90deg, rgba(0, 230, 118, 0.1), transparent);
+  border-left-color: #00e676;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 230, 118, 0.4);
+}
+
+.nav-icon {
+  font-size: 1.4rem;
+}
+
+/* Right Dashboard Screen */
+.aff-saas-screen {
+  width: 65%;
+  padding: 60px;
+  position: relative;
+  background: radial-gradient(
+    circle at top right,
+    rgba(0, 176, 255, 0.05) 0%,
+    transparent 50%
+  );
+}
+
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.tech-badge {
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 2px;
+  border: 1px solid currentColor;
+}
+
+.screen-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 25px;
+  letter-spacing: -0.5px;
+}
+
+.screen-desc {
+  font-size: 1.15rem;
+  color: #a0a5b5;
+  line-height: 1.8;
+}
+
+.screen-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.metric-box {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.metric-box i {
+  font-size: 1.5rem;
+  color: #00b0ff;
+}
+
+.metric-text {
+  font-size: 0.95rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+.insight-bar {
+  margin-top: 40px;
+  background: rgba(0, 230, 118, 0.05);
+  border-left: 4px solid #00e676;
+  padding: 20px;
+  border-radius: 0 8px 8px 0;
+}
+
+/* === Benefits Section === */
+.affiliate-benefits-section {
+  padding: 100px 0;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.aff-benefit-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.aff-benefit-card:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(0, 176, 255, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 176, 255, 0.1);
+}
+
+.aff-benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #00b0ff, #00e676);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 992px) {
+  .affiliate-crystal-grid {
+    grid-template-columns: 1fr;
+  }
+  .affiliate-saas-container {
+    flex-direction: column;
+  }
+  .aff-saas-sidebar,
+  .aff-saas-screen {
+    width: 100%;
+  }
+  .aff-saas-sidebar {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .screen-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .affiliate-context-section {
+    padding: 50px 0;
+  }
+  .affiliate-context-section h2 {
+    font-size: 26px !important;
+  }
+  .affiliate-strategy-section {
+    padding: 50px 0 !important;
+  }
+  .affiliate-strategy-section h2 {
+    font-size: 26px !important;
+  }
+  .affiliate-benefits-section {
+    padding: 50px 0 !important;
+  }
+  .affiliate-benefits-section h2 {
+    font-size: 26px !important;
+  }
+  .aff-nav-item {
+    padding: 15px 20px;
+  }
+  .screen-header {
+    flex-wrap: wrap;
+  }
+  .screen-title {
+    font-size: 1.58rem;
+  }
+  .aff-saas-screen {
+    padding: 30px 20px;
+  }
+  .popular-tag {
+    min-width: 200px;
+  }
+  .logo-addons-area {
+    margin-bottom: 40px !important;
+  }
+}

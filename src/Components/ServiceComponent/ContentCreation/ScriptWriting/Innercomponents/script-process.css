@@ -1,0 +1,161 @@
+/* Script Process Section - Premium Dark Styling */
+.script-process-section {
+  padding: 50px 0;
+  background-color: #0d0f1b;
+  position: relative;
+  overflow: hidden;
+}
+
+.script-process-title h2 {
+  font-size: 3.8rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: -1px;
+}
+
+.script-process-title .highlight-gold {
+  background: linear-gradient(135deg, #fdb914 0%, #ff6b00 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+/* Steps Grid */
+.script-steps-container {
+  margin-top: 80px;
+}
+
+/* Premium Dark Card Design */
+.script-step-card {
+  background: #111;
+  border-radius: 24px;
+  padding: 30px 20px;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  border: 1px solid #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.script-step-card:hover {
+  transform: translateY(-20px) scale(1.02);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  border-color: #fdb914;
+  background: #000;
+}
+
+.script-step-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at bottom left,
+    rgba(253, 185, 20, 0.1),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.script-step-card:hover::after {
+  opacity: 1;
+}
+
+/* Step Number styling */
+.script-step-number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 4rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.05);
+  line-height: 0.8;
+  transition: all 0.5s ease;
+  z-index: -1;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.script-step-card:hover .script-step-number {
+  color: rgba(253, 185, 20, 0.15);
+  transform: scale(1.2) rotate(-10deg);
+}
+
+/* Icon Styling */
+.script-step-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+  box-shadow: none;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.script-step-card:hover .script-step-icon {
+  background: linear-gradient(135deg, #fdb914 0%, #ff6b00 100%);
+  box-shadow: 0 10px 20px rgba(253, 185, 20, 0.4);
+  border-color: transparent;
+  transform: rotate(5deg);
+}
+
+.script-step-icon svg {
+  width: 32px;
+  height: 32px;
+  fill: #fdb914;
+  transition: fill 0.3s ease;
+}
+
+.script-step-card:hover .script-step-icon svg {
+  fill: #fff;
+}
+
+/* Content Styling */
+.script-step-card h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.script-step-card p {
+  font-size: 15px;
+  color: #aaa;
+  line-height: 1.6;
+  margin-bottom: 0;
+  font-weight: 500;
+  flex-grow: 1;
+}
+
+/* Connector Line (Desktop Only) - Adjusted for layout */
+@media (min-width: 992px) {
+  .script-steps-row {
+    position: relative;
+  }
+  /* Optional: Add connector line logic if strictly linear */
+}
+
+@media (max-width: 767px) {
+  .script-process-section {
+    padding: 30px 0;
+  }
+  .script-process-title h2 {
+    font-size: 2rem;
+  }
+}

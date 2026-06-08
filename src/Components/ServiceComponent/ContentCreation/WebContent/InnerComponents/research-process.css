@@ -1,0 +1,244 @@
+/* research-process.css */
+.research-process-section {
+  padding: 50px 0;
+  background: #0d0f1b;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  font-family: "Outfit", sans-serif;
+}
+
+.research-header {
+  text-align: center;
+  margin-bottom: 50px;
+  z-index: 2;
+  position: relative;
+}
+
+.research-header h2 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.research-header p {
+  color: #ccc;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.research-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 600px; /* Space for the orbit */
+}
+
+/* Central Core */
+.research-core {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, #fdb914 0%, #a37200 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow:
+    0 0 50px rgba(253, 185, 20, 0.4),
+    inset 0 0 20px rgba(255, 255, 255, 0.2);
+  z-index: 10;
+  animation: pulseCore 3s infinite ease-in-out;
+}
+
+.core-icon svg {
+  width: 80px;
+  height: 80px;
+  color: #000;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}
+
+@keyframes pulseCore {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 50px rgba(253, 185, 20, 0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 80px rgba(253, 185, 20, 0.6);
+  }
+}
+
+/* Orbital Rings */
+.orbit-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform-style: preserve-3d;
+}
+
+.orbit-1 {
+  width: 400px;
+  height: 400px;
+  animation: spinRight 20s linear infinite;
+}
+.orbit-2 {
+  width: 600px;
+  height: 600px;
+  animation: spinLeft 30s linear infinite;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+@keyframes spinRight {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinLeft {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* Satellite Items */
+.satellite-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 220px;
+  background: rgba(20, 20, 20, 0.9);
+  border: 1px solid rgba(253, 185, 20, 0.3);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  transform-origin: -200px center; /* Offset for rotation */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Positioning Satellites around the core */
+/* We will use specific classes to position them without complex transform-origin hacks for stability in responsive */
+.sat-1 {
+  transform: translate(-50%, -50%) translate(-250px, -150px);
+}
+.sat-2 {
+  transform: translate(-50%, -50%) translate(250px, -150px);
+}
+.sat-3 {
+  transform: translate(-50%, -50%) translate(-250px, 150px);
+}
+.sat-4 {
+  transform: translate(-50%, -50%) translate(250px, 150px);
+}
+
+.satellite-item:hover {
+  background: #1a1a1a;
+  border-color: #fdb914;
+  transform: translate(-50%, -50%) scale(1.05); /* This breaks the specific positioning, need to combine */
+  z-index: 20;
+}
+
+/* Fix hover transform for each specific position */
+.sat-1:hover {
+  transform: translate(-50%, -50%) translate(-250px, -150px) scale(1.05);
+}
+.sat-2:hover {
+  transform: translate(-50%, -50%) translate(250px, -150px) scale(1.05);
+}
+.sat-3:hover {
+  transform: translate(-50%, -50%) translate(-250px, 150px) scale(1.05);
+}
+.sat-4:hover {
+  transform: translate(-50%, -50%) translate(250px, 150px) scale(1.05);
+}
+
+.sat-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(253, 185, 20, 0.1);
+  color: #fdb914;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.sat-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.satellite-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.satellite-item p {
+  font-size: 0.85rem;
+  color: #888;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Connecting Lines */
+.connection-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px; /* Thickness */
+  height: 0;
+  background: linear-gradient(to bottom, #fdb914, transparent);
+  transform-origin: top center;
+  opacity: 0.3;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .research-container {
+    height: auto;
+    flex-direction: column;
+    padding: 50px 0;
+  }
+
+  .research-core {
+    position: relative;
+    margin-bottom: 50px;
+  }
+
+  .orbit-ring,
+  .connection-line {
+    display: none;
+  }
+
+  .satellite-item {
+    position: relative;
+    transform: none !important;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 350px;
+    left: auto;
+    top: auto;
+  }
+
+  .sat-1,
+  .sat-2,
+  .sat-3,
+  .sat-4 {
+    transform: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .research-header h2 {
+    font-size: 2.2rem;
+  }
+}

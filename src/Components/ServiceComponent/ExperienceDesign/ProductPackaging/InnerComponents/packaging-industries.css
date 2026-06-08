@@ -1,0 +1,125 @@
+.pkg-industries-section {
+  background-color: #111111;
+  color: #ffffff;
+  padding: 50px 0;
+}
+
+.pkg-section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.pkg-section-desc {
+  color: #aaaaaa;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0;
+  border-left: 2px solid #fdb914;
+  padding-left: 20px;
+}
+
+.pkg-industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.pkg-industry-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  height: 200px;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+}
+
+.pkg-ind-content {
+  padding: 40px 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.pkg-ind-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.pkg-ind-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.pkg-ind-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fdb914;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 3;
+}
+
+.pkg-ind-overlay p {
+  color: #000000;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0;
+  text-align: center;
+}
+
+.pkg-industry-card:hover {
+  transform: translateY(-5px);
+  border-color: #fdb914;
+  box-shadow: 0 10px 25px rgba(253, 185, 20, 0.2);
+}
+
+.pkg-industry-card:hover .pkg-ind-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pkg-industry-card:hover .pkg-ind-icon {
+  transform: scale(0.8);
+}
+
+.pkg-industry-footer {
+  color: #fdb914;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 991px) {
+  .pkg-section-desc {
+    margin-top: 25px;
+    border-left: none;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .pkg-section-title {
+    font-size: 2.2rem;
+  }
+}

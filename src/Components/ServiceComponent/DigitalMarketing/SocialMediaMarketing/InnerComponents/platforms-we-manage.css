@@ -1,0 +1,294 @@
+/* platforms-we-manage.css - Clean Orbit-Only Version */
+.aurora-manage-section {
+  padding: 100px 0;
+  background-color: #050505;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  position: relative;
+  overflow: hidden;
+  min-height: 900px;
+  display: flex;
+  align-items: center;
+}
+
+/* Static Background (No Drift) */
+.aurora-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(15, 15, 15, 1) 0%,
+    rgba(5, 5, 5, 1) 100%
+  );
+}
+
+.aurora {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.3; /* Subtle static glow */
+}
+
+.aurora.a-1 {
+  width: 600px;
+  height: 600px;
+  top: -10%;
+  left: -10%;
+  background: rgba(138, 43, 226, 0.4);
+}
+.aurora.a-2 {
+  width: 500px;
+  height: 500px;
+  bottom: -10%;
+  right: -5%;
+  background: rgba(0, 212, 255, 0.3);
+}
+.aurora.a-3 {
+  width: 650px;
+  height: 650px;
+  top: 40%;
+  left: 30%;
+  background: rgba(255, 179, 0, 0.15);
+}
+
+/* --- Container & Header --- */
+.aurora-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.aurora-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.aurora-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 15px;
+  letter-spacing: -1px;
+}
+
+.aurora-header p {
+  font-size: 1.25rem;
+  color: #a0a0a0;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* --- Constellation System --- */
+.constellation-wrapper {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aurora-manage-section .constellation-wrapper {
+  margin: 150px auto 0;
+}
+
+/* Static Hub */
+.constellation-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.core-orb {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #ffdf00 0%,
+    #ff8c00 50%,
+    #d43b00 100%
+  );
+  filter: blur(25px);
+  opacity: 0.6;
+}
+
+.core-glass {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.core-glass span {
+  font-weight: 800;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.3;
+}
+
+/* --- Orbital Tracks --- */
+.orbit-track {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* The spinning dashed line goes here so it doesn't spin the planets */
+.orbit-track::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  animation: spinTrack var(--speed) linear infinite;
+  box-sizing: border-box;
+}
+
+.orbit-track.reverse::before {
+  animation-name: spinTrackReverse;
+}
+
+/* --- Planet Card Positioning --- */
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(var(--orbit-deg))
+    translateY(var(--radius));
+  pointer-events: auto;
+}
+
+.planet-counter {
+  /* ONLY STATIC COUNTER-ROTATION - NO ANIMATION */
+  transform: rotate(calc(-1 * var(--orbit-deg)));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes spinTrack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinTrackReverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/* --- Clean Static Card Design --- */
+.planet-glass {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 25px;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.planet-glass img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.planet-glass span {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+/* Simple Hover Effect (No Animation) */
+.planet-glass:hover {
+  background: rgba(30, 30, 30, 0.9);
+  border-color: var(--brand-color);
+  box-shadow: 0 0 20px var(--brand-color);
+}
+
+/* --- Mobile --- */
+.pm-mobile-grid {
+  display: none;
+}
+@media (max-width: 768px) {
+  .constellation-wrapper {
+    display: none;
+  }
+  .pm-mobile-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    padding: 0 20px;
+  }
+  .pm-mobile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(20, 20, 20, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    gap: 10px;
+  }
+
+  .aurora-manage-section {
+    padding: 40px 0;
+    min-height: auto;
+  }
+
+  .aurora-header {
+    margin-bottom: 40px;
+  }
+
+  .aurora-header h2 {
+    font-size: 2rem;
+  }
+}

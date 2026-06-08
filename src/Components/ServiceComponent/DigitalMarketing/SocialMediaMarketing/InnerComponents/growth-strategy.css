@@ -1,0 +1,311 @@
+/* growth-strategy.css */
+.growth-strategy-section {
+  padding: 50px 0;
+  background: #000;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background Cyber-Field */
+.gs-bg-field {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top, #1a1a2e, #000);
+  z-index: 0;
+}
+
+.gs-header {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 80px;
+}
+
+.gs-header h2 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #fff, #666);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.gs-header p {
+  font-size: 1.1rem;
+  color: #888;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Timeline Container */
+.gs-timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+/* Central Neon Line */
+.gs-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 4px;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.gs-line-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50vh; /* Gradient height */
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #e94560,
+    transparent
+  ); /* Neon Pink/Red */
+  animation: scanDown 3s linear infinite;
+}
+
+@keyframes scanDown {
+  0% {
+    top: -50%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+/* Timeline Items */
+.gs-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
+  opacity: 0; /* Animated in via JS or simple CSS delay */
+  animation: fadeInUp 0.8s forwards;
+}
+
+.gs-item:nth-child(odd) {
+  flex-direction: row-reverse;
+} /* Left aligned content */
+/* Actually row-reverse puts content on left if we structure flex properly */
+/* Let's be explicit */
+/* Left side: content, Right side: empty */
+/* Right side: content, Left side: empty */
+/* To keep it simple: Flex row centered. One child has margin. */
+
+.gs-content {
+  width: 45%;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.gs-item:nth-child(odd) .gs-content {
+  margin-right: auto; /* Push to left */
+  text-align: right;
+  border-right: 4px solid #e94560;
+  transform: perspective(1000px) rotateY(10deg);
+}
+
+.gs-item:nth-child(even) .gs-content {
+  margin-left: auto; /* Push to right */
+  text-align: left;
+  border-left: 4px solid #403aff;
+  transform: perspective(1000px) rotateY(-10deg);
+}
+
+.gs-content:hover {
+  transform: perspective(1000px) rotateY(0deg) scale(1.05); /* Flatten and zoom */
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.gs-item:nth-child(odd) .gs-content:hover {
+  border-color: #e94560;
+  box-shadow: 0 0 20px rgba(233, 69, 96, 0.3);
+}
+.gs-item:nth-child(even) .gs-content:hover {
+  border-color: #403aff;
+  box-shadow: 0 0 20px rgba(64, 58, 255, 0.3);
+}
+
+/* Central Dot */
+.gs-dot {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  box-shadow: 0 0 10px #fff;
+  transition: all 0.3s;
+}
+
+.gs-content:hover ~ .gs-dot {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.gs-item:nth-child(odd) .gs-content:hover ~ .gs-dot {
+  background: #e94560;
+  box-shadow: 0 0 20px #e94560;
+}
+.gs-item:nth-child(even) .gs-content:hover ~ .gs-dot {
+  background: #403aff;
+  box-shadow: 0 0 20px #403aff;
+}
+
+/* Text Styles */
+.gs-step-num {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  letter-spacing: 2px;
+}
+
+.gs-item:nth-child(odd) .gs-step-num {
+  color: #e94560;
+}
+.gs-item:nth-child(even) .gs-step-num {
+  color: #403aff;
+}
+
+.gs-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.gs-content p {
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Animations delays */
+.gs-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.gs-item:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.gs-item:nth-child(3) {
+  animation-delay: 0.5s;
+}
+.gs-item:nth-child(4) {
+  animation-delay: 0.7s;
+}
+.gs-item:nth-child(5) {
+  animation-delay: 0.9s;
+}
+.gs-item:nth-child(6) {
+  animation-delay: 1.1s;
+}
+.gs-item:nth-child(7) {
+  animation-delay: 1.3s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional Line */
+.gs-optional {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 1.2rem;
+  color: #fff;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .gs-line {
+    left: 20px;
+  }
+  .gs-dot {
+    left: 20px;
+  }
+  .gs-item {
+    flex-direction: column !important;
+    align-items: flex-start;
+    margin-left: 50px;
+  }
+  .gs-content {
+    width: 100%;
+    margin: 0 !important;
+    text-align: left !important;
+    transform: none !important;
+    border-right: none !important;
+    border-left: 4px solid #fff; /* Unified border for mobile */
+  }
+  .gs-item:nth-child(odd) .gs-content {
+    border-left-color: #e94560;
+  }
+  .gs-item:nth-child(even) .gs-content {
+    border-left-color: #403aff;
+  }
+}
+
+@media (max-width: 767px) {
+  .growth-strategy-section {
+    padding: 40px 0;
+  }
+
+  .gs-header {
+    margin-bottom: 40px;
+  }
+
+  .gs-header h2 {
+    font-size: 2rem;
+  }
+
+  .gs-line {
+    left: 8px;
+  }
+
+  .gs-item {
+    margin-left: 30px;
+    margin-bottom: 30px;
+  }
+
+  .gs-dot {
+    left: -20px;
+  }
+
+  .gs-content {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,177 @@
+/* Section Background & Typography */
+.content-mastery-section {
+  padding: 100px 0;
+  position: relative;
+  background-color: var(--cm-bg-dark, #0a0e17); /* High-end dark */
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  border-top: 1px dashed rgba(255,255,255,0.05);
+}
+
+.content-mastery-section .top-title h2 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.content-mastery-section .top-title b {
+  color: var(--cm-accent-primary, #00f2fe);
+}
+
+.content-mastery-section p {
+  font-size: 18px;
+  color: #8b9bb4;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* FLEU CARD STYLE - PREMIUM DARK VERSION */
+.fleu-card {
+  background: rgba(13, 17, 29, 0.7);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 40px 16px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.fleu-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(0, 242, 254, 0.05);
+  border-color: rgba(0, 242, 254, 0.3);
+}
+
+/* Colored bottom bar on hover */
+.fleu-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: left;
+}
+
+.fleu-card:hover::after {
+  transform: scaleX(1);
+}
+
+.offer_row {
+  padding-top: 40px;
+}
+
+/* ICON WRAPPER & RIPPLE BACKGROUND */
+.fleu-icon-wrapper {
+  position: relative;
+  width: 90px;
+  height: 90px;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03); 
+}
+
+.fleu-icon-wrapper i {
+  font-size: 36px;
+  color: rgba(255,255,255,0.8);
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.fleu-card:hover .fleu-icon-wrapper i {
+  color: #00f2fe;
+}
+
+/* The Ripple Effect Background */
+.ripple-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 1;
+  background: repeating-radial-gradient(
+    circle,
+    rgba(255,255,255,0.02) 0,
+    rgba(255,255,255,0.02) 4px,
+    transparent 5px,
+    transparent 10px
+  );
+  opacity: 0.6;
+  transition: all 0.5s ease;
+}
+
+.fleu-card:hover .ripple-bg {
+  transform: scale(1.1);
+  opacity: 1;
+  background: repeating-radial-gradient(
+    circle,
+    rgba(0,242,254,0.05) 0,
+    rgba(0,242,254,0.05) 4px,
+    transparent 5px,
+    transparent 10px
+  );
+}
+
+/* Typography */
+.fleu-card h3 {
+  font-size: 19px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+.fleu-card p {
+  font-size: 15px;
+  color: #8b9bb4;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+/* BUTTON - PREMIUM STYLE */
+.btn-get-started {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ef1d26; /* Primary Red */
+  background: linear-gradient(135deg, #ef1d26 0%, #c4121a 100%);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(239, 29, 38, 0.3);
+  letter-spacing: 0.5px;
+}
+
+.fleu-card .btn-get-started {
+  padding: 8px 32px;
+}
+
+.btn-get-started:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(239, 29, 38, 0.4);
+  background: linear-gradient(135deg, #ff333d 0%, #d60b02 100%);
+  color: #fff;
+}
+
+/* RESPONSIVE is handled by Bootstrap now */

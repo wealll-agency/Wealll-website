@@ -1,0 +1,252 @@
+/* writing-style.css */
+.writing-style-section {
+  padding: 100px 0;
+  background: #0d0f1b;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Background Animation */
+.style-bg-anim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #000 100%);
+  z-index: 0;
+}
+
+.floating-char {
+  position: absolute;
+  color: rgba(253, 185, 20, 0.05); /* Very faint gold */
+  font-size: 4rem;
+  font-weight: bold;
+  user-select: none;
+  animation: floatUp 10s linear infinite;
+  display: none;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.style-header {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 80px;
+}
+
+.style-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.style-header p {
+  color: #999;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 3D Container */
+.styles-3d-container {
+  perspective: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.style-card-3d {
+  width: 250px; /* Base width */
+  height: 200px;
+  background: rgba(25, 25, 25, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  margin: 0 10px;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 50px 20px 30px;
+  backdrop-filter: blur(10px);
+}
+
+/* Default State: Tilted Inwards to create a curve */
+/* Center card is flat, others rotated */
+/* We will handle this via inline styles or specific classes in React, 
+   but for CSS fallbacks let's define a hover state that expands */
+
+.style-card-3d:hover {
+  width: 350px; /* Expand width */
+  height: 400px;
+  transform: translateY(-20px) scale(1.05) !important; /* Override inline rotation on hover */
+  background: #111;
+  border-color: #fdb914;
+  padding: 30px 20px;
+  box-shadow: 0 0 40px rgba(253, 185, 20, 0.3);
+  z-index: 10;
+}
+
+/* Card Content */
+.card-icon-3d {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  transition: all 0.5s ease;
+}
+
+.style-card-3d:hover .card-icon-3d {
+  transform: scale(1.2);
+  text-shadow: 0 0 20px #fdb914;
+}
+
+.card-title-3d {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.style-card-3d:hover .card-title-3d {
+  color: #fdb914;
+  font-size: 1.4rem;
+}
+
+.card-desc-3d {
+  font-size: 0.9rem;
+  color: #aaa;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.4s ease 0.1s;
+  line-height: 1.5;
+}
+
+.style-card-3d:hover .card-desc-3d {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Example Text Reveal on Hover */
+.card-example-box {
+  margin-top: 30px;
+  background: rgba(253, 185, 20, 0.1);
+  border: 1px solid rgba(253, 185, 20, 0.3);
+  border-radius: 10px;
+  padding: 15px;
+  width: 100%;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.4s ease 0.2s;
+}
+
+.style-card-3d:hover .card-example-box {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.example-label {
+  font-size: 0.7rem;
+  color: #fdb914;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.example-text {
+  font-size: 0.85rem;
+  color: #eee;
+  font-style: italic;
+  font-family: "Georgia", serif;
+}
+
+/* Active State (if clicked) */
+.style-card-3d.active {
+  border-color: #fdb914;
+  background: #111;
+}
+
+/* Responsive */
+
+@media (max-width: 1400px) {
+  .style-card-3d:hover {
+    height: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .styles-3d-container {
+    flex-direction: column;
+    height: auto;
+    padding-bottom: 50px;
+  }
+
+  .style-card-3d {
+    width: 90%;
+    height: auto;
+    margin-bottom: 20px;
+    transform: none !important;
+    padding: 30px;
+  }
+
+  .style-card-3d:hover {
+    width: 95%;
+    transform: translateY(-5px) !important;
+  }
+
+  .card-desc-3d,
+  .card-example-box {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .writing-style-section {
+    padding: 50px 0;
+  }
+  .style-header {
+    margin-bottom: 50px;
+  }
+  .style-header h2 {
+    font-size: 2.2rem;
+  }
+  .style-card-3d {
+    width: 100%;
+    padding: 30px 20px;
+  }
+  .styles-3d-container {
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,667 @@
+/* PR Matrix Broadcast Cyber-Pipeline */
+.pr-cyber-section {
+  background-color: #020202;
+  padding: 120px 0;
+  color: #ffffff;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.pr-cyber-glow-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(253, 185, 20, 0.05) 0%,
+    rgba(2, 2, 2, 0) 70%
+  );
+  filter: blur(100px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pr-cyber-header {
+  margin-top: 60px;
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 2;
+}
+
+.pr-cyber-header h2 {
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Helvetica Compressed", sans-serif;
+  margin-bottom: 15px;
+}
+
+.neon-text {
+  color: #fdb914;
+  text-shadow:
+    0 0 10px rgba(253, 185, 20, 0.5),
+    0 0 20px rgba(253, 185, 20, 0.3);
+}
+
+.pr-cyber-header p {
+  font-size: 1.15rem;
+  color: #aaaaaa;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Timeline Container */
+.pr-timeline-container {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* The Central Core Beam */
+.pr-timeline-core {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(253, 185, 20, 0.8),
+    rgba(253, 185, 20, 0.8),
+    transparent
+  );
+  border-radius: 4px;
+  box-shadow:
+    0 0 15px rgba(253, 185, 20, 0.5),
+    0 0 30px rgba(253, 185, 20, 0.2);
+  z-index: 1;
+  overflow: hidden; /* For the particle */
+}
+
+/* The running particle inside the core beam */
+.pr-core-particle {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(to bottom, transparent, #ffffff, transparent);
+  filter: blur(2px);
+  animation: coreFlow 3s infinite linear;
+}
+
+@keyframes coreFlow {
+  0% {
+    top: -120px;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+/* Timeline Rows */
+.pr-timeline-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 80px;
+  z-index: 2;
+}
+
+.pr-timeline-row:last-child {
+  margin-bottom: 0;
+}
+
+.pr-timeline-row.row-left {
+  justify-content: flex-start;
+}
+
+.pr-timeline-row.row-right {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+/* The content wrapper spacing */
+.pr-timeline-content-wrapper {
+  width: 45%;
+  position: relative;
+  perspective: 1000px; /* For 3D floating effect */
+}
+
+.row-left .pr-timeline-content-wrapper {
+  padding-right: 50px;
+  text-align: right;
+}
+
+.row-right .pr-timeline-content-wrapper {
+  padding-left: 50px;
+  text-align: left;
+}
+
+/* The Radar Node on the Core Beam */
+.pr-timeline-node {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3; /* Above core */
+}
+
+.pr-node-center {
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow:
+    0 0 10px #ffffff,
+    0 0 20px #fdb914;
+  z-index: 2;
+}
+
+.pr-node-radar {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #fdb914;
+  border-radius: 50%;
+  animation: radarPing 2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  z-index: 1;
+}
+
+@keyframes radarPing {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* The Horizontal Connector Line */
+.pr-timeline-connector {
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  background: linear-gradient(to right, rgba(253, 185, 20, 0.8), transparent);
+  z-index: 1;
+}
+
+.row-left .pr-timeline-connector {
+  right: 50%;
+  width: 8%; /* Animated via framer motion but base state */
+  background: linear-gradient(
+    to left,
+    rgba(253, 185, 20, 0.8),
+    rgba(253, 185, 20, 0)
+  );
+  box-shadow: 0 0 8px rgba(253, 185, 20, 0.4);
+}
+
+.row-right .pr-timeline-connector {
+  left: 50%;
+  width: 8%;
+  background: linear-gradient(
+    to right,
+    rgba(253, 185, 20, 0.8),
+    rgba(253, 185, 20, 0)
+  );
+  box-shadow: 0 0 8px rgba(253, 185, 20, 0.4);
+}
+
+/* Glass Datacard styling (Holographic feel) */
+.pr-glass-datacard {
+  background: rgba(15, 15, 15, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 30px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.02);
+  /* Float animation */
+  animation: floatCard 6s infinite ease-in-out;
+}
+
+.row-left .pr-glass-datacard {
+  animation-delay: 0s;
+}
+.row-right .pr-glass-datacard {
+  animation-delay: -3s;
+}
+
+@keyframes floatCard {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.pr-glass-datacard:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(253, 185, 20, 0.3);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.8),
+    0 0 30px rgba(253, 185, 20, 0.1);
+  background: rgba(20, 20, 20, 0.8);
+  /* pause float on hover */
+  animation-play-state: paused;
+}
+
+/* Glowing Left/Right edge on hover */
+.pr-datacard-edge {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  width: 3px;
+  background: #fdb914;
+  border-radius: 3px;
+  box-shadow: 0 0 15px #fdb914;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.row-left .pr-datacard-edge {
+  right: 0;
+  transform: translateX(50%);
+}
+.row-right .pr-datacard-edge {
+  left: 0;
+  transform: translateX(-50%);
+}
+.pr-glass-datacard:hover .pr-datacard-edge {
+  opacity: 1;
+}
+
+.pr-datacard-number {
+  position: absolute;
+  top: -20px;
+  font-size: 6rem;
+  font-weight: 900;
+  font-family: "Lexend", sans-serif;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.03);
+  z-index: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+.row-left .pr-datacard-number {
+  left: 10px;
+}
+.row-right .pr-datacard-number {
+  right: 10px;
+}
+.pr-glass-datacard:hover .pr-datacard-number {
+  -webkit-text-stroke: 1px rgba(253, 185, 20, 0.1);
+}
+
+.pr-datacard-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.row-left .pr-datacard-inner {
+  align-items: flex-end;
+}
+.row-right .pr-datacard-inner {
+  align-items: flex-start;
+}
+
+.pr-datacard-icon {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #fdb914;
+  transition: all 0.4s ease;
+}
+
+.pr-glass-datacard:hover .pr-datacard-icon {
+  background: rgba(253, 185, 20, 0.1);
+  border-color: rgba(253, 185, 20, 0.3);
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(253, 185, 20, 0.2);
+}
+
+.pr-datacard-text h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.pr-glass-datacard:hover .pr-datacard-text h3 {
+  color: #fdb914;
+}
+
+.pr-datacard-text p {
+  font-size: 1rem;
+  color: #aaaaaa;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 991px) {
+  .pr-timeline-core {
+    left: 30px; /* Move core to the left side */
+    transform: none;
+  }
+
+  .pr-timeline-row.row-left,
+  .pr-timeline-row.row-right {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 50px;
+  }
+
+  .pr-timeline-node {
+    left: 30px;
+    top: 25px; /* Align with card top */
+    transform: translateX(-50%);
+  }
+
+  .pr-timeline-connector {
+    display: none; /* Hide connector on mobile */
+  }
+
+  .pr-timeline-content-wrapper {
+    width: 100%;
+    padding-left: 70px !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+  }
+
+  .pr-datacard-inner {
+    align-items: flex-start !important;
+  }
+
+  .pr-datacard-edge {
+    left: 0; /* Always left edge on mobile */
+    transform: translateX(-50%);
+  }
+
+  .pr-datacard-number {
+    right: 10px; /* Always right on mobile */
+    left: auto !important;
+  }
+}
+
+/* =========================================================
+   PREMIUM DISTRIBUTION NETWORKS MARQUEE
+   ========================================================= */
+
+.pr-marquee-section {
+  padding: 100px 0;
+}
+
+.pr-marquee-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(
+    circle,
+    rgba(253, 185, 20, 0.05) 0%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pr-portfolio-marquee {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  z-index: 2;
+}
+
+.pr-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 30px;
+}
+
+.pr-scroll-left {
+  animation: prMarqueeLeft 40s linear infinite;
+}
+
+.pr-scroll-right {
+  animation: prMarqueeRight 40s linear infinite;
+  align-self: flex-end;
+}
+
+.pr-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes prMarqueeLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes prMarqueeRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.pr-marquee-card {
+  width: 320px;
+  height: 180px;
+  background: rgba(15, 15, 15, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.pr-marquee-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(253, 185, 20, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+
+.pr-marquee-card:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(253, 185, 20, 0.4);
+  box-shadow: 0 15px 40px rgba(253, 185, 20, 0.1);
+}
+
+.pr-marquee-card:hover::before {
+  opacity: 1;
+}
+
+.pr-marquee-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+}
+
+.pr-marquee-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 15px auto;
+  font-size: 2.5rem;
+  transition: transform 0.4s ease;
+}
+
+.pr-marquee-card:hover .pr-marquee-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.pr-marquee-name {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-family: "Lexend", sans-serif;
+}
+
+/* =========================================================
+   THE PR ADVANTAGE (GLOWING GRID)
+   ========================================================= */
+
+.pr-advantage-section {
+  padding: 100px 0;
+  background-color: #050505;
+  position: relative;
+}
+
+.pr-glow-card {
+  background: rgba(18, 18, 20, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 40px 35px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    background 0.4s;
+  height: 100%;
+  z-index: 1;
+  cursor: default;
+}
+
+/* The physical blur spotlight hidden behind the glass card */
+.pr-glow-card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 180px;
+  background: var(--hover-color, #fdb914);
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.pr-glow-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(25, 25, 30, 0.9);
+}
+
+.pr-glow-card:hover::before {
+  opacity: 0.2;
+}
+
+.pr-glow-icon-wrap {
+  width: 65px;
+  height: 65px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+  transition: all 0.4s ease;
+}
+
+.pr-glow-card:hover .pr-glow-icon-wrap {
+  background: var(--hover-color, #fdb914);
+  border-color: var(--hover-color, #fdb914);
+  color: #000 !important;
+  transform: scale(1.1) rotate(-5deg);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.pr-glow-card h3 {
+  color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-family: "Lexend", sans-serif;
+}
+
+.pr-glow-card p {
+  color: #aaaaaa;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.pr-glow-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: var(--hover-color, #fdb914);
+  transition: width 0.4s ease;
+}
+
+.pr-glow-card:hover .pr-glow-line {
+  width: 100%;
+}

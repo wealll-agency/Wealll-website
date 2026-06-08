@@ -1,0 +1,168 @@
+/* Script Services Section - Premium Dark Styling */
+.script-services-section {
+  padding: 50px 0;
+  background-color: #0d0f1b;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background decorative elements */
+.script-services-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(
+    circle,
+    rgba(253, 185, 20, 0.05) 0%,
+    transparent 70%
+  );
+  z-index: 0;
+}
+
+.script-services-header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 60px;
+}
+
+.script-services-header h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 15px;
+  letter-spacing: -1px;
+}
+
+.script-services-header p {
+  color: #666;
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Service Card */
+.script-service-card {
+  background: #111;
+  padding: 30px 25px;
+  border-radius: 24px;
+  border: 1px solid #333;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.script-service-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  border-color: #fdb914;
+  background: #000;
+}
+
+/* Gold Gradient Overlay */
+.script-service-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle at top right,
+    rgba(253, 185, 20, 0.1),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.script-service-card:hover::after {
+  opacity: 1;
+}
+
+/* Icon Styling */
+.script-service-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0px;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.script-service-card:hover .script-service-icon {
+  background: #fdb914;
+  transform: rotate(10deg);
+  border-color: #fdb914;
+}
+
+.script-service-icon svg {
+  width: 32px;
+  height: 32px;
+  color: #fdb914;
+  transition: all 0.4s ease;
+  fill: currentColor;
+}
+
+.script-service-card:hover .script-service-icon svg {
+  color: #000;
+  transform: scale(1.1);
+}
+
+.script-service-card h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.script-service-card p {
+  color: #aaa;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  flex-grow: 1;
+}
+
+.script-learn-more {
+  font-size: 14px;
+  font-weight: 800;
+  color: #fdb914;
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.script-learn-more svg {
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  stroke-width: 3px;
+}
+
+.script-service-card:hover .script-learn-more svg {
+  transform: translateX(8px);
+}
+
+@media (max-width: 767px) {
+  .script-services-section {
+    padding: 30px 0;
+  }
+  .script-services-header h2 {
+    font-size: 2rem;
+  }
+}

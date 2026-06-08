@@ -1,0 +1,877 @@
+/* --- Base Variables & Core Layout --- */
+:root {
+  --mr-primary: #fdb914; /* wealll theme yellow */
+  --mr-glow: rgba(253, 185, 20, 0.4);
+  --mr-dark: #070707;
+  --mr-darker: #000000;
+  --mr-card: #111111;
+  --mr-glass: rgba(255, 255, 255, 0.05);
+  --mr-border: rgba(255, 255, 255, 0.1);
+  --mr-text: #eaeaea;
+  --mr-muted: #888888;
+  --mr-transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.mr-page {
+  background-color: var(--mr-darker);
+  color: var(--mr-text);
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+.mr-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.top_container {
+  margin-top: 60px;
+}
+
+.mr-section-sp {
+  padding: 100px 0;
+  position: relative;
+  z-index: 10;
+}
+
+.mr-section-sp .tri-1 {
+  background-color: #000;
+}
+
+/* --- Shared Title Stylings --- */
+.mr-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 16px;
+  background: rgba(253, 185, 20, 0.1);
+  border: 1px solid var(--mr-glow);
+  color: var(--mr-primary);
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.mr-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.mr-desc {
+  font-size: 20px;
+  color: var(--mr-muted);
+  max-width: 700px;
+  line-height: 1.6;
+}
+
+/* --- Animations --- */
+.mr-reveal-up,
+.mr-reveal-left,
+.mr-reveal-right,
+.mr-scale-up {
+  opacity: 0;
+  transition:
+    opacity 1s cubic-bezier(0.25, 0.8, 0.25, 1),
+    transform 1s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: opacity, transform;
+}
+
+.mr-reveal-up {
+  transform: translateY(50px);
+}
+.mr-reveal-left {
+  transform: translateX(50px);
+}
+.mr-reveal-right {
+  transform: translateX(-50px);
+}
+.mr-scale-up {
+  transform: scale(0.9);
+}
+
+.mr-is-visible {
+  opacity: 1 !important;
+  transform: translate(0, 0) scale(1) !important;
+}
+
+/* Stagger Children inside list */
+.mr-stagger-list > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.mr-is-visible.mr-stagger-list > *:nth-child(1) {
+  transition-delay: 0.1s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.mr-is-visible.mr-stagger-list > *:nth-child(2) {
+  transition-delay: 0.2s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.mr-is-visible.mr-stagger-list > *:nth-child(3) {
+  transition-delay: 0.3s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.mr-is-visible.mr-stagger-list > *:nth-child(4) {
+  transition-delay: 0.4s;
+  opacity: 1;
+  transform: translateY(0);
+}
+.mr-is-visible.mr-stagger-list > *:nth-child(5) {
+  transition-delay: 0.5s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================
+   1. Media Strategy & Planning (Split Layout with Image/Glow)
+============================================================= */
+.mr-strategy-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.mr-feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 40px 0;
+}
+
+.mr-feature-list li {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 25px;
+  background: var(--mr-glass);
+  padding: 15px 25px;
+  border-radius: 12px;
+  border-left: 3px solid transparent;
+  transition: var(--mr-transition);
+}
+
+.mr-feature-list li:hover {
+  background: rgba(253, 185, 20, 0.05);
+  border-left-color: var(--mr-primary);
+  transform: translateX(10px);
+}
+
+.mr-feature-list li i {
+  color: var(--mr-primary);
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+.mr-image-frame {
+  position: relative;
+  border-radius: 30px;
+  padding: 2px;
+  background: linear-gradient(
+    135deg,
+    rgba(253, 185, 20, 0.5),
+    transparent,
+    rgba(255, 255, 255, 0.05)
+  );
+  overflow: visible;
+}
+
+.mr-image-frame img {
+  width: 100%;
+  border-radius: 28px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8);
+}
+
+.mr-float-tag {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  background: var(--mr-card);
+  border: 1px solid var(--mr-primary);
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: float 4s ease-in-out infinite;
+  box-shadow: 0 10px 30px rgba(253, 185, 20, 0.2);
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* ==========================================================
+   2. Press Release (Video Background & Horizontal Cards)
+============================================================= */
+.mr-press-section {
+  position: relative;
+  padding: 140px 0;
+  background: var(--mr-dark);
+}
+
+.mr-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+  mix-blend-mode: luminosity;
+  pointer-events: none;
+}
+
+.mr-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--mr-darker) 0%,
+    transparent 20%,
+    transparent 80%,
+    var(--mr-darker) 100%
+  );
+}
+
+.mr-press-cards-warp {
+  display: flex;
+  gap: 20px;
+  margin-top: 60px;
+  position: relative;
+  z-index: 2;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.mr-press-cards-warp::-webkit-scrollbar {
+  height: 6px;
+}
+.mr-press-cards-warp::-webkit-scrollbar-thumb {
+  background: var(--mr-primary);
+  border-radius: 6px;
+}
+
+.mr-press-card {
+  min-width: 320px;
+  flex: 1;
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--mr-border);
+  padding: 40px;
+  border-radius: 20px;
+  transition: var(--mr-transition);
+}
+
+.mr-press-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--mr-primary);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.mr-press-icon {
+  font-size: 40px;
+  background: linear-gradient(135deg, var(--mr-primary), #fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+
+.mr-press-card h4 {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.mr-press-card p {
+  color: var(--mr-muted);
+  font-size: 15px;
+}
+
+/* ==========================================================
+   3. Journalist Outreach (Network Connection Nodes)
+============================================================= */
+.mr-outreach-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.mr-network {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  border-radius: 30px;
+  background: url("../../../../../assets/images/cm-mr-outreach.png")
+    center/cover;
+  box-shadow: inset 0 0 100px var(--mr-darker);
+  border: 1px solid var(--mr-border);
+}
+
+.mr-outreach-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+.mr-out-item {
+  display: flex;
+  align-items: center;
+  background: var(--mr-card);
+  padding: 20px;
+  border-radius: 12px;
+  border-left: 4px solid var(--mr-border);
+  transition: var(--mr-transition);
+}
+
+.mr-out-item:hover {
+  border-left-color: var(--mr-primary);
+  background: #1a1a1a;
+  transform: scale(1.02);
+}
+
+.mr-out-num {
+  font-size: 24px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.1);
+  margin-right: 20px;
+}
+
+.mr-out-item:hover .mr-out-num {
+  color: var(--mr-primary);
+}
+
+.mr-out-item h5 {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* ==========================================================
+   4. Spokesperson Prep (Camera ViewFinder UI) & 5. Brand Story
+============================================================= */
+.mr-cam-ui-wrapper {
+  position: relative;
+  background: radial-gradient(circle at center, #111 0%, #000 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 60px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  text-align: left;
+}
+
+.mr-cam-corner {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-style: solid;
+  border-width: 0;
+  transition: border-color 0.3s ease;
+}
+
+.mr-cam-ui-wrapper:hover .mr-cam-corner {
+  border-color: var(--mr-primary);
+}
+
+.mr-cam-corner.top-left {
+  top: 20px;
+  left: 20px;
+  border-top-width: 3px;
+  border-left-width: 3px;
+  border-top-left-radius: 10px;
+}
+.mr-cam-corner.top-right {
+  top: 20px;
+  right: 20px;
+  border-top-width: 3px;
+  border-right-width: 3px;
+  border-top-right-radius: 10px;
+}
+.mr-cam-corner.bottom-left {
+  bottom: 20px;
+  left: 20px;
+  border-bottom-width: 3px;
+  border-left-width: 3px;
+  border-bottom-left-radius: 10px;
+}
+.mr-cam-corner.bottom-right {
+  bottom: 20px;
+  right: 20px;
+  border-bottom-width: 3px;
+  border-right-width: 3px;
+  border-bottom-right-radius: 10px;
+}
+
+.mr-cam-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.mr-timecode {
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.mr-rec-indicator {
+  display: flex;
+  align-items: center;
+  color: #ff3b3b;
+  animation: blink 1s infinite;
+  letter-spacing: 2px;
+}
+
+.mr-rec-dot {
+  width: 12px;
+  height: 12px;
+  background: #ff3b3b;
+  border-radius: 50%;
+  margin-right: 8px;
+  box-shadow: 0 0 10px #ff3b3b;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.mr-cam-settings {
+  display: flex;
+  gap: 15px;
+  color: #888;
+}
+
+.mr-cam-body {
+  display: flex;
+  gap: 40px;
+}
+
+.mr-cam-sidebar {
+  flex: 0 0 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mr-cam-btn {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.mr-cam-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(5px);
+}
+
+.mr-cam-btn.active {
+  background: rgba(253, 185, 20, 0.1);
+  border-color: var(--mr-primary);
+  box-shadow: 0 0 20px rgba(253, 185, 20, 0.2);
+}
+
+.mr-cam-icon {
+  font-size: 28px;
+  margin-right: 20px;
+  filter: grayscale(1);
+  transition: filter 0.3s ease;
+}
+
+.mr-cam-btn.active .mr-cam-icon {
+  filter: grayscale(0);
+}
+
+.mr-cam-btn-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.mr-cam-btn.active .mr-cam-btn-title {
+  color: var(--mr-primary);
+}
+
+.mr-cam-btn-sub {
+  color: #888;
+  font-size: 13px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.mr-cam-screen {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 60px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.mr-cam-screen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.02) 2px,
+    rgba(255, 255, 255, 0.02) 4px
+  );
+  pointer-events: none;
+}
+
+.mr-cam-crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.ch-horiz {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #fff;
+}
+.ch-vert {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background: #fff;
+}
+
+.mr-teleprompter-content {
+  position: relative;
+  z-index: 2;
+  animation: prompt-slide-up 0.5s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+@keyframes prompt-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.mr-promo-label {
+  background: var(--mr-primary);
+  color: #000;
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.mr-promo-title {
+  color: #fff;
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.mr-promo-desc {
+  color: #e0e0e0;
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.mr-audio-bars {
+  position: absolute;
+  bottom: 20px;
+  left: 60px;
+  right: 60px;
+  display: flex;
+  gap: 4px;
+  height: 20px;
+  align-items: flex-end;
+  opacity: 0.5;
+}
+
+.mr-audio-bars .bar {
+  flex: 1;
+  background: var(--mr-primary);
+  border-radius: 2px 2px 0 0;
+  animation: audio-bounce 1.5s ease-in-out infinite alternate;
+}
+
+.mr-audio-bars .bar:nth-child(1) {
+  animation-delay: 0.1s;
+  height: 30%;
+}
+.mr-audio-bars .bar:nth-child(2) {
+  animation-delay: 0.3s;
+  height: 60%;
+}
+.mr-audio-bars .bar:nth-child(3) {
+  animation-delay: 0.2s;
+  height: 40%;
+}
+.mr-audio-bars .bar:nth-child(4) {
+  animation-delay: 0.5s;
+  height: 80%;
+}
+.mr-audio-bars .bar:nth-child(5) {
+  animation-delay: 0.4s;
+  height: 50%;
+}
+.mr-audio-bars .bar:nth-child(6) {
+  animation-delay: 0.6s;
+  height: 90%;
+}
+.mr-audio-bars .bar:nth-child(7) {
+  animation-delay: 0.2s;
+  height: 70%;
+}
+.mr-audio-bars .bar:nth-child(8) {
+  animation-delay: 0.1s;
+  height: 40%;
+}
+
+@keyframes audio-bounce {
+  0% {
+    transform: scaleY(0.3);
+    transform-origin: bottom;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+}
+
+/* Story Development */
+.mr-story-block {
+  background: var(--mr-card);
+  border-radius: 40px;
+  padding: 80px;
+  text-align: center;
+  border: 1px solid var(--mr-border);
+  position: relative;
+  overflow: hidden;
+}
+
+.mr-story-block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(253, 185, 20, 0.1) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.mr-pill-warp {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+.mr-pill {
+  padding: 15px 30px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 16px;
+  transition: var(--mr-transition);
+  cursor: default;
+}
+
+.mr-pill:hover {
+  background: var(--mr-primary);
+  color: #000;
+  border-color: var(--mr-primary);
+  transform: translateY(-5px);
+}
+
+/* ==========================================================
+   6. Coverage Monitoring (Metrics Dashboard Style)
+============================================================= */
+.mr-monitor-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 60px;
+}
+
+.mr-metric-box {
+  background: var(--mr-glass);
+  border: 1px solid var(--mr-border);
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: var(--mr-transition);
+}
+
+.mr-metric-box:hover {
+  background: #1a1a1a;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.mr-metric-box h3 {
+  font-size: 60px;
+  color: var(--mr-primary);
+  margin-bottom: 15px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.mr-metric-box p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .mr-strategy-grid,
+  .mr-outreach-grid {
+    grid-template-columns: 1fr;
+  }
+  .mr-network {
+    height: 350px;
+  }
+  .mr-cam-body {
+    flex-direction: column;
+  }
+  .mr-cam-sidebar {
+    flex: auto;
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 15px;
+  }
+  .mr-cam-btn {
+    min-width: 250px;
+  }
+  .mr-monitor-metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .mr-title {
+    font-size: 30px;
+  }
+  .mr-section-sp {
+    padding: 50px 0;
+  }
+  .mr-cam-screen {
+    padding: 30px;
+  }
+  .mr-cam-settings {
+    display: none;
+  }
+  .mr-promo-title {
+    font-size: 24px;
+  }
+  .mr-promo-desc {
+    font-size: 16px;
+  }
+  .mr-monitor-metrics {
+    grid-template-columns: 1fr;
+  }
+  .mr-story-block {
+    padding: 30px 15px;
+  }
+  .mr-float-tag {
+    right: 0;
+  }
+  .mr-feature-list li {
+    font-size: 15px;
+    padding: 15px;
+  }
+  .mr-press-section {
+    padding: 50px 0;
+  }
+  .mr-cam-ui-wrapper {
+    padding: 30px 15px;
+  }
+  .mr-cam-btn {
+    padding: 15px 12px;
+  }
+  .mr-cam-btn-title {
+    font-size: 16px;
+  }
+  .mr-promo-label {
+    margin-bottom: 0;
+  }
+  .mr-pill {
+    padding: 15px;
+  }
+}

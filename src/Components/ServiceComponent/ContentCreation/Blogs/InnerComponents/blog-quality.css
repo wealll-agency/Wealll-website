@@ -1,0 +1,141 @@
+/* Blog Quality Section */
+.blog-quality-section {
+  padding: 90px 0;
+  background-color: #0d0f1b;
+  position: relative;
+}
+
+.blog-quality-header {
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.blog-quality-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #fff;
+  letter-spacing: -1px;
+}
+
+.blog-quality-header p {
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Tones Grid */
+.tones-wrapper {
+  margin-bottom: 60px;
+}
+
+.tones-title {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.tones-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tone-chip {
+  background: #111;
+  padding: 15px 30px;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s ease;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tone-chip svg {
+  width: 20px;
+  height: 20px;
+  color: #fdb914;
+}
+
+.tone-chip:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-color: #fdb914;
+  color: #fff;
+}
+
+/* Quality Standards Row */
+.quality-standards-box {
+  background: #111;
+  border-radius: 20px;
+  padding: 50px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+}
+
+.quality-standards-box h3 {
+  color: #fff;
+}
+
+.quality-standards-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: #fdb914;
+}
+
+.quality-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.quality-item {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ccc;
+}
+
+.quality-check {
+  background: #e6f7e6;
+  color: #28a745;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .quality-list {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-quality-section {
+    padding: 50px 0;
+  }
+  .blog-quality-header h2 {
+    margin-top: 0;
+    font-size: 2.2rem;
+  }
+}
