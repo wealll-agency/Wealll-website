@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './ecommerce-faq.css';
-import ecomImg from '../../../../../assets/images/ecom-development.webp';
+import ecomImg from '../../../../../assets/images/ecommerce-development.png';
 
 const EcommerceFAQ = () => {
     const sectionRef = useRef(null);

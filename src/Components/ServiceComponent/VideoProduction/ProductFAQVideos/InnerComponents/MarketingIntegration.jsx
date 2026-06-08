@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './marketing-integration.css';
-import mktImg from '../../../../../assets/images/social-media-manage.webp';
+import mktImg from '../../../../../assets/images/social-media-manage.jpeg';
 
 const MarketingIntegration = () => {
     const sectionRef = useRef(null);

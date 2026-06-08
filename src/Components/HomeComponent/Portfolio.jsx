@@ -1,14 +1,14 @@
 import React from "react";
-import portfolio_logo1 from "../../assets/images/portfolio_logo1.jpg";
-import portfolio_logo2 from "../../assets/images/portfolio_logo2.jpg";
-import portfolio_logo3 from "../../assets/images/portfolio_logo3.jpg";
-import portfolio_logo4 from "../../assets/images/portfolio_logo4.jpg";
-import portfolio_logo5 from "../../assets/images/portfolio_logo5.jpg";
-import portfolio_logo6 from "../../assets/images/portfolio_logo6.jpg";
-import portfolio_logo7 from "../../assets/images/portfolio_logo7.jpg";
-import portfolio_logo8 from "../../assets/images/portfolio_logo8.jpg";
-import portfolio_logo9 from "../../assets/images/portfolio_logo9.jpg";
-import portfolio_logo10 from "../../assets/images/portfolio_logo10.jpg";
+import portfolio_logo1 from "../../assets/images/portfolio/logodesign/Bani.png";
+import portfolio_logo2 from "../../assets/images/portfolio/logodesign/Debo.png";
+import portfolio_logo3 from "../../assets/images/portfolio/logodesign/jj.png";
+import portfolio_logo4 from "../../assets/images/portfolio/logodesign/Hotel-icon.png";
+import portfolio_logo5 from "../../assets/images/portfolio/logodesign/khukumoni.png";
+import portfolio_logo6 from "../../assets/images/portfolio/logodesign/Karma.png";
+import portfolio_logo7 from "../../assets/images/portfolio/logodesign/Jalan-Chandi-wala.png";
+import portfolio_logo8 from "../../assets/images/portfolio/logodesign/Max glow.png";
+import portfolio_logo9 from "../../assets/images/portfolio/logodesign/Pro.png";
+import portfolio_logo10 from "../../assets/images/portfolio/logodesign/Rb-con.png";
 
 import portfolio_branding1 from "../../assets/images/portfolio_branding1.jpg";
 import portfolio_branding2 from "../../assets/images/portfolio_branding2.jpg";

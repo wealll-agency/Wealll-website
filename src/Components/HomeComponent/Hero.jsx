@@ -54,6 +54,8 @@ const Hero = () => {
     beautech
   ];
 
+
+
   return (
     <section className="ml-hero-section">
       <div className="ml-hero-container">

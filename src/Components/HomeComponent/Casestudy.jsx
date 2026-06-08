@@ -5,10 +5,10 @@ import brandimage2 from "../../assets/images/packaging.webp";
 import brandimage3 from "../../assets/images/key-visual.webp";
 import brandimage4 from "../../assets/images/POSM.webp";
 import brandimage5 from "../../assets/images/video-anim.webp";
-import brandimage6 from "../../assets/images/web-design.webp";
-import brandimage7 from "../../assets/images/ecom-development.webp";
+import brandimage6 from "../../assets/images/web-design.jpeg";
+import brandimage7 from "../../assets/images/ecommerce-development.png";
 import brandimage8 from "../../assets/images/personal-branding.webp";
-import brandimage9 from "../../assets/images/social-media-manage.webp";
+import brandimage9 from "../../assets/images/social-media-manage.jpeg";
 import brandimage10 from "../../assets/images/barter-collaboration.png";
 import brandimage11 from "../../assets/images/paid-collaboration.png";
 import brandimage12 from "../../assets/images/podcast-collaboration.jpg";
@@ -238,7 +238,7 @@ const Casestudy = () => {
                                         <li className='nav-item'>
                                             <a className='nav-link' data-bs-toggle="tab" href="#menu13">UGC Ads</a>
                                         </li>
-                                    
+
                                     </ul>
 
                                     <div id="progress-bar-container">
