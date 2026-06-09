@@ -19,9 +19,9 @@ import logo13 from "../../assets/images/SS-Medicorp.png";
 import logo14 from "../../assets/images/Beautech2.png";
 import logo15 from "../../assets/images/Jawed Habib.png";
 
-import test1 from "../../assets/images/testimonal-image1.webp";
-import test2 from "../../assets/images/testimonal-image2.webp";
-import test3 from "../../assets/images/testimonal-image3.webp";
+import test1 from "../../assets/images/philo.jpg";
+import test2 from "../../assets/images/Beautech2.png";
+import test3 from "../../assets/images/Lakme.png";
 
 const clientLogos = [
     logo1, logo2, logo3, logo4, logo5,
@@ -122,7 +122,7 @@ const OurClients = () => {
                             </div>
                             <div className="trusted-text ms-3">
                                 <p className="mb-0 text-white" style={{ fontSize: '1.2rem', fontWeight: '500' }}>
-                                    Trusted by <strong style={{ color: '#27ae60', fontWeight: '700' }}>1000+</strong> happy clients
+                                    Trusted by <strong style={{ color: '#27ae60', fontWeight: '700' }}>1000+</strong> happy brands
                                 </p>
                             </div>
                         </div>

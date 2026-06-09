@@ -484,7 +484,8 @@
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  object-fit: cover;
+  background-color: #fff;
+  object-fit: contain;
   border: 2px solid #ffffff;
   margin-left: -15px; /* Overlapping effect */
   position: relative;

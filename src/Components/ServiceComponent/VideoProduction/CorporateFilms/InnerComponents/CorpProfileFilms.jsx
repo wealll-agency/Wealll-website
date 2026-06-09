@@ -2,7 +2,7 @@ import React from 'react';
 import '../corporate-films.css';
 import team1 from '../../../../../assets/images/Team-1.jpg';
 import industryLeader from '../../../../../assets/images/commercial_studio.jpg';
-import globalPresence from '../../../../../assets/images/brand-identity.webp'; // Placeholder
+import globalPresence from '../../../../../assets/images/brand-identity.jpeg'; // Placeholder
 import csrDoc from '../../../../../assets/images/career-team.jpg';
 
 const CorpProfileFilms = () => {
