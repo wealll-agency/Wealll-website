@@ -1,14 +1,14 @@
 import React from "react";
-import portfolio_logo1 from "../../assets/images/portfolio_logo1.jpg";
-import portfolio_logo2 from "../../assets/images/portfolio_logo2.jpg";
-import portfolio_logo3 from "../../assets/images/portfolio_logo3.jpg";
-import portfolio_logo4 from "../../assets/images/portfolio_logo4.jpg";
-import portfolio_logo5 from "../../assets/images/portfolio_logo5.jpg";
-import portfolio_logo6 from "../../assets/images/portfolio_logo6.jpg";
-import portfolio_logo7 from "../../assets/images/portfolio_logo7.jpg";
-import portfolio_logo8 from "../../assets/images/portfolio_logo8.jpg";
-import portfolio_logo9 from "../../assets/images/portfolio_logo9.jpg";
-import portfolio_logo10 from "../../assets/images/portfolio_logo10.jpg";
+import portfolio_logo1 from "../../assets/images/portfolio_logo1.jpeg";
+import portfolio_logo2 from "../../assets/images/portfolio_logo2.jpeg";
+import portfolio_logo3 from "../../assets/images/portfolio_logo3.jpeg";
+import portfolio_logo4 from "../../assets/images/portfolio_logo4.jpeg";
+import portfolio_logo5 from "../../assets/images/portfolio_logo5.jpeg";
+import portfolio_logo6 from "../../assets/images/portfolio_logo6.jpeg";
+import portfolio_logo7 from "../../assets/images/portfolio_logo7.jpeg";
+import portfolio_logo8 from "../../assets/images/portfolio_logo8.jpeg";
+import portfolio_logo9 from "../../assets/images/portfolio_logo9.jpeg";
+import portfolio_logo10 from "../../assets/images/portfolio_logo10.png";
 
 import portfolio_branding1 from "../../assets/images/portfolio/logodesign/Bani.png";
 import portfolio_branding2 from "../../assets/images/portfolio/logodesign/Debo.png";
@@ -21,10 +21,13 @@ import portfolio_branding8 from "../../assets/images/portfolio/logodesign/Max gl
 import portfolio_branding9 from "../../assets/images/portfolio/logodesign/Pro.png";
 import portfolio_branding10 from "../../assets/images/portfolio/logodesign/Rb-con.png";
 
-import portfolio_app1 from "../../assets/images/portfolio_app1.jpeg";
-import portfolio_app2 from "../../assets/images/portfolio_app2.jpg";
+import portfolio_brand1 from "../../assets/images/portfolio_brand1.jpeg";
+import portfolio_brand2 from "../../assets/images/portfolio_brand2.jpeg";
 
-import portfolio_software1 from "../../assets/images/portfolio_software1.jpg";
+import portfolio_app1 from "../../assets/images/portfolio_app1.jpeg";
+import portfolio_app2 from "../../assets/images/portfolio_app2.jpeg";
+
+import portfolio_software1 from "../../assets/images/portfolio_software1.jpeg";
 
 import portfolio_website1 from "../../assets/images/portfolio_website1.jpg";
 import portfolio_website2 from "../../assets/images/portfolio_website2.jpg";
@@ -51,16 +54,21 @@ const Portfolio = () => {
                                 <a className="nav-link active" data-bs-toggle="pill" href="#portfoliomenu1"><i className="fa-solid fa-house"></i> Logo Design</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" data-bs-toggle="pill" href="#portfoliomenu2"><i className="fa-solid fa-house"></i> Branding</a>
+                                <a className="nav-link" data-bs-toggle="pill" href="#portfoliomenu2"><i className="fa-solid fa-house"></i> SMP</a>
+                            </li>
+
+                            <li className="nav-item">
+                                <a className="nav-link" data-bs-toggle="pill" href="#portfoliomenu3"><i className="fa-solid fa-house"></i> Brand</a>
+                            </li>
+
+                            <li className="nav-item">
+                                <a className="nav-link" data-bs-toggle="pill" href="#portfoliomenu4"><i className="fa-solid fa-house"></i> Mobile Apps</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" data-bs-toggle="pill" href="#portfoliomenu3"><i className="fa-solid fa-house"></i> Mobile Apps</a>
+                                <a className="nav-link" data-bs-toggle="pill" href="#portfoliomenu5"><i className="fa-solid fa-house"></i> Softwares</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" data-bs-toggle="pill" href="#portfoliomenu4"><i className="fa-solid fa-house"></i> Softwares</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" data-bs-toggle="pill" href="#portfoliomenu5"><i className="fa-solid fa-house"></i> Websites</a>
+                                <a className="nav-link" data-bs-toggle="pill" href="#portfoliomenu6"><i className="fa-solid fa-house"></i> Websites</a>
                             </li>
                         </ul>
 
@@ -193,7 +201,24 @@ const Portfolio = () => {
 
                                 </div>
                             </div>
+
                             <div id="portfoliomenu3" className="tab-pane fade">
+                                <div className="row justify-content-center">
+                                    <div className="col-md-3">
+                                        <div className="inner_box">
+                                            <img src={portfolio_brand1} alt="" />
+                                        </div>
+                                    </div>
+                                    <div className="col-md-3">
+                                        <div className="inner_box">
+                                            <img src={portfolio_brand2} className="app_img" alt="" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div id="portfoliomenu4" className="tab-pane fade">
                                 <div className="row">
                                     <div className="col-md-6">
                                         <div className="inner_box">
@@ -208,7 +233,7 @@ const Portfolio = () => {
                                 </div>
                             </div>
 
-                            <div id="portfoliomenu4" className="tab-pane fade">
+                            <div id="portfoliomenu5" className="tab-pane fade">
                                 <div className="row">
                                     <div className="col-md-6">
                                         <div className="inner_box">
@@ -219,7 +244,7 @@ const Portfolio = () => {
                                 </div>
                             </div>
 
-                            <div id="portfoliomenu5" className="tab-pane fade">
+                            <div id="portfoliomenu6" className="tab-pane fade">
                                 <div className="row">
                                     <div className="col-md-3 col-20">
                                         <div className="inner_box">

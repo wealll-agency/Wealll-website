@@ -9,10 +9,10 @@ import brandimage6 from "../../assets/images/web-design.jpeg";
 import brandimage7 from "../../assets/images/ecommerce-development.png";
 import brandimage8 from "../../assets/images/personal-branding.webp";
 import brandimage9 from "../../assets/images/social-media-manage.jpeg";
-import brandimage10 from "../../assets/images/barter-collaboration.png";
-import brandimage11 from "../../assets/images/paid-collaboration.png";
-import brandimage12 from "../../assets/images/podcast-collaboration.jpg";
-import brandimage13 from "../../assets/images/ugc-ads.webp";
+import brandimage10 from "../../assets/images/barter-collaboration.jpeg";
+import brandimage11 from "../../assets/images/paid-collaboration.jpeg";
+import brandimage12 from "../../assets/images/podcast-collaboration.jpeg";
+import brandimage13 from "../../assets/images/ugc-ads.jpeg";
 
 
 const Casestudy = () => {

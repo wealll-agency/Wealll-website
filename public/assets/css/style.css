@@ -1744,11 +1744,15 @@ ul.mega-menu li {
   background: #f5f5f5;
 }
 
+.nabout-value .top-title {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
 .top-title h2 {
   font-size: 54px;
   line-height: 64px;
   color: #0f0928;
-  margin-bottom: 30px;
 }
 
 .top-title h2 b,
@@ -2127,6 +2131,10 @@ ul.mega-menu li {
   background: #fff2ee;
 }
 
+.our_trip_tab {
+  padding-top: 50px;
+}
+
 .our_trip_tab .tab_btn ul {
   flex-direction: column;
 }
@@ -2154,8 +2162,16 @@ ul.mega-menu li {
 .our_trip_tab .tab_btn ul li a:hover,
 .our_trip_tab .tab_btn ul li a.active {
   color: #fff;
-  background: #b4896e;
+  background: #154781;
   border-left: 11px solid #000000;
+}
+
+.abotrip-box img {
+  min-height: 700px;
+  max-height: 700px;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 .abotrip-nav {
@@ -2180,6 +2196,31 @@ ul.mega-menu li {
   z-index: 2;
   height: 70px;
   min-width: 200px;
+}
+
+.award_winning {
+  text-align: center;
+  padding: 60px 0 40px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.award_winning p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.award_winning p a {
+  color: #00f;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.award_details {
+  padding-top: 30px;
 }
 
 .newpress {
@@ -2406,10 +2447,6 @@ ul.mega-menu li {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-}
-
-.portfolio_tab_content .inner_box .app_img {
-  width: 22%;
 }
 
 .portfolio_tab_content .inner_box img {

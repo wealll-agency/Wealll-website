@@ -4,7 +4,7 @@ import "./media-content.css";
 // Media Assets
 import planningImg from "../../../../../assets/images/cm-mr-planning.png";
 import outreachImg from "../../../../../assets/images/cm-mr-outreach.png";
-import pressVideo from "../../../../../assets/Video/px-showreel.mp4"; // using existing showreel as cool tech bg
+import pressVideo from "../../../../../assets/Video/WE_ALLL_Video_Final.mp4"; // using existing showreel as cool tech bg
 import BannerComponent from "../../../CommonComponents/BannerComponent";
 
 const MediaContent = () => {

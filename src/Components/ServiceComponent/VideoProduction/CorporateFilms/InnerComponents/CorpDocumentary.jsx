@@ -3,7 +3,7 @@ import '../corporate-films.css';
 import founderImg from '../../../../../assets/images/Team-2.jpg';
 import btsImg from '../../../../../assets/images/Team-3.jpg';
 import cultureImg from '../../../../../assets/images/career-team.jpg';
-import impactImg from '../../../../../assets/images/ugc-ads.webp'; // Placeholder
+import impactImg from '../../../../../assets/images/ugc-ads.jpeg'; // Placeholder
 import successImg from '../../../../../assets/images/tab_img3.jpg';
 
 const CorpDocumentary = () => {

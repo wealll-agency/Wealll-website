@@ -3,11 +3,11 @@ import '../corporate-films-advanced.css';
 
 // Importing assets for the new design
 import cineShoot from '../../../../../assets/images/commercial_cinema.jpg';
-import lighting from '../../../../../assets/images/portfolio_logo9.jpg';
+import lighting from '../../../../../assets/images/portfolio_logo9.jpeg';
 import interview from '../../../../../assets/images/Team-1.jpg';
 import drone from '../../../../../assets/images/commercial_poster.jpg';
 import graphics from '../../../../../assets/images/monitor.png';
-import vo from '../../../../../assets/images/podcast-collaboration.jpg';
+import vo from '../../../../../assets/images/podcast-collaboration.jpeg';
 
 const CorpProduction = () => {
     const [activeItem, setActiveItem] = useState(0);
