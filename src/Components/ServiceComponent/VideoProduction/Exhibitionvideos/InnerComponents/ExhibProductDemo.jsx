@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import '../exhibition-videos.css';
 
-import pd1 from '../../../../../assets/images/portfolio_software1.jpeg';
-import pd2 from '../../../../../assets/images/portfolio_website4.jpeg';
-import pd3 from '../../../../../assets/images/portfolio_app2.jpeg';
-import pd4 from '../../../../../assets/images/monitor.png';
+import pd1 from '../../../../../assets/images/product-showcase1.jpeg';
+import pd2 from '../../../../../assets/images/product-showcase2.jpeg';
+import pd3 from '../../../../../assets/images/product-showcase3.jpeg';
+import pd4 from '../../../../../assets/images/product-showcase4.jpeg';
 
 const ExhibProductDemo = () => {
     const [activeIndex, setActiveIndex] = useState(0);
