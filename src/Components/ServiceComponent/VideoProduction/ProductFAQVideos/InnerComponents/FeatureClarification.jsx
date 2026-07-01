@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './feature-clarification.css';
-import featImg from '../../../../../assets/images/home-ai-img.webp';
+import featImg from '../../../../../assets/images/portfolio_brand1.jpeg';
 
 const FeatureClarification = () => {
     const sectionRef = useRef(null);

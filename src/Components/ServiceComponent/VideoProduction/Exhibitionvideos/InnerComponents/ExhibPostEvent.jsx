@@ -1,11 +1,11 @@
 import React from 'react';
 import '../exhibition-videos.css';
 
-import post1 from '../../../../../assets/images/portfolio_website5.jpg';
-import post2 from '../../../../../assets/images/portfolio_logo6.jpg';
+import post1 from '../../../../../assets/images/portfolio_website5.jpeg';
+import post2 from '../../../../../assets/images/portfolio_logo6.jpeg';
 import post3 from '../../../../../assets/images/commercial_cinema.jpg';
-import post4 from '../../../../../assets/images/ugc-ads.webp';
-import post5 from '../../../../../assets/images/portfolio_app1.jpg';
+import post4 from '../../../../../assets/images/ugc-ads.jpeg';
+import post5 from '../../../../../assets/images/portfolio_app1.jpeg';
 
 const ExhibPostEvent = () => {
     return (

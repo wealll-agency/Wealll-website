@@ -10,22 +10,30 @@ import gallery3 from "../../../../../assets/images/dm-3.png";
 import gallery4 from "../../../../../assets/images/dm-4.png";
 import gallery5 from "../../../../../assets/images/dm-5.png";
 
+import dm1 from "../../../../../assets/images/dm1.jpeg";
+import dm2 from "../../../../../assets/images/dm2.jpeg";
+import dm3 from "../../../../../assets/images/dm3.jpeg";
+import dm4 from "../../../../../assets/images/dm4.jpeg";
+import dm5 from "../../../../../assets/images/dm5.jpeg";
+
+
+
 const Intro = ({ title, desc, defaultService, defaultBudget, sliderImages }) => {
   const bgStyle = {
     backgroundImage: `url(${creativebgImage})`,
   };
 
   const defaultSliderImages = [
-    gallery1,
-    gallery2,
-    gallery3,
-    gallery4,
-    gallery5,
-    gallery1,
-    gallery2,
-    gallery3,
-    gallery4,
-    gallery5,
+    dm1,
+    dm2,
+    dm3,
+    dm4,
+    dm5,
+    dm1,
+    dm2,
+    dm3,
+    dm4,
+    dm5,
   ];
 
   const galleryImages = sliderImages || defaultSliderImages;
@@ -39,11 +47,11 @@ const Intro = ({ title, desc, defaultService, defaultBudget, sliderImages }) => 
               <div className="service_intro">
                 <div className="hero__content_Inner position-relative">
                   <h1 className="main-title text-start">
-                    Best{" "}
+                    One of the Best{" "}
                     <span className="creative-bg" style={bgStyle}>
                       {title}
                     </span>{" "}
-                    <br /> Company In India
+                    <br /> Company In Kolkata
                   </h1>
                   <p>{desc}</p>
                 </div>

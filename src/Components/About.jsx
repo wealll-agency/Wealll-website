@@ -12,11 +12,11 @@ const About = () => {
   return (
     <>
       <AboutBanner></AboutBanner>
-      <OurStrategy></OurStrategy>
-      <OurValues></OurValues>
+      {/* <OurStrategy></OurStrategy> */}
       <BrandGrow></BrandGrow>
+      <OurValues></OurValues>
       <MeetOurTeam></MeetOurTeam>
-      <OurJourney></OurJourney>
+      {/* <OurJourney></OurJourney> */}
       <OurTrips></OurTrips>
       <Awards></Awards>
     </>

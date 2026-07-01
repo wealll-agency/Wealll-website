@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import '../exhibition-videos.css';
 
-import booth1 from '../../../../../assets/images/portfolio_website1.jpg';
-import booth2 from '../../../../../assets/images/portfolio_branding3.jpg';
-import booth3 from '../../../../../assets/images/tab_img1.jpg';
-import booth4 from '../../../../../assets/images/tab_img4.jpg';
-import booth5 from '../../../../../assets/images/career-team.jpg';
+import booth1 from '../../../../../assets/images/slice-image1.jpeg';
+import booth2 from '../../../../../assets/images/slice-image2.jpeg';
+import booth3 from '../../../../../assets/images/slice-image3.jpeg';
+import booth4 from '../../../../../assets/images/slice-image4.jpeg';
+import booth5 from '../../../../../assets/images/slice-image5.jpeg';
 import BannerComponent from '../../../CommonComponents/BannerComponent';
 
 const ExhibBoothHighlight = () => {
@@ -34,7 +34,7 @@ const ExhibBoothHighlight = () => {
                 <div className="slice-gallery-container mt-5">
                     <div className="row g-0 align-items-center">
                         {/* Left Side: Interactive Menu */}
-                        <div className="col-lg-5 col-md-12 p-4 z-10">
+                        <div className="col-lg-6 col-md-12 p-4 z-10">
                             <div className="slice-menu">
                                 {highlights.map((item, index) => (
                                     <div
@@ -53,7 +53,7 @@ const ExhibBoothHighlight = () => {
                         </div>
 
                         {/* Right Side: Kinetic Slice Image Area */}
-                        <div className="col-lg-7 col-md-12">
+                        <div className="col-lg-6 col-md-12">
                             <div className="slice-image-wrapper">
                                 {highlights.map((item, index) => {
                                     const isActive = activeIndex === index;

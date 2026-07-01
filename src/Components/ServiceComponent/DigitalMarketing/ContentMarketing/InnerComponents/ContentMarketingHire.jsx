@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import growthImg from '../../../../../assets/images/growth_image.jpeg';
 
 const ContentMarketingHire = () => {
     return (
@@ -7,7 +8,7 @@ const ContentMarketingHire = () => {
             <div className="container py-5 z-2 position-relative">
                 <div className="row align-items-center">
                     <div className="col-lg-6 mb-5 mb-lg-0 pe-lg-5">
-                        <motion.span 
+                        <motion.span
                             className="badge bg-transparent border border-info text-info mb-3 px-3 py-2 rounded-pill"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -15,7 +16,7 @@ const ContentMarketingHire = () => {
                         >
                             <i className="fa-solid fa-rocket me-2"></i> Organic Growth
                         </motion.span>
-                        <motion.h2 
+                        <motion.h2
                             className="cm-section-title mb-4"
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +42,7 @@ const ContentMarketingHire = () => {
                     </div>
 
                     <div className="col-lg-6 position-relative">
-                        <motion.div 
+                        <motion.div
                             className="cm-cinematic-frame"
                             initial={{ opacity: 0, scale: 0.9, rotate: 2 }}
                             whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -50,14 +51,14 @@ const ContentMarketingHire = () => {
                         >
                             <div className="cm-cinematic-glow"></div>
                             {/* Dummy Image simulating high-end workspace */}
-                            <img 
-                                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800" 
-                                alt="Content Marketing Strategy" 
+                            <img
+                                src={growthImg}
+                                alt="Content Marketing Strategy"
                                 className="img-fluid cm-cinematic-img"
                             />
-                            
+
                             {/* Floating Analytics Badges */}
-                            <motion.div 
+                            <motion.div
                                 className="cm-floating-badge badge-1"
                                 animate={{ y: [-10, 10, -10] }}
                                 transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
@@ -69,7 +70,7 @@ const ContentMarketingHire = () => {
                                 </div>
                             </motion.div>
 
-                            <motion.div 
+                            <motion.div
                                 className="cm-floating-badge badge-2"
                                 animate={{ y: [10, -10, 10] }}
                                 transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}

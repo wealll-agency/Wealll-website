@@ -75,6 +75,7 @@
 .card-top {
   position: relative;
   z-index: 2;
+  bottom: 40px !important;
 }
 
 .brand-logo {
@@ -139,10 +140,12 @@
 .card-image img {
   max-width: 100%;
   height: auto;
-  object-fit: contain;
-  /* Often these mocks stick out from bottom */
+  object-fit: cover;
+  object-position: top;
   transform: translateY(10px);
   transition: transform 0.5s ease;
+  max-height: 350px;
+  width: 100%;
 }
 
 .project-card:hover .card-image img {

@@ -19,9 +19,9 @@ import logo13 from "../../assets/images/SS-Medicorp.png";
 import logo14 from "../../assets/images/Beautech2.png";
 import logo15 from "../../assets/images/Jawed Habib.png";
 
-import test1 from "../../assets/images/testimonal-image1.webp";
-import test2 from "../../assets/images/testimonal-image2.webp";
-import test3 from "../../assets/images/testimonal-image3.webp";
+import test1 from "../../assets/images/philo.jpg";
+import test2 from "../../assets/images/Beautech2.png";
+import test3 from "../../assets/images/Lakme.png";
 
 const clientLogos = [
     logo1, logo2, logo3, logo4, logo5,
@@ -33,9 +33,9 @@ const OurClients = () => {
     const [selectedOptions, setSelectedOptions] = useState([]);
 
     const helpOptions = [
-        "AEO", "SEO", "Paid media",
-        "Creative", "Content", "Social Media",
-        "App Store", "Analytics", "Other"
+        "Digital", "Content", "Design",
+        "Video", "PR Services", "Influencer",
+        "Development", "Page Recovery"
     ];
 
     const toggleOption = (option) => {
@@ -54,7 +54,7 @@ const OurClients = () => {
                         everywhere from <span>Google</span> to <span>ChatGPT</span>
                     </h2>
                     <p>We help you show up everywhere customers are searching, swiping, scrolling, streaming, and shopping.</p>
-                    <a href="#" className="np-btn-primary mx-auto">Work with us</a>
+                    {/* <a href="#" className="np-btn-primary mx-auto">Work with us</a> */}
                 </div>
 
                 <div className="row np-clients-content align-items-center">
@@ -111,7 +111,7 @@ const OurClients = () => {
                                 ))}
                             </div>
 
-                            <a href="#" className="np-btn-primary form-btn">Get started</a>
+                            <a href="#" className="np-btn-primary form-btn">Work with us</a>
                         </div>
 
                         <div className="trusted-clients-section d-flex align-items-center mt-4">
@@ -122,7 +122,7 @@ const OurClients = () => {
                             </div>
                             <div className="trusted-text ms-3">
                                 <p className="mb-0 text-white" style={{ fontSize: '1.2rem', fontWeight: '500' }}>
-                                    Trusted by <strong style={{ color: '#27ae60', fontWeight: '700' }}>1000+</strong> happy clients
+                                    Trusted by <strong style={{ color: '#27ae60', fontWeight: '700' }}>1000+</strong> happy brands
                                 </p>
                             </div>
                         </div>

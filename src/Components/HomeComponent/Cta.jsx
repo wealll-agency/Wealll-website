@@ -2,7 +2,7 @@ import React from 'react'
 
 // import ctaimg from "../../assets/images/cta_image.png";
 import VideoBanner from './VideoBanner';
-import myVideo from "../../assets/Video/px-showreel.mp4";
+import myVideo from "../../assets/Video/WE_ALLL_Video_Final.mp4";
 import thumb from "../../assets/images/video-thumb-2.webp";
 
 const Cta = () => {

@@ -20,7 +20,7 @@ const PressRelease = () => {
                 <PrHero />
                 <PrConfidence />
                 <PrGlobalize />
-                <PrNetwork />
+                {/* <PrNetwork /> */}
                 <PrClients />
             </div>
             <BottomComponents />

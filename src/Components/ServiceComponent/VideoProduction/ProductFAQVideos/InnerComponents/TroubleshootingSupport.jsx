@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './troubleshooting-support.css';
-import supportBg from '../../../../../assets/images/brand-identity.webp';
+import supportBg from '../../../../../assets/images/brand-identity.jpeg';
 
 const TroubleshootingSupport = () => {
     const sectionRef = useRef(null);

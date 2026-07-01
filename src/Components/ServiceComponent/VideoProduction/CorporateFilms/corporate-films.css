@@ -180,6 +180,7 @@
   cursor: pointer;
   animation: corpPulse 2s infinite;
   z-index: 2;
+  display: none;
   transition: transform 0.3s ease;
 }
 

@@ -19,8 +19,7 @@ const ContactForm = () => {
                       <i className="fa-solid fa-location-dot"></i>
                     </div>
                     <span>Address</span>
-                    14/4C Cluster Rajarhat 76, Action Area1, Newtown, Koch
-                    Pukur, West Bengal - 700 156
+                    Unit 8A, 4th Floor, Tower 1, Globsyn Crystal, Salt Lake Electronics Complex, Street No. 17, EP Block, Sector V, Kolkata – 700091, West Bengal, India
                   </li>
 
                   <li>
@@ -183,7 +182,7 @@ const ContactForm = () => {
       <div className="google-map-area">
         <div className="container-fluid">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.3353804939266!2d88.4645984!3d22.5665564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275d604cd5615%3A0xfac1548308b5bef4!2sWe%20Alll!5e0!3m2!1sen!2sin!4v1756553686949!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4389.370318214442!2d88.43323939999999!3d22.5718916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02755159f4e117%3A0x40e3bebe07f10e30!2sGlobsyn%20Crystals!5e1!3m2!1sen!2sin!4v1782454905362!5m2!1sen!2sin"
             style={{ width: "100%", height: "500px" }}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

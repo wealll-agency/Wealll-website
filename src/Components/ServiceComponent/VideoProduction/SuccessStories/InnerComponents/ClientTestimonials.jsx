@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import './client-testimonials.css';
-import client1 from '../../../../../assets/images/Team-1.jpg';
-import client2 from '../../../../../assets/images/Team-2.jpg';
-import client3 from '../../../../../assets/images/Team-3.jpg';
+import client1 from '../../../../../assets/images/vyapaar-expo-trip6.jpeg';
+import client2 from '../../../../../assets/images/vyapaar-expo-trip1.jpeg';
+import client3 from '../../../../../assets/images/vyapaar-expo-trip7.jpeg';
 
 const ClientTestimonials = () => {
     const sectionRef = useRef(null);

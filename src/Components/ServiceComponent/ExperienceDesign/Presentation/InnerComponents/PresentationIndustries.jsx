@@ -1,18 +1,27 @@
 import React, { useState } from 'react';
 import './presentation.css';
 
+import indImg1 from '../../../../../assets/images/presentation/presentation-industry1.jpeg';
+import indImg2 from '../../../../../assets/images/presentation/presentation-industry2.jpeg';
+import indImg3 from '../../../../../assets/images/presentation/presentation-industry3.jpeg';
+import indImg4 from '../../../../../assets/images/presentation/presentation-industry4.jpeg';
+import indImg5 from '../../../../../assets/images/presentation/presentation-industry5.jpeg';
+import indImg6 from '../../../../../assets/images/presentation/presentation-industry6.jpeg';
+import indImg7 from '../../../../../assets/images/presentation/presentation-industry7.jpeg';
+import indImg8 from '../../../../../assets/images/presentation/presentation-industry8.jpeg';
+
 const PresentationIndustries = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const industries = [
-        { name: "Tech Startups", desc: "Seed & Series A funding pitch decks.", img: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200&auto=format&fit=crop" }, // Modern tech office/data
-        { name: "FinTech & Crypto", desc: "Whitepapers, ICOs & tokenomics.", img: "https://images.unsplash.com/photo-1621504450181-5d356f61d307?q=80&w=1200&auto=format&fit=crop" }, // Crypto/Trading charts
-        { name: "Enterprise B2B", desc: "High-ticket software sales decks.", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop" }, // Enterprise Data 
-        { name: "Medical & Health", desc: "Clinical trials & board reviews.", img: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1200&auto=format&fit=crop" }, // Modern Medical/Lab
-        { name: "Real Estate", desc: "Commercial developer proposals.", img: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=1200&auto=format&fit=crop" }, // Luxury Real Estate
-        { name: "Agencies & PR", desc: "RFP responses & bold campaign pitches.", img: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop" }, // Creative Agency Meeting
-        { name: "Education", desc: "Institutional funding & curriculum.", img: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop" }, // University/Education
-        { name: "Non-Profit", desc: "Major donor & grant applications.", img: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop" } // Community/Helping Hands
+        { name: "Tech Startups", desc: "Seed & Series A funding pitch decks.", img: indImg1 }, // Modern tech office/data
+        { name: "FinTech & Crypto", desc: "Whitepapers, ICOs & tokenomics.", img: indImg2 }, // Crypto/Trading charts
+        { name: "Enterprise B2B", desc: "High-ticket software sales decks.", img: indImg3 }, // Enterprise Data 
+        { name: "Medical & Health", desc: "Clinical trials & board reviews.", img: indImg4 }, // Modern Medical/Lab
+        { name: "Real Estate", desc: "Commercial developer proposals.", img: indImg5 }, // Luxury Real Estate
+        { name: "Agencies & PR", desc: "RFP responses & bold campaign pitches.", img: indImg6 }, // Creative Agency Meeting
+        { name: "Education", desc: "Institutional funding & curriculum.", img: indImg7 }, // University/Education
+        { name: "Non-Profit", desc: "Major donor & grant applications.", img: indImg8 } // Community/Helping Hands
     ];
 
     return (

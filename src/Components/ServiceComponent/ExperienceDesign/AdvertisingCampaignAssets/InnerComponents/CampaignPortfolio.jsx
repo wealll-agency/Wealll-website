@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
 import './campaign-portfolio.css';
+import img1 from '../../../../../assets/images/campain-portfolio2.jpg';
+import img2 from '../../../../../assets/images/campain-portfolio3.jpg';
+import img3 from '../../../../../assets/images/campain-portfolio4.jpg';
+import img4 from '../../../../../assets/images/campain-portfolio5.jpg';
+import img5 from '../../../../../assets/images/campain-portfolio1.jpg';
 
 const CampaignPortfolio = () => {
     const [activePanel, setActivePanel] = useState(0);
@@ -9,31 +14,31 @@ const CampaignPortfolio = () => {
             title: "Social Media Ad Creatives",
             desc: "Facebook, Instagram & LinkedIn high-conversion formats.",
             category: "Digital Social",
-            image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop"
+            image: img1
         },
         {
             title: "Multi-Size Banners",
             desc: "HTML5 & Static standard sizes for complete ad networks.",
             category: "Display Network",
-            image: "https://images.unsplash.com/photo-1542744094-24638ea0bc40?q=80&w=1000&auto=format&fit=crop"
+            image: img2
         },
         {
             title: "Performance Meta Ads",
             desc: "A/B tested creative hooks and persuasive ad copy.",
             category: "Meta Ads",
-            image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1000&auto=format&fit=crop"
+            image: img3
         },
         {
             title: "Product Launch Campaigns",
             desc: "High-impact visual teasers creating market anticipation.",
             category: "Go-To-Market",
-            image: "https://images.unsplash.com/photo-1557838923-2985c318be48?q=80&w=1000&auto=format&fit=crop"
+            image: img4
         },
         {
             title: "Festive & Promo Offers",
             desc: "Seasonal sales campaigns designed for urgency & conversion.",
             category: "Promotional",
-            image: "https://images.unsplash.com/photo-1607083206968-13611e3d76db?q=80&w=1000&auto=format&fit=crop"
+            image: img5
         }
     ];
 

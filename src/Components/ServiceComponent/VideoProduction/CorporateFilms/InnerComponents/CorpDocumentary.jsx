@@ -1,9 +1,9 @@
 import React from 'react';
 import '../corporate-films.css';
-import founderImg from '../../../../../assets/images/Team-2.jpg';
-import btsImg from '../../../../../assets/images/Team-3.jpg';
-import cultureImg from '../../../../../assets/images/career-team.jpg';
-import impactImg from '../../../../../assets/images/ugc-ads.webp'; // Placeholder
+import founderImg from '../../../../../assets/images/documentaries-1.jpeg';
+import btsImg from '../../../../../assets/images/documentaries-2.jpeg';
+import cultureImg from '../../../../../assets/images/documentaries-3.jpeg';
+import impactImg from '../../../../../assets/images/documentaries-4.jpeg';
 import successImg from '../../../../../assets/images/tab_img3.jpg';
 
 const CorpDocumentary = () => {
@@ -33,24 +33,21 @@ const CorpDocumentary = () => {
                     </div>
                 </div>
 
-                {/* Horizontal Scrolling Film Strip */}
-                <div className="doc-film-strip">
-                    {documentaries.map((doc, index) => (
-                        <div
-                            className="doc-frame"
-                            key={index}
-                            style={{ backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%), url(${doc.bg})` }}
-                        >
-                            <h4>{doc.title}</h4>
+                {/* 4 Grid Layout */}
+                <div className="profile-grid mt-4">
+                    {documentaries.slice(0, 4).map((doc, index) => (
+                        <div className="profile-card-modern" key={index}>
+                            <div
+                                className="profile-card-bg"
+                                style={{ backgroundImage: `url(${doc.bg})` }}
+                            ></div>
+                            <div className="profile-card-overlay">
+                                <div className="profile-card-content">
+                                    <h3>{doc.title}</h3>
+                                </div>
+                            </div>
                         </div>
                     ))}
-                    {/* Duplicate for infinite feel visual */}
-                    <div
-                        className="doc-frame"
-                        style={{ backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 50%), url(${founderImg})` }}
-                    >
-                        <h4>Founder Journey</h4>
-                    </div>
                 </div>
             </div>
         </section>

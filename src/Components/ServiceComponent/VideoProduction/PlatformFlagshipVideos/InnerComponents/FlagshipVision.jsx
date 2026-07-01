@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './flagship-vision.css';
-import dummyVideo from '../../../../../assets/Video/Wealll_hero.mp4';
+import dummyVideo from '../../../../../assets/Video/WEALLL.mp4';
 import BannerComponent from '../../../CommonComponents/BannerComponent';
 
 const FlagshipVision = () => {

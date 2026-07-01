@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './faq-explainer.css';
-import demoVideo from '../../../../../assets/Video/about_video.mp4';
+import demoVideo from '../../../../../assets/Video/Wealll-Website-Creative-Section.mp4';
 
 const FAQExplainer = () => {
     const sectionRef = useRef(null);
