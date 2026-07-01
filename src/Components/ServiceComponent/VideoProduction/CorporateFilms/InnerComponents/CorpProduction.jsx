@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import '../corporate-films-advanced.css';
 
 // Importing assets for the new design
-import cineShoot from '../../../../../assets/images/commercial_cinema.jpg';
-import lighting from '../../../../../assets/images/portfolio_logo9.jpeg';
-import interview from '../../../../../assets/images/Team-1.jpg';
-import drone from '../../../../../assets/images/commercial_poster.jpg';
-import graphics from '../../../../../assets/images/monitor.png';
-import vo from '../../../../../assets/images/podcast-collaboration.jpeg';
+import cineShoot from '../../../../../assets/images/production-showcase1.jpeg';
+import interview from '../../../../../assets/images/production-showcase2.jpeg';
+import lighting from '../../../../../assets/images/production-showcase3.jpeg';
+import drone from '../../../../../assets/images/production-showcase4.jpeg';
+import graphics from '../../../../../assets/images/production-showcase5.jpeg';
+import vo from '../../../../../assets/images/production-showcase6.jpeg';
 
 const CorpProduction = () => {
     const [activeItem, setActiveItem] = useState(0);

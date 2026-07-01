@@ -200,7 +200,14 @@
   letter-spacing: 1px;
 }
 
+@media (max-width:1400px){
+    .ml-hero-content{
+    flex: 0 0 60%;
+  }
+}
+
 /* Mobile Responsiveness */
+
 @media (max-width: 991px) {
   .ml-hero-container {
     flex-direction: column;

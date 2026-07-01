@@ -392,11 +392,15 @@
 .np-form-container {
   background-color: #f6f6f6;
   border-radius: 8px;
-  padding: 50px;
+  padding: 50px 30px;
   color: #333333;
   max-width: 600px;
   margin-left: auto;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.np-checkbox-label:last-child {
+    min-width: 200px;
 }
 
 .np-form-container h3 {
@@ -581,6 +585,10 @@
     font-size: 2.2rem;
     width: 95%;
   }
+
+  .np-checkbox-label:last-child {
+    min-width: auto;
+}
 
   /* Shrink all bubbles for mobile */
   .bubble-pos-1 {

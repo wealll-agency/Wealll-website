@@ -19,7 +19,7 @@ const Footer = () => {
                                 <div className='ptf-animated-block'>
                                     <h6 className="footerTitle">Address</h6>
                                     <div className="mainBlk">
-                                        <p>14/4C Cluster Rajarhat 76, Action Area1, Newtown, Koch Pukur, West Bengal - 700 156
+                                        <p>Unit 8A, 4th Floor, Tower 1, Globsyn Crystal, Salt Lake Electronics Complex, Street No. 17, EP Block, Sector V, Kolkata – 700091, West Bengal, India
                                         </p>
                                     </div>
 
@@ -90,12 +90,11 @@ const Footer = () => {
                                 <div className="social-links d-flex align-items-center justify-content-lg-start justify-content-center">
 
                                     <ul>
-                                        <li> <a href="https://www.facebook.com/people/We-Alll/61556163594429/" target="_blank"><i className="fa-brands fa-linkedin-in"></i></a></li>
-                                        <li> <a href="https://www.linkedin.com/company/we-alll/" target="_blank"><i className="fa-brands fa-facebook"></i></a></li>
+                                        <li> <a href="https://www.linkedin.com/company/we-alll/" target="_blank"><i className="fa-brands fa-linkedin-in"></i></a></li>
+                                        <li> <a href="https://www.facebook.com/people/We-Alll/61556163594429/" target="_blank"><i className="fa-brands fa-facebook"></i></a></li>
                                         <li> <a href="https://www.instagram.com/wealll_official/" target="_blank"><i className="fa-brands fa-instagram"></i></a></li>
                                         <li> <a href="https://www.youtube.com/@WeAlll-Digital" target="_blank"><i className="fa-brands fa-youtube"></i></a></li>
-                                        <li> <a href="#" target="_blank"><i className="fa-solid fa-location-dot"></i></a></li>
-
+                                        <li> <a href="https://g.co/kgs/y7nFvQc" target="_blank"><i className="fa-solid fa-location-dot"></i></a></li>
 
                                     </ul>
 
@@ -130,7 +129,7 @@ const Footer = () => {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="https://share.google/o5qb4OQ6i9r0E5Vw5" target="_blank">
+                                            <a href="#" target="_blank">
                                                 <img src={ReviewImage3} alt="F Google Review Result" />
                                                 <div className="replte-inner">
                                                     <div className="replte-star">
@@ -182,7 +181,7 @@ const Footer = () => {
 
                             <div className="col-lg-4 col-md-5 col-sm-12 col-12 order-lg-1 order-md-1 order-sm-3 order-3">
 
-                                <p className="copyright">©2025&nbsp;We Alll. All Rights Reserved.</p>
+                                <p className="copyright"> ©2023-{new Date().getFullYear()} We Alll. All Rights Reserved.</p>
 
                             </div>
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../exhibition-videos.css';
 
 import pd1 from '../../../../../assets/images/portfolio_software1.jpeg';
-import pd2 from '../../../../../assets/images/portfolio_website4.jpg';
+import pd2 from '../../../../../assets/images/portfolio_website4.jpeg';
 import pd3 from '../../../../../assets/images/portfolio_app2.jpeg';
 import pd4 from '../../../../../assets/images/monitor.png';
 

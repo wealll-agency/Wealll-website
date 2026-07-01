@@ -1,12 +1,8 @@
 import React, { useEffect } from 'react'
-import testimonial1 from "../../assets/images/testimonal-image1.webp";
-import testimonial2 from "../../assets/images/testimonal-image2.webp";
-import testimonial3 from "../../assets/images/testimonal-image3.webp";
-import testimonial4 from "../../assets/images/testimonal-image4.webp";
-import testimonial5 from "../../assets/images/testimonal-image5.webp";
-import testimonial6 from "../../assets/images/testimonal-image6.webp";
-import testimonial7 from "../../assets/images/testimonal-image7.webp";
-import testimonial8 from "../../assets/images/testimonal-image8.webp";
+import testimonial1 from "../../assets/images/testimonal-image1.png";
+import testimonial2 from "../../assets/images/testimonal-image2.png";
+import testimonial3 from "../../assets/images/testimonal-image3.png";
+
 
 const Testimonial = () => {
 
@@ -56,24 +52,21 @@ const Testimonial = () => {
                                         <div className="testi-box">
                                             <div className="testi-desc">
                                                 <p>
-                                                    We Alll Creations was truly helpful with Website
-                                                    UI, Logo, and Infographic creation. Not only
-                                                    this, time and again they shared ideas and
-                                                    suggestions proactively which I liked and
-                                                    implemented. Amazing experience working with
-                                                    We Alll Creations!
+                                                    We partnered with We Alll for our digital marketing needs, and the results have been outstanding! Their team is highly skilled in SEO, social media marketing, and performance campaigns. They understood our brand, created a tailored strategy, and consistently delivered excellent ROI.
+                                                </p>
+                                                <p>Their creative content, timely communication, and transparent reporting made the entire process smooth and effective. We’re seeing real growth in traffic, engagement, and leads — all thanks to We Alll.
+                                                    Highly recommended to anyone looking for a reliable and affordable digital marketing agency
                                                 </p>
                                             </div>
                                             <div className="testi-avatar">
                                                 <div className="avatar-img">
                                                     <img
                                                         src={testimonial1}
-                                                        alt="Didier Bonny "
+                                                        alt="Makeover By Soumi"
                                                     />
                                                 </div>
                                                 <div className="avatar-desc">
-                                                    <h5>Didier Bonny</h5>
-                                                    <p>CEO - Innoptim Group | Switzerland</p>
+                                                    <h5>Makeover By Soumi</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -82,24 +75,20 @@ const Testimonial = () => {
                                         <div className="testi-box">
                                             <div className="testi-desc">
                                                 <p>
-                                                    Having worked with many creative agencies - big
-                                                    & small - we found We Alll refreshingly
-                                                    different. The We Alll team is always bubbling
-                                                    with new ideas, they have inexhaustible patience
-                                                    and they deliver on time. It's truly a pleasure
-                                                    to work with this young agency.
+                                                    We’ve had a great experience working with We Alll for our digital marketing. Their team is professional, responsive, and truly understands the Kolkata market. They took the time to understand our business and created a clear strategy instead of making unrealistic promises.
+                                                </p>
+                                                <p>Their Meta Ads and website improvements helped us see better engagement and more consistent inquiries. Communication is smooth, and they provide regular updates with clear reporting
                                                 </p>
                                             </div>
                                             <div className="testi-avatar">
                                                 <div className="avatar-img">
                                                     <img
                                                         src={testimonial2}
-                                                        alt="Raj Pinjani "
+                                                        alt="Ron Ray "
                                                     />
                                                 </div>
                                                 <div className="avatar-desc">
-                                                    <h5>Raj Pinjani</h5>
-                                                    <p>Director - Rasna International | India</p>
+                                                    <h5>Ron Ray</h5>
                                                 </div>
                                             </div>
                                         </div>
@@ -108,156 +97,22 @@ const Testimonial = () => {
                                         <div className="testi-box">
                                             <div className="testi-desc">
                                                 <p>
-                                                    We Alll has been great Partners to work with,
-                                                    their quality along with their commitment to
-                                                    deliverables it's top-notch Graphic India is
-                                                    happy to collaborate and continue to partner
-                                                    with We Alll with respect to productions
-                                                    services.
+                                                    I am the owner of Ambika Silvers in Kolkata, and I recently lost ownership access to my Google Business Profile (GBP), which affected my visibility on Google Search and Maps.
+                                                    I contacted We Alll, and their team quickly helped me recover ownership of my business profile. They were professional, highly knowledgeable about Google Business Profile and local SEO.
                                                 </p>
+                                                <p>  Thanks to the support, my business is now working properly again on Google. I highly recommend We Alll to any business owner looking for help with GBP recovery, local SEO, or digital marketing services in Kolkata.
+                                                </p>
+                                                <p>Thank you, We Alll for the excellent support and quick resolution!</p>
                                             </div>
                                             <div className="testi-avatar">
                                                 <div className="avatar-img">
                                                     <img
                                                         src={testimonial3}
-                                                        alt="Navin Miranda"
+                                                        alt="Ambika Silvers"
                                                     />
                                                 </div>
                                                 <div className="avatar-desc">
-                                                    <h5>Navin Miranda</h5>
-                                                    <p>
-                                                        Head of Business Development - Graphic India |
-                                                        Singapore
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className="testi-box">
-                                            <div className="testi-desc">
-                                                <p>
-                                                    We Alll team has done a wonderful job redesigning
-                                                    our website to take it from a plain and
-                                                    functional website to an amazingly professional
-                                                    and lively one. We recommend We Alll Creations to
-                                                    any business that need a hand improving their
-                                                    internet traffic and their business!
-                                                </p>
-                                            </div>
-                                            <div className="testi-avatar">
-                                                <div className="avatar-img">
-                                                    <img
-                                                        src={testimonial4}
-                                                        alt="Gaurav Parvadia "
-                                                    />
-                                                </div>
-                                                <div className="avatar-desc">
-                                                    <h5>Gaurav Parvadia</h5>
-                                                    <p>CEO - Twinr | Canada</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className="testi-box">
-                                            <div className="testi-desc">
-                                                <p>
-                                                    Kandarp & Team We Alll, I extremely delighted to
-                                                    see the range. I am sure your merits will win
-                                                    some useful business from Africa.
-                                                </p>
-                                            </div>
-                                            <div className="testi-avatar">
-                                                <div className="avatar-img">
-                                                    <img
-                                                        src={testimonial5}
-                                                        alt="Dhiren Rana"
-                                                    />
-                                                </div>
-                                                <div className="avatar-desc">
-                                                    <h5>Dhiren Rana</h5>
-                                                    <p>Director - Romaunt Roses | Kenya</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className="testi-box">
-                                            <div className="testi-desc">
-                                                <p>
-                                                    I have been knowing Kandarp the main visionary
-                                                    of We Alll for 3 years. What a beautiful human
-                                                    being. His persona radiates in his organization
-                                                    as well. Great design works. top-notch work.
-                                                    Quality of designs and any other works done by
-                                                    We Alll are absolutely beyond any other company's
-                                                    standard. Try to meet the fellow once. such a
-                                                    good service is rare these days. Thanks for all
-                                                    the help done by We Alll for my design works and
-                                                    publishing work
-                                                </p>
-                                            </div>
-                                            <div className="testi-avatar">
-                                                <div className="avatar-img">
-                                                    <img
-                                                        src={testimonial6}
-                                                        alt="Jitesh Donga"
-                                                    />
-                                                </div>
-                                                <div className="avatar-desc">
-                                                    <h5>Jitesh Donga</h5>
-                                                    <p>Community Manager - Pratilipi | India</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className="testi-box">
-                                            <div className="testi-desc">
-                                                <p>
-                                                    We were looking to redesign, fresh content &
-                                                    development for Onlinetoken website and it was
-                                                    our 3rd attempt but landed in good hand of
-                                                    We Alll team. They are very creative,
-                                                    resourceful, punctual and exceeded our
-                                                    expectations.
-                                                </p>
-                                            </div>
-                                            <div className="testi-avatar">
-                                                <div className="avatar-img">
-                                                    <img
-                                                        src={testimonial7}
-                                                        alt="Haresh Ghoghari "
-                                                    />
-                                                </div>
-                                                <div className="avatar-desc">
-                                                    <h5>Haresh Ghoghari</h5>
-                                                    <p>Co-founder - Onlinetoken | USA</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="swiper-slide">
-                                        <div className="testi-box">
-                                            <div className="testi-desc">
-                                                <p>
-                                                    We were looking for partners in Brand
-                                                    Communication, who can understand technology,
-                                                    content & customers. They offer a unique blend
-                                                    which we were looking for.
-                                                </p>
-                                            </div>
-                                            <div className="testi-avatar">
-                                                <div className="avatar-img">
-                                                    <img
-                                                        src={testimonial8}
-                                                        alt="Keyur Bhalavat"
-                                                    />
-                                                </div>
-                                                <div className="avatar-desc">
-                                                    <h5>Keyur Bhalavat</h5>
-                                                    <p>CEO - Plutomen | India</p>
+                                                    <h5>Ambika Silvers</h5>
                                                 </div>
                                             </div>
                                         </div>

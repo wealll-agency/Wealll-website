@@ -33,9 +33,9 @@ const OurClients = () => {
     const [selectedOptions, setSelectedOptions] = useState([]);
 
     const helpOptions = [
-        "AEO", "SEO", "Paid media",
-        "Creative", "Content", "Social Media",
-        "App Store", "Analytics", "Other"
+        "Digital", "Content", "Design",
+        "Video", "PR Services", "Influencer",
+        "Development", "Page Recovery"
     ];
 
     const toggleOption = (option) => {
@@ -54,7 +54,7 @@ const OurClients = () => {
                         everywhere from <span>Google</span> to <span>ChatGPT</span>
                     </h2>
                     <p>We help you show up everywhere customers are searching, swiping, scrolling, streaming, and shopping.</p>
-                    <a href="#" className="np-btn-primary mx-auto">Work with us</a>
+                    {/* <a href="#" className="np-btn-primary mx-auto">Work with us</a> */}
                 </div>
 
                 <div className="row np-clients-content align-items-center">
@@ -111,7 +111,7 @@ const OurClients = () => {
                                 ))}
                             </div>
 
-                            <a href="#" className="np-btn-primary form-btn">Get started</a>
+                            <a href="#" className="np-btn-primary form-btn">Work with us</a>
                         </div>
 
                         <div className="trusted-clients-section d-flex align-items-center mt-4">

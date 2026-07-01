@@ -1,7 +1,7 @@
 import React from 'react';
 import '../corporate-films.css';
 import commercialPoster from '../../../../../assets/images/commercial_poster.jpg';
-import aboutVideo from '../../../../../assets/Video/about_video.mp4';
+import aboutVideo from '../../../../../assets/Video/WEALLL.mp4';
 import BannerComponent from '../../../CommonComponents/BannerComponent';
 
 const CorpBrandStory = () => {

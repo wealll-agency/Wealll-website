@@ -109,7 +109,10 @@
 .fc-main-img {
   width: 100%;
   height: auto;
+  max-height: 700px;
+  object-fit: cover;
   display: block;
+  object-position: top;
   border-radius: 20px;
   transition: transform 0.5s ease;
 }
@@ -189,6 +192,7 @@
   border: 2px solid rgba(253, 185, 20, 0.1);
   border-radius: 50%;
   z-index: 1;
+  display: none;
   animation: fc-spin 20s linear infinite;
 }
 

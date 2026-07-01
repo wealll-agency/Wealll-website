@@ -1,9 +1,9 @@
 import React from 'react';
 import '../corporate-films.css';
-import team1 from '../../../../../assets/images/Team-1.jpg';
-import industryLeader from '../../../../../assets/images/commercial_studio.jpg';
-import globalPresence from '../../../../../assets/images/brand-identity.jpeg'; // Placeholder
-import csrDoc from '../../../../../assets/images/career-team.jpg';
+import team1 from '../../../../../assets/images/Team-1.jpeg';
+import industryLeader from '../../../../../assets/images/Team-2.jpeg';
+import csrDoc from '../../../../../assets/images/Team-3.jpeg';
+import globalPresence from '../../../../../assets/images/Team-4.jpeg';
 
 const CorpProfileFilms = () => {
     const profiles = [

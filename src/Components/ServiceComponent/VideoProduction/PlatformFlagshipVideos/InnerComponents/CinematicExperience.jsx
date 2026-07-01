@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import './cinematic-experience.css';
-import sampleVideo from '../../../../../assets/Video/about_video.mp4';
+import sampleVideo from '../../../../../assets/Video/WE_ALLL_Video_Final.mp4';
 
 const CinematicExperience = () => {
     const sectionRef = useRef(null);
@@ -117,7 +117,7 @@ const CinematicExperience = () => {
                 </div>
 
                 {/* Video Player inside the cinematic section */}
-                <div className="row justify-content-center mt-5">
+                {/* <div className="row justify-content-center mt-5">
                     <div className="col-lg-10">
                         <div className="cine-player-wrapper cine-reveal" style={{ transitionDelay: '0.5s' }}>
                             <div className="cine-player-frame">
@@ -129,7 +129,6 @@ const CinematicExperience = () => {
                                     playsInline
                                     className="cine-real-video"
                                 />
-                                {/* Mock UI elements overlaying the video */}
                                 <div className="cine-mock-ui top-left cine-parallax" data-speed="1">
                                     <div className="mock-bar"></div>
                                     <div className="mock-bar short"></div>
@@ -142,7 +141,7 @@ const CinematicExperience = () => {
                             <div className="cine-player-reflection"></div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </section>
     );

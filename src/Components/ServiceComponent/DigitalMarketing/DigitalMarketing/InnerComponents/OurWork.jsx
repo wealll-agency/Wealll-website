@@ -7,16 +7,11 @@ import "swiper/css/scrollbar";
 import "./OurWork.css";
 
 // Import local assets
-import maisonLogo from "../../../../../assets/images/maison-logo.webp";
-import maisonProject from "../../../../../assets/images/maison-project.png";
-import dsLogo from "../../../../../assets/images/ds-logo.png";
-import dsWork from "../../../../../assets/images/ds-work.webp";
-import ncbLogo from "../../../../../assets/images/ncb-logo.png";
-import ncbWork from "../../../../../assets/images/ncb-work.webp";
-import shipzipLogo from "../../../../../assets/images/shipzip-logo.png";
-import shipzipWork from "../../../../../assets/images/shipzip-work.webp";
-import wlLogo from "../../../../../assets/images/wl-logo.png";
-import wlWork from "../../../../../assets/images/wl-work.webp";
+import bunny from "../../../../../assets/images/Bunny.png";
+import karma from "../../../../../assets/images/Karma.png";
+import philo from "../../../../../assets/images/Phillo.png";
+import kesri from "../../../../../assets/images/kesri.jpeg";
+import khukumoni from "../../../../../assets/images/khukumoni.jpeg";
 
 const OurWork = () => {
   const projects = [
@@ -25,17 +20,15 @@ const OurWork = () => {
       title: "Curating Impactful Digital Campaigns for Moroccan Atelier",
       tags: ["SOCIAL MEDIA", "INFLUENCER MARKETING"],
       bgColor: "#000000",
-      logo: maisonLogo,
-      image: maisonProject,
+      image: bunny,
       textColor: "#ffffff",
     },
     {
       id: 2,
       title: "Driving Awareness for Cancer Care with Social Media Campaigns",
       tags: ["SOCIAL MEDIA", "CREATIVE ARTWORK"],
-      bgColor: "#496141",
-      logo: dsLogo,
-      image: dsWork,
+      bgColor: "#000000",
+      image: karma,
       textColor: "#ffffff",
     },
     {
@@ -43,26 +36,23 @@ const OurWork = () => {
       title: "360° Google Marketing for a Prominent Jewellery Brand",
       tags: ["GOOGLE ADS", "SEO", "SOCIAL MEDIA"],
       bgColor: "#000000",
-      logo: ncbLogo,
-      image: ncbWork,
+      image: philo,
       textColor: "#ffffff",
     },
     {
       id: 4,
       title: "Working with Founders for Branding & Digital Marketing",
       tags: ["BRANDING", "DIGITAL MARKETING"],
-      bgColor: "#ea1d2a",
-      logo: shipzipLogo,
-      image: shipzipWork,
+      bgColor: "#000000",
+      image: kesri,
       textColor: "#ffffff",
     },
     {
       id: 5,
       title: "Boosting Online Presence with Strategic Performance Marketing",
       tags: ["PERFORMANCE MARKETING", "STRATEGY"],
-      bgColor: "#282828",
-      logo: wlLogo,
-      image: wlWork,
+      bgColor: "#000000",
+      image: khukumoni,
       textColor: "#ffffff",
     },
   ];
@@ -115,9 +105,7 @@ const OurWork = () => {
               >
                 <div className="card-inner">
                   <div className="card-top">
-                    <div className="brand-logo">
-                      <img src={project.logo} alt="Brand Logo" />
-                    </div>
+
                     <h3
                       className="project-title"
                       style={{ color: project.textColor }}

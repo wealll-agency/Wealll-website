@@ -3,11 +3,11 @@ import testimonalImage from "../../assets/images/testimonal-bg.webp";
 import brandimage1 from "../../assets/images/brand-identity.jpeg";
 import brandimage2 from "../../assets/images/packaging.jpeg";
 import brandimage3 from "../../assets/images/key-visual.jpeg";
-import brandimage4 from "../../assets/images/posm.jpeg";
-import brandimage5 from "../../assets/images/video-anim.webp";
+import brandimage4 from "../../assets/images/POSM.jpeg";
+import brandimage5 from "../../assets/Video/Wealll-Website-Creative-Section.mp4";
 import brandimage6 from "../../assets/images/web-design.jpeg";
 import brandimage7 from "../../assets/images/ecommerce-development.png";
-import brandimage8 from "../../assets/images/personal-branding.webp";
+import brandimage8 from "../../assets/images/personal-branding.png";
 import brandimage9 from "../../assets/images/social-media-manage.jpeg";
 import brandimage10 from "../../assets/images/barter-collaboration.jpeg";
 import brandimage11 from "../../assets/images/paid-collaboration.jpeg";
@@ -93,7 +93,7 @@ const Casestudy = () => {
                                             <img src={brandimage4} alt="" />
                                         </div>
                                         <div id="menu5" className="tab-pane fade">
-                                            <img src={brandimage5} alt="" />
+                                            <video src={brandimage5} autoPlay loop muted playsInline></video>
                                         </div>
                                     </div>
                                 </div>
@@ -417,7 +417,7 @@ const Casestudy = () => {
                                                                 <img src={brandimage4} alt="" />
                                                             </div>
                                                             <div id="mobilemenu5" className="tab-pane fade">
-                                                                <img src={brandimage5} alt="" />
+                                                                <video src={brandimage5} autoPlay loop muted playsInline></video>
                                                             </div>
                                                         </div>
                                                     </div>

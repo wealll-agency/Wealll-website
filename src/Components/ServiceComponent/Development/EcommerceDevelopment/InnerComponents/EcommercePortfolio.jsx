@@ -3,10 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import '../../WoocommerceDevelopment/InnerComponents/woocommerce-dark.css';
 
 // Using existing assets
-import port1 from '../../../../../assets/images/portfolio_website1.jpg';
-import port2 from '../../../../../assets/images/portfolio_website2.jpg';
-import port3 from '../../../../../assets/images/portfolio_website3.jpg';
-import port4 from '../../../../../assets/images/portfolio_website4.jpg';
+import port1 from '../../../../../assets/images/portfolio_website1.jpeg';
+import port2 from '../../../../../assets/images/portfolio_website2.jpeg';
+import port3 from '../../../../../assets/images/portfolio_website3.jpeg';
+import port4 from '../../../../../assets/images/portfolio_website4.jpeg';
 
 const categories = ["All", "B2B Store", "B2C Store", "Mobile App"];
 

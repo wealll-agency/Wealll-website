@@ -2,9 +2,29 @@ import React, { useState } from 'react';
 import './logo-styles.css';
 
 import vintage_logo from '../../../../../assets/images/vintage_logo.jpeg';
-import vintage_logo_desc1 from '../../../../../assets/images/vintage_logo_description1.jpeg';
-import vintage_logo_desc2 from '../../../../../assets/images/vintage_logo_description2.jpeg';
-import vintage_logo_desc3 from '../../../../../assets/images/vintage_logo_description3.jpeg';
+import typography_img1 from '../../../../../assets/images/typography-logo1.jpeg';
+import typography_img2 from '../../../../../assets/images/typography-logo2.jpeg';
+import typography_img3 from '../../../../../assets/images/typography-logo3.jpeg';
+import typography_img4 from '../../../../../assets/images/typography-logo4.jpeg';
+import vintage_logo_desc1 from '../../../../../assets/images/vintage_logo_description1.jpg';
+import vintage_logo_desc2 from '../../../../../assets/images/vintage_logo_description2.jpg';
+import vintage_logo_desc3 from '../../../../../assets/images/vintage_logo_description3.jpg';
+import vintage_logo_desc4 from '../../../../../assets/images/vintage_logo_description4.jpeg';
+import geomatric1_logo from '../../../../../assets/images/geomatric1-logo.jpeg';
+import geomatric2_logo from '../../../../../assets/images/geomatric2-logo.jpeg';
+import geomatric3_logo from '../../../../../assets/images/geomatric3-logo.jpeg';
+import geomatric4_logo from '../../../../../assets/images/geomatric4-logo.jpeg';
+import vintage_img1 from '../../../../../assets/images/vintage_logo1.jpeg';
+import vintage_img2 from '../../../../../assets/images/vintage_logo2.jpeg';
+import vintage_img3 from '../../../../../assets/images/vintage_logo3.jpeg';
+import minimalist_img1 from '../../../../../assets/images/minimalist-logo1.jpeg';
+import minimalist_img2 from '../../../../../assets/images/minimalist-logo2.jpeg';
+import minimalist_img3 from '../../../../../assets/images/minimalist-logo3.jpeg';
+import mascot_img1 from '../../../../../assets/images/mascot-logo1.jpeg';
+import mascot_img2 from '../../../../../assets/images/mascot-logo2.jpeg';
+import mascot_img3 from '../../../../../assets/images/mascot-logo3.jpeg';
+import mascot_img4 from '../../../../../assets/images/mascot-logo4.jpeg';
+import minimalist_logo from '../../../../../assets/images/minimalist-logo.jpeg';
 
 const LogoStyles = () => {
     // 6 Styles for 6 Cube Faces
@@ -19,8 +39,29 @@ const LogoStyles = () => {
 
     const [currentClass, setCurrentClass] = useState('show-front');
 
+    const initialImages = [minimalist_img1, minimalist_img2, minimalist_img3];
+    const geometricImages = [geomatric4_logo, geomatric2_logo, geomatric3_logo];
+    const vintageImages = [vintage_img1, vintage_img2, vintage_img3];
+    const mascotImages = [mascot_img2, mascot_img3, mascot_img4];
+    const abstractImages = [vintage_logo_desc2, vintage_logo_desc3, vintage_logo_desc4];
+    const typographyImages = [typography_img2, typography_img3, typography_img4];
+    const [bottomImages, setBottomImages] = useState(initialImages);
+
     const handleRotate = (face) => {
         setCurrentClass(`show-${face}`);
+        if (face === 'right') {
+            setBottomImages(geometricImages);
+        } else if (face === 'left') {
+            setBottomImages(vintageImages);
+        } else if (face === 'top') {
+            setBottomImages(mascotImages);
+        } else if (face === 'back') {
+            setBottomImages(abstractImages);
+        } else if (face === 'bottom') {
+            setBottomImages(typographyImages);
+        } else {
+            setBottomImages(initialImages);
+        }
     };
 
     return (
@@ -38,6 +79,16 @@ const LogoStyles = () => {
                                 <div className="face-content">
                                     {style.name === "Vintage" ? (
                                         <img src={vintage_logo} alt="Vintage Logo" className="vintage-face-img" />
+                                    ) : style.name === "Typographic" ? (
+                                        <img src={typography_img1} alt="Typographic Logo" className="typographic-face-img" />
+                                    ) : style.name === "Abstract" ? (
+                                        <img src={vintage_logo_desc1} alt="Abstract Logo" className="vintage-face-img" />
+                                    ) : style.name === "Geometric" ? (
+                                        <img src={geomatric1_logo} alt="Geometric Logo" className="vintage-face-img" />
+                                    ) : style.name === "Minimalist" ? (
+                                        <img src={minimalist_logo} alt="Minimalist Logo" className="vintage-face-img" />
+                                    ) : style.name === "Mascot" ? (
+                                        <img src={mascot_img1} alt="Mascot Logo" className="vintage-face-img" />
                                     ) : (
                                         <>
                                             <div className="face-icon" style={{ textShadow: `0 0 20px ${style.color}` }}>{style.icon}</div>
@@ -66,21 +117,13 @@ const LogoStyles = () => {
 
                 <div className="style-description-images mt-5">
                     <div className="row g-4">
-                        <div className="col-lg-4 col-md-6">
-                            <div className="description-img-box">
-                                <img src={vintage_logo_desc1} alt="Description 1" className="img-fluid rounded shadow" />
+                        {bottomImages.map((imgSrc, index) => (
+                            <div className="col-lg-4 col-md-6" key={index}>
+                                <div className="description-img-box">
+                                    <img src={imgSrc} alt={`Description ${index + 1}`} className="img-fluid rounded shadow" />
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <div className="description-img-box">
-                                <img src={vintage_logo_desc2} alt="Description 2" className="img-fluid rounded shadow" />
-                            </div>
-                        </div>
-                        <div className="col-lg-4 col-md-6">
-                            <div className="description-img-box">
-                                <img src={vintage_logo_desc3} alt="Description 3" className="img-fluid rounded shadow" />
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-import aboutImage from "../../assets/images/team_img1.jpg";
+import aboutImage from "../../assets/images/office_rellocation1.jpeg";
 import creativebgImage from "../../assets/images/creativebg.png";
 import agencypattern from "../../assets/images/agency-pattern.png";
 

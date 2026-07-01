@@ -25,6 +25,23 @@ import vyapaar_expo_trip5 from "../../assets/images/vyapaar-expo-trip5.jpeg"
 import vyapaar_expo_trip7 from "../../assets/images/vyapaar-expo-trip7.jpeg"
 import vyapaar_expo_trip8 from "../../assets/images/vyapaar-expo-trip8.jpeg"
 
+import karma_event3 from "../../assets/images/karma-international-seminar3.jpeg"
+import karma_event4 from "../../assets/images/karma-international-seminar4.jpeg"
+import karma_event5 from "../../assets/images/karma-international-seminar5.jpeg"
+import karma_event6 from "../../assets/images/karma-international-seminar6.jpeg"
+import karma_event7 from "../../assets/images/karma-international-seminar7.jpeg"
+import karma_event8 from "../../assets/images/karma-international-seminar8.jpeg"
+
+import growth_summit1 from "../../assets/images/growth_summit1.jpeg"
+import growth_summit2 from "../../assets/images/growth_summit2.jpeg"
+import growth_summit3 from "../../assets/images/growth_summit3.jpeg"
+import growth_summit4 from "../../assets/images/growth_summit4.jpeg"
+
+
+import office_rellocation1 from "../../assets/images/office_rellocation1.jpeg"
+import office_rellocation2 from "../../assets/images/office_rellocation2.jpeg"
+import office_rellocation3 from "../../assets/images/office_rellocation3.jpeg"
+
 
 const OurTrips = () => {
 
@@ -73,6 +90,18 @@ const OurTrips = () => {
 
                                                 <li class="nav-item">
                                                     <a class="nav-link" data-bs-toggle="tab" href="#menu4">Mouparnaz Makeover Meeting</a>
+                                                </li>
+
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-bs-toggle="tab" href="#menu5">Karma International Carnival</a>
+                                                </li>
+
+                                                 <li class="nav-item">
+                                                    <a class="nav-link" data-bs-toggle="tab" href="#menu6">Growth Summit 2026</a>
+                                                </li>
+
+                                                <li class="nav-item">
+                                                    <a class="nav-link" data-bs-toggle="tab" href="#menu7">Office Relocation</a>
                                                 </li>
 
                                             </ul>
@@ -254,6 +283,125 @@ const OurTrips = () => {
                                                 </div>
                                             </div>
 
+                                            <div id="menu5" class="tab-pane fade">
+                                                <div class="abotrip-box swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <div class="abotripb-img">
+                                                                <img src={karma_event3} alt="3" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="swiper-slide">
+                                                            <div class="abotripb-img">
+                                                                <img src={karma_event4} alt="4" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="swiper-slide">
+                                                            <div class="abotripb-img">
+                                                                <img src={karma_event5} alt="5" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="swiper-slide">
+                                                            <div class="abotripb-img">
+                                                                <img src={karma_event6} alt="1" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="swiper-slide">
+                                                            <div class="abotripb-img">
+                                                                <img src={karma_event7} alt="1" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="swiper-slide">
+                                                            <div class="abotripb-img">
+                                                                <img src={karma_event8} alt="1" />
+                                                            </div>
+                                                        </div>
+
+
+                                                    </div>
+
+                                                    <div class="abotrip-nav d-flex">
+                                                        <div class="swiper-button-prev abotrip-button-prev">
+                                                        </div>
+                                                        <div class="swiper-button-next abotrip-button-next">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div id="menu6" class="tab-pane">
+
+                                                <div class="abotrip-box swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <div class="abotripb-img">
+                                                                <img src={growth_summit1} alt="1" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="abotripb-img">
+                                                                <img src={growth_summit2} alt="7" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="swiper-slide">
+                                                            <div class="abotripb-img">
+                                                                <img src={growth_summit3} alt="7" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="swiper-slide">
+                                                            <div class="abotripb-img">
+                                                                <img src={growth_summit4} alt="7" />
+                                                            </div>
+                                                        </div>
+                                     
+                                                    </div>
+
+                                                    <div class="abotrip-nav d-flex">
+                                                        <div class="swiper-button-prev abotrip-button-prev"></div>
+                                                        <div class="swiper-button-next abotrip-button-next"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div id="menu7" class="tab-pane">
+
+                                                <div class="abotrip-box swiper">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide">
+                                                            <div class="abotripb-img">
+                                                                <img src={office_rellocation1} alt="1" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="swiper-slide">
+                                                            <div class="abotripb-img">
+                                                                <img src={office_rellocation2} alt="7" />
+                                                            </div>
+                                                        </div>
+
+                                                         <div class="swiper-slide">
+                                                            <div class="abotripb-img">
+                                                                <img src={office_rellocation3} alt="7" />
+                                                            </div>
+                                                        </div>
+
+                                                        
+                                     
+                                                    </div>
+
+                                                    <div class="abotrip-nav d-flex">
+                                                        <div class="swiper-button-prev abotrip-button-prev"></div>
+                                                        <div class="swiper-button-next abotrip-button-next"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
 
                                         </div>
                                     </div>

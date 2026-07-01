@@ -1,6 +1,9 @@
 import React, { useEffect } from 'react'
-import Team1 from "../../assets/images/team_img1.jpg";
+// import Team1 from "../../assets/images/team_img1.jpg";
 import Team2 from "../../assets/images/team_img2.jpeg";
+import office_rellocation1 from "../../assets/images/office_rellocation1.jpeg"
+import office_rellocation2 from "../../assets/images/office_rellocation2.jpeg"
+import office_rellocation3 from "../../assets/images/office_rellocation3.jpeg"
 // import Team3 from "../../assets/images/Team-3.jpg";
 import Wealll_mini from "../../assets/images/Wealll_mini.png";
 
@@ -43,16 +46,35 @@ const MeetOurTeam = () => {
                                 <div className="nmeetri-top">
                                     <div className="nmeetrt-slider swiper">
                                         <div className="swiper-wrapper">
-                                            <div className="swiper-slide">
+                                            {/* <div className="swiper-slide">
                                                 <div className="nmeetrisl-img">
                                                     <img src={Team1} alt="Team" />
                                                 </div>
-                                            </div>
+                                            </div> */}
                                             <div className="swiper-slide">
                                                 <div className="nmeetrisl-img">
                                                     <img src={Team2} alt="Team-2" />
                                                 </div>
                                             </div>
+
+                                            <div className="swiper-slide">
+                                                <div className="nmeetrisl-img">
+                                                    <img src={office_rellocation1} alt="Team-2" />
+                                                </div>
+                                            </div>
+
+                                            <div className="swiper-slide">
+                                                <div className="nmeetrisl-img">
+                                                    <img src={office_rellocation2} alt="Team-2" />
+                                                </div>
+                                            </div>
+
+                                            <div className="swiper-slide">
+                                                <div className="nmeetrisl-img">
+                                                    <img src={office_rellocation3} alt="Team-2" />
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
