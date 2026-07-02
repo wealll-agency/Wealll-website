@@ -12,14 +12,25 @@ import {
   FaLaravel,
   FaShopify
 } from 'react-icons/fa';
-import { SiCanva, SiJavascript } from 'react-icons/si';
+import { SiJavascript } from 'react-icons/si';
+
+const CustomCanvaIcon = ({ size }) => (
+  <div style={{
+    width: size, height: size,
+    borderRadius: '50%', background: 'linear-gradient(135deg, #00C4CC, #7D2AE8)',
+    display: 'flex', alignItems: 'center', justifyContent: 'center',
+    color: 'white', fontSize: size * 0.65, fontWeight: 'bold', fontFamily: 'sans-serif', margin: '0 auto'
+  }}>
+    C
+  </div>
+);
 import { DiPhotoshop, DiIllustrator } from 'react-icons/di';
 
 const technologies = [
   { name: 'Figma', title: <FaFigma size={50} />, color: '#F24E1E' },
   { name: 'Adobe Photoshop', title: <DiPhotoshop size={50} />, color: '#31A8FF' },
   { name: 'Adobe Illustrator', title: <DiIllustrator size={50} />, color: '#FF9A00' },
-  { name: 'Canva', title: <SiCanva size={50} />, color: '#00C4CC' },
+  { name: 'Canva', title: <CustomCanvaIcon size={50} />, color: '#00C4CC' },
   { name: 'HTML5', title: <FaHtml5 size={50} />, color: '#E34F26' },
   { name: 'PHP', title: <FaPhp size={50} />, color: '#777BB4' },
   { name: 'WordPress', title: <FaWordpress size={50} />, color: '#21759B' },
