@@ -73,13 +73,13 @@ const Buildbrand = () => {
                                     </h3>
                                     <p>Creative minds</p>
                                 </div>
-{/* <div className="brands-count-box">
+                                <div className="brands-count-box">
                                     <h3>
                                         <span className="count" data-count="35">35</span>
                                         <span>+</span>
                                     </h3>
                                     <p>Industries</p>
-                                </div> */}
+                                </div>
                                 <div className="brands-count-box">
                                     <h3>
                                         <span className="count" data-count="500">500</span>
