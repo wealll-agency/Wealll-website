@@ -68,7 +68,7 @@ const Buildbrand = () => {
                             <div className="brands-count-main">
                                 <div className="brands-count-box">
                                     <h3>
-                                        <span className="count" data-count="80">80</span>
+                                        <span className="count" data-count="40">40</span>
                                         <span>+</span>
                                     </h3>
                                     <p>Creative minds</p>
@@ -82,17 +82,17 @@ const Buildbrand = () => {
                                 </div>
                                 <div className="brands-count-box">
                                     <h3>
-                                        <span className="count" data-count="450">450</span>
+                                        <span className="count" data-count="500">500</span>
                                         <span>+</span>
                                     </h3>
-                                    <p>Granthalaya Community</p>
+                                    <p>Projects</p>
                                 </div>
                                 <div className="brands-count-box">
                                     <h3>
                                         <span className="count" data-count="550">550</span>
                                         <span>+</span>
                                     </h3>
-                                    <p>Clients served from 25+ countries</p>
+                                    <p>Clients served from 20+ countries</p>
                                 </div>
                             </div>
                         </div>
