@@ -22,6 +22,8 @@ const s3 = new S3Client({
 const uploadFolder = path.join(process.cwd(), "src", "assets");
 const bucketName = process.env.AWS_BUCKET_NAME;
 
+// ১. লোকাল ফোল্ডারের সব ফাইলের লিস্ট নেওয়া
+
 function walkFolders(dir) {
   let files = [];
   if (!fs.existsSync(dir)) return files;
@@ -37,6 +39,8 @@ function walkFolders(dir) {
   });
   return files;
 }
+
+// ২. S3 বাকেটের সব ফাইলের লিস্ট নেওয়া
 
 async function getS3Files() {
   const command = new ListObjectsV2Command({
