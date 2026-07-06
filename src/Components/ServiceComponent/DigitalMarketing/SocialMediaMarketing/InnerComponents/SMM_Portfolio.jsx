@@ -1,10 +1,11 @@
 import React from 'react';
 import './smm-portfolio.css';
 // Imports for placeholder images
-import port1 from "../../../../../assets/images/portfolio_branding1.jpeg";
-import port2 from "../../../../../assets/images/portfolio_branding2.jpeg";
-import port3 from "../../../../../assets/images/portfolio_branding3.jpeg";
-import port4 from "../../../../../assets/images/portfolio_branding4.jpeg";
+const port1 = mediaUrl("assets/images/portfolio_branding1.jpeg");
+const port2 = mediaUrl("assets/images/portfolio_branding2.jpeg");
+const port3 = mediaUrl("assets/images/portfolio_branding3.jpeg");
+const port4 = mediaUrl("assets/images/portfolio_branding4.jpeg");
+import { mediaUrl } from "../../../../../config/media";
 
 const portfolioItems = [
     { type: "Post Design", title: "Creative Campaign", desc: "Startups", img: port1 },
@@ -28,7 +29,7 @@ const SMM_Portfolio = () => {
                 <div className="smm-gallery-container">
                     {portfolioItems.map((item, index) => (
                         <div className="smm-panel" key={index}>
-                            <img src={item.img} alt={item.title} />
+                            <img src={item.img} alt={item.title} loading="lazy" />
 
                             {/* Vertical Label for inactive state */}
                             <div className="smm-panel-label">{item.title}</div>

@@ -1,10 +1,11 @@
 import React from 'react';
 import '../corporate-films.css';
-import founderImg from '../../../../../assets/images/documentaries-1.jpeg';
-import btsImg from '../../../../../assets/images/documentaries-2.jpeg';
-import cultureImg from '../../../../../assets/images/documentaries-3.jpeg';
-import impactImg from '../../../../../assets/images/documentaries-4.jpeg';
-import successImg from '../../../../../assets/images/tab_img3.jpg';
+const founderImg = mediaUrl("assets/images/documentaries-1.jpeg");
+const btsImg = mediaUrl("assets/images/documentaries-2.jpeg");
+const cultureImg = mediaUrl("assets/images/documentaries-3.jpeg");
+const impactImg = mediaUrl("assets/images/documentaries-4.jpeg");
+const successImg = mediaUrl("assets/images/tab_img3.jpg");
+import { mediaUrl } from "../../../../../config/media";
 
 const CorpDocumentary = () => {
     const documentaries = [

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './press-release.css';
-import dashboardImg from '../../../../../assets/images/Hero_Banner_01.webp';
+const dashboardImg = mediaUrl("assets/images/Hero_Banner_01.webp");
+import { mediaUrl } from "../../../../../config/media";
 
 const PrGlobalize = () => {
     const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -18,7 +19,7 @@ const PrGlobalize = () => {
 
                 <div className="pr-dashboard-mockup">
                     <div className="pr-dashboard-inner" onClick={() => setIsVideoOpen(true)} style={{cursor: 'pointer'}}>
-                        <img src={dashboardImg} alt="Press Release Dashboard" />
+                        <img src={dashboardImg} alt="Press Release Dashboard" loading="lazy" />
                         <div className="pr-play-btn">
                             <i className="fas fa-play" style={{marginLeft: '5px'}}></i>
                         </div>

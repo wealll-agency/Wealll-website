@@ -1,46 +1,47 @@
 import React, { useEffect } from 'react'
 
-import sundarbantrip1 from "../../assets/images/sundarban_trip1.jpeg"
-import sundarbantrip2 from "../../assets/images/sundarban_trip2.jpeg"
-import sundarbantrip3 from "../../assets/images/sundarban_trip3.jpeg"
-import sundarbantrip6 from "../../assets/images/sundarban_trip6_2.jpeg"
-import sundarbantrip7 from "../../assets/images/sundarban_trip7.jpeg"
+const sundarbantrip1 = mediaUrl("assets/images/sundarban_trip1.jpeg");
+const sundarbantrip2 = mediaUrl("assets/images/sundarban_trip2.jpeg");
+const sundarbantrip3 = mediaUrl("assets/images/sundarban_trip3.jpeg");
+const sundarbantrip6 = mediaUrl("assets/images/sundarban_trip6_2.jpeg");
+const sundarbantrip7 = mediaUrl("assets/images/sundarban_trip7.jpeg");
 
-import mouparnas_meeting1 from "../../assets/images/mouparnas-meeting1.jpeg"
-import mouparnas_meeting2 from "../../assets/images/mouparnas-meeting2.jpeg"
-import mouparnas_meeting3 from "../../assets/images/mouparnas-meeting3.jpeg"
-import mouparnas_meeting4 from "../../assets/images/mouparnas-meeting4.jpeg"
+const mouparnas_meeting1 = mediaUrl("assets/images/mouparnas-meeting1.jpeg");
+const mouparnas_meeting2 = mediaUrl("assets/images/mouparnas-meeting2.jpeg");
+const mouparnas_meeting3 = mediaUrl("assets/images/mouparnas-meeting3.jpeg");
+const mouparnas_meeting4 = mediaUrl("assets/images/mouparnas-meeting4.jpeg");
 
-import bwa2025_1 from "../../assets/images/BWA-trip1.jpeg"
-import bwa2025_2 from "../../assets/images/BWA-trip2.jpeg"
-import bwa2025_3 from "../../assets/images/BWA-trip3.jpeg"
-import bwa2025_4 from "../../assets/images/BWA-trip4.jpeg"
-import bwa2025_5 from "../../assets/images/BWA-trip5.jpeg"
-import bwa2025_6 from "../../assets/images/BWA-trip6.jpeg"
+const bwa2025_1 = mediaUrl("assets/images/BWA-trip1.jpeg");
+const bwa2025_2 = mediaUrl("assets/images/BWA-trip2.jpeg");
+const bwa2025_3 = mediaUrl("assets/images/BWA-trip3.jpeg");
+const bwa2025_4 = mediaUrl("assets/images/BWA-trip4.jpeg");
+const bwa2025_5 = mediaUrl("assets/images/BWA-trip5.jpeg");
+const bwa2025_6 = mediaUrl("assets/images/BWA-trip6.jpeg");
 
-import vyapaar_expo_trip2 from "../../assets/images/vyapaar-expo-trip2.jpeg"
-import vyapaar_expo_trip3 from "../../assets/images/vyapaar-expo-trip3.jpeg"
-import vyapaar_expo_trip4 from "../../assets/images/vyapaar-expo-trip4.jpeg"
-import vyapaar_expo_trip5 from "../../assets/images/vyapaar-expo-trip5.jpeg"
-import vyapaar_expo_trip7 from "../../assets/images/vyapaar-expo-trip7.jpeg"
-import vyapaar_expo_trip8 from "../../assets/images/vyapaar-expo-trip8.jpeg"
+const vyapaar_expo_trip2 = mediaUrl("assets/images/vyapaar-expo-trip2.jpeg");
+const vyapaar_expo_trip3 = mediaUrl("assets/images/vyapaar-expo-trip3.jpeg");
+const vyapaar_expo_trip4 = mediaUrl("assets/images/vyapaar-expo-trip4.jpeg");
+const vyapaar_expo_trip5 = mediaUrl("assets/images/vyapaar-expo-trip5.jpeg");
+const vyapaar_expo_trip7 = mediaUrl("assets/images/vyapaar-expo-trip7.jpeg");
+const vyapaar_expo_trip8 = mediaUrl("assets/images/vyapaar-expo-trip8.jpeg");
 
-import karma_event3 from "../../assets/images/karma-international-seminar3.jpeg"
-import karma_event4 from "../../assets/images/karma-international-seminar4.jpeg"
-import karma_event5 from "../../assets/images/karma-international-seminar5.jpeg"
-import karma_event6 from "../../assets/images/karma-international-seminar6.jpeg"
-import karma_event7 from "../../assets/images/karma-international-seminar7.jpeg"
-import karma_event8 from "../../assets/images/karma-international-seminar8.jpeg"
+const karma_event3 = mediaUrl("assets/images/karma-international-seminar3.jpeg");
+const karma_event4 = mediaUrl("assets/images/karma-international-seminar4.jpeg");
+const karma_event5 = mediaUrl("assets/images/karma-international-seminar5.jpeg");
+const karma_event6 = mediaUrl("assets/images/karma-international-seminar6.jpeg");
+const karma_event7 = mediaUrl("assets/images/karma-international-seminar7.jpeg");
+const karma_event8 = mediaUrl("assets/images/karma-international-seminar8.jpeg");
 
-import growth_summit1 from "../../assets/images/growth_summit1.jpeg"
-import growth_summit2 from "../../assets/images/growth_summit2.jpeg"
-import growth_summit3 from "../../assets/images/growth_summit3.jpeg"
-import growth_summit4 from "../../assets/images/growth_summit4.jpeg"
+const growth_summit1 = mediaUrl("assets/images/growth_summit1.jpeg");
+const growth_summit2 = mediaUrl("assets/images/growth_summit2.jpeg");
+const growth_summit3 = mediaUrl("assets/images/growth_summit3.jpeg");
+const growth_summit4 = mediaUrl("assets/images/growth_summit4.jpeg");
 
 
-import office_rellocation1 from "../../assets/images/office_rellocation1.jpeg"
-import office_rellocation2 from "../../assets/images/office_rellocation2.jpeg"
-import office_rellocation3 from "../../assets/images/office_rellocation3.jpeg"
+const office_rellocation1 = mediaUrl("assets/images/office_rellocation1.jpeg");
+const office_rellocation2 = mediaUrl("assets/images/office_rellocation2.jpeg");
+const office_rellocation3 = mediaUrl("assets/images/office_rellocation3.jpeg");
+import { mediaUrl } from "../../config/media";
 
 
 const OurTrips = () => {
@@ -115,28 +116,28 @@ const OurTrips = () => {
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={sundarbantrip1} alt="1" />
+                                                                <img src={sundarbantrip1} alt="1" loading="lazy" />
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={sundarbantrip2} alt="7" />
+                                                                <img src={sundarbantrip2} alt="7" loading="lazy" />
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={sundarbantrip3} alt="2" />
+                                                                <img src={sundarbantrip3} alt="2" loading="lazy" />
                                                             </div>
                                                         </div>
 
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={sundarbantrip6} alt="5" />
+                                                                <img src={sundarbantrip6} alt="5" loading="lazy" />
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={sundarbantrip7} alt="6" />
+                                                                <img src={sundarbantrip7} alt="6" loading="lazy" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -156,35 +157,35 @@ const OurTrips = () => {
                                                         <div class="swiper-slide">
 
                                                             <div class="abotripb-img">
-                                                                <img src={bwa2025_1} alt="4" />
+                                                                <img src={bwa2025_1} alt="4" loading="lazy" />
                                                             </div>
                                                         </div>
 
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={bwa2025_2} alt="5" />
+                                                                <img src={bwa2025_2} alt="5" loading="lazy" />
                                                             </div>
                                                         </div>
 
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={bwa2025_3} alt="6" />
+                                                                <img src={bwa2025_3} alt="6" loading="lazy" />
                                                             </div>
                                                         </div>
 
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={bwa2025_4} alt="1" />
+                                                                <img src={bwa2025_4} alt="1" loading="lazy" />
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={bwa2025_5} alt="7" />
+                                                                <img src={bwa2025_5} alt="7" loading="lazy" />
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={bwa2025_6} alt="2" />
+                                                                <img src={bwa2025_6} alt="2" loading="lazy" />
                                                             </div>
                                                         </div>
 
@@ -204,36 +205,36 @@ const OurTrips = () => {
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={vyapaar_expo_trip2} alt="4" />
+                                                                <img src={vyapaar_expo_trip2} alt="4" loading="lazy" />
                                                             </div>
                                                         </div>
 
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={vyapaar_expo_trip3} alt="5" />
+                                                                <img src={vyapaar_expo_trip3} alt="5" loading="lazy" />
                                                             </div>
                                                         </div>
 
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={vyapaar_expo_trip4} alt="1" />
+                                                                <img src={vyapaar_expo_trip4} alt="1" loading="lazy" />
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={vyapaar_expo_trip5} alt="7" />
+                                                                <img src={vyapaar_expo_trip5} alt="7" loading="lazy" />
                                                             </div>
                                                         </div>
 
 
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={vyapaar_expo_trip7} alt="6" />
+                                                                <img src={vyapaar_expo_trip7} alt="6" loading="lazy" />
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={vyapaar_expo_trip8} alt="6" />
+                                                                <img src={vyapaar_expo_trip8} alt="6" loading="lazy" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -251,25 +252,25 @@ const OurTrips = () => {
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={mouparnas_meeting1} alt="3" />
+                                                                <img src={mouparnas_meeting1} alt="3" loading="lazy" />
                                                             </div>
                                                         </div>
 
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={mouparnas_meeting2} alt="4" />
+                                                                <img src={mouparnas_meeting2} alt="4" loading="lazy" />
                                                             </div>
                                                         </div>
 
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={mouparnas_meeting3} alt="5" />
+                                                                <img src={mouparnas_meeting3} alt="5" loading="lazy" />
                                                             </div>
                                                         </div>
 
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={mouparnas_meeting4} alt="1" />
+                                                                <img src={mouparnas_meeting4} alt="1" loading="lazy" />
                                                             </div>
                                                         </div>
                                                     </div>
@@ -288,37 +289,37 @@ const OurTrips = () => {
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={karma_event3} alt="3" />
+                                                                <img src={karma_event3} alt="3" loading="lazy" />
                                                             </div>
                                                         </div>
 
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={karma_event4} alt="4" />
+                                                                <img src={karma_event4} alt="4" loading="lazy" />
                                                             </div>
                                                         </div>
 
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={karma_event5} alt="5" />
+                                                                <img src={karma_event5} alt="5" loading="lazy" />
                                                             </div>
                                                         </div>
 
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={karma_event6} alt="1" />
+                                                                <img src={karma_event6} alt="1" loading="lazy" />
                                                             </div>
                                                         </div>
 
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={karma_event7} alt="1" />
+                                                                <img src={karma_event7} alt="1" loading="lazy" />
                                                             </div>
                                                         </div>
 
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={karma_event8} alt="1" />
+                                                                <img src={karma_event8} alt="1" loading="lazy" />
                                                             </div>
                                                         </div>
 
@@ -341,24 +342,24 @@ const OurTrips = () => {
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={growth_summit1} alt="1" />
+                                                                <img src={growth_summit1} alt="1" loading="lazy" />
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={growth_summit2} alt="7" />
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="swiper-slide">
-                                                            <div class="abotripb-img">
-                                                                <img src={growth_summit3} alt="7" />
+                                                                <img src={growth_summit2} alt="7" loading="lazy" />
                                                             </div>
                                                         </div>
 
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={growth_summit4} alt="7" />
+                                                                <img src={growth_summit3} alt="7" loading="lazy" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="swiper-slide">
+                                                            <div class="abotripb-img">
+                                                                <img src={growth_summit4} alt="7" loading="lazy" />
                                                             </div>
                                                         </div>
                                      
@@ -377,18 +378,18 @@ const OurTrips = () => {
                                                     <div class="swiper-wrapper">
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={office_rellocation1} alt="1" />
+                                                                <img src={office_rellocation1} alt="1" loading="lazy" />
                                                             </div>
                                                         </div>
                                                         <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={office_rellocation2} alt="7" />
+                                                                <img src={office_rellocation2} alt="7" loading="lazy" />
                                                             </div>
                                                         </div>
 
                                                          <div class="swiper-slide">
                                                             <div class="abotripb-img">
-                                                                <img src={office_rellocation3} alt="7" />
+                                                                <img src={office_rellocation3} alt="7" loading="lazy" />
                                                             </div>
                                                         </div>
 

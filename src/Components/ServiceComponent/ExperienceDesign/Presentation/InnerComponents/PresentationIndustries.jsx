@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import './presentation.css';
 
-import indImg1 from '../../../../../assets/images/presentation/presentation-industry1.jpeg';
-import indImg2 from '../../../../../assets/images/presentation/presentation-industry2.jpeg';
-import indImg3 from '../../../../../assets/images/presentation/presentation-industry3.jpeg';
-import indImg4 from '../../../../../assets/images/presentation/presentation-industry4.jpeg';
-import indImg5 from '../../../../../assets/images/presentation/presentation-industry5.jpeg';
-import indImg6 from '../../../../../assets/images/presentation/presentation-industry6.jpeg';
-import indImg7 from '../../../../../assets/images/presentation/presentation-industry7.jpeg';
-import indImg8 from '../../../../../assets/images/presentation/presentation-industry8.jpeg';
+const indImg1 = mediaUrl("assets/images/presentation/presentation-industry1.jpeg");
+const indImg2 = mediaUrl("assets/images/presentation/presentation-industry2.jpeg");
+const indImg3 = mediaUrl("assets/images/presentation/presentation-industry3.jpeg");
+const indImg4 = mediaUrl("assets/images/presentation/presentation-industry4.jpeg");
+const indImg5 = mediaUrl("assets/images/presentation/presentation-industry5.jpeg");
+const indImg6 = mediaUrl("assets/images/presentation/presentation-industry6.jpeg");
+const indImg7 = mediaUrl("assets/images/presentation/presentation-industry7.jpeg");
+const indImg8 = mediaUrl("assets/images/presentation/presentation-industry8.jpeg");
+import { mediaUrl } from "../../../../../config/media";
 
 const PresentationIndustries = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -57,7 +58,7 @@ const PresentationIndustries = () => {
                                 className={`typo-portal-image ${activeIndex === index ? 'active-layer' : 'hidden-layer'}`}
                                 key={index}
                             >
-                                <img src={ind.img} alt={ind.name} className="typo-img-scale" />
+                                <img src={ind.img} alt={ind.name} className="typo-img-scale" loading="lazy" />
                                 <div className="typo-portal-overlay"></div>
                                 <div className="typo-portal-content">
                                     <div className="typo-portal-bar"></div>

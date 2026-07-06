@@ -6,12 +6,13 @@ import 'swiper/css/pagination';
 import './mern-dark.css';
 
 // Imported Recent Work images from Banao
-import hobbycueImg from '../../../../../assets/images/Hobbycue_Banner_latest_min.png';
-import olineoImg from '../../../../../assets/images/Olineo_Banner_latest_min.png';
-import hummImg from '../../../../../assets/images/HummcareImg.png';
-import sensegrassImg from '../../../../../assets/images/Sensegrass_Banner_latest_min.png';
-import thingsEduImg from '../../../../../assets/images/Things_Education_Banner_min.png';
-import vrRealityImg from '../../../../../assets/images/VrReality_Banner_latest_min.png';
+const hobbycueImg = mediaUrl("assets/images/Hobbycue_Banner_latest_min.png");
+const olineoImg = mediaUrl("assets/images/Olineo_Banner_latest_min.png");
+const hummImg = mediaUrl("assets/images/HummcareImg.png");
+const sensegrassImg = mediaUrl("assets/images/Sensegrass_Banner_latest_min.png");
+const thingsEduImg = mediaUrl("assets/images/Things_Education_Banner_min.png");
+const vrRealityImg = mediaUrl("assets/images/VrReality_Banner_latest_min.png");
+import { mediaUrl } from "../../../../../config/media";
 
 const recentWorks = [
   { id: 1, title: 'HOBBYCUE', category: 'SOCIAL MEDIA', image: hobbycueImg },
@@ -81,7 +82,7 @@ const MernAppSlider = () => {
                       alt={work.title} 
                       className="w-100 h-100" 
                       style={{ display: 'block', objectFit: 'cover', objectPosition: 'center' }} 
-                    />
+                    loading="lazy" />
                   </div>
                 </div>
 

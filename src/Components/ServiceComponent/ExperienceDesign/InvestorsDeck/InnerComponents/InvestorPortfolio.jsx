@@ -91,7 +91,7 @@ const InvestorPortfolio = () => {
                     src={sample.imgSrc}
                     alt={sample.title}
                     className="inv-acc-bg"
-                  />
+                  loading="lazy" />
                 </div>
 
                 {/* Darkening Gradient */}

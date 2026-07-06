@@ -1,6 +1,7 @@
 import React from 'react';
 import './campaign-strategy.css';
-import strategyOrb from '../../../../../assets/images/strategy_core_orb_v2.png';
+const strategyOrb = mediaUrl("assets/images/strategy_core_orb_v2.png");
+import { mediaUrl } from "../../../../../config/media";
 
 const CampaignStrategy = () => {
     const strategyPoints = [
@@ -58,7 +59,7 @@ const CampaignStrategy = () => {
                         <div className="energy-ring ring-2"></div>
                         <div className="energy-ring ring-3"></div>
                         <div className="core-image-wrapper">
-                            <img src={strategyOrb} alt="Advertising Strategy Core" className="strategy-orb-img" />
+                            <img src={strategyOrb} alt="Advertising Strategy Core" className="strategy-orb-img" loading="lazy" />
                         </div>
                     </div>
                 </div>

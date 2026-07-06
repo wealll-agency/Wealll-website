@@ -1,30 +1,31 @@
 import React, { useState } from 'react';
 import './logo-styles.css';
 
-import vintage_logo from '../../../../../assets/images/vintage_logo.jpeg';
-import typography_img1 from '../../../../../assets/images/typography-logo1.jpeg';
-import typography_img2 from '../../../../../assets/images/typography-logo2.jpeg';
-import typography_img3 from '../../../../../assets/images/typography-logo3.jpeg';
-import typography_img4 from '../../../../../assets/images/typography-logo4.jpeg';
-import vintage_logo_desc1 from '../../../../../assets/images/vintage_logo_description1.jpg';
-import vintage_logo_desc2 from '../../../../../assets/images/vintage_logo_description2.jpg';
-import vintage_logo_desc3 from '../../../../../assets/images/vintage_logo_description3.jpg';
-import vintage_logo_desc4 from '../../../../../assets/images/vintage_logo_description4.jpeg';
-import geomatric1_logo from '../../../../../assets/images/geomatric1-logo.jpeg';
-import geomatric2_logo from '../../../../../assets/images/geomatric2-logo.jpeg';
-import geomatric3_logo from '../../../../../assets/images/geomatric3-logo.jpeg';
-import geomatric4_logo from '../../../../../assets/images/geomatric4-logo.jpeg';
-import vintage_img1 from '../../../../../assets/images/vintage_logo1.jpeg';
-import vintage_img2 from '../../../../../assets/images/vintage_logo2.jpeg';
-import vintage_img3 from '../../../../../assets/images/vintage_logo3.jpeg';
-import minimalist_img1 from '../../../../../assets/images/minimalist-logo1.jpeg';
-import minimalist_img2 from '../../../../../assets/images/minimalist-logo2.jpeg';
-import minimalist_img3 from '../../../../../assets/images/minimalist-logo3.jpeg';
-import mascot_img1 from '../../../../../assets/images/mascot-logo1.jpeg';
-import mascot_img2 from '../../../../../assets/images/mascot-logo2.jpeg';
-import mascot_img3 from '../../../../../assets/images/mascot-logo3.jpeg';
-import mascot_img4 from '../../../../../assets/images/mascot-logo4.jpeg';
-import minimalist_logo from '../../../../../assets/images/minimalist-logo.jpeg';
+const vintage_logo = mediaUrl("assets/images/vintage_logo.jpeg");
+const typography_img1 = mediaUrl("assets/images/typography-logo1.jpeg");
+const typography_img2 = mediaUrl("assets/images/typography-logo2.jpeg");
+const typography_img3 = mediaUrl("assets/images/typography-logo3.jpeg");
+const typography_img4 = mediaUrl("assets/images/typography-logo4.jpeg");
+const vintage_logo_desc1 = mediaUrl("assets/images/vintage_logo_description1.jpg");
+const vintage_logo_desc2 = mediaUrl("assets/images/vintage_logo_description2.jpg");
+const vintage_logo_desc3 = mediaUrl("assets/images/vintage_logo_description3.jpg");
+const vintage_logo_desc4 = mediaUrl("assets/images/vintage_logo_description4.jpeg");
+const geomatric1_logo = mediaUrl("assets/images/geomatric1-logo.jpeg");
+const geomatric2_logo = mediaUrl("assets/images/geomatric2-logo.jpeg");
+const geomatric3_logo = mediaUrl("assets/images/geomatric3-logo.jpeg");
+const geomatric4_logo = mediaUrl("assets/images/geomatric4-logo.jpeg");
+const vintage_img1 = mediaUrl("assets/images/vintage_logo1.jpeg");
+const vintage_img2 = mediaUrl("assets/images/vintage_logo2.jpeg");
+const vintage_img3 = mediaUrl("assets/images/vintage_logo3.jpeg");
+const minimalist_img1 = mediaUrl("assets/images/minimalist-logo1.jpeg");
+const minimalist_img2 = mediaUrl("assets/images/minimalist-logo2.jpeg");
+const minimalist_img3 = mediaUrl("assets/images/minimalist-logo3.jpeg");
+const mascot_img1 = mediaUrl("assets/images/mascot-logo1.jpeg");
+const mascot_img2 = mediaUrl("assets/images/mascot-logo2.jpeg");
+const mascot_img3 = mediaUrl("assets/images/mascot-logo3.jpeg");
+const mascot_img4 = mediaUrl("assets/images/mascot-logo4.jpeg");
+const minimalist_logo = mediaUrl("assets/images/minimalist-logo.jpeg");
+import { mediaUrl } from "../../../../../config/media";
 
 const LogoStyles = () => {
     // 6 Styles for 6 Cube Faces
@@ -78,17 +79,17 @@ const LogoStyles = () => {
                             <div className={`cube-face cube-face-${style.face}`} key={style.id} style={{ border: `2px solid ${style.color}`, boxShadow: `0 0 20px ${style.color}40`, background: `rgba(0,0,0,0.9)` }}>
                                 <div className="face-content">
                                     {style.name === "Vintage" ? (
-                                        <img src={vintage_logo} alt="Vintage Logo" className="vintage-face-img" />
+                                        <img src={vintage_logo} alt="Vintage Logo" className="vintage-face-img" loading="lazy" />
                                     ) : style.name === "Typographic" ? (
-                                        <img src={typography_img1} alt="Typographic Logo" className="typographic-face-img" />
+                                        <img src={typography_img1} alt="Typographic Logo" className="typographic-face-img" loading="lazy" />
                                     ) : style.name === "Abstract" ? (
-                                        <img src={vintage_logo_desc1} alt="Abstract Logo" className="vintage-face-img" />
+                                        <img src={vintage_logo_desc1} alt="Abstract Logo" className="vintage-face-img" loading="lazy" />
                                     ) : style.name === "Geometric" ? (
-                                        <img src={geomatric1_logo} alt="Geometric Logo" className="vintage-face-img" />
+                                        <img src={geomatric1_logo} alt="Geometric Logo" className="vintage-face-img" loading="lazy" />
                                     ) : style.name === "Minimalist" ? (
-                                        <img src={minimalist_logo} alt="Minimalist Logo" className="vintage-face-img" />
+                                        <img src={minimalist_logo} alt="Minimalist Logo" className="vintage-face-img" loading="lazy" />
                                     ) : style.name === "Mascot" ? (
-                                        <img src={mascot_img1} alt="Mascot Logo" className="vintage-face-img" />
+                                        <img src={mascot_img1} alt="Mascot Logo" className="vintage-face-img" loading="lazy" />
                                     ) : (
                                         <>
                                             <div className="face-icon" style={{ textShadow: `0 0 20px ${style.color}` }}>{style.icon}</div>
@@ -120,7 +121,7 @@ const LogoStyles = () => {
                         {bottomImages.map((imgSrc, index) => (
                             <div className="col-lg-4 col-md-6" key={index}>
                                 <div className="description-img-box">
-                                    <img src={imgSrc} alt={`Description ${index + 1}`} className="img-fluid rounded shadow" />
+                                    <img src={imgSrc} alt={`Description ${index + 1}`} className="img-fluid rounded shadow" loading="lazy" />
                                 </div>
                             </div>
                         ))}

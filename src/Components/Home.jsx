@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 // import VideoBanner from "./HomeComponent/VideoBanner";
-// import myVideo from "../assets/Video/px-showreel.mp4";
-// import thumb from "../assets/images/video-thumb-2.webp";
+// const myVideo = mediaUrl("assets/Video/px-showreel.mp4");
+// const thumb = mediaUrl("assets/images/video-thumb-2.webp");
 import OurClients from "./HomeComponent/OurClients";
 import Aboutus from "./HomeComponent/Aboutus";
 import Cta from "./HomeComponent/Cta";
@@ -11,13 +11,14 @@ import Testimonial from "./HomeComponent/Testimonial";
 import Portfolio from "./HomeComponent/Portfolio";
 import Hero from "./HomeComponent/Hero";
 
-// import heroBg1 from "../assets/images/Hero_Banner_01.webp";
-// import heroBg2 from "../assets/images/Hero_Banner_02.webp";
-// import heroBg3 from "../assets/images/Hero_Banner_ 03.webp";
+// const heroBg1 = mediaUrl("assets/images/Hero_Banner_01.webp");
+// const heroBg2 = mediaUrl("assets/images/Hero_Banner_02.webp");
+// const heroBg3 = mediaUrl("assets/images/Hero_Banner_ 03.webp");
 
-// import heroBg3 from "../assets/images/banner-granth-2-new-1-scaled.webp";
+// const heroBg3 = mediaUrl("assets/images/banner-granth-2-new-1-scaled.webp");
 
-// import bannerVideo from "../assets/Video/Wealll_hero.mp4";
+// const bannerVideo = mediaUrl("assets/Video/Wealll_hero.mp4");
+import { mediaUrl } from "../config/media";
 
 const Home = () => {
 

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './campaign-portfolio.css';
-import img1 from '../../../../../assets/images/campain-portfolio2.jpg';
-import img2 from '../../../../../assets/images/campain-portfolio3.jpg';
-import img3 from '../../../../../assets/images/campain-portfolio4.jpg';
-import img4 from '../../../../../assets/images/campain-portfolio5.jpg';
-import img5 from '../../../../../assets/images/campain-portfolio1.jpg';
+const img1 = mediaUrl("assets/images/campain-portfolio2.jpg");
+const img2 = mediaUrl("assets/images/campain-portfolio3.jpg");
+const img3 = mediaUrl("assets/images/campain-portfolio4.jpg");
+const img4 = mediaUrl("assets/images/campain-portfolio5.jpg");
+const img5 = mediaUrl("assets/images/campain-portfolio1.jpg");
+import { mediaUrl } from "../../../../../config/media";
 
 const CampaignPortfolio = () => {
     const [activePanel, setActivePanel] = useState(0);

@@ -4,11 +4,12 @@ import { FiSearch, FiLayers, FiEye, FiUserCheck, FiBox, FiPieChart } from 'react
 import './ecommerce-dark.css';
 
 // User-provided Assets
-import solutionImg1 from '../../../../../assets/images/solution_img1.webp';
-import solutionImg2 from '../../../../../assets/images/solution_img2.webp';
-import solutionImg3 from '../../../../../assets/images/solution_img3.webp';
-import solutionImg4 from '../../../../../assets/images/solution_img4.webp';
-import solutionImg5 from '../../../../../assets/images/solution_img5.webp';
+const solutionImg1 = mediaUrl("assets/images/solution_img1.webp");
+const solutionImg2 = mediaUrl("assets/images/solution_img2.webp");
+const solutionImg3 = mediaUrl("assets/images/solution_img3.webp");
+const solutionImg4 = mediaUrl("assets/images/solution_img4.webp");
+const solutionImg5 = mediaUrl("assets/images/solution_img5.webp");
+import { mediaUrl } from "../../../../../config/media";
 
 const aiFeatures = [
   {
@@ -139,7 +140,7 @@ const EcommerceAI = () => {
                     alt={activeTab.title}
                     className="img-fluid ecom-mockup-shadow"
                     style={{ maxHeight: '500px', objectFit: 'contain' }}
-                  />
+                  loading="lazy" />
                 </motion.div>
               </AnimatePresence>
             </div>

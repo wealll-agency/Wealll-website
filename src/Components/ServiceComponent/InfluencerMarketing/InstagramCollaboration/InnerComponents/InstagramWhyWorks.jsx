@@ -1,3 +1,4 @@
+import { mediaUrl } from "../../../../../config/media";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -95,7 +96,7 @@ const InstagramWhyWorks = () => {
           <div className="col-lg-7">
             <div style={{ position: "relative" }}>
               <motion.img
-                src="/insta_spotlight.png"
+                src={mediaUrl("insta_spotlight.png")}
                 className="ig-why-image"
                 alt="Instagram Spotlight"
                 initial={{ opacity: 0, scale: 0.8, rotateY: 20 }}

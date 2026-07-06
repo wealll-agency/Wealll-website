@@ -3,10 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './wordpress-dev-dark.css';
 
 // Using dummy images
-import port1 from '../../../../../assets/images/portfolio_website1.jpeg';
-import port2 from '../../../../../assets/images/portfolio_website2.jpeg';
-import port3 from '../../../../../assets/images/portfolio_website3.jpeg';
-import port4 from '../../../../../assets/images/portfolio_website4.jpeg';
+const port1 = mediaUrl("assets/images/portfolio_website1.jpeg");
+const port2 = mediaUrl("assets/images/portfolio_website2.jpeg");
+const port3 = mediaUrl("assets/images/portfolio_website3.jpeg");
+const port4 = mediaUrl("assets/images/portfolio_website4.jpeg");
+import { mediaUrl } from "../../../../../config/media";
 
 const categories = ["All", "eCommerce", "Corporate", "Blog", "Custom CMS"];
 
@@ -82,7 +83,7 @@ const WPPortfolio = () => {
 
                   {/* The Image Window with Hover Scroll programmed in CSS */}
                   <div className="wp-portfolio-scroll-container">
-                    <img src={item.img} alt={item.title} className="wp-portfolio-scroll-img" />
+                    <img src={item.img} alt={item.title} className="wp-portfolio-scroll-img" loading="lazy" />
                     <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center" style={{ background: 'rgba(56, 189, 248, 0.4)', transition: 'opacity 0.3s ease', opacity: 0 }} onMouseEnter={(e) => e.currentTarget.style.opacity = '1'} onMouseLeave={(e) => e.currentTarget.style.opacity = '0'} >
                       <span className="btn text-white rounded-pill px-4 py-2 fw-bold" style={{ background: '#3b82f6', border: '1px solid #fff' }}>Live Demo</span>
                     </div>

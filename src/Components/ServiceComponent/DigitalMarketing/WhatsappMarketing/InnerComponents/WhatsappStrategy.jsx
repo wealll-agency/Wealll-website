@@ -1,8 +1,9 @@
 import React from 'react';
 import './whatsapp-marketing.css';
-import img1 from '../../../../../assets/images/tab_img1.jpg';
-import img2 from '../../../../../assets/images/tab_img2.jpg';
-import img3 from '../../../../../assets/images/tab_img3.jpg';
+const img1 = mediaUrl("assets/images/tab_img1.jpg");
+const img2 = mediaUrl("assets/images/tab_img2.jpg");
+const img3 = mediaUrl("assets/images/tab_img3.jpg");
+import { mediaUrl } from "../../../../../config/media";
 
 const WhatsappStrategy = () => {
     return (
@@ -17,7 +18,7 @@ const WhatsappStrategy = () => {
                     {/* Row 1: Image Left, Content Overlap Right */}
                     <div className="wa-strategy-row">
                         <div className="wa-strategy-img-box">
-                            <img src={img1} alt="Audience Segmentation" className="wa-strategy-img" />
+                            <img src={img1} alt="Audience Segmentation" className="wa-strategy-img" loading="lazy" />
                         </div>
                         <div className="wa-strategy-content">
                             <div className="wa-bg-number">01</div>
@@ -43,7 +44,7 @@ const WhatsappStrategy = () => {
                     {/* Row 2: Content Overlap Left, Image Right */}
                     <div className="wa-strategy-row reverse">
                         <div className="wa-strategy-img-box">
-                            <img src={img2} alt="Compliance & Safety" className="wa-strategy-img" />
+                            <img src={img2} alt="Compliance & Safety" className="wa-strategy-img" loading="lazy" />
                         </div>
                         <div className="wa-strategy-content">
                             <div className="wa-bg-number">02</div>
@@ -69,7 +70,7 @@ const WhatsappStrategy = () => {
                     {/* Row 3: Image Left, Content Overlap Right */}
                     <div className="wa-strategy-row">
                         <div className="wa-strategy-img-box">
-                            <img src={img3} alt="Rich Media Messaging" className="wa-strategy-img" />
+                            <img src={img3} alt="Rich Media Messaging" className="wa-strategy-img" loading="lazy" />
                         </div>
                         <div className="wa-strategy-content">
                             <div className="wa-bg-number">03</div>

@@ -1,9 +1,10 @@
 import React from 'react'
 
-// import ctaimg from "../../assets/images/cta_image.png";
+// const ctaimg = mediaUrl("assets/images/cta_image.png");
 import VideoBanner from './VideoBanner';
-import myVideo from "../../assets/Video/WE_ALLL_Video_Final.mp4";
-import thumb from "../../assets/images/video-thumb-2.webp";
+const myVideo = mediaUrl("assets/Video/WE_ALLL_Video_Final.mp4");
+const thumb = mediaUrl("assets/images/video-thumb-2.webp");
+import { mediaUrl } from "../../config/media";
 
 const Cta = () => {
     return (
@@ -24,7 +25,7 @@ const Cta = () => {
                         </div>
                         <div className="col-xl-6 col-md-5">
                             {/* <div className="cta-img">
-                                <img src={ctaimg} alt="" />
+                                <img src={ctaimg} alt="" loading="lazy" />
                             </div> */}
 
                             <VideoBanner src={myVideo} overlay={thumb} width="100%"></VideoBanner>

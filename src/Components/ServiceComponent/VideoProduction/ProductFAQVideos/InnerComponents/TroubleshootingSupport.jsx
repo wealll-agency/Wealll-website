@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './troubleshooting-support.css';
-import supportBg from '../../../../../assets/images/brand-identity.jpeg';
+const supportBg = mediaUrl("assets/images/brand-identity.jpeg");
+import { mediaUrl } from "../../../../../config/media";
 
 const TroubleshootingSupport = () => {
     const sectionRef = useRef(null);

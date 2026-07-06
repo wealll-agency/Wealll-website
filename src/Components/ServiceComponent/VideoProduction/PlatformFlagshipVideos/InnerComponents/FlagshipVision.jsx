@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './flagship-vision.css';
-import dummyVideo from '../../../../../assets/Video/WEALLL.mp4';
+const dummyVideo = mediaUrl("assets/Video/WEALLL.mp4");
 import BannerComponent from '../../../CommonComponents/BannerComponent';
+import { mediaUrl } from "../../../../../config/media";
 
 const FlagshipVision = () => {
     const sectionRef = useRef(null);
@@ -78,7 +79,7 @@ const FlagshipVision = () => {
                                         src={dummyVideo}
                                         autoPlay loop muted playsInline
                                         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6, zIndex: 0 }}
-                                    ></video>
+                                     preload="metadata"></video>
                                     <div className="play-button-glow" style={{ position: 'relative', zIndex: 1, cursor: 'pointer' }} onClick={() => setShowModal(true)}>
                                         <div className="play-triangle"></div>
                                     </div>
@@ -131,7 +132,7 @@ const FlagshipVision = () => {
                             src={dummyVideo}
                             controls autoPlay
                             style={{ width: '100%', borderRadius: '10px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}
-                        ></video>
+                         preload="metadata"></video>
                     </div>
                 </div>
             )}

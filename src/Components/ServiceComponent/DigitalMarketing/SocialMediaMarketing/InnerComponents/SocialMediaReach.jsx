@@ -1,8 +1,9 @@
 import React from "react";
 import "./social-media-reach.css";
-import boostIcon from "../../../../../assets/images/boost_icon.png";
-import img1 from "../../../../../assets/images/img1.png";
+const boostIcon = mediaUrl("assets/images/boost_icon.png");
+const img1 = mediaUrl("assets/images/img1.png");
 // Note: In a real scenario, we would import local assets.
+import { mediaUrl } from "../../../../../config/media";
 // Using inline SVGs or placeholders for now to ensure self-contained implementation as requested.
 
 const SocialMediaReach = () => {
@@ -18,7 +19,7 @@ const SocialMediaReach = () => {
               src={boostIcon}
               className="rocket-icon-img"
               alt="rocket"
-            />{" "}
+            loading="lazy" />{" "}
             <br /> <span className="boost-badge">Boost </span>
           </h2>
         </div>
@@ -26,7 +27,7 @@ const SocialMediaReach = () => {
         {/* Card 1: Yellow - Sales */}
         <div className="reach-card card-yellow">
           <div className="girl-img-wrapper">
-            <img src={img1} alt="Girl with phone" className="girl-img" />
+            <img src={img1} alt="Girl with phone" className="girl-img" loading="lazy" />
           </div>
           <div className="card-footer-text">
             More Qualified <br /> Opportunities

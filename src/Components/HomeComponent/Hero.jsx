@@ -6,13 +6,14 @@ import 'swiper/css/autoplay';
 import { Pagination, Autoplay } from 'swiper/modules';
 import './Hero.css';
 
-import kesri from '../../assets/images/case-studies/Kesri.png';
-import bunny from '../../assets/images/case-studies/Bunny.png';
-import maxglow from '../../assets/images/case-studies/Maxglow.png';
-import karma from '../../assets/images/case-studies/Karma.png';
-import philo from '../../assets/images/case-studies/Philo.png';
-import khukumoni from '../../assets/images/case-studies/Khukumoni.png';
-import beautech from '../../assets/images/case-studies/Beautech.png';
+const kesri = mediaUrl("assets/images/case-studies/Kesri.png");
+const bunny = mediaUrl("assets/images/case-studies/Bunny.png");
+const maxglow = mediaUrl("assets/images/case-studies/Maxglow.png");
+const karma = mediaUrl("assets/images/case-studies/Karma.png");
+const philo = mediaUrl("assets/images/case-studies/Philo.png");
+const khukumoni = mediaUrl("assets/images/case-studies/Khukumoni.png");
+const beautech = mediaUrl("assets/images/case-studies/Beautech.png");
+import { mediaUrl } from "../../config/media";
 
 const words = ["Guaranteed Growth", "Better ROAS", "Smarter Scaling"];
 

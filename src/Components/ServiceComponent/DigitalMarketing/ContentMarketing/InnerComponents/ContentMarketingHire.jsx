@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import growthImg from '../../../../../assets/images/growth_image.jpeg';
+const growthImg = mediaUrl("assets/images/growth_image.jpeg");
+import { mediaUrl } from "../../../../../config/media";
 
 const ContentMarketingHire = () => {
     return (
@@ -55,7 +56,7 @@ const ContentMarketingHire = () => {
                                 src={growthImg}
                                 alt="Content Marketing Strategy"
                                 className="img-fluid cm-cinematic-img"
-                            />
+                            loading="lazy" />
 
                             {/* Floating Analytics Badges */}
                             <motion.div

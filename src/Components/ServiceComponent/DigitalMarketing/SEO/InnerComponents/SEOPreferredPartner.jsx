@@ -3,11 +3,12 @@ import { motion } from 'framer-motion';
 import './seo-dark.css';
 
 // Import correct downloaded assets from reference site
-import iconExpert from '../../../../../assets/images/seo-expert-near-me.webp';
-import iconMarketing from '../../../../../assets/images/seo-marketing-company.webp';
-import iconNearMe from '../../../../../assets/images/seo-near-me.webp';
-import mainIllustration from '../../../../../assets/images/seo-kolkata.webp';
-import bgShape1 from '../../../../../assets/images/seo-service-company.webp';
+const iconExpert = mediaUrl("assets/images/seo-expert-near-me.webp");
+const iconMarketing = mediaUrl("assets/images/seo-marketing-company.webp");
+const iconNearMe = mediaUrl("assets/images/seo-near-me.webp");
+const mainIllustration = mediaUrl("assets/images/seo-kolkata.webp");
+const bgShape1 = mediaUrl("assets/images/seo-service-company.webp");
+import { mediaUrl } from "../../../../../config/media";
 
 const SEOPreferredPartner = () => {
   const partnerPoints = [
@@ -48,7 +49,7 @@ const SEOPreferredPartner = () => {
                   key={idx}
                 >
                   <div className="ref-pill-icon-box">
-                    <img src={point.icon} alt={point.title} className="ref-pill-img" />
+                    <img src={point.icon} alt={point.title} className="ref-pill-img" loading="lazy" />
                   </div>
                   <h3 className="ref-pill-title m-0 text-white">{point.title}</h3>
                 </motion.div>
@@ -68,14 +69,14 @@ const SEOPreferredPartner = () => {
               src={mainIllustration}
               alt="We Alll SEO Partner"
               className="seo-ref-main-img img-fluid"
-            />
+            loading="lazy" />
           </motion.div>
 
         </div>
       </div>
 
       {/* Background decorative shapes */}
-      <img src={bgShape1} alt="Shape" className="seo-ref-shape-plane position-absolute" style={{ bottom: '5%', left: '8%', width: '120px', opacity: 0.6 }} />
+      <img src={bgShape1} alt="Shape" className="seo-ref-shape-plane position-absolute" style={{ bottom: '5%', left: '8%', width: '120px', opacity: 0.6 }} loading="lazy" />
       <div className="seo-ref-shape-triangle position-absolute" style={{ bottom: '15%', left: '4%', width: '0', height: '0', borderLeft: '15px solid transparent', borderRight: '15px solid transparent', borderBottom: '25px solid transparent', borderBottomColor: 'rgba(255, 165, 0, 0.4)' }}></div>
     </section>
   );

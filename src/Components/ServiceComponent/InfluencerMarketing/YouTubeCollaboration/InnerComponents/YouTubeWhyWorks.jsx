@@ -1,3 +1,4 @@
+import { mediaUrl } from "../../../../../config/media";
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -111,7 +112,7 @@ const YouTubeWhyWorks = () => {
           <div className="col-lg-7">
             <div className="yt-visual-container">
               <motion.img
-                src="/youtube_spotlight.png"
+                src={mediaUrl("youtube_spotlight.png")}
                 className="yt-main-asset"
                 alt="YouTube Spotlight"
                 initial={{ opacity: 0, scale: 0.8 }}

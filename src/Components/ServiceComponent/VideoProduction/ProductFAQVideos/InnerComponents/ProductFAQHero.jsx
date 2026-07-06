@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import './product-faq-hero.css';
-import heroVideo from '../../../../../assets/Video/Wealll_hero.mp4';
+const heroVideo = mediaUrl("assets/Video/Wealll_hero.mp4");
 import BannerComponent from '../../../CommonComponents/BannerComponent';
+import { mediaUrl } from "../../../../../config/media";
 
 const ProductFAQHero = () => {
     const heroRef = useRef(null);
@@ -84,7 +85,7 @@ const ProductFAQHero = () => {
                                     <div className="pf-address-bar">FAQ.mp4</div>
                                 </div>
                                 <div className="pf-video-container">
-                                    <video src={heroVideo} autoPlay loop muted playsInline className="pf-hero-video"></video>
+                                    <video src={heroVideo} autoPlay loop muted playsInline className="pf-hero-video" preload="metadata"></video>
 
                                     {/* Play overlay button */}
                                     <div className="pf-video-play-layer">

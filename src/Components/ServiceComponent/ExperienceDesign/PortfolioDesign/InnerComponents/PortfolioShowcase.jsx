@@ -71,7 +71,7 @@ const PortfolioShowcase = () => {
                             <SwiperSlide key={index}>
                                 <div className="clean-sample-card">
                                     <div className="card-image-box">
-                                        <img src={sample.image} alt={sample.title} />
+                                        <img src={sample.image} alt={sample.title} loading="lazy" />
                                         <div className="image-overlay">
                                             <button className="view-btn">View Design</button>
                                         </div>

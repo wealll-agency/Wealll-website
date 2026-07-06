@@ -1,8 +1,9 @@
 import React from "react";
-import Icon1 from "../../assets/images/Envision.png";
-import Icon2 from "../../assets/images/Establish.png";
-import Icon3 from "../../assets/images/Execute.png";
-import Icon4 from "../../assets/images/Echo.png";
+const Icon1 = mediaUrl("assets/images/Envision.png");
+const Icon2 = mediaUrl("assets/images/Establish.png");
+const Icon3 = mediaUrl("assets/images/Execute.png");
+const Icon4 = mediaUrl("assets/images/Echo.png");
+import { mediaUrl } from "../../config/media";
 const OurStrategy = () => {
   return (
     <>
@@ -20,7 +21,7 @@ const OurStrategy = () => {
                 <div className="col-lg-3 col-md-6">
                   <div className="inner_box">
                     <div className="box_img">
-                      <img src={Icon1} alt="" />
+                      <img src={Icon1} alt="" loading="lazy" />
                     </div>
                     <h3>Envision</h3>
                     <p>
@@ -32,7 +33,7 @@ const OurStrategy = () => {
                 <div className="col-lg-3 col-md-6">
                   <div className="inner_box">
                     <div className="box_img">
-                      <img src={Icon2} alt="" />
+                      <img src={Icon2} alt="" loading="lazy" />
                     </div>
                     <h3>Establish</h3>
                     <p>
@@ -44,7 +45,7 @@ const OurStrategy = () => {
                 <div className="col-lg-3 col-md-6">
                   <div className="inner_box">
                     <div className="box_img">
-                      <img src={Icon3} alt="" />
+                      <img src={Icon3} alt="" loading="lazy" />
                     </div>
                     <h3>Execute</h3>
                     <p>
@@ -56,7 +57,7 @@ const OurStrategy = () => {
                 <div className="col-lg-3 col-md-6">
                   <div className="inner_box">
                     <div className="box_img">
-                      <img src={Icon4} alt="" />
+                      <img src={Icon4} alt="" loading="lazy" />
                     </div>
                     <h3>Echo</h3>
                     <p>

@@ -1,7 +1,8 @@
 import React from 'react'
-import Numbers from "../../assets/images/Numbers.jpeg";
-import njb from "../../assets/images/njb.png"
-import jline from "../../assets/images/jline.svg";
+const Numbers = mediaUrl("assets/images/Numbers.jpeg");
+const njb = mediaUrl("assets/images/njb.png");
+const jline = mediaUrl("assets/images/jline.svg");
+import { mediaUrl } from "../../config/media";
 
 const OurJourney = () => {
 
@@ -32,7 +33,7 @@ const OurJourney = () => {
                         </div>
                         <div className="col-lg-5">
                             <div className="hyear-img">
-                                <img src={Numbers} alt="" />
+                                <img src={Numbers} alt="" loading="lazy" />
                             </div>
                         </div>
                     </div>
@@ -43,27 +44,27 @@ const OurJourney = () => {
                             <div className="col-lg-2 text-center">
                                 <h3>6</h3>
                                 <p>Years of content, context and connect</p>
-                                <img src={jline} alt="" />
+                                <img src={jline} alt="" loading="lazy" />
                             </div>
                             <div className="col-lg-2 text-center">
                                 <h3>550+</h3>
                                 <p>Clients served from 25+ countries</p>
-                                <img src={jline} alt="" />
+                                <img src={jline} alt="" loading="lazy" />
                             </div>
                             <div className="col-lg-2 text-center">
                                 <h3>35+</h3>
                                 <p>Industries</p>
-                                <img src={jline} alt="" />
+                                <img src={jline} alt="" loading="lazy" />
                             </div>
                             <div className="col-lg-2 text-center">
                                 <h3>450+</h3>
                                 <p>We Alll Community</p>
-                                <img src={jline} alt="" />
+                                <img src={jline} alt="" loading="lazy" />
                             </div>
                             <div className="col-lg-2 text-center">
                                 <h3>80+</h3>
                                 <p>Creative minds</p>
-                                <img src={jline} alt="" />
+                                <img src={jline} alt="" loading="lazy" />
                             </div>
                         </div>
                     </div>

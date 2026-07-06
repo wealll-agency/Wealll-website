@@ -13,11 +13,12 @@ import Marketing360VsTraditional from './InnerComponents/Marketing360VsTradition
 import Marketing360Packages from './InnerComponents/Marketing360Packages';
 import Marketing360Addons from './InnerComponents/Marketing360Addons';
 
-import dm1 from "../../../../assets/images/dm1.jpeg";
-import dm2 from "../../../../assets/images/dm2.jpeg";
-import dm3 from "../../../../assets/images/dm3.jpeg";
-import dm4 from "../../../../assets/images/dm4.jpeg";
-import dm5 from "../../../../assets/images/dm5.jpeg";
+const dm1 = mediaUrl("assets/images/dm1.jpeg");
+const dm2 = mediaUrl("assets/images/dm2.jpeg");
+const dm3 = mediaUrl("assets/images/dm3.jpeg");
+const dm4 = mediaUrl("assets/images/dm4.jpeg");
+const dm5 = mediaUrl("assets/images/dm5.jpeg");
+import { mediaUrl } from "../../../../config/media";
 
 const VideoMarketing = () => {
   const sliderImages = [dm1, dm2, dm5, dm3, dm4, dm1, dm2, dm5, dm3, dm4];

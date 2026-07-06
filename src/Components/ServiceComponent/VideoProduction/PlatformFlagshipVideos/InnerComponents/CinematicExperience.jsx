@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './cinematic-experience.css';
-import sampleVideo from '../../../../../assets/Video/WE_ALLL_Video_Final.mp4';
+const sampleVideo = mediaUrl("assets/Video/WE_ALLL_Video_Final.mp4");
+import { mediaUrl } from "../../../../../config/media";
 
 const CinematicExperience = () => {
     const sectionRef = useRef(null);
@@ -128,7 +129,7 @@ const CinematicExperience = () => {
                                     muted
                                     playsInline
                                     className="cine-real-video"
-                                />
+                                preload="metadata" />
                                 <div className="cine-mock-ui top-left cine-parallax" data-speed="1">
                                     <div className="mock-bar"></div>
                                     <div className="mock-bar short"></div>

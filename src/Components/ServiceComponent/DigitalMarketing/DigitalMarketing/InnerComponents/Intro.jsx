@@ -3,18 +3,19 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
-import creativebgImage from "../../../../../assets/images/creativebg.png";
-import gallery1 from "../../../../../assets/images/dm-1.png";
-import gallery2 from "../../../../../assets/images/dm-2.png";
-import gallery3 from "../../../../../assets/images/dm-3.png";
-import gallery4 from "../../../../../assets/images/dm-4.png";
-import gallery5 from "../../../../../assets/images/dm-5.png";
+const creativebgImage = mediaUrl("assets/images/creativebg.png");
+const gallery1 = mediaUrl("assets/images/dm-1.png");
+const gallery2 = mediaUrl("assets/images/dm-2.png");
+const gallery3 = mediaUrl("assets/images/dm-3.png");
+const gallery4 = mediaUrl("assets/images/dm-4.png");
+const gallery5 = mediaUrl("assets/images/dm-5.png");
 
-import dm1 from "../../../../../assets/images/dm1.jpeg";
-import dm2 from "../../../../../assets/images/dm2.jpeg";
-import dm3 from "../../../../../assets/images/dm3.jpeg";
-import dm4 from "../../../../../assets/images/dm4.jpeg";
-import dm5 from "../../../../../assets/images/dm5.jpeg";
+const dm1 = mediaUrl("assets/images/dm1.jpeg");
+const dm2 = mediaUrl("assets/images/dm2.jpeg");
+const dm3 = mediaUrl("assets/images/dm3.jpeg");
+const dm4 = mediaUrl("assets/images/dm4.jpeg");
+const dm5 = mediaUrl("assets/images/dm5.jpeg");
+import { mediaUrl } from "../../../../../config/media";
 
 
 
@@ -226,7 +227,7 @@ const Intro = ({ title, desc, defaultService, defaultBudget, sliderImages }) => 
                       src={img}
                       alt={`Gallery ${index}`}
                       style={{ width: "100%", borderRadius: "10px" }}
-                    />
+                    loading="lazy" />
                   </SwiperSlide>
                 ))}
               </Swiper>

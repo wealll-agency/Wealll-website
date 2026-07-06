@@ -1,5 +1,6 @@
 import React from 'react';
-import HeroImage from '../../../../../assets/images/ROI-Focussed-Email-Marketing-Agency-min.png.webp';
+const HeroImage = mediaUrl("assets/images/ROI-Focussed-Email-Marketing-Agency-min.png.webp");
+import { mediaUrl } from "../../../../../config/media";
 
 const EmailHeroSection = () => {
   return (

@@ -1,8 +1,9 @@
 import React from 'react';
 import './video-marketing.css';
-import img1 from '../../../../../assets/images/video-thumb-2.webp';
-import img2 from '../../../../../assets/images/commercial_studio.jpg';
-import img3 from '../../../../../assets/images/commercial_poster.jpg';
+const img1 = mediaUrl("assets/images/video-thumb-2.webp");
+const img2 = mediaUrl("assets/images/commercial_studio.jpg");
+const img3 = mediaUrl("assets/images/commercial_poster.jpg");
+import { mediaUrl } from "../../../../../config/media";
 
 const VideoStrategy = () => {
     return (
@@ -18,7 +19,7 @@ const VideoStrategy = () => {
                     <div className="row vm-zigzag-row align-items-center">
                         <div className="col-lg-6 mb-4 mb-lg-0">
                             <div className="vm-zigzag-img-wrapper left-img">
-                                <img src={img1} alt="Visual Storytelling" className="img-fluid vm-zigzag-img" />
+                                <img src={img1} alt="Visual Storytelling" className="img-fluid vm-zigzag-img" loading="lazy" />
                                 <div className="vm-img-decoration"></div>
                             </div>
                         </div>
@@ -40,7 +41,7 @@ const VideoStrategy = () => {
                     <div className="row vm-zigzag-row align-items-center flex-row-reverse">
                         <div className="col-lg-6 mb-4 mb-lg-0">
                             <div className="vm-zigzag-img-wrapper right-img">
-                                <img src={img2} alt="Multi-Platform Optimization" className="img-fluid vm-zigzag-img" />
+                                <img src={img2} alt="Multi-Platform Optimization" className="img-fluid vm-zigzag-img" loading="lazy" />
                                 <div className="vm-img-decoration"></div>
                             </div>
                         </div>
@@ -62,7 +63,7 @@ const VideoStrategy = () => {
                     <div className="row vm-zigzag-row align-items-center">
                         <div className="col-lg-6 mb-4 mb-lg-0">
                             <div className="vm-zigzag-img-wrapper left-img">
-                                <img src={img3} alt="Data-Driven Production" className="img-fluid vm-zigzag-img" />
+                                <img src={img3} alt="Data-Driven Production" className="img-fluid vm-zigzag-img" loading="lazy" />
                                 <div className="vm-img-decoration"></div>
                             </div>
                         </div>

@@ -1,5 +1,6 @@
 import React from 'react'
-import BrandImage from "../../assets/images/services-image-01.jpeg";
+const BrandImage = mediaUrl("assets/images/services-image-01.jpeg");
+import { mediaUrl } from "../../config/media";
 const BrandGrow = () => {
     return (
         <>
@@ -19,7 +20,7 @@ const BrandGrow = () => {
                         </div>
                         <div className="col-lg-5">
                             <div className="sdeconect-img">
-                                <img src={BrandImage} alt="CTA" />
+                                <img src={BrandImage} alt="CTA" loading="lazy" />
                             </div>
                         </div>
                     </div>

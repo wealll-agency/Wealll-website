@@ -1,9 +1,10 @@
 import React from 'react';
 import './email-services.css';
-import icon_monitoring from "../../../../../assets/images/monitor.png";
-import icon_ads from "../../../../../assets/images/ads.png";
-import icon_reporting from "../../../../../assets/images/reporting.png";
-import icon_strategies from "../../../../../assets/images/strategies.png";
+const icon_monitoring = mediaUrl("assets/images/monitor.png");
+const icon_ads = mediaUrl("assets/images/ads.png");
+const icon_reporting = mediaUrl("assets/images/reporting.png");
+const icon_strategies = mediaUrl("assets/images/strategies.png");
+import { mediaUrl } from "../../../../../config/media";
 
 const EmailServices = () => {
     return (
@@ -21,7 +22,7 @@ const EmailServices = () => {
                     <div className="col-md-6 col-lg-3 mb-4">
                         <div className="email-service-card">
                             <div className="email-service-icon-wrapper">
-                                <img src={icon_monitoring} alt="List Management" />
+                                <img src={icon_monitoring} alt="List Management" loading="lazy" />
                             </div>
                             <h3>List Management</h3>
                             <p>
@@ -32,7 +33,7 @@ const EmailServices = () => {
                     <div className="col-md-6 col-lg-3 mb-4">
                         <div className="email-service-card">
                             <div className="email-service-icon-wrapper">
-                                <img src={icon_ads} alt="Drip Campaigns" />
+                                <img src={icon_ads} alt="Drip Campaigns" loading="lazy" />
                             </div>
                             <h3>Drip Campaigns</h3>
                             <p>
@@ -43,7 +44,7 @@ const EmailServices = () => {
                     <div className="col-md-6 col-lg-3 mb-4">
                         <div className="email-service-card">
                             <div className="email-service-icon-wrapper">
-                                <img src={icon_reporting} alt="Analytics & Insight" />
+                                <img src={icon_reporting} alt="Analytics & Insight" loading="lazy" />
                             </div>
                             <h3>Analytics & Insight</h3>
                             <p>
@@ -54,7 +55,7 @@ const EmailServices = () => {
                     <div className="col-md-6 col-lg-3 mb-4">
                         <div className="email-service-card">
                             <div className="email-service-icon-wrapper">
-                                <img src={icon_strategies} alt="Custom Templates" />
+                                <img src={icon_strategies} alt="Custom Templates" loading="lazy" />
                             </div>
                             <h3>Custom Templates</h3>
                             <p>

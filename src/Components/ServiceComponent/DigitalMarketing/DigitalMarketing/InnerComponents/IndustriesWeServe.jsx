@@ -10,18 +10,19 @@ import React, { useEffect, useRef } from "react";
 // import fashionAnim from "../../../../../assets/lottie/fashion.json";
 // import travelAnim from "../../../../../assets/lottie/travel.json";
 
-import icon1 from "../../../../../assets/lottie/01.gif";
-import icon2 from "../../../../../assets/lottie/02.gif";
-import icon3 from "../../../../../assets/lottie/03.gif";
-import icon4 from "../../../../../assets/lottie/04.gif";
-import icon5 from "../../../../../assets/lottie/05.gif";
-import icon6 from "../../../../../assets/lottie/06.gif";
-import icon7 from "../../../../../assets/lottie/07.gif";
-import icon8 from "../../../../../assets/lottie/08.gif";
-import icon9 from "../../../../../assets/lottie/09.gif";
+const icon1 = mediaUrl("assets/lottie/01.gif");
+const icon2 = mediaUrl("assets/lottie/02.gif");
+const icon3 = mediaUrl("assets/lottie/03.gif");
+const icon4 = mediaUrl("assets/lottie/04.gif");
+const icon5 = mediaUrl("assets/lottie/05.gif");
+const icon6 = mediaUrl("assets/lottie/06.gif");
+const icon7 = mediaUrl("assets/lottie/07.gif");
+const icon8 = mediaUrl("assets/lottie/08.gif");
+const icon9 = mediaUrl("assets/lottie/09.gif");
 
 
 import "./IndustriesWeServe.css";
+import { mediaUrl } from "../../../../../config/media";
 
 const IndustriesWeServe = () => {
   const sectionRef = useRef(null);
@@ -128,7 +129,7 @@ const IndustriesWeServe = () => {
                     loop={true}
                     style={{ width: "100%", height: "100%", filter: "invert(1) drop-shadow(0px 5px 15px rgba(255,107,107,0.3))" }}
                   /> */}
-                  <img src={item.animation} alt={item.title} />
+                  <img src={item.animation} alt={item.title} loading="lazy" />
                 </div>
                 <div className="dm-ind-content">
                   <h3>{item.title}</h3>

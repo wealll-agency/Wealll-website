@@ -1,14 +1,15 @@
 import React from "react";
-// import Press1 from "../../assets/images/press1.png";
-// import Press2 from "../../assets/images/press2.png";
-// import Press3 from "../../assets/images/press3.png";
-// import Press4 from "../../assets/images/press4.png";
-// import Press5 from "../../assets/images/press5.png";
-// import Press6 from "../../assets/images/press6.png";
-// import Press7 from "../../assets/images/press7.png";
-// import Press8 from "../../assets/images/press8.png";
-import award from "../../assets/images/awards.png"
-import awardImages from "../../assets/images/awardimages.jpeg"
+// const Press1 = mediaUrl("assets/images/press1.png");
+// const Press2 = mediaUrl("assets/images/press2.png");
+// const Press3 = mediaUrl("assets/images/press3.png");
+// const Press4 = mediaUrl("assets/images/press4.png");
+// const Press5 = mediaUrl("assets/images/press5.png");
+// const Press6 = mediaUrl("assets/images/press6.png");
+// const Press7 = mediaUrl("assets/images/press7.png");
+// const Press8 = mediaUrl("assets/images/press8.png");
+const award = mediaUrl("assets/images/awards.png");
+const awardImages = mediaUrl("assets/images/awardimages.jpeg");
+import { mediaUrl } from "../../config/media";
 
 const Awards = () => {
   return (
@@ -39,20 +40,20 @@ const Awards = () => {
                   <h3>Press Mentions</h3>
                   <div class="presslogo_main">
                     <div class="client-box">
-                      <img src={Press1} alt="Press Mentions"/>
+                      <img src={Press1} alt="Press Mentions"loading="lazy" />
                     </div>
                     <div class="client-box">
-                      <img src={Press2} alt="2 5"/>
+                      <img src={Press2} alt="2 5"loading="lazy" />
                     </div>
                     <div class="client-box">
-                      <img src={Press3} alt="3 5"/>
+                      <img src={Press3} alt="3 5"loading="lazy" />
                     </div>
                     <div class="client-box">
                       <img src={Press4} alt="4 5"
-                      />
+                      loading="lazy" />
                     </div>
                     <div class="client-box">
-                      <img src={Press5} alt="5 5"/>
+                      <img src={Press5} alt="5 5"loading="lazy" />
                     </div>
                   </div>
                 </div>
@@ -62,13 +63,13 @@ const Awards = () => {
                   <h3>Featured In</h3>
                   <div class="presslogo_main">
                     <div class="client-box">
-                      <img src={Press6} alt="6"/>
+                      <img src={Press6} alt="6"loading="lazy" />
                     </div>
                     <div class="client-box">
-                      <img src={Press7} alt="7"/>
+                      <img src={Press7} alt="7"loading="lazy" />
                     </div>
                     <div class="client-box">
-                      <img src={Press8} alt="8"/>
+                      <img src={Press8} alt="8"loading="lazy" />
                     </div>
                     
                   </div>
@@ -85,22 +86,22 @@ const Awards = () => {
             <div className="row award_row">
                 <div className="col-lg-3 col-md-6">
                     <div class="client-box">
-                      <img src={Press1} alt="Press Mentions"/>
+                      <img src={Press1} alt="Press Mentions"loading="lazy" />
                     </div>
                 </div>
                 <div className="col-lg-3 col-md-6">
                     <div class="client-box">
-                      <img src={Press1} alt="Press Mentions"/>
+                      <img src={Press1} alt="Press Mentions"loading="lazy" />
                     </div>
                 </div>
                 <div className="col-lg-3 col-md-6">
                     <div class="client-box">
-                      <img src={Press1} alt="Press Mentions"/>
+                      <img src={Press1} alt="Press Mentions"loading="lazy" />
                     </div>
                 </div>
                 <div className="col-lg-3 col-md-6">
                     <div class="client-box">
-                      <img src={Press1} alt="Press Mentions"/>
+                      <img src={Press1} alt="Press Mentions"loading="lazy" />
                     </div>
                 </div>
             </div>
@@ -112,13 +113,13 @@ const Awards = () => {
           <div className="row">
             <div className="col-md-12">
               <div className="top_title">
-                <img src={award} alt="" />
+                <img src={award} alt="" loading="lazy" />
                 <div className="award_details">
                   <p>For more than 3 years, We Alll has been <a href="#">recognized</a> as a top-rated digital marketing company by some of the industry’s leading review sites, including SEOblog, Clutch, UpCity and InfluencerMarketingHub.</p>
                   <p>In 2025, We Alll conquered another milestone, having been named to the <a href="#">Inc. 300 list of fastest-growing companies</a> in America for the third consecutive year. According to Inc., only a small percentage of the companies featured in the annual Inc. 300 since 2023 have made the list for 3 consecutive years. We continuously optimize our processes to ensure the company remains our clients’ go-to digital marketing service provider.</p>
                 </div>
                 <div className="award_images">
-                  <img src={awardImages} alt="" />
+                  <img src={awardImages} alt="" loading="lazy" />
                 </div>
               </div>
             </div>

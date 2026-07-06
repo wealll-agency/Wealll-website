@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import './success-story-hero.css';
-import heroVideo from '../../../../../assets/Video/Wealll_hero.mp4';
+const heroVideo = mediaUrl("assets/Video/Wealll_hero.mp4");
 import BannerComponent from '../../../CommonComponents/BannerComponent';
+import { mediaUrl } from "../../../../../config/media";
 
 const SuccessStoryHero = () => {
     const heroRef = useRef(null);
@@ -97,7 +98,7 @@ const SuccessStoryHero = () => {
                                         <div className="ss-url">Growth Dashboard.io</div>
                                     </div>
                                     <div className="ss-panel-body">
-                                        <video src={heroVideo} autoPlay loop muted playsInline className="ss-hero-vid"></video>
+                                        <video src={heroVideo} autoPlay loop muted playsInline className="ss-hero-vid" preload="metadata"></video>
                                         <div className="ss-vid-overlay">
                                             <div className="ss-play-btn"><i className="fa-solid fa-play"></i></div>
                                         </div>

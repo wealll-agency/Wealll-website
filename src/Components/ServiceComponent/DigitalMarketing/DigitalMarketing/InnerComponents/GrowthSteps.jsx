@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import growthStep1 from "../../../../../assets/images/growthstep1.jpeg";
-import growthStep2 from "../../../../../assets/images/growthstep2.jpeg";
-import growthStep3 from "../../../../../assets/images/growthstep3.jpeg";
+const growthStep1 = mediaUrl("assets/images/growthstep1.jpeg");
+const growthStep2 = mediaUrl("assets/images/growthstep2.jpeg");
+const growthStep3 = mediaUrl("assets/images/growthstep3.jpeg");
 import "./GrowthSteps.css";
+import { mediaUrl } from "../../../../../config/media";
 
 const GrowthSteps = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -79,7 +80,7 @@ const GrowthSteps = () => {
                     key={step.id}
                     className={`growth-slide ${activeStep === index ? "active" : ""}`}
                   >
-                    <img src={step.image} alt={step.label} />
+                    <img src={step.image} alt={step.label} loading="lazy" />
                   </div>
                 ))}
 

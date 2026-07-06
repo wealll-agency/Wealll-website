@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../../../../../assets/images/We _Alll_black.png"; // Assuming this is correct or similar path
+const logo = mediaUrl("assets/images/We _Alll_black.png"); // Assuming this is correct or similar path
+import { mediaUrl } from "../../../../../config/media";
 
 const CTABanner = () => {
   return (

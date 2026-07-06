@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import './client-testimonials.css';
-import client1 from '../../../../../assets/images/vyapaar-expo-trip6.jpeg';
-import client2 from '../../../../../assets/images/vyapaar-expo-trip1.jpeg';
-import client3 from '../../../../../assets/images/vyapaar-expo-trip7.jpeg';
+const client1 = mediaUrl("assets/images/vyapaar-expo-trip6.jpeg");
+const client2 = mediaUrl("assets/images/vyapaar-expo-trip1.jpeg");
+const client3 = mediaUrl("assets/images/vyapaar-expo-trip7.jpeg");
+import { mediaUrl } from "../../../../../config/media";
 
 const ClientTestimonials = () => {
     const sectionRef = useRef(null);
@@ -70,12 +71,12 @@ const ClientTestimonials = () => {
 
                                 {test.type === 'video' ? (
                                     <div className="ct-video-thumb">
-                                        <img src={test.img} alt={test.name} />
+                                        <img src={test.img} alt={test.name} loading="lazy" />
                                         <div className="ct-play-overlay"><i className="fa-solid fa-play"></i></div>
                                     </div>
                                 ) : (
                                     <div className="ct-avatar-header">
-                                        <img src={test.img} alt={test.name} className="ct-avatar" />
+                                        <img src={test.img} alt={test.name} className="ct-avatar" loading="lazy" />
                                         <div>
                                             <h5 className="ct-name">{test.name}</h5>
                                             <span className="ct-role">{test.role}</span>

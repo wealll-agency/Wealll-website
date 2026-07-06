@@ -2,11 +2,12 @@ import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 // Importing the generated cinematic assets
-import img1 from "../../../../../assets/images/barter_creator_discovery_1774353977479.png";
-import img2 from "../../../../../assets/images/barter_collaboration_strategy_1774354035410.png";
-import img3 from "../../../../../assets/images/barter_outreach_negotiation_1774354071770.png";
-import img4 from "../../../../../assets/images/barter_content_execution_1774354120390.png";
-import img5 from "../../../../../assets/images/barter_performance_tracking_1774354160375.png";
+const img1 = mediaUrl("assets/images/barter_creator_discovery_1774353977479.png");
+const img2 = mediaUrl("assets/images/barter_collaboration_strategy_1774354035410.png");
+const img3 = mediaUrl("assets/images/barter_outreach_negotiation_1774354071770.png");
+const img4 = mediaUrl("assets/images/barter_content_execution_1774354120390.png");
+const img5 = mediaUrl("assets/images/barter_performance_tracking_1774354160375.png");
+import { mediaUrl } from "../../../../../config/media";
 
 const BarterContent = () => {
     const observerRefs = useRef([]);
@@ -97,7 +98,7 @@ const BarterContent = () => {
                                 <img
                                     src={section.img}
                                     alt={section.title}
-                                />
+                                loading="lazy" />
                             </div>
                         </div>
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import './press-release.css';
-import confImg from '../../../../../assets/images/pe-confidence.png';
+const confImg = mediaUrl("assets/images/pe-confidence.png");
+import { mediaUrl } from "../../../../../config/media";
 
 const PrConfidence = () => {
     return (
@@ -50,7 +51,7 @@ const PrConfidence = () => {
 
                     <div className="col-lg-5">
                         <div className="pr-conf-image">
-                            <img src={confImg} alt="Inspire Confidence" />
+                            <img src={confImg} alt="Inspire Confidence" loading="lazy" />
                         </div>
                     </div>
                 </div>

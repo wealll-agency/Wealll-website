@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import AboutBannerImage from "../../assets/images/About-us-2.jpeg";
+const AboutBannerImage = mediaUrl("assets/images/About-us-2.jpeg");
+import { mediaUrl } from "../../config/media";
 
 const AboutBanner = () => {
 

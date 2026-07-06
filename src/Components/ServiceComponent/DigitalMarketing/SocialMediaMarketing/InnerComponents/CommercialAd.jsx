@@ -1,8 +1,9 @@
 import React from "react";
 import "./commercial-ad.css";
-import commercialStudio from "../../../../../assets/images/commercial_studio.jpg";
-import commercialCinema from "../../../../../assets/images/commercial_cinema.jpg";
-import commercialPoster from "../../../../../assets/images/commercial_poster2.jpeg";
+const commercialStudio = mediaUrl("assets/images/commercial_studio.jpg");
+const commercialCinema = mediaUrl("assets/images/commercial_cinema.jpg");
+const commercialPoster = mediaUrl("assets/images/commercial_poster2.jpeg");
+import { mediaUrl } from "../../../../../config/media";
 
 const CommercialAd = () => {
   return (
@@ -50,7 +51,7 @@ const CommercialAd = () => {
                       src={commercialStudio}
                       alt="Production Studio"
                       className="w-100 h-100 object-fit-cover"
-                    />
+                    loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -64,7 +65,7 @@ const CommercialAd = () => {
                   src={commercialCinema}
                   alt="Cinema Audience"
                   className="w-100 h-100 object-fit-cover"
-                />
+                loading="lazy" />
               </div>
             </div>
           </div>
@@ -76,7 +77,7 @@ const CommercialAd = () => {
                 src={commercialPoster}
                 alt="Commercial Poster Ad"
                 className="w-100 h-100 object-fit-cover"
-              />
+              loading="lazy" />
             </div>
           </div>
         </div>

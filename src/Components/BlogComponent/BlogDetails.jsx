@@ -49,7 +49,7 @@ const BlogDetails = () => {
                             {/* Author Meta (Simple Line) */}
                             <div className="blog-meta mb-5 d-flex align-items-center">
                                 <div className="author-img-small me-3">
-                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="Author" className="rounded-circle" style={{ width: '50px', height: '50px', objectFit: 'cover' }} />
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="Author" className="rounded-circle" style={{ width: '50px', height: '50px', objectFit: 'cover' }} loading="lazy" />
                                 </div>
                                 <div>
                                     <p className="mb-0 fw-bold">by Abhishek Shaw</p>
@@ -105,7 +105,7 @@ const BlogDetails = () => {
                                                     alt={post.title}
                                                     className="me-3 rounded"
                                                     style={{ width: '80px', height: '80px', objectFit: 'cover' }}
-                                                />
+                                                loading="lazy" />
                                                 <div>
                                                     <h6 className="mb-1">
                                                         <Link to="/blog-details" state={post} className="text-decoration-none text-dark">
@@ -131,7 +131,7 @@ const BlogDetails = () => {
                                     relatedPosts.map(post => (
                                         <div key={post.id} className="col-lg-3 col-md-4 mb-4">
                                             <div className="card h-100 border-0 shadow-sm">
-                                                <img src={post.image} className="card-img-top" alt={post.title} style={{ height: '250px', objectFit: 'cover' }} />
+                                                <img src={post.image} className="card-img-top" alt={post.title} style={{ height: '250px', objectFit: 'cover' }} loading="lazy" />
                                                 <div className="card-body">
                                                     <div className="mb-2">
                                                         <span className="badge bg-light text-dark me-2">{post.category}</span>

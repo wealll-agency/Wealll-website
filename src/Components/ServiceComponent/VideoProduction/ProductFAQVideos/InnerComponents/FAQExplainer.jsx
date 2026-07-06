@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './faq-explainer.css';
-import demoVideo from '../../../../../assets/Video/Wealll-Website-Creative-Section.mp4';
+const demoVideo = mediaUrl("assets/Video/Wealll-Website-Creative-Section.mp4");
+import { mediaUrl } from "../../../../../config/media";
 
 const FAQExplainer = () => {
     const sectionRef = useRef(null);
@@ -70,7 +71,7 @@ const FAQExplainer = () => {
                                     <span></span><span></span><span></span>
                                 </div>
                                 <div className="q-monitor-screen">
-                                    <video src={demoVideo} autoPlay loop muted playsInline className="q-demo-video"></video>
+                                    <video src={demoVideo} autoPlay loop muted playsInline className="q-demo-video" preload="metadata"></video>
                                     <div className="q-floating-card top-left q-float-anim-1">
                                         <div className="icon">❓</div>
                                         <span>User Query Resolved</span>

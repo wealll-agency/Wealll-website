@@ -1,7 +1,8 @@
 import React from 'react';
 import './video-marketing.css';
-import showreel from '../../../../../assets/Video/px-showreel.mp4';
+const showreel = mediaUrl("assets/Video/px-showreel.mp4");
 import BannerComponent from '../../../CommonComponents/BannerComponent';
+import { mediaUrl } from "../../../../../config/media";
 
 const VideoShowcase = () => {
     return (
@@ -25,7 +26,7 @@ const VideoShowcase = () => {
                             loop
                             muted
                             playsInline
-                        >
+                         preload="metadata">
                             <source src={showreel} type="video/mp4" />
                             Your browser does not support the video tag.
                         </video>

@@ -3,21 +3,22 @@ import './press-release.css';
 import CountUp from './CountUp';
 
 // Importing client logos
-import client1 from "../../../../../assets/images/AAmi-Bangali.png";
-import client2 from "../../../../../assets/images/BWA-ODISHA.png";
-import client3 from "../../../../../assets/images/Choice-Foundation.png";
-import client4 from "../../../../../assets/images/Kesri.png";
-import client5 from "../../../../../assets/images/Karma-International-01.png";
-import client6 from "../../../../../assets/images/Khukumoni.png";
-import client7 from "../../../../../assets/images/Maxglow.png";
-import client8 from "../../../../../assets/images/Vyapaar-Zone.png";
-import client9 from "../../../../../assets/images/Lakme.png";
-import client10 from "../../../../../assets/images/Kiwi.png";
-import client11 from "../../../../../assets/images/Pro-100.png";
-import client12 from "../../../../../assets/images/Sutraa.png";
-import client13 from "../../../../../assets/images/SS-Medicorp.png";
-import client14 from "../../../../../assets/images/Beautech2.png";
-import client15 from "../../../../../assets/images/Jawed Habib.png";
+const client1 = mediaUrl("assets/images/AAmi-Bangali.png");
+const client2 = mediaUrl("assets/images/BWA-ODISHA.png");
+const client3 = mediaUrl("assets/images/Choice-Foundation.png");
+const client4 = mediaUrl("assets/images/Kesri.png");
+const client5 = mediaUrl("assets/images/Karma-International-01.png");
+const client6 = mediaUrl("assets/images/Khukumoni.png");
+const client7 = mediaUrl("assets/images/Maxglow.png");
+const client8 = mediaUrl("assets/images/Vyapaar-Zone.png");
+const client9 = mediaUrl("assets/images/Lakme.png");
+const client10 = mediaUrl("assets/images/Kiwi.png");
+const client11 = mediaUrl("assets/images/Pro-100.png");
+const client12 = mediaUrl("assets/images/Sutraa.png");
+const client13 = mediaUrl("assets/images/SS-Medicorp.png");
+const client14 = mediaUrl("assets/images/Beautech2.png");
+const client15 = mediaUrl("assets/images/Jawed Habib.png");
+import { mediaUrl } from "../../../../../config/media";
 
 const clientRow1 = [client1, client2, client3, client4, client5, client6, client7];
 const clientRow2 = [client8, client9, client10, client11, client12, client13, client14, client15];
@@ -48,7 +49,7 @@ const PrClients = () => {
                     {[...clientRow1, ...clientRow1, ...clientRow1].map((logo, index) => (
                         <div className="pr-logo-card" key={`cli1-${index}`} style={{ width: '220px', height: '120px', flexShrink: 0 }}>
                             <div className="pr-logo-glass" style={{ background: 'rgba(255, 255, 255, 1)', boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '12px', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px', transition: 'transform 0.3s ease' }}>
-                                <img src={logo} alt={`Client Row 1 - ${index}`} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+                                <img src={logo} alt={`Client Row 1 - ${index}`} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} loading="lazy" />
                             </div>
                         </div>
                     ))}
@@ -59,7 +60,7 @@ const PrClients = () => {
                     {[...clientRow2, ...clientRow2, ...clientRow2].map((logo, index) => (
                         <div className="pr-logo-card" key={`cli2-${index}`} style={{ width: '220px', height: '120px', flexShrink: 0 }}>
                             <div className="pr-logo-glass" style={{ background: 'rgba(255, 255, 255, 1)', boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '12px', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px', transition: 'transform 0.3s ease' }}>
-                                <img src={logo} alt={`Client Row 2 - ${index}`} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+                                <img src={logo} alt={`Client Row 2 - ${index}`} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} loading="lazy" />
                             </div>
                         </div>
                     ))}

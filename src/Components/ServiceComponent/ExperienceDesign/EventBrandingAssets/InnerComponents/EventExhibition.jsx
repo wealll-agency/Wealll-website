@@ -62,7 +62,7 @@ const EventExhibition = () => {
                         <div className="eba-monolith-glow"></div>
 
                         <div className="eba-monolith-core">
-                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Booth Renders" className="eba-monolith-img" />
+                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Booth Renders" className="eba-monolith-img" loading="lazy" />
                             <div className="eba-monolith-text">STALL DESIGN CONCEPTS</div>
                         </div>
 

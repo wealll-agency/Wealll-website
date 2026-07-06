@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react'
-// import Team1 from "../../assets/images/team_img1.jpg";
-import Team2 from "../../assets/images/team_img2.jpeg";
-import office_rellocation1 from "../../assets/images/office_rellocation1.jpeg"
-import office_rellocation2 from "../../assets/images/office_rellocation2.jpeg"
-import office_rellocation3 from "../../assets/images/office_rellocation3.jpeg"
-// import Team3 from "../../assets/images/Team-3.jpg";
-import Wealll_mini from "../../assets/images/Wealll_mini.png";
+// const Team1 = mediaUrl("assets/images/team_img1.jpg");
+const Team2 = mediaUrl("assets/images/team_img2.jpeg");
+const office_rellocation1 = mediaUrl("assets/images/office_rellocation1.jpeg");
+const office_rellocation2 = mediaUrl("assets/images/office_rellocation2.jpeg");
+const office_rellocation3 = mediaUrl("assets/images/office_rellocation3.jpeg");
+// const Team3 = mediaUrl("assets/images/Team-3.jpg");
+const Wealll_mini = mediaUrl("assets/images/Wealll_mini.png");
+import { mediaUrl } from "../../config/media";
 
 const MeetOurTeam = () => {
 
@@ -48,30 +49,30 @@ const MeetOurTeam = () => {
                                         <div className="swiper-wrapper">
                                             {/* <div className="swiper-slide">
                                                 <div className="nmeetrisl-img">
-                                                    <img src={Team1} alt="Team" />
+                                                    <img src={Team1} alt="Team" loading="lazy" />
                                                 </div>
                                             </div> */}
                                             <div className="swiper-slide">
                                                 <div className="nmeetrisl-img">
-                                                    <img src={Team2} alt="Team-2" />
+                                                    <img src={Team2} alt="Team-2" loading="lazy" />
                                                 </div>
                                             </div>
 
                                             <div className="swiper-slide">
                                                 <div className="nmeetrisl-img">
-                                                    <img src={office_rellocation1} alt="Team-2" />
+                                                    <img src={office_rellocation1} alt="Team-2" loading="lazy" />
                                                 </div>
                                             </div>
 
                                             <div className="swiper-slide">
                                                 <div className="nmeetrisl-img">
-                                                    <img src={office_rellocation2} alt="Team-2" />
+                                                    <img src={office_rellocation2} alt="Team-2" loading="lazy" />
                                                 </div>
                                             </div>
 
                                             <div className="swiper-slide">
                                                 <div className="nmeetrisl-img">
-                                                    <img src={office_rellocation3} alt="Team-2" />
+                                                    <img src={office_rellocation3} alt="Team-2" loading="lazy" />
                                                 </div>
                                             </div>
 
@@ -80,7 +81,7 @@ const MeetOurTeam = () => {
                                 </div>
                                 <div className="nmeetri-bottom">
                                     <div className="nmeetrbo-logo">
-                                        <img src={Wealll_mini} alt="" />
+                                        <img src={Wealll_mini} alt="" loading="lazy" />
                                     </div>
                                     <div className="nmeetrbo-desc">
                                         <h3>Best digital marketing Agency in Kolkata</h3>

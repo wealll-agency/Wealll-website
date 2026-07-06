@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import '../exhibition-videos.css';
 
-import booth1 from '../../../../../assets/images/slice-image1.jpeg';
-import booth2 from '../../../../../assets/images/slice-image2.jpeg';
-import booth3 from '../../../../../assets/images/slice-image3.jpeg';
-import booth4 from '../../../../../assets/images/slice-image4.jpeg';
-import booth5 from '../../../../../assets/images/slice-image5.jpeg';
+const booth1 = mediaUrl("assets/images/slice-image1.jpeg");
+const booth2 = mediaUrl("assets/images/slice-image2.jpeg");
+const booth3 = mediaUrl("assets/images/slice-image3.jpeg");
+const booth4 = mediaUrl("assets/images/slice-image4.jpeg");
+const booth5 = mediaUrl("assets/images/slice-image5.jpeg");
 import BannerComponent from '../../../CommonComponents/BannerComponent';
+import { mediaUrl } from "../../../../../config/media";
 
 const ExhibBoothHighlight = () => {
     const [activeIndex, setActiveIndex] = useState(0);

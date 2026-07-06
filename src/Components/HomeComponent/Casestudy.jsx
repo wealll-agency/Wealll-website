@@ -1,18 +1,19 @@
 import React from 'react'
-import testimonalImage from "../../assets/images/testimonal-bg.webp";
-import brandimage1 from "../../assets/images/brand-identity.jpeg";
-import brandimage2 from "../../assets/images/packaging.jpeg";
-import brandimage3 from "../../assets/images/key-visual.jpeg";
-import brandimage4 from "../../assets/images/POSM.jpeg";
-import brandimage5 from "../../assets/Video/Wealll-Website-Creative-Section.mp4";
-import brandimage6 from "../../assets/images/web-design.jpeg";
-import brandimage7 from "../../assets/images/ecommerce-development.png";
-import brandimage8 from "../../assets/images/personal-branding.png";
-import brandimage9 from "../../assets/images/social-media-manage.jpeg";
-import brandimage10 from "../../assets/images/barter-collaboration.jpeg";
-import brandimage11 from "../../assets/images/paid-collaboration.jpeg";
-import brandimage12 from "../../assets/images/podcast-collaboration.jpeg";
-import brandimage13 from "../../assets/images/ugc-ads.jpeg";
+const testimonalImage = mediaUrl("assets/images/testimonal-bg.webp");
+const brandimage1 = mediaUrl("assets/images/brand-identity.jpeg");
+const brandimage2 = mediaUrl("assets/images/packaging.jpeg");
+const brandimage3 = mediaUrl("assets/images/key-visual.jpeg");
+const brandimage4 = mediaUrl("assets/images/POSM.jpeg");
+const brandimage5 = mediaUrl("assets/Video/Wealll-Website-Creative-Section.mp4");
+const brandimage6 = mediaUrl("assets/images/web-design.jpeg");
+const brandimage7 = mediaUrl("assets/images/ecommerce-development.png");
+const brandimage8 = mediaUrl("assets/images/personal-branding.png");
+const brandimage9 = mediaUrl("assets/images/social-media-manage.jpeg");
+const brandimage10 = mediaUrl("assets/images/barter-collaboration.jpeg");
+const brandimage11 = mediaUrl("assets/images/paid-collaboration.jpeg");
+const brandimage12 = mediaUrl("assets/images/podcast-collaboration.jpeg");
+const brandimage13 = mediaUrl("assets/images/ugc-ads.jpeg");
+import { mediaUrl } from "../../config/media";
 
 
 const Casestudy = () => {
@@ -81,19 +82,19 @@ const Casestudy = () => {
                                 <div className="right-panel1">
                                     <div className="tab-content">
                                         <div id="menu1" className="tab-pane active">
-                                            <img src={brandimage1} alt="" />
+                                            <img src={brandimage1} alt="" loading="lazy" />
                                         </div>
                                         <div id="menu2" className="tab-pane fade">
-                                            <img src={brandimage2} alt="" />
+                                            <img src={brandimage2} alt="" loading="lazy" />
                                         </div>
                                         <div id="menu3" className="tab-pane fade">
-                                            <img src={brandimage3} alt="" />
+                                            <img src={brandimage3} alt="" loading="lazy" />
                                         </div>
                                         <div id="menu4" className="tab-pane fade">
-                                            <img src={brandimage4} alt="" />
+                                            <img src={brandimage4} alt="" loading="lazy" />
                                         </div>
                                         <div id="menu5" className="tab-pane fade">
-                                            <video src={brandimage5} autoPlay loop muted playsInline></video>
+                                            <video src={brandimage5} autoPlay loop muted playsInline preload="metadata"></video>
                                         </div>
                                     </div>
                                 </div>
@@ -143,10 +144,10 @@ const Casestudy = () => {
                                 <div className="right-panel1">
                                     <div className="tab-content">
                                         <div id="menu6" className="tab-pane active">
-                                            <img src={brandimage6} alt="" />
+                                            <img src={brandimage6} alt="" loading="lazy" />
                                         </div>
                                         <div id="menu7" className="tab-pane fade">
-                                            <img src={brandimage7} alt="" />
+                                            <img src={brandimage7} alt="" loading="lazy" />
                                         </div>
                                     </div>
                                 </div>
@@ -195,10 +196,10 @@ const Casestudy = () => {
                                 <div className="right-panel1">
                                     <div className="tab-content">
                                         <div id="menu8" className="tab-pane active">
-                                            <img src={brandimage8} alt="" />
+                                            <img src={brandimage8} alt="" loading="lazy" />
                                         </div>
                                         <div id="menu9" className="tab-pane fade">
-                                            <img src={brandimage9} alt="" />
+                                            <img src={brandimage9} alt="" loading="lazy" />
                                         </div>
                                     </div>
                                 </div>
@@ -256,17 +257,17 @@ const Casestudy = () => {
                                 <div className="right-panel1">
                                     <div className="tab-content">
                                         <div id="menu10" className="tab-pane active">
-                                            <img src={brandimage10} alt="" />
+                                            <img src={brandimage10} alt="" loading="lazy" />
                                         </div>
                                         <div id="menu11" className="tab-pane fade">
-                                            <img src={brandimage11} alt="" />
+                                            <img src={brandimage11} alt="" loading="lazy" />
                                         </div>
 
                                         <div id="menu12" className="tab-pane fade">
-                                            <img src={brandimage12} alt="" />
+                                            <img src={brandimage12} alt="" loading="lazy" />
                                         </div>
                                         <div id="menu13" className="tab-pane fade">
-                                            <img src={brandimage13} alt="" />
+                                            <img src={brandimage13} alt="" loading="lazy" />
                                         </div>
 
                                     </div>
@@ -405,19 +406,19 @@ const Casestudy = () => {
                                                     <div className="right-panel1">
                                                         <div className="tab-content">
                                                             <div id="mobilemenu1" className="tab-pane active">
-                                                                <img src={brandimage1} alt="" />
+                                                                <img src={brandimage1} alt="" loading="lazy" />
                                                             </div>
                                                             <div id="mobilemenu2" className="tab-pane fade">
-                                                                <img src={brandimage2} alt="" />
+                                                                <img src={brandimage2} alt="" loading="lazy" />
                                                             </div>
                                                             <div id="mobilemenu3" className="tab-pane fade">
-                                                                <img src={brandimage3} alt="" />
+                                                                <img src={brandimage3} alt="" loading="lazy" />
                                                             </div>
                                                             <div id="mobilemenu4" className="tab-pane fade">
-                                                                <img src={brandimage4} alt="" />
+                                                                <img src={brandimage4} alt="" loading="lazy" />
                                                             </div>
                                                             <div id="mobilemenu5" className="tab-pane fade">
-                                                                <video src={brandimage5} autoPlay loop muted playsInline></video>
+                                                                <video src={brandimage5} autoPlay loop muted playsInline preload="metadata"></video>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -475,10 +476,10 @@ const Casestudy = () => {
                                                         <div className="right-panel1">
                                                             <div className="tab-content">
                                                                 <div id="mobilemenu6" className="tab-pane active">
-                                                                    <img src={brandimage6} alt="" />
+                                                                    <img src={brandimage6} alt="" loading="lazy" />
                                                                 </div>
                                                                 <div id="mobilemenu7" className="tab-pane fade">
-                                                                    <img src={brandimage7} alt="" />
+                                                                    <img src={brandimage7} alt="" loading="lazy" />
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -539,10 +540,10 @@ const Casestudy = () => {
                                                         <div className="right-panel1">
                                                             <div className="tab-content">
                                                                 <div id="mobilemenu8" className="tab-pane active">
-                                                                    <img src={brandimage8} alt="" />
+                                                                    <img src={brandimage8} alt="" loading="lazy" />
                                                                 </div>
                                                                 <div id="mobilemenu9" className="tab-pane fade">
-                                                                    <img src={brandimage9} alt="" />
+                                                                    <img src={brandimage9} alt="" loading="lazy" />
                                                                 </div>
                                                             </div>
                                                         </div>

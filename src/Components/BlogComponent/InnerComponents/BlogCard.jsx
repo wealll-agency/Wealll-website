@@ -7,7 +7,7 @@ const BlogCard = ({ data }) => {
         <div className="blog-card">
             <div className="blog-card-image-wrapper">
                 <span className="date-badge">{data.date}</span>
-                <img src={data.image} alt={data.title} className="blog-card-image" />
+                <img src={data.image} alt={data.title} className="blog-card-image" loading="lazy" />
             </div>
 
             <div className="blog-card-content">

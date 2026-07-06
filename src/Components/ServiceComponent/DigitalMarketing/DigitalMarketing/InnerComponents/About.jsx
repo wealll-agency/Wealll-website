@@ -1,8 +1,9 @@
-// import about_video from "../../../../../assets/Video/about_video.mp4";
-import about_video from "../../../../../assets/Video/Wealll_MAR_Slot_05.mp4";
-import about_video2 from "../../../../../assets/Video/Wealll_MAR_Slot_06.mp4";
-import wealll_logo from "../../../../../assets/images/wealll_logo_overlay.png";
+// const about_video = mediaUrl("assets/Video/about_video.mp4");
+const about_video = mediaUrl("assets/Video/Wealll_MAR_Slot_05.mp4");
+const about_video2 = mediaUrl("assets/Video/Wealll_MAR_Slot_06.mp4");
+const wealll_logo = mediaUrl("assets/images/wealll_logo_overlay.png");
 import "./About.css";
+import { mediaUrl } from "../../../../../config/media";
 
 const About = () => {
   return (
@@ -57,7 +58,7 @@ const About = () => {
                         objectFit: "cover",
                         display: "block",
                       }}
-                    ></video>
+                     preload="metadata"></video>
                   </div>
                 </div>
               </div>
@@ -86,7 +87,7 @@ const About = () => {
                     muted
                     playsInline
                     style={{ width: "100%", height: "auto", display: "block" }}
-                  />
+                  preload="metadata" />
 
                 </div>
               </div>

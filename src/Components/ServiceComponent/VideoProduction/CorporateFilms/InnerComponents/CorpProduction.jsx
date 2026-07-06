@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import '../corporate-films-advanced.css';
 
 // Importing assets for the new design
-import cineShoot from '../../../../../assets/images/production-showcase1.jpeg';
-import interview from '../../../../../assets/images/production-showcase2.jpeg';
-import lighting from '../../../../../assets/images/production-showcase3.jpeg';
-import drone from '../../../../../assets/images/production-showcase4.jpeg';
-import graphics from '../../../../../assets/images/production-showcase5.jpeg';
-import vo from '../../../../../assets/images/production-showcase6.jpeg';
+const cineShoot = mediaUrl("assets/images/production-showcase1.jpeg");
+const interview = mediaUrl("assets/images/production-showcase2.jpeg");
+const lighting = mediaUrl("assets/images/production-showcase3.jpeg");
+const drone = mediaUrl("assets/images/production-showcase4.jpeg");
+const graphics = mediaUrl("assets/images/production-showcase5.jpeg");
+const vo = mediaUrl("assets/images/production-showcase6.jpeg");
+import { mediaUrl } from "../../../../../config/media";
 
 const CorpProduction = () => {
     const [activeItem, setActiveItem] = useState(0);

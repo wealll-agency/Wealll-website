@@ -1,9 +1,10 @@
 import React from "react";
 
-import icon1 from "../../../../../assets/images/icon-1.svg";
-import icon2 from "../../../../../assets/images/icon-2.svg";
-import icon3 from "../../../../../assets/images/icon-3.svg";
-import icon4 from "../../../../../assets/images/icon-4.svg";
+const icon1 = mediaUrl("assets/images/icon-1.svg");
+const icon2 = mediaUrl("assets/images/icon-2.svg");
+const icon3 = mediaUrl("assets/images/icon-3.svg");
+const icon4 = mediaUrl("assets/images/icon-4.svg");
+import { mediaUrl } from "../../../../../config/media";
 
 const BrandSlider = () => {
   return (
@@ -47,7 +48,7 @@ const BrandSlider = () => {
         <div className="c-text-container-1">
           <div className="c-text-slider-1">
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -57,7 +58,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -67,7 +68,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -77,7 +78,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -87,7 +88,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -97,7 +98,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -107,7 +108,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -117,7 +118,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -127,7 +128,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -137,7 +138,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -147,7 +148,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -157,7 +158,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -167,7 +168,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -177,7 +178,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -187,7 +188,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -197,7 +198,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -207,7 +208,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -217,7 +218,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -227,7 +228,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -237,7 +238,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -247,7 +248,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -257,7 +258,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -267,7 +268,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -277,249 +278,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Digital Marketing</p>
-              </a>
-            </div>
-          </div>
-
-          <div className="c-text-slider-1">
-            <div className="c-text-1">
-              <img src={icon1} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>BRANDING</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon2} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Creatives</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon3} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Website Development</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon4} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Digital Marketing</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon1} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>BRANDING</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon2} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Creatives</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon3} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Website Development</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon4} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Digital Marketing</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon1} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>BRANDING</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon2} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Creatives</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon3} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Website Development</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon4} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Digital Marketing</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon1} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>BRANDING</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon2} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Creatives</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon3} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Website Development</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon4} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Digital Marketing</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon1} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>BRANDING</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon2} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Creatives</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon3} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Website Development</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon4} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Digital Marketing</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon1} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>BRANDING</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon2} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Creatives</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon3} alt="" />
-            </div>
-
-            <div className="c-text-1">
-              <a href="#">
-                <p>Website Development</p>
-              </a>
-            </div>
-
-            <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -531,7 +290,7 @@ const BrandSlider = () => {
 
           <div className="c-text-slider-1">
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -541,7 +300,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -551,7 +310,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -561,7 +320,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -571,7 +330,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -581,7 +340,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -591,7 +350,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -601,7 +360,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -611,7 +370,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -621,7 +380,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -631,7 +390,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -641,7 +400,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -651,7 +410,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -661,7 +420,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -671,7 +430,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -681,7 +440,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -691,7 +450,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -701,7 +460,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -711,7 +470,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -721,7 +480,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -731,7 +490,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -741,7 +500,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -751,7 +510,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -761,7 +520,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -773,7 +532,7 @@ const BrandSlider = () => {
 
           <div className="c-text-slider-1">
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -783,7 +542,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -793,7 +552,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -803,7 +562,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -813,7 +572,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -823,7 +582,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -833,7 +592,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -843,7 +602,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -853,7 +612,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -863,7 +622,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -873,7 +632,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -883,7 +642,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -893,7 +652,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -903,7 +662,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -913,7 +672,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -923,7 +682,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -933,7 +692,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -943,7 +702,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -953,7 +712,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -963,7 +722,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -973,7 +732,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon1} alt="" />
+              <img src={icon1} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -983,7 +742,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon2} alt="" />
+              <img src={icon2} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -993,7 +752,7 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon3} alt="" />
+              <img src={icon3} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">
@@ -1003,7 +762,249 @@ const BrandSlider = () => {
             </div>
 
             <div className="c-text-1">
-              <img src={icon4} alt="" />
+              <img src={icon4} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Digital Marketing</p>
+              </a>
+            </div>
+          </div>
+
+          <div className="c-text-slider-1">
+            <div className="c-text-1">
+              <img src={icon1} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>BRANDING</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon2} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Creatives</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon3} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Website Development</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon4} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Digital Marketing</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon1} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>BRANDING</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon2} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Creatives</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon3} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Website Development</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon4} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Digital Marketing</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon1} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>BRANDING</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon2} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Creatives</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon3} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Website Development</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon4} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Digital Marketing</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon1} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>BRANDING</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon2} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Creatives</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon3} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Website Development</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon4} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Digital Marketing</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon1} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>BRANDING</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon2} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Creatives</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon3} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Website Development</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon4} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Digital Marketing</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon1} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>BRANDING</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon2} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Creatives</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon3} alt="" loading="lazy" />
+            </div>
+
+            <div className="c-text-1">
+              <a href="#">
+                <p>Website Development</p>
+              </a>
+            </div>
+
+            <div className="c-text-1">
+              <img src={icon4} alt="" loading="lazy" />
             </div>
 
             <div className="c-text-1">

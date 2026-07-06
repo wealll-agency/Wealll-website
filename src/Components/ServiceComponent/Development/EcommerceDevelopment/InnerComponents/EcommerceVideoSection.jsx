@@ -28,7 +28,7 @@ const EcommerceVideoSection = () => {
             
             <div className="hej-app-content p-0">
               <div className="position-relative" style={{ height: '220px', backgroundColor: '#e2f0d9' }}>
-                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400" alt="Plant Balls" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=400" alt="Plant Balls" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
                 <div className="position-absolute bottom-0 start-0 p-3 w-100" style={{ background: 'linear-gradient(to top, rgba(0,0,0,0.8), transparent)' }}>
                   <div className="badge bg-white text-dark mb-2">🚚 FREE delivery*</div>
                   <h4 className="text-white mb-0" style={{ fontSize: '1.2rem' }}>Plant Balls (500g)</h4>
@@ -50,7 +50,7 @@ const EcommerceVideoSection = () => {
                 <div className="d-flex gap-3">
                   <div className="card border-0 shadow-sm" style={{ width: '120px' }}>
                     <div style={{ padding: '20px', background: '#f8f9fa' }}>
-                      <img src="https://images.unsplash.com/photo-1582281172669-715bd5bce0a1?auto=format&fit=crop&q=80&w=200" alt="Jar" className="img-fluid mix-blend-multiply" />
+                      <img src="https://images.unsplash.com/photo-1582281172669-715bd5bce0a1?auto=format&fit=crop&q=80&w=200" alt="Jar" className="img-fluid mix-blend-multiply" loading="lazy" />
                     </div>
                     <div className="card-body p-2 text-center">
                       <p className="small text-muted mb-0">IKEA Family Price</p>
@@ -59,7 +59,7 @@ const EcommerceVideoSection = () => {
                   </div>
                   <div className="card border-0 shadow-sm" style={{ width: '120px' }}>
                      <div style={{ padding: '20px', background: '#f8f9fa' }}>
-                      <img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?auto=format&fit=crop&q=80&w=200" alt="Jar" className="img-fluid mix-blend-multiply" />
+                      <img src="https://images.unsplash.com/photo-1621939514649-280e2ee25f60?auto=format&fit=crop&q=80&w=200" alt="Jar" className="img-fluid mix-blend-multiply" loading="lazy" />
                     </div>
                     <div className="card-body p-2 text-center">
                       <p className="small text-muted mb-0">IKEA Family Price</p>
@@ -88,7 +88,7 @@ const EcommerceVideoSection = () => {
             className="hej-phone right-phone"
           >
             <div className="position-relative" style={{ height: '180px' }}>
-              <img src="https://images.unsplash.com/photo-1414445839132-4467554ee5d1?auto=format&fit=crop&q=80&w=400" alt="Food" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src="https://images.unsplash.com/photo-1414445839132-4467554ee5d1?auto=format&fit=crop&q=80&w=400" alt="Food" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy" />
               <div className="position-absolute top-0 start-0 m-3 bg-white rounded-circle d-flex align-items-center justify-content-center shadow" style={{ width: '35px', height: '35px' }}>
                 <span className="fw-bold">←</span>
               </div>
@@ -99,7 +99,7 @@ const EcommerceVideoSection = () => {
               <p className="text-secondary small mb-4">Select your favorite roast</p>
 
               <div className="d-flex border rounded p-2 mb-3 align-items-center shadow-sm">
-                <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&q=80&w=150" alt="Coffee" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '5px' }} />
+                <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?auto=format&fit=crop&q=80&w=150" alt="Coffee" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '5px' }} loading="lazy" />
                 <div className="ms-3 flex-grow-1">
                   <span className="badge bg-danger mb-1" style={{ fontSize: '0.6rem' }}>New</span>
                   <p className="text-success fw-bold small mb-0">STARBUCKS</p>
@@ -112,7 +112,7 @@ const EcommerceVideoSection = () => {
               </div>
 
               <div className="d-flex border rounded p-2 align-items-center shadow-sm">
-                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=150" alt="Coffee" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '5px' }} />
+                <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&q=80&w=150" alt="Coffee" style={{ width: '60px', height: '60px', objectFit: 'cover', borderRadius: '5px' }} loading="lazy" />
                 <div className="ms-3 flex-grow-1">
                   <span className="badge bg-danger mb-1" style={{ fontSize: '0.6rem' }}>New</span>
                   <p className="text-danger fw-bold small mb-0">COMMUNITY</p>

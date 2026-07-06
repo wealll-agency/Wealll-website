@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './ecommerce-faq.css';
-import ecomImg from '../../../../../assets/images/ecommerce-development.png';
+const ecomImg = mediaUrl("assets/images/ecommerce-development.png");
+import { mediaUrl } from "../../../../../config/media";
 
 const EcommerceFAQ = () => {
     const sectionRef = useRef(null);
@@ -41,7 +42,7 @@ const EcommerceFAQ = () => {
                     <div className="col-lg-6 mb-5 mb-lg-0">
                         <div className="ecom-visual ecom-reveal">
                             <div className="ecom-mockup-wrapper">
-                                <img src={ecomImg} alt="Ecommerce Videos" className="img-fluid ecom-img-main" />
+                                <img src={ecomImg} alt="Ecommerce Videos" className="img-fluid ecom-img-main" loading="lazy" />
 
                                 {/* Floating elements */}
                                 <div className="ecom-float tag-1">

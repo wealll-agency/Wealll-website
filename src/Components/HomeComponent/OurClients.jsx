@@ -3,25 +3,26 @@ import './our-clients-v2.css';
 import BrandSlider from "./../HomeComponent/BrandSlider";
 
 // Importing the authentic downloaded PNG logos
-import logo1 from "../../assets/images/AAmi-Bangali.png";
-import logo2 from "../../assets/images/BWA-ODISHA.png";
-import logo3 from "../../assets/images/Choice-Foundation.png";
-import logo4 from "../../assets/images/Kesri.png";
-import logo5 from "../../assets/images/Karma-International-01.png";
-import logo6 from "../../assets/images/Khukumoni.png";
-import logo7 from "../../assets/images/Maxglow.png";
-import logo8 from "../../assets/images/Vyapaar-Zone.png";
-import logo9 from "../../assets/images/Lakme.png";
-import logo10 from "../../assets/images/Kiwi.png";
-import logo11 from "../../assets/images/Pro-100.png";
-import logo12 from "../../assets/images/Sutraa.png";
-import logo13 from "../../assets/images/SS-Medicorp.png";
-import logo14 from "../../assets/images/Beautech2.png";
-import logo15 from "../../assets/images/Jawed Habib.png";
+const logo1 = mediaUrl("assets/images/AAmi-Bangali.png");
+const logo2 = mediaUrl("assets/images/BWA-ODISHA.png");
+const logo3 = mediaUrl("assets/images/Choice-Foundation.png");
+const logo4 = mediaUrl("assets/images/Kesri.png");
+const logo5 = mediaUrl("assets/images/Karma-International-01.png");
+const logo6 = mediaUrl("assets/images/Khukumoni.png");
+const logo7 = mediaUrl("assets/images/Maxglow.png");
+const logo8 = mediaUrl("assets/images/Vyapaar-Zone.png");
+const logo9 = mediaUrl("assets/images/Lakme.png");
+const logo10 = mediaUrl("assets/images/Kiwi.png");
+const logo11 = mediaUrl("assets/images/Pro-100.png");
+const logo12 = mediaUrl("assets/images/Sutraa.png");
+const logo13 = mediaUrl("assets/images/SS-Medicorp.png");
+const logo14 = mediaUrl("assets/images/Beautech2.png");
+const logo15 = mediaUrl("assets/images/Jawed Habib.png");
 
-import test1 from "../../assets/images/philo.jpg";
-import test2 from "../../assets/images/Beautech2.png";
-import test3 from "../../assets/images/Lakme.png";
+const test1 = mediaUrl("assets/images/philo.jpg");
+const test2 = mediaUrl("assets/images/Beautech2.png");
+const test3 = mediaUrl("assets/images/Lakme.png");
+import { mediaUrl } from "../../config/media";
 
 const clientLogos = [
     logo1, logo2, logo3, logo4, logo5,
@@ -75,7 +76,7 @@ const OurClients = () => {
                                     key={index}
                                 >
                                     <div className={`floating-bubble float-anim-${(index % 5) + 1}`}>
-                                        <img src={logo} alt={`Client logo ${index + 1}`} />
+                                        <img src={logo} alt={`Client logo ${index + 1}`} loading="lazy" />
                                     </div>
                                 </div>
                             ))}
@@ -116,9 +117,9 @@ const OurClients = () => {
 
                         <div className="trusted-clients-section d-flex align-items-center mt-4">
                             <div className="trusted-images">
-                                <img src={test1} alt="Client 1" className="trusted-img" />
-                                <img src={test2} alt="Client 2" className="trusted-img" />
-                                <img src={test3} alt="Client 3" className="trusted-img" />
+                                <img src={test1} alt="Client 1" className="trusted-img" loading="lazy" />
+                                <img src={test2} alt="Client 2" className="trusted-img" loading="lazy" />
+                                <img src={test3} alt="Client 3" className="trusted-img" loading="lazy" />
                             </div>
                             <div className="trusted-text ms-3">
                                 <p className="mb-0 text-white" style={{ fontSize: '1.2rem', fontWeight: '500' }}>

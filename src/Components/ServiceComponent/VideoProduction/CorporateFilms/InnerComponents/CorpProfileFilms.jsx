@@ -1,9 +1,10 @@
 import React from 'react';
 import '../corporate-films.css';
-import team1 from '../../../../../assets/images/Team-1.jpeg';
-import industryLeader from '../../../../../assets/images/Team-2.jpeg';
-import csrDoc from '../../../../../assets/images/Team-3.jpeg';
-import globalPresence from '../../../../../assets/images/Team-4.jpeg';
+const team1 = mediaUrl("assets/images/Team-1.jpeg");
+const industryLeader = mediaUrl("assets/images/Team-2.jpeg");
+const csrDoc = mediaUrl("assets/images/Team-3.jpeg");
+const globalPresence = mediaUrl("assets/images/Team-4.jpeg");
+import { mediaUrl } from "../../../../../config/media";
 
 const CorpProfileFilms = () => {
     const profiles = [

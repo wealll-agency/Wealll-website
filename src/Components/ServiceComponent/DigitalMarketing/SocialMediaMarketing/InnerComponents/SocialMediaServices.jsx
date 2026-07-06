@@ -1,19 +1,20 @@
 import React from "react";
 import "./social-media-services.css";
-import creativebgImage from "../../../../../assets/images/creativebg.png";
-import icon_monitoring from "../../../../../assets/images/monitor.png";
-import icon_ads from "../../../../../assets/images/ads.png";
-import icon_reporting from "../../../../../assets/images/reporting.png";
-import icon_strategies from "../../../../../assets/images/strategies.png";
-import fb_icon from "../../../../../assets/images/fb_icon.png";
-import insta_icon from "../../../../../assets/images/insta_icon.png";
-import twitter_icon from "../../../../../assets/images/twitter_icon.png";
-import youtube_icon from "../../../../../assets/images/youtube_icon.png";
-import linkedin_icon from "../../../../../assets/images/linkedin_icon.png";
-import pinterest_icon from "../../../../../assets/images/pinterest_icon.png";
-import magic_reach from "../../../../../assets/images/magic_reach.png";
-import magic_engage from "../../../../../assets/images/magic_engage.png";
-import magic_grow from "../../../../../assets/images/magic_grow.png";
+const creativebgImage = mediaUrl("assets/images/creativebg.png");
+const icon_monitoring = mediaUrl("assets/images/monitor.png");
+const icon_ads = mediaUrl("assets/images/ads.png");
+const icon_reporting = mediaUrl("assets/images/reporting.png");
+const icon_strategies = mediaUrl("assets/images/strategies.png");
+const fb_icon = mediaUrl("assets/images/fb_icon.png");
+const insta_icon = mediaUrl("assets/images/insta_icon.png");
+const twitter_icon = mediaUrl("assets/images/twitter_icon.png");
+const youtube_icon = mediaUrl("assets/images/youtube_icon.png");
+const linkedin_icon = mediaUrl("assets/images/linkedin_icon.png");
+const pinterest_icon = mediaUrl("assets/images/pinterest_icon.png");
+const magic_reach = mediaUrl("assets/images/magic_reach.png");
+const magic_engage = mediaUrl("assets/images/magic_engage.png");
+const magic_grow = mediaUrl("assets/images/magic_grow.png");
+import { mediaUrl } from "../../../../../config/media";
 
 const SocialMediaServices = () => {
   const bgStyle = {
@@ -35,7 +36,7 @@ const SocialMediaServices = () => {
           <div className="col-md-4 mb-4">
             <div className="magic-card">
               <div className="magic-icon-wrapper">
-                <img src={magic_reach} alt="Boost Your Reach" />
+                <img src={magic_reach} alt="Boost Your Reach" loading="lazy" />
               </div>
               <h3>Boost Your Reach</h3>
               <p>
@@ -47,7 +48,7 @@ const SocialMediaServices = () => {
           <div className="col-md-4 mb-4">
             <div className="magic-card">
               <div className="magic-icon-wrapper">
-                <img src={magic_engage} alt="Engage Your Audience" />
+                <img src={magic_engage} alt="Engage Your Audience" loading="lazy" />
               </div>
               <h3>Engage Your Audience</h3>
               <p>
@@ -59,7 +60,7 @@ const SocialMediaServices = () => {
           <div className="col-md-4 mb-4">
             <div className="magic-card">
               <div className="magic-icon-wrapper">
-                <img src={magic_grow} alt="Grow Your Business" />
+                <img src={magic_grow} alt="Grow Your Business" loading="lazy" />
               </div>
               <h3>Grow Your Business</h3>
               <p>
@@ -158,7 +159,7 @@ const SocialMediaServices = () => {
             <div className="col-md-6 col-lg-4 mb-4">
               <div className="platform-card">
                 <div className="p-icon">
-                  <img src={fb_icon} alt="" />
+                  <img src={fb_icon} alt="" loading="lazy" />
                 </div>
                 <div className="p-content">
                   <h4>
@@ -174,7 +175,7 @@ const SocialMediaServices = () => {
             <div className="col-md-6 col-lg-4 mb-4">
               <div className="platform-card">
                 <div className="p-icon">
-                  <img src={insta_icon} alt="" />
+                  <img src={insta_icon} alt="" loading="lazy" />
                 </div>
                 <div className="p-content">
                   <h4>
@@ -190,7 +191,7 @@ const SocialMediaServices = () => {
             <div className="col-md-6 col-lg-4 mb-4">
               <div className="platform-card">
                 <div className="p-icon">
-                  <img src={twitter_icon} alt="" />
+                  <img src={twitter_icon} alt="" loading="lazy" />
                 </div>
                 <div className="p-content">
                   <h4>
@@ -206,7 +207,7 @@ const SocialMediaServices = () => {
             <div className="col-md-6 col-lg-4 mb-4">
               <div className="platform-card">
                 <div className="p-icon">
-                  <img src={youtube_icon} alt="" />
+                  <img src={youtube_icon} alt="" loading="lazy" />
                 </div>
                 <div className="p-content">
                   <h4>
@@ -222,7 +223,7 @@ const SocialMediaServices = () => {
             <div className="col-md-6 col-lg-4 mb-4">
               <div className="platform-card">
                 <div className="p-icon">
-                  <img src={linkedin_icon} alt="" />
+                  <img src={linkedin_icon} alt="" loading="lazy" />
                 </div>
                 <div className="p-content">
                   <h4>
@@ -238,7 +239,7 @@ const SocialMediaServices = () => {
             <div className="col-md-6 col-lg-4 mb-4">
               <div className="platform-card">
                 <div className="p-icon">
-                  <img src={pinterest_icon} alt="" />
+                  <img src={pinterest_icon} alt="" loading="lazy" />
                 </div>
                 <div className="p-content">
                   <h4>

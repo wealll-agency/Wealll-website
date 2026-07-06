@@ -7,11 +7,12 @@ import "swiper/css/scrollbar";
 import "./OurWork.css";
 
 // Import local assets
-import bunny from "../../../../../assets/images/Bunny.png";
-import karma from "../../../../../assets/images/Karma.png";
-import philo from "../../../../../assets/images/Phillo.png";
-import kesri from "../../../../../assets/images/kesri.jpeg";
-import khukumoni from "../../../../../assets/images/khukumoni.jpeg";
+const bunny = mediaUrl("assets/images/Bunny.png");
+const karma = mediaUrl("assets/images/Karma.png");
+const philo = mediaUrl("assets/images/Phillo.png");
+const kesri = mediaUrl("assets/images/kesri.jpeg");
+const khukumoni = mediaUrl("assets/images/khukumoni.jpeg");
+import { mediaUrl } from "../../../../../config/media";
 
 const OurWork = () => {
   const projects = [
@@ -121,7 +122,7 @@ const OurWork = () => {
                     </div>
                   </div>
                   <div className="card-image">
-                    <img src={project.image} alt={project.title} />
+                    <img src={project.image} alt={project.title} loading="lazy" />
                   </div>
                 </div>
               </div>

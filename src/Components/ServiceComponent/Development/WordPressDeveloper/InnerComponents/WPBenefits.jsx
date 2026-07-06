@@ -3,7 +3,8 @@ import { motion } from 'framer-motion';
 import './wordpress-dev-dark.css';
 
 // Using a dummy image based on the user's previously validated path structure
-import wpImage from '../../../../../assets/images/portfolio_website2.jpeg';
+const wpImage = mediaUrl("assets/images/portfolio_website2.jpeg");
+import { mediaUrl } from "../../../../../config/media";
 
 const WPBenefits = () => {
   return (

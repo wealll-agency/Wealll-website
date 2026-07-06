@@ -2,13 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 import "./crisis-content.css";
 
 // Importing the generated & copied assets
-import monitorImg from "../../../../../assets/images/cm-monitor.png";
-import picsart from "../../../../../assets/images/picsart.jpeg";
-import picsart2 from "../../../../../assets/images/picsart2.jpeg";
-// import pressImg from "../../../../../assets/images/cm-press.png";
-import pressImg from "../../../../../assets/images/picsart3.jpeg";
-import recoveryImg from "../../../../../assets/images/cm-recovery.png";
+const monitorImg = mediaUrl("assets/images/cm-monitor.png");
+const picsart = mediaUrl("assets/images/picsart.jpeg");
+const picsart2 = mediaUrl("assets/images/picsart2.jpeg");
+// const pressImg = mediaUrl("assets/images/cm-press.png");
+const pressImg = mediaUrl("assets/images/picsart3.jpeg");
+const recoveryImg = mediaUrl("assets/images/cm-recovery.png");
 import BannerComponent from "../../../CommonComponents/BannerComponent";
+import { mediaUrl } from "../../../../../config/media";
 
 const CrisisContent = () => {
   const [activeStrategy, setActiveStrategy] = useState(0);
@@ -125,7 +126,7 @@ const CrisisContent = () => {
             </div>
             <div className="cm-monitor-img cm-fade-left" ref={addToRefs}>
               <div className="img-wrapper">
-                <img src={picsart} alt="Crisis Monitoring and Radar" />
+                <img src={picsart} alt="Crisis Monitoring and Radar" loading="lazy" />
                 <div className="cm-pulse-dot">Active Scanning</div>
               </div>
             </div>
@@ -296,7 +297,7 @@ const CrisisContent = () => {
             </div>
 
             <div className="cm-recovery-img-box cm-fade-left" ref={addToRefs}>
-              <img src={picsart2} alt="Reputation graph recovery" />
+              <img src={picsart2} alt="Reputation graph recovery" loading="lazy" />
             </div>
           </div>
         </div>

@@ -41,7 +41,7 @@ const ProductionExecution = () => {
                                     src="https://images.unsplash.com/photo-1590102426319-c7526718cd70?q=80&w=1200&auto=format&fit=crop"
                                     alt="Production Set"
                                     className="set-image"
-                                />
+                                loading="lazy" />
                                 <div className="set-overlay-gradient"></div>
                             </div>
 

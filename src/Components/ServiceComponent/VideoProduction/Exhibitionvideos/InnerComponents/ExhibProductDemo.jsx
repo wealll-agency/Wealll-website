@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import '../exhibition-videos.css';
 
-import pd1 from '../../../../../assets/images/product-showcase1.jpeg';
-import pd2 from '../../../../../assets/images/product-showcase2.jpeg';
-import pd3 from '../../../../../assets/images/product-showcase3.jpeg';
-import pd4 from '../../../../../assets/images/product-showcase4.jpeg';
+const pd1 = mediaUrl("assets/images/product-showcase1.jpeg");
+const pd2 = mediaUrl("assets/images/product-showcase2.jpeg");
+const pd3 = mediaUrl("assets/images/product-showcase3.jpeg");
+const pd4 = mediaUrl("assets/images/product-showcase4.jpeg");
+import { mediaUrl } from "../../../../../config/media";
 
 const ExhibProductDemo = () => {
     const [activeIndex, setActiveIndex] = useState(0);

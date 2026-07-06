@@ -3,10 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import './mobile-dark.css';
 
 // Importing generated images
-import port1 from '../../../../../assets/images/mobile_port1.png';
-import port2 from '../../../../../assets/images/mobile_port2.png';
-import port3 from '../../../../../assets/images/mobile_port3.png';
-import port4 from '../../../../../assets/images/mobile_port4.png';
+const port1 = mediaUrl("assets/images/mobile_port1.png");
+const port2 = mediaUrl("assets/images/mobile_port2.png");
+const port3 = mediaUrl("assets/images/mobile_port3.png");
+const port4 = mediaUrl("assets/images/mobile_port4.png");
+import { mediaUrl } from "../../../../../config/media";
 
 const categories = ["All", "iOS App", "Android App", "Hybrid App", "UI/UX Design"];
 
@@ -78,7 +79,7 @@ const MobileAppPortfolio = () => {
                 <div className="mobile-port-item group">
                   {/* The Image Window with Hover Scroll */}
                   <div className="mobile-port-scroll-container">
-                    <img src={item.img} alt={item.title} className="mobile-port-scroll-img" />
+                    <img src={item.img} alt={item.title} className="mobile-port-scroll-img" loading="lazy" />
                     
                     {/* View Project Overlay */}
                     <div className="mobile-port-overlay">

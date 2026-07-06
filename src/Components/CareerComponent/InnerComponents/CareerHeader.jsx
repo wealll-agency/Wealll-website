@@ -1,6 +1,7 @@
 import React from 'react';
-import careerTeam from "../../../assets/images/career-team.jpeg";
-import creativebgImage from "../../../assets/images/creativebg.png";
+const careerTeam = mediaUrl("assets/images/career-team.jpeg");
+const creativebgImage = mediaUrl("assets/images/creativebg.png");
+import { mediaUrl } from "../../../config/media";
 
 const CareerHeader = () => {
 
@@ -20,7 +21,7 @@ const CareerHeader = () => {
                     </h1>
                     <p>At We Alll, our office is more than just a space — it’s where ideas are born, collaborations flourish, <br /> and creativity thrives. Ready to be part of our journey? Let’s create something extraordinary together!</p>
                     <div className='career_img_box'>
-                        <img src={careerTeam} alt="" />
+                        <img src={careerTeam} alt="" loading="lazy" />
                     </div>
 
                 </div>

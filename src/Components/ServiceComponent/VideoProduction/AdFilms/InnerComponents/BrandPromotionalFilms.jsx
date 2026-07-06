@@ -94,7 +94,7 @@ const BrandPromotionalFilms = () => {
                                         src="https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?q=80&w=800&auto=format&fit=crop"
                                         alt="Promotional Film Production"
                                         className="promo-composition-image"
-                                    />
+                                    loading="lazy" />
                                 </div>
 
                                 {/* Floating elements */}

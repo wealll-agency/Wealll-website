@@ -1,12 +1,13 @@
 import React from "react";
 import "./platforms-we-manage.css";
 // Importing icons
-import fb_icon from "../../../../../assets/images/fb_icon.png";
-import insta_icon from "../../../../../assets/images/insta_icon.png";
-import twitter_icon from "../../../../../assets/images/twitter_icon.png";
-import youtube_icon from "../../../../../assets/images/youtube_icon.png";
-import linkedin_icon from "../../../../../assets/images/linkedin_icon.png";
-import pinterest_icon from "../../../../../assets/images/pinterest_icon.png";
+const fb_icon = mediaUrl("assets/images/fb_icon.png");
+const insta_icon = mediaUrl("assets/images/insta_icon.png");
+const twitter_icon = mediaUrl("assets/images/twitter_icon.png");
+const youtube_icon = mediaUrl("assets/images/youtube_icon.png");
+const linkedin_icon = mediaUrl("assets/images/linkedin_icon.png");
+const pinterest_icon = mediaUrl("assets/images/pinterest_icon.png");
+import { mediaUrl } from "../../../../../config/media";
 
 const PlatformsWeManage = () => {
     return (
@@ -42,7 +43,7 @@ const PlatformsWeManage = () => {
                         <div className="planet" style={{ "--orbit-deg": "0deg", "--radius": "-190px", "--brand-color": "#1877F2" }}>
                             <div className="planet-counter">
                                 <div className="planet-glass">
-                                    <img src={fb_icon} alt="Facebook" />
+                                    <img src={fb_icon} alt="Facebook" loading="lazy" />
                                     <span>Facebook</span>
                                 </div>
                             </div>
@@ -50,7 +51,7 @@ const PlatformsWeManage = () => {
                         <div className="planet" style={{ "--orbit-deg": "180deg", "--radius": "-190px", "--brand-color": "#FF0000" }}>
                             <div className="planet-counter">
                                 <div className="planet-glass">
-                                    <img src={youtube_icon} alt="YouTube" />
+                                    <img src={youtube_icon} alt="YouTube" loading="lazy" />
                                     <span>YouTube</span>
                                 </div>
                             </div>
@@ -62,7 +63,7 @@ const PlatformsWeManage = () => {
                         <div className="planet" style={{ "--orbit-deg": "90deg", "--radius": "-280px", "--brand-color": "#C13584" }}>
                             <div className="planet-counter">
                                 <div className="planet-glass">
-                                    <img src={insta_icon} alt="Instagram" />
+                                    <img src={insta_icon} alt="Instagram" loading="lazy" />
                                     <span>Instagram</span>
                                 </div>
                             </div>
@@ -70,7 +71,7 @@ const PlatformsWeManage = () => {
                         <div className="planet" style={{ "--orbit-deg": "270deg", "--radius": "-280px", "--brand-color": "#0A66C2" }}>
                             <div className="planet-counter">
                                 <div className="planet-glass">
-                                    <img src={linkedin_icon} alt="LinkedIn" />
+                                    <img src={linkedin_icon} alt="LinkedIn" loading="lazy" />
                                     <span>LinkedIn</span>
                                 </div>
                             </div>
@@ -82,7 +83,7 @@ const PlatformsWeManage = () => {
                         <div className="planet" style={{ "--orbit-deg": "45deg", "--radius": "-370px", "--brand-color": "#1DA1F2" }}>
                             <div className="planet-counter">
                                 <div className="planet-glass">
-                                    <img src={twitter_icon} alt="Twitter" />
+                                    <img src={twitter_icon} alt="Twitter" loading="lazy" />
                                     <span>Twitter</span>
                                 </div>
                             </div>
@@ -90,7 +91,7 @@ const PlatformsWeManage = () => {
                         <div className="planet" style={{ "--orbit-deg": "225deg", "--radius": "-370px", "--brand-color": "#E60023" }}>
                             <div className="planet-counter">
                                 <div className="planet-glass">
-                                    <img src={pinterest_icon} alt="Pinterest" />
+                                    <img src={pinterest_icon} alt="Pinterest" loading="lazy" />
                                     <span>Pinterest</span>
                                 </div>
                             </div>
@@ -102,27 +103,27 @@ const PlatformsWeManage = () => {
                 {/* Mobile Fallback Grid (Glassmorphic) */}
                 <div className="pm-mobile-grid">
                     <div className="pm-mobile-card" style={{ "--brand-color": "#1877F2" }}>
-                        <img src={fb_icon} alt="Facebook" />
+                        <img src={fb_icon} alt="Facebook" loading="lazy" />
                         <h4>Facebook</h4>
                     </div>
                     <div className="pm-mobile-card" style={{ "--brand-color": "#C13584" }}>
-                        <img src={insta_icon} alt="Instagram" />
+                        <img src={insta_icon} alt="Instagram" loading="lazy" />
                         <h4>Instagram</h4>
                     </div>
                     <div className="pm-mobile-card" style={{ "--brand-color": "#0A66C2" }}>
-                        <img src={linkedin_icon} alt="LinkedIn" />
+                        <img src={linkedin_icon} alt="LinkedIn" loading="lazy" />
                         <h4>LinkedIn</h4>
                     </div>
                     <div className="pm-mobile-card" style={{ "--brand-color": "#FF0000" }}>
-                        <img src={youtube_icon} alt="YouTube" />
+                        <img src={youtube_icon} alt="YouTube" loading="lazy" />
                         <h4>YouTube</h4>
                     </div>
                     <div className="pm-mobile-card" style={{ "--brand-color": "#1DA1F2" }}>
-                        <img src={twitter_icon} alt="Twitter" />
+                        <img src={twitter_icon} alt="Twitter" loading="lazy" />
                         <h4>Twitter</h4>
                     </div>
                     <div className="pm-mobile-card" style={{ "--brand-color": "#E60023" }}>
-                        <img src={pinterest_icon} alt="Pinterest" />
+                        <img src={pinterest_icon} alt="Pinterest" loading="lazy" />
                         <h4>Pinterest</h4>
                     </div>
                 </div>

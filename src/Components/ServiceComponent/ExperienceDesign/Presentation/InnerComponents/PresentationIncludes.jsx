@@ -2,12 +2,13 @@ import React from 'react';
 import './presentation.css';
 
 // Import downloaded images
-import inc1 from '../../../../../assets/images/presentation/inc1.jpg';
-import inc2 from '../../../../../assets/images/presentation/inc2.jpg';
-import inc3 from '../../../../../assets/images/presentation/inc3.jpg';
-import inc4 from '../../../../../assets/images/presentation/inc4.jpg';
-import inc5 from '../../../../../assets/images/presentation/inc5.jpg';
-import inc6 from '../../../../../assets/images/presentation/inc6.jpg';
+const inc1 = mediaUrl("assets/images/presentation/inc1.jpg");
+const inc2 = mediaUrl("assets/images/presentation/inc2.jpg");
+const inc3 = mediaUrl("assets/images/presentation/inc3.jpg");
+const inc4 = mediaUrl("assets/images/presentation/inc4.jpg");
+const inc5 = mediaUrl("assets/images/presentation/inc5.jpg");
+const inc6 = mediaUrl("assets/images/presentation/inc6.jpg");
+import { mediaUrl } from "../../../../../config/media";
 
 const PresentationIncludes = () => {
     const panels = [
@@ -65,7 +66,7 @@ const PresentationIncludes = () => {
                                 className="cinematic-acc-panel"
                                 key={index}
                             >
-                                <img src={panel.img} alt={panel.title} className="cinematic-acc-img" />
+                                <img src={panel.img} alt={panel.title} className="cinematic-acc-img" loading="lazy" />
                                 <div className="cinematic-acc-overlay"></div>
 
                                 {/* Idle State Layout */}

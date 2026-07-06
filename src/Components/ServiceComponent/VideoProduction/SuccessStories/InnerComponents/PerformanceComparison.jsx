@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './performance-comparison.css';
-import dmBaseImg from '../../../../../assets/images/dm-2.png';
+const dmBaseImg = mediaUrl("assets/images/dm-2.png");
+import { mediaUrl } from "../../../../../config/media";
 
 const PerformanceComparison = () => {
     const sectionRef = useRef(null);
@@ -55,7 +56,7 @@ const PerformanceComparison = () => {
                     <div className="col-lg-7">
                         <div className="pc-visual pc-reveal" style={{ transitionDelay: '0.2s' }}>
                             <div className="pc-backdrop-image">
-                                <img src={dmBaseImg} alt="Digital Marketing Dashboard" className="img-fluid opacity-25 mix-blend-mode-luminosity rounded-4" />
+                                <img src={dmBaseImg} alt="Digital Marketing Dashboard" className="img-fluid opacity-25 mix-blend-mode-luminosity rounded-4" loading="lazy" />
                             </div>
 
                             <div className="pc-metrics-grid">

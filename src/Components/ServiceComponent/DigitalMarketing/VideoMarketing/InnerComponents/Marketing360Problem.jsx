@@ -23,7 +23,7 @@ const Marketing360Problem = () => {
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop" 
                 alt="Marketing Dashboard Visualization" 
                 className="img-fluid mk360-premium-img" 
-              />
+              loading="lazy" />
               
               {/* Floating decorative badge */}
               <div className="mk360-floating-badge top-right">

@@ -1,15 +1,17 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import shape2 from "../../assets/images/shape2.png";
-import shape3 from "../../assets/images/shape3.png";
-import shape5 from "../../assets/images/shape5.png";
-import shape6 from "../../assets/images/shape6.png";
-import shape7 from "../../assets/images/shape7.png";
-import shape8 from "../../assets/images/shape8.png";
+import { mediaUrl } from "../../config/media";
+const shape2 = mediaUrl("assets/images/shape2.png");
+const shape3 = mediaUrl("assets/images/shape3.png");
+const shape5 = mediaUrl("assets/images/shape5.png");
+const shape6 = mediaUrl("assets/images/shape6.png");
+const shape7 = mediaUrl("assets/images/shape7.png");
+const shape8 = mediaUrl("assets/images/shape8.png");
+
 const ContactBanner = () => {
     return (
         <>
-            <section className="page-title-area contact_page_title">
+            <section className="page-title-area contact_page_title" style={{ backgroundImage: `url(${mediaUrl("assets/images/contact_banner.jpeg")})` }}>
                 <div className="container">
                     <div className="page-title-content">
                         {/* <h1>Contact Us</h1> */}

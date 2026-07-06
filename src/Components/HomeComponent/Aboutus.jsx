@@ -1,12 +1,13 @@
 import React from 'react'
-import aboutImage from "../../assets/images/office_rellocation1.jpeg";
-import creativebgImage from "../../assets/images/creativebg.png";
-import agencypattern from "../../assets/images/agency-pattern.png";
+const aboutImage = mediaUrl("assets/images/office_rellocation1.jpeg");
+const creativebgImage = mediaUrl("assets/images/creativebg.png");
+const agencypattern = mediaUrl("assets/images/agency-pattern.png");
 
-import ca1 from "../../assets/images/ca-1.png";
-import ca2 from "../../assets/images/ca-2.png";
-import ca3 from "../../assets/images/ca-3.png";
-import ca4 from "../../assets/images/ca-4.png";
+const ca1 = mediaUrl("assets/images/ca-1.png");
+const ca2 = mediaUrl("assets/images/ca-2.png");
+const ca3 = mediaUrl("assets/images/ca-3.png");
+const ca4 = mediaUrl("assets/images/ca-4.png");
+import { mediaUrl } from "../../config/media";
 
 const Aboutus = () => {
 
@@ -45,13 +46,13 @@ const Aboutus = () => {
                         <div className="col-xl-6 col-lg-12 col-md-12 order-xl-2 order-lg-1 order-md-1 order-1">
                             <div className='about_img'>
                                 <div className="team-img-full">
-                                    <img src={aboutImage} alt="" />
+                                    <img src={aboutImage} alt="" loading="lazy" />
                                 </div>
                                 <div className="creative-icon">
-                                    <img src={ca1} alt="" />
-                                    <img src={ca2} alt="" />
-                                    <img src={ca3} alt="" />
-                                    <img src={ca4} alt="" />
+                                    <img src={ca1} alt="" loading="lazy" />
+                                    <img src={ca2} alt="" loading="lazy" />
+                                    <img src={ca3} alt="" loading="lazy" />
+                                    <img src={ca4} alt="" loading="lazy" />
                                 </div>
                             </div>
 
@@ -59,7 +60,7 @@ const Aboutus = () => {
                         </div>
 
                         <div className="bg-patter-crea">
-                            <img src={agencypattern} alt="Creative Agency pattern" />
+                            <img src={agencypattern} alt="Creative Agency pattern" loading="lazy" />
                         </div>
 
                     </div>

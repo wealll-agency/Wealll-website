@@ -1,8 +1,9 @@
 import React from 'react';
 import './email-campaigns.css';
-import magic_reach from "../../../../../assets/images/magic_reach.png";
-import magic_engage from "../../../../../assets/images/magic_engage.png";
-import magic_grow from "../../../../../assets/images/magic_grow.png";
+const magic_reach = mediaUrl("assets/images/magic_reach.png");
+const magic_engage = mediaUrl("assets/images/magic_engage.png");
+const magic_grow = mediaUrl("assets/images/magic_grow.png");
+import { mediaUrl } from "../../../../../config/media";
 
 const EmailCampaigns = () => {
     return (
@@ -20,7 +21,7 @@ const EmailCampaigns = () => {
                     <div className="col-md-4 mb-4">
                         <div className="email-magic-card">
                             <div className="email-magic-icon-wrapper">
-                                <img src={magic_reach} alt="Targeted Segmentation" />
+                                <img src={magic_reach} alt="Targeted Segmentation" loading="lazy" />
                             </div>
                             <h3>Targeted Segmentation</h3>
                             <p>
@@ -31,7 +32,7 @@ const EmailCampaigns = () => {
                     <div className="col-md-4 mb-4">
                         <div className="email-magic-card">
                             <div className="email-magic-icon-wrapper">
-                                <img src={magic_engage} alt="Automated Perfection" />
+                                <img src={magic_engage} alt="Automated Perfection" loading="lazy" />
                             </div>
                             <h3>Automated Perfection</h3>
                             <p>
@@ -42,7 +43,7 @@ const EmailCampaigns = () => {
                     <div className="col-md-4 mb-4">
                         <div className="email-magic-card">
                             <div className="email-magic-icon-wrapper">
-                                <img src={magic_grow} alt="High-Converting Copy" />
+                                <img src={magic_grow} alt="High-Converting Copy" loading="lazy" />
                             </div>
                             <h3>High-Converting Copy</h3>
                             <p>

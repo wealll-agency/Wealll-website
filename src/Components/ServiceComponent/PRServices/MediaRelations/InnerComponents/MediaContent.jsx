@@ -2,10 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import "./media-content.css";
 
 // Media Assets
-import planningImg from "../../../../../assets/images/cm-mr-planning.png";
-import outreachImg from "../../../../../assets/images/cm-mr-outreach.png";
-import pressVideo from "../../../../../assets/Video/WE_ALLL_Video_Final.mp4"; // using existing showreel as cool tech bg
+const planningImg = mediaUrl("assets/images/cm-mr-planning.png");
+const outreachImg = mediaUrl("assets/images/cm-mr-outreach.png");
+const pressVideo = mediaUrl("assets/Video/WE_ALLL_Video_Final.mp4"); // using existing showreel as cool tech bg
 import BannerComponent from "../../../CommonComponents/BannerComponent";
+import { mediaUrl } from "../../../../../config/media";
 
 const MediaContent = () => {
   const [activePrep, setActivePrep] = useState(0);
@@ -104,7 +105,7 @@ const MediaContent = () => {
                 <img
                   src={planningImg}
                   alt="Media footprint and routing strategy"
-                />
+                loading="lazy" />
                 <div className="mr-float-tag">
                   <span style={{ color: "var(--mr-primary)" }}>●</span> Target
                   Acquired
@@ -117,7 +118,7 @@ const MediaContent = () => {
 
       {/* 2. Press Release Development */}
       <section className="mr-press-section">
-        <video autoPlay loop muted playsInline className="mr-video-bg">
+        <video autoPlay loop muted playsInline className="mr-video-bg" preload="metadata">
           <source src={pressVideo} type="video/mp4" />
         </video>
         <div className="mr-video-overlay"></div>

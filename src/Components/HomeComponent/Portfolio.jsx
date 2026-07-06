@@ -1,39 +1,40 @@
 import React from "react";
-import portfolio_logo1 from "../../assets/images/portfolio_logo1.jpeg";
-import portfolio_logo2 from "../../assets/images/portfolio_logo2.jpeg";
-import portfolio_logo3 from "../../assets/images/portfolio_logo3.jpeg";
-import portfolio_logo4 from "../../assets/images/portfolio_logo4.jpeg";
-import portfolio_logo5 from "../../assets/images/portfolio_logo5.jpeg";
-import portfolio_logo6 from "../../assets/images/portfolio_logo6.jpeg";
-import portfolio_logo7 from "../../assets/images/portfolio_logo7.jpeg";
-import portfolio_logo8 from "../../assets/images/portfolio_logo8.jpeg";
-import portfolio_logo9 from "../../assets/images/portfolio_logo9.jpeg";
-import portfolio_logo10 from "../../assets/images/portfolio_logo10.png";
+const portfolio_logo1 = mediaUrl("assets/images/portfolio_logo1.jpeg");
+const portfolio_logo2 = mediaUrl("assets/images/portfolio_logo2.jpeg");
+const portfolio_logo3 = mediaUrl("assets/images/portfolio_logo3.jpeg");
+const portfolio_logo4 = mediaUrl("assets/images/portfolio_logo4.jpeg");
+const portfolio_logo5 = mediaUrl("assets/images/portfolio_logo5.jpeg");
+const portfolio_logo6 = mediaUrl("assets/images/portfolio_logo6.jpeg");
+const portfolio_logo7 = mediaUrl("assets/images/portfolio_logo7.jpeg");
+const portfolio_logo8 = mediaUrl("assets/images/portfolio_logo8.jpeg");
+const portfolio_logo9 = mediaUrl("assets/images/portfolio_logo9.jpeg");
+const portfolio_logo10 = mediaUrl("assets/images/portfolio_logo10.png");
 
-import portfolio_branding1 from "../../assets/images/portfolio/logodesign/Bani.png";
-import portfolio_branding2 from "../../assets/images/portfolio/logodesign/portfolio_branding2.png";
-import portfolio_branding3 from "../../assets/images/portfolio/logodesign/jj.png";
-import portfolio_branding4 from "../../assets/images/portfolio/logodesign/Hotel-icon.png";
-import portfolio_branding5 from "../../assets/images/portfolio/logodesign/khukumoni.jpg";
-import portfolio_branding6 from "../../assets/images/portfolio/logodesign/Karma.png";
-import portfolio_branding7 from "../../assets/images/portfolio/logodesign/Jalan-Chandi-wala.png";
-import portfolio_branding8 from "../../assets/images/portfolio/logodesign/Max glow.png";
-import portfolio_branding9 from "../../assets/images/portfolio/logodesign/Pro.png";
-import portfolio_branding10 from "../../assets/images/portfolio/logodesign/Rb-con.png";
+const portfolio_branding1 = mediaUrl("assets/images/portfolio/logodesign/Bani.png");
+const portfolio_branding2 = mediaUrl("assets/images/portfolio/logodesign/portfolio_branding2.png");
+const portfolio_branding3 = mediaUrl("assets/images/portfolio/logodesign/jj.png");
+const portfolio_branding4 = mediaUrl("assets/images/portfolio/logodesign/Hotel-icon.png");
+const portfolio_branding5 = mediaUrl("assets/images/portfolio/logodesign/khukumoni.jpg");
+const portfolio_branding6 = mediaUrl("assets/images/portfolio/logodesign/Karma.png");
+const portfolio_branding7 = mediaUrl("assets/images/portfolio/logodesign/Jalan-Chandi-wala.png");
+const portfolio_branding8 = mediaUrl("assets/images/portfolio/logodesign/Max glow.png");
+const portfolio_branding9 = mediaUrl("assets/images/portfolio/logodesign/Pro.png");
+const portfolio_branding10 = mediaUrl("assets/images/portfolio/logodesign/Rb-con.png");
 
-import portfolio_brand1 from "../../assets/images/portfolio_brand1.jpeg";
-import portfolio_brand2 from "../../assets/images/portfolio_brand2.jpeg";
+const portfolio_brand1 = mediaUrl("assets/images/portfolio_brand1.jpeg");
+const portfolio_brand2 = mediaUrl("assets/images/portfolio_brand2.jpeg");
 
-import portfolio_app1 from "../../assets/images/portfolio_app1.jpeg";
-import portfolio_app2 from "../../assets/images/portfolio_app2.jpeg";
+const portfolio_app1 = mediaUrl("assets/images/portfolio_app1.jpeg");
+const portfolio_app2 = mediaUrl("assets/images/portfolio_app2.jpeg");
 
-import portfolio_software1 from "../../assets/images/portfolio_software1.jpeg";
+const portfolio_software1 = mediaUrl("assets/images/portfolio_software1.jpeg");
 
-import portfolio_website1 from "../../assets/images/portfolio_website1.jpeg";
-import portfolio_website2 from "../../assets/images/portfolio_website2.jpeg";
-import portfolio_website3 from "../../assets/images/portfolio_website3.jpeg";
-import portfolio_website4 from "../../assets/images/portfolio_website4.jpeg";
-import portfolio_website5 from "../../assets/images/portfolio_website5.jpeg";
+const portfolio_website1 = mediaUrl("assets/images/portfolio_website1.jpeg");
+const portfolio_website2 = mediaUrl("assets/images/portfolio_website2.jpeg");
+const portfolio_website3 = mediaUrl("assets/images/portfolio_website3.jpeg");
+const portfolio_website4 = mediaUrl("assets/images/portfolio_website4.jpeg");
+const portfolio_website5 = mediaUrl("assets/images/portfolio_website5.jpeg");
+import { mediaUrl } from "../../config/media";
 
 const
     Portfolio = () => {
@@ -78,61 +79,61 @@ const
                                     <div className="row">
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_logo1} alt="" />
+                                                <img src={portfolio_logo1} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_logo2} alt="" />
+                                                <img src={portfolio_logo2} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_logo3} alt="" />
+                                                <img src={portfolio_logo3} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_logo4} alt="" />
+                                                <img src={portfolio_logo4} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_logo5} alt="" />
+                                                <img src={portfolio_logo5} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_logo6} alt="" />
+                                                <img src={portfolio_logo6} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_logo7} alt="" />
+                                                <img src={portfolio_logo7} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_logo8} alt="" />
+                                                <img src={portfolio_logo8} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_logo9} alt="" />
+                                                <img src={portfolio_logo9} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_logo10} alt="" />
+                                                <img src={portfolio_logo10} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
@@ -142,63 +143,63 @@ const
                                     <div className="row">
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_branding1} alt="" />
+                                                <img src={portfolio_branding1} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_branding2} alt="" />
+                                                <img src={portfolio_branding2} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_branding10} alt="" />
+                                                <img src={portfolio_branding10} alt="" loading="lazy" />
 
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_branding4} alt="" />
+                                                <img src={portfolio_branding4} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_branding5} alt="" />
+                                                <img src={portfolio_branding5} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_branding6} alt="" />
+                                                <img src={portfolio_branding6} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_branding7} alt="" />
+                                                <img src={portfolio_branding7} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_branding8} alt="" />
+                                                <img src={portfolio_branding8} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
 
-                                                <img src={portfolio_branding3} alt="" />
+                                                <img src={portfolio_branding3} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_branding9} alt="" />
+                                                <img src={portfolio_branding9} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
@@ -209,12 +210,12 @@ const
                                     <div className="row justify-content-center">
                                         <div className="col-md-3">
                                             <div className="inner_box">
-                                                <img src={portfolio_brand1} alt="" />
+                                                <img src={portfolio_brand1} alt="" loading="lazy" />
                                             </div>
                                         </div>
                                         <div className="col-md-3">
                                             <div className="inner_box">
-                                                <img src={portfolio_brand2} className="app_img" alt="" />
+                                                <img src={portfolio_brand2} className="app_img" alt="" loading="lazy" />
                                             </div>
                                         </div>
                                     </div>
@@ -225,12 +226,12 @@ const
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="inner_box">
-                                                <img src={portfolio_app1} alt="" />
+                                                <img src={portfolio_app1} alt="" loading="lazy" />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
                                             <div className="inner_box">
-                                                <img src={portfolio_app2} className="app_img" alt="" />
+                                                <img src={portfolio_app2} className="app_img" alt="" loading="lazy" />
                                             </div>
                                         </div>
                                     </div>
@@ -240,7 +241,7 @@ const
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="inner_box">
-                                                <img src={portfolio_software1} alt="" />
+                                                <img src={portfolio_software1} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
@@ -251,31 +252,31 @@ const
                                     <div className="row desktop_website_row">
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_website1} alt="" />
+                                                <img src={portfolio_website1} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_website2} alt="" />
+                                                <img src={portfolio_website2} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_website3} alt="" />
+                                                <img src={portfolio_website3} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_website4} alt="" />
+                                                <img src={portfolio_website4} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_website5} alt="" />
+                                                <img src={portfolio_website5} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
@@ -285,13 +286,13 @@ const
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_website3} alt="" />
+                                                <img src={portfolio_website3} alt="" loading="lazy" />
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_website4} alt="" />
+                                                <img src={portfolio_website4} alt="" loading="lazy" />
                                             </div>
                                         </div>
 

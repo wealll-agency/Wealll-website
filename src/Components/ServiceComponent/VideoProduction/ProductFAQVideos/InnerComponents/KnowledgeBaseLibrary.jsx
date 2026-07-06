@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './knowledge-base-library.css';
-import demoVideo from '../../../../../assets/Video/Wealll_hero.mp4';
+const demoVideo = mediaUrl("assets/Video/Wealll_hero.mp4");
+import { mediaUrl } from "../../../../../config/media";
 
 const KnowledgeBaseLibrary = () => {
     const sectionRef = useRef(null);
@@ -62,7 +63,7 @@ const KnowledgeBaseLibrary = () => {
                                 </div>
                             </div>
                             <div className="kb-portal-body">
-                                <video src={demoVideo} autoPlay loop muted playsInline className="kb-main-video"></video>
+                                <video src={demoVideo} autoPlay loop muted playsInline className="kb-main-video" preload="metadata"></video>
                                 <div className="kb-playing-badge">
                                     <span className="live-dot"></span> Now Playing: Onboarding Guide
                                 </div>

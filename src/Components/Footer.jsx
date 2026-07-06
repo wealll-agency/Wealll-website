@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import MainLogo from "../assets/images/Wealll_new.png";
-import ReviewImage1 from "../assets/images/f-clutch-review_result.webp";
-import ReviewImage2 from "../assets/images/f-glassdoor-review_result.webp";
-import ReviewImage3 from "../assets/images/f-google-review_result.webp";
-import GoogleStar from "../assets/images/star-google_result.webp";
-import AmbitionBox from "../assets/images/ambitionbox.png";
+const MainLogo = mediaUrl("assets/images/Wealll_new.png");
+const ReviewImage1 = mediaUrl("assets/images/f-clutch-review_result.webp");
+const ReviewImage2 = mediaUrl("assets/images/f-glassdoor-review_result.webp");
+const ReviewImage3 = mediaUrl("assets/images/f-google-review_result.webp");
+const GoogleStar = mediaUrl("assets/images/star-google_result.webp");
+const AmbitionBox = mediaUrl("assets/images/ambitionbox.png");
+import { mediaUrl } from "../config/media";
 
 
 const Footer = () => {
@@ -104,10 +105,10 @@ const Footer = () => {
                                     <ul>
                                         <li>
                                             <a href="#" target="_blank">
-                                                <img src={ReviewImage1} alt="F Clutch Review Result" />
+                                                <img src={ReviewImage1} alt="F Clutch Review Result" loading="lazy" />
                                                 <div className="replte-inner">
                                                     <div className="replte-star">
-                                                        <img src={GoogleStar} alt="Star Google Result" />
+                                                        <img src={GoogleStar} alt="Star Google Result" loading="lazy" />
                                                     </div>
                                                     <div className="replte-count">
                                                         <h5>(4.9/5)</h5>
@@ -117,10 +118,10 @@ const Footer = () => {
                                         </li>
                                         <li>
                                             <a href="#" target="_blank">
-                                                <img src={ReviewImage2} alt="F Glassdoor Review Result" />
+                                                <img src={ReviewImage2} alt="F Glassdoor Review Result" loading="lazy" />
                                                 <div className="replte-inner">
                                                     <div className="replte-star">
-                                                        <img src={GoogleStar} alt="Star Google Result" />
+                                                        <img src={GoogleStar} alt="Star Google Result" loading="lazy" />
                                                     </div>
                                                     <div className="replte-count">
                                                         <h5>(4.9/5)</h5>
@@ -130,10 +131,10 @@ const Footer = () => {
                                         </li>
                                         <li>
                                             <a href="#" target="_blank">
-                                                <img src={ReviewImage3} alt="F Google Review Result" />
+                                                <img src={ReviewImage3} alt="F Google Review Result" loading="lazy" />
                                                 <div className="replte-inner">
                                                     <div className="replte-star">
-                                                        <img src={GoogleStar} alt="Star Google Result" />
+                                                        <img src={GoogleStar} alt="Star Google Result" loading="lazy" />
                                                     </div>
                                                     <div className="replte-count">
                                                         <h5>(4.9/5)</h5>
@@ -143,10 +144,10 @@ const Footer = () => {
                                         </li>
                                         <li>
                                             <a href="#" target="_blank">
-                                                <img src={AmbitionBox} alt="Ambition Box" />
+                                                <img src={AmbitionBox} alt="Ambition Box" loading="lazy" />
                                                 <div className="replte-inner">
                                                     <div className="replte-star">
-                                                        <img src={GoogleStar} alt="Star Google Result" />
+                                                        <img src={GoogleStar} alt="Star Google Result" loading="lazy" />
                                                     </div>
                                                     <div className="replte-count">
                                                         <h5>(4.9/5)</h5>
@@ -173,7 +174,7 @@ const Footer = () => {
                                 <div className="footer-logo">
 
                                     <a href="/" className="w--current">
-                                        <img className="footer-logo" src={MainLogo} alt="" /></a>
+                                        <img className="footer-logo" src={MainLogo} alt="" loading="lazy" /></a>
 
                                 </div>
 

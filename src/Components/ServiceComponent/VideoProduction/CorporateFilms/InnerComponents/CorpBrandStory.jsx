@@ -1,8 +1,9 @@
 import React from 'react';
 import '../corporate-films.css';
-import commercialPoster from '../../../../../assets/images/commercial_poster.jpg';
-import aboutVideo from '../../../../../assets/Video/WEALLL.mp4';
+const commercialPoster = mediaUrl("assets/images/commercial_poster.jpg");
+const aboutVideo = mediaUrl("assets/Video/WEALLL.mp4");
 import BannerComponent from '../../../CommonComponents/BannerComponent';
+import { mediaUrl } from "../../../../../config/media";
 
 const CorpBrandStory = () => {
     return (
@@ -33,7 +34,7 @@ const CorpBrandStory = () => {
                         </div>
                         <div className="col-lg-6">
                             <div className="brand-story-video-container">
-                                <video autoPlay loop muted playsInline poster={commercialPoster}>
+                                <video autoPlay loop muted playsInline poster={commercialPoster} preload="metadata">
                                     <source src={aboutVideo} type="video/mp4" />
                                 </video>
                                 <div className="brand-story-video-overlay"></div>

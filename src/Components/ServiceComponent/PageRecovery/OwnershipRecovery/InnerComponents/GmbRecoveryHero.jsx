@@ -3,8 +3,9 @@ import { motion } from 'framer-motion';
 import './gmb-recovery-dark.css';
 
 // Import images
-import problemImg from '../../../../../assets/images/gmb_ownership_problem.png';
-import solutionImg from '../../../../../assets/images/gmb_ownership_solution.png';
+const problemImg = mediaUrl("assets/images/gmb_ownership_problem.png");
+const solutionImg = mediaUrl("assets/images/gmb_ownership_solution.png");
+import { mediaUrl } from "../../../../../config/media";
 
 const GmbRecoveryHero = () => {
 

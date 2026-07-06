@@ -1,6 +1,7 @@
 import React from 'react';
 import './portfolio-inclusions.css';
-import MobilePortfolio from '../../../../../assets/images/modern-portfolio-showcase.jpg';
+const MobilePortfolio = mediaUrl("assets/images/modern-portfolio-showcase.jpg");
+import { mediaUrl } from "../../../../../config/media";
 
 const PortfolioInclusions = () => {
     const inclusions = [
@@ -45,7 +46,7 @@ const PortfolioInclusions = () => {
 
                     <div className="inclusions-visual">
                         <div className="mockup-image-wrapper">
-                            <img src={MobilePortfolio} alt="Mobile Portfolio Mockup" className="floating-image" />
+                            <img src={MobilePortfolio} alt="Mobile Portfolio Mockup" className="floating-image" loading="lazy" />
                             <div className="mockup-glow"></div>
                         </div>
                     </div>

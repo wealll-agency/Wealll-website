@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import './client-growth.css';
-import growthImg1 from '../../../../../assets/images/growthstep1.jpg';
-import growthImg2 from '../../../../../assets/images/growthstep2.jpg';
-import growthImg3 from '../../../../../assets/images/growthstep3.jpg';
+const growthImg1 = mediaUrl("assets/images/growthstep1.jpg");
+const growthImg2 = mediaUrl("assets/images/growthstep2.jpg");
+const growthImg3 = mediaUrl("assets/images/growthstep3.jpg");
+import { mediaUrl } from "../../../../../config/media";
 
 const ClientGrowth = () => {
     const sectionRef = useRef(null);
@@ -69,13 +70,13 @@ const ClientGrowth = () => {
                         <div className="cg-visual-grid">
                             <div className="cg-grid-col cg-col-left cg-reveal" style={{ transitionDelay: '0.3s' }}>
                                 <div className="cg-img-card">
-                                    <img src={growthImg1} alt="Growth" />
+                                    <img src={growthImg1} alt="Growth" loading="lazy" />
                                     <div className="cg-overlay">
                                         <div className="cg-badge">+150% Leads</div>
                                     </div>
                                 </div>
                                 <div className="cg-img-card cg-card-small mt-4">
-                                    <img src={growthImg3} alt="Strategy" />
+                                    <img src={growthImg3} alt="Strategy" loading="lazy" />
                                 </div>
                             </div>
                             <div className="cg-grid-col cg-col-right cg-reveal" style={{ transitionDelay: '0.5s' }}>
@@ -90,7 +91,7 @@ const ClientGrowth = () => {
                                     <span>Client Retention</span>
                                 </div>
                                 <div className="cg-img-card">
-                                    <img src={growthImg2} alt="Success" />
+                                    <img src={growthImg2} alt="Success" loading="lazy" />
                                     <div className="cg-overlay">
                                         <div className="cg-badge cg-badge-alt">Traffic Doubled</div>
                                     </div>

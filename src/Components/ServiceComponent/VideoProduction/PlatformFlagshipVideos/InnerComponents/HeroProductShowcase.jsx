@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './hero-product-showcase.css';
-import dummyVideo from '../../../../../assets/Video/Wealll_hero.mp4';
+const dummyVideo = mediaUrl("assets/Video/Wealll_hero.mp4");
+import { mediaUrl } from "../../../../../config/media";
 
 const HeroProductShowcase = () => {
     const sectionRef = useRef(null);
@@ -96,7 +97,7 @@ const HeroProductShowcase = () => {
                                         src={dummyVideo}
                                         autoPlay loop muted playsInline
                                         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.4, zIndex: 0, borderRadius: 'inherit' }}
-                                    ></video>
+                                     preload="metadata"></video>
                                     <div className="hps-sidebar" style={{ position: 'relative', zIndex: 1 }}>
                                         <span className="reveal-widget" style={{ transitionDelay: '0.6s' }}></span>
                                         <span className="reveal-widget" style={{ transitionDelay: '0.7s' }}></span>
@@ -206,7 +207,7 @@ const HeroProductShowcase = () => {
                             src={dummyVideo}
                             controls autoPlay
                             style={{ width: '100%', borderRadius: '10px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}
-                        ></video>
+                         preload="metadata"></video>
                     </div>
                 </div>
             )}

@@ -1,5 +1,6 @@
 import React from "react";
-import map1 from "../../assets/images/bg-map.png";
+const map1 = mediaUrl("assets/images/bg-map.png");
+import { mediaUrl } from "../../config/media";
 const ContactForm = () => {
   return (
     <>
@@ -175,7 +176,7 @@ const ContactForm = () => {
 
         {/* Background Map */}
         <div className="bg-map">
-          <img src={map1} alt="image" />
+          <img src={map1} alt="image" loading="lazy" />
         </div>
       </section>
 

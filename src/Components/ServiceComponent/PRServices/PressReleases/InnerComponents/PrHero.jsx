@@ -1,6 +1,7 @@
 import React from "react";
 import "./press-release.css";
-import heroImg from "../../../../../assets/images/pe-hero.png";
+const heroImg = mediaUrl("assets/images/pe-hero.png");
+import { mediaUrl } from "../../../../../config/media";
 
 const PrHero = () => {
   return (

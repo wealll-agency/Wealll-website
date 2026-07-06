@@ -61,7 +61,7 @@ const EventSeminar = () => {
                     <div className="eba-acoustic-grid eba-delay-2" ref={addToRefs}>
                         {acousticPanels.map((panel, idx) => (
                             <div className="eba-acoustic-col" key={idx}>
-                                <img src={panel.img} alt={panel.title} className="eba-ac-img" />
+                                <img src={panel.img} alt={panel.title} className="eba-ac-img" loading="lazy" />
                                 <div className="eba-ac-content">
                                     <div className="eba-ac-title">{panel.title}</div>
                                     <div className="eba-ac-desc">{panel.desc}</div>

@@ -91,19 +91,19 @@ const EventThemeBranding = () => {
 
                     <div className="eba-env-grid eba-delay-2" ref={addToRefs}>
                         <div className="eba-env-panel">
-                            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Entry Arches" className="eba-env-img" />
+                            <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Entry Arches" className="eba-env-img" loading="lazy" />
                             <div className="eba-env-title">Entry Arches & Directionals</div>
                         </div>
                         <div className="eba-env-panel">
-                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Stage Backdrops" className="eba-env-img" />
+                            <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Stage Backdrops" className="eba-env-img" loading="lazy" />
                             <div className="eba-env-title">Stage & Screens Integration</div>
                         </div>
                         <div className="eba-env-panel">
-                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Photo Booths" className="eba-env-img" />
+                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Photo Booths" className="eba-env-img" loading="lazy" />
                             <div className="eba-env-title">Photo Booth Experiences</div>
                         </div>
                         <div className="eba-env-panel">
-                            <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Merchandise" className="eba-env-img" />
+                            <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80" alt="Merchandise" className="eba-env-img" loading="lazy" />
                             <div className="eba-env-title">Merch & Sponsor Branding</div>
                         </div>
                     </div>

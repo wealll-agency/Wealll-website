@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './investor-presentation.css';
-import dummyVideo from '../../../../../assets/Video/Wealll_hero.mp4';
+const dummyVideo = mediaUrl("assets/Video/Wealll_hero.mp4");
+import { mediaUrl } from "../../../../../config/media";
 
 const InvestorPresentation = () => {
     const sectionRef = useRef(null);
@@ -101,7 +102,7 @@ const InvestorPresentation = () => {
                                         src={dummyVideo}
                                         autoPlay loop muted playsInline
                                         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.5, zIndex: 0 }}
-                                    ></video>
+                                     preload="metadata"></video>
                                     <div className="inv-play-btn" style={{ position: 'relative', zIndex: 1, cursor: 'pointer' }} onClick={() => setShowModal(true)}>
                                         <i className="fa-solid fa-play"></i>
                                     </div>
@@ -138,7 +139,7 @@ const InvestorPresentation = () => {
                             src={dummyVideo}
                             controls autoPlay
                             style={{ width: '100%', borderRadius: '10px', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}
-                        ></video>
+                         preload="metadata"></video>
                     </div>
                 </div>
             )}

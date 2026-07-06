@@ -1,19 +1,20 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import MainLogo from "../assets/images/Wealll_new.png";
-import MiniLogo from "../assets/images/Wealll_mini.png";
-import navCall from "../assets/images/nav-call.svg";
-import menuImg from "../assets/images/menu.svg";
-import menuclose from "../assets/images/close-m.svg";
+const MainLogo = mediaUrl("assets/images/Wealll_new.png");
+const MiniLogo = mediaUrl("assets/images/Wealll_mini.png");
+const navCall = mediaUrl("assets/images/nav-call.svg");
+const menuImg = mediaUrl("assets/images/menu.svg");
+const menuclose = mediaUrl("assets/images/close-m.svg");
 
-import megamenu1 from "../assets/images/megamenu1.png";
-import megamenu2 from "../assets/images/megamenu2.png";
-import megamenu3 from "../assets/images/megamenu3.png";
-import megamenu4 from "../assets/images/megamenu4.png";
-import megamenu5 from "../assets/images/megamenu5.png";
-import megamenu6 from "../assets/images/megamenu6.png";
-import megamenu7 from "../assets/images/megamenu7.png";
-import megamenu8 from "../assets/images/megamenu8.png";
+const megamenu1 = mediaUrl("assets/images/megamenu1.png");
+const megamenu2 = mediaUrl("assets/images/megamenu2.png");
+const megamenu3 = mediaUrl("assets/images/megamenu3.png");
+const megamenu4 = mediaUrl("assets/images/megamenu4.png");
+const megamenu5 = mediaUrl("assets/images/megamenu5.png");
+const megamenu6 = mediaUrl("assets/images/megamenu6.png");
+const megamenu7 = mediaUrl("assets/images/megamenu7.png");
+const megamenu8 = mediaUrl("assets/images/megamenu8.png");
+import { mediaUrl } from "../config/media";
 
 const Header = () => {
   useEffect(() => {
@@ -63,11 +64,11 @@ const Header = () => {
             <div className="navlogo-full-wrap w-inline-block">
               <div className="navlogo-full-mask">
                 <Link to="/">
-                  <img src={MainLogo} alt="Logo" className="navlogo-full" />
+                  <img src={MainLogo} alt="Logo" className="navlogo-full" loading="lazy" />
                 </Link>
               </div>
               <Link to="/">
-                <img src={MiniLogo} alt="Logo" className="navlogo-mark" />
+                <img src={MiniLogo} alt="Logo" className="navlogo-mark" loading="lazy" />
               </Link>
             </div>
 
@@ -91,7 +92,7 @@ const Header = () => {
                           <ul className="nav-tab">
                             <li className="show">
                               <a href="#">
-                                <img src={megamenu4} alt="" />
+                                <img src={megamenu4} alt="" loading="lazy" />
                                 <span>Digital Marketing</span>
                               </a>
                               <ul className="nav-box">
@@ -129,7 +130,7 @@ const Header = () => {
                             </li>
                             <li>
                               <a href="#">
-                                <img src={megamenu1} alt="" />
+                                <img src={megamenu1} alt="" loading="lazy" />
                                 <span>Content Creation</span>
                               </a>
                               <ul className="nav-box">
@@ -167,7 +168,7 @@ const Header = () => {
                             </li>
                             <li>
                               <a href="#">
-                                <img src={megamenu3} alt="" />
+                                <img src={megamenu3} alt="" loading="lazy" />
                                 <span>Experience Design</span>
                               </a>
                               <ul className="nav-box">
@@ -213,7 +214,7 @@ const Header = () => {
                             </li>
                             <li>
                               <a href="#">
-                                <img src={megamenu2} alt="" />
+                                <img src={megamenu2} alt="" loading="lazy" />
                                 <span>Video Production</span>
                               </a>
                               <ul className="nav-box">
@@ -266,7 +267,7 @@ const Header = () => {
                             </li>
                             <li>
                               <a href="#">
-                                <img src={megamenu7} alt="" />
+                                <img src={megamenu7} alt="" loading="lazy" />
                                 <span>PR Services</span>
                               </a>
                               <ul className="nav-box">
@@ -294,7 +295,7 @@ const Header = () => {
                             </li>
                             <li>
                               <a href="#">
-                                <img src={megamenu8} alt="" />
+                                <img src={megamenu8} alt="" loading="lazy" />
                                 <span>Influencer Marketing</span>
                               </a>
                               <ul className="nav-box">
@@ -337,7 +338,7 @@ const Header = () => {
                             </li>
                             <li>
                               <a href="#">
-                                <img src={megamenu5} alt="" />
+                                <img src={megamenu5} alt="" loading="lazy" />
                                 <span>Development</span>
                               </a>
                               <ul className="nav-box">
@@ -401,7 +402,7 @@ const Header = () => {
                             </li>
                             <li>
                               <a href="#">
-                                <img src={megamenu6} alt="" />
+                                <img src={megamenu6} alt="" loading="lazy" />
                                 <span>Page Recovery</span>
                               </a>
                               <ul className="nav-box">
@@ -487,7 +488,7 @@ const Header = () => {
                   href="#"
                   className="nav-menu-logo-link w-inline-block"
                 >
-                  <img src={MainLogo} alt="Logo" className="navlogo-full" />
+                  <img src={MainLogo} alt="Logo" className="navlogo-full" loading="lazy" />
                 </a>
 
                 <div
@@ -546,7 +547,7 @@ const Header = () => {
                           <ul className="nav-tab">
                             <li className="show">
                               <a href="#">
-                                <img src={megamenu4} alt="" />
+                                <img src={megamenu4} alt="" loading="lazy" />
                                 <span>Digital Marketing</span>
                               </a>
 
@@ -585,7 +586,7 @@ const Header = () => {
                             </li>
                             <li>
                               <a href="#">
-                                <img src={megamenu1} alt="" />
+                                <img src={megamenu1} alt="" loading="lazy" />
                                 <span>Content Creation</span>
                               </a>
                               <ul className="nav-box">
@@ -623,7 +624,7 @@ const Header = () => {
                             </li>
                             <li>
                               <a href="#">
-                                <img src={megamenu3} alt="" />
+                                <img src={megamenu3} alt="" loading="lazy" />
                                 <span>Experience Design</span>
                               </a>
                               <ul className="nav-box">
@@ -669,7 +670,7 @@ const Header = () => {
                             </li>
                             <li>
                               <a href="#">
-                                <img src={megamenu2} alt="" />
+                                <img src={megamenu2} alt="" loading="lazy" />
                                 <span>Video Production</span>
                               </a>
                               <ul className="nav-box">
@@ -722,7 +723,7 @@ const Header = () => {
                             </li>
                             <li>
                               <a href="#">
-                                <img src={megamenu7} alt="" />
+                                <img src={megamenu7} alt="" loading="lazy" />
                                 <span>PR Services</span>
                               </a>
                               <ul className="nav-box">
@@ -750,7 +751,7 @@ const Header = () => {
                             </li>
                             <li>
                               <a href="#">
-                                <img src={megamenu8} alt="" />
+                                <img src={megamenu8} alt="" loading="lazy" />
                                 <span>Influencer Marketing</span>
                               </a>
                               <ul className="nav-box">
@@ -793,7 +794,7 @@ const Header = () => {
                             </li>
                             <li>
                               <a href="#">
-                                <img src={megamenu5} alt="" />
+                                <img src={megamenu5} alt="" loading="lazy" />
                                 <span>Development</span>
                               </a>
                               <ul className="nav-box">
@@ -858,7 +859,7 @@ const Header = () => {
                             </li>
                             <li>
                               <a href="#">
-                                <img src={megamenu6} alt="" />
+                                <img src={megamenu6} alt="" loading="lazy" />
                                 <span>Page Recovery</span>
                               </a>
                               <ul className="nav-box">

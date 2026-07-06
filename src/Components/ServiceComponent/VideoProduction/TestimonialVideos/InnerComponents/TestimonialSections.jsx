@@ -2,14 +2,15 @@ import React, { useEffect, useRef, useState } from "react";
 import "./testimonial-videos.css";
 
 // Importing the generated cinematic assets
-import img1 from "../../../../../assets/images/testimonial_customer_exp_1772799592410.png";
-import img2 from "../../../../../assets/images/testimonial_success_story_1772799633035.png";
-import img3 from "../../../../../assets/images/testimonial_founder_1772799651082.png";
-import img4 from "../../../../../assets/images/testimonial_interview_1772799683120.png";
-import img5 from "../../../../../assets/images/testimonial_social_proof_1772799701057.png";
-import img6 from "../../../../../assets/images/testimonial_marketing_1772799760599.png";
-import dummyVideo from "../../../../../assets/Video/about_video.mp4";
+const img1 = mediaUrl("assets/images/testimonial_customer_exp_1772799592410.png");
+const img2 = mediaUrl("assets/images/testimonial_success_story_1772799633035.png");
+const img3 = mediaUrl("assets/images/testimonial_founder_1772799651082.png");
+const img4 = mediaUrl("assets/images/testimonial_interview_1772799683120.png");
+const img5 = mediaUrl("assets/images/testimonial_social_proof_1772799701057.png");
+const img6 = mediaUrl("assets/images/testimonial_marketing_1772799760599.png");
+const dummyVideo = mediaUrl("assets/Video/about_video.mp4");
 import BannerComponent from "../../../CommonComponents/BannerComponent";
+import { mediaUrl } from "../../../../../config/media";
 
 const testimonialData = [
   {
@@ -164,7 +165,7 @@ const TestimonialSections = () => {
                     src={section.img}
                     alt={section.title}
                     className="tm-video-thumbnail"
-                  />
+                  loading="lazy" />
 
                   {/* Play Button Overlay */}
                   <div className="tm-play-btn-wrapper">
@@ -229,7 +230,7 @@ const TestimonialSections = () => {
             >
               <i className="fa-solid fa-xmark"></i>
             </button>
-            <video controls autoPlay className="tm-modal-video">
+            <video controls autoPlay className="tm-modal-video" preload="metadata">
               <source src={dummyVideo} type="video/mp4" />
               Your browser does not support the video tag.
             </video>

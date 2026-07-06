@@ -1,12 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import "./tv-commercials.css";
-import bg1 from "../../../../../assets/images/tv_commercial_brand_story_1772790134750.png";
-import bg2 from "../../../../../assets/images/tv_commercial_product_promo_1772790152726.png";
-import bg3 from "../../../../../assets/images/tv_commercial_script_concept_1772790174220.png";
-import bg4 from "../../../../../assets/images/tv_commercial_pro_production_1772790194396.png";
-import bg5 from "../../../../../assets/images/tv_commercial_multi_platform_1772790212294.png";
-import bg6 from "../../../../../assets/images/tv_commercial_strategy_1772790233395.png";
+const bg1 = mediaUrl("assets/images/tv_commercial_brand_story_1772790134750.png");
+const bg2 = mediaUrl("assets/images/tv_commercial_product_promo_1772790152726.png");
+const bg3 = mediaUrl("assets/images/tv_commercial_script_concept_1772790174220.png");
+const bg4 = mediaUrl("assets/images/tv_commercial_pro_production_1772790194396.png");
+const bg5 = mediaUrl("assets/images/tv_commercial_multi_platform_1772790212294.png");
+const bg6 = mediaUrl("assets/images/tv_commercial_strategy_1772790233395.png");
 import BannerComponent from "../../../CommonComponents/BannerComponent";
+import { mediaUrl } from "../../../../../config/media";
 
 const TvCommercialSections = () => {
   const sectionRefs = useRef([]);
@@ -133,7 +134,7 @@ const TvCommercialSections = () => {
                     src={bg1}
                     alt="Brand Story"
                     className="tvc-main-img img-fluid rounded border-gold"
-                  />
+                  loading="lazy" />
                   <div className="tvc-float-chip chip-top-right">
                     <i className="fa-solid fa-heart align-middle"></i>{" "}
                     <span>Emotional Connect</span>
@@ -220,7 +221,7 @@ const TvCommercialSections = () => {
                       src={bg2}
                       alt="Product Promo"
                       className="tvc-main-img img-fluid rounded"
-                    />
+                    loading="lazy" />
                     <div className="tvc-glass-stat shadow-lg">
                       <div className="tvc-stat-icon text-warning">
                         <i className="fa-solid fa-chart-line fa-2x"></i>
@@ -312,7 +313,7 @@ const TvCommercialSections = () => {
                     src={bg3}
                     alt="Script Concept"
                     className="tvc-main-img img-fluid rounded border-gold"
-                  />
+                  loading="lazy" />
                   <div className="tvc-float-chip chip-top-left">
                     <i className="fa-solid fa-file-pen"></i>{" "}
                     <span>Copywriting</span>
@@ -393,7 +394,7 @@ const TvCommercialSections = () => {
                     src={bg4}
                     alt="Production Execution"
                     className="tvc-main-img img-fluid rounded"
-                  />
+                  loading="lazy" />
                   <div className="tvc-progress-float">
                     <div className="d-flex justify-content-between mb-1">
                       <small className="text-white">
@@ -488,7 +489,7 @@ const TvCommercialSections = () => {
                     src={bg5}
                     alt="Multi Platform"
                     className="tvc-main-img img-fluid rounded border-gold"
-                  />
+                  loading="lazy" />
                   <div className="tvc-float-chip chip-bottom-right">
                     <i className="fa-solid fa-share-nodes"></i>{" "}
                     <span>Omnichannel Ready</span>
@@ -570,7 +571,7 @@ const TvCommercialSections = () => {
                     src={bg6}
                     alt="Campaign Strategy"
                     className="tvc-main-img img-fluid rounded"
-                  />
+                  loading="lazy" />
                   <div className="tvc-glass-stat tvc-stat-huge shadow-lg">
                     <div className="mt-2 text-white">
                       <h2>

@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
-import testimonial1 from "../../assets/images/testimonal-image1.png";
-import testimonial2 from "../../assets/images/testimonal-image2.png";
-import testimonial3 from "../../assets/images/testimonal-image3.png";
+const testimonial1 = mediaUrl("assets/images/testimonal-image1.png");
+const testimonial2 = mediaUrl("assets/images/testimonal-image2.png");
+const testimonial3 = mediaUrl("assets/images/testimonal-image3.png");
+import { mediaUrl } from "../../config/media";
 
 
 const Testimonial = () => {
@@ -63,7 +64,7 @@ const Testimonial = () => {
                                                     <img
                                                         src={testimonial1}
                                                         alt="Makeover By Soumi"
-                                                    />
+                                                    loading="lazy" />
                                                 </div>
                                                 <div className="avatar-desc">
                                                     <h5>Makeover By Soumi</h5>
@@ -85,7 +86,7 @@ const Testimonial = () => {
                                                     <img
                                                         src={testimonial2}
                                                         alt="Ron Ray "
-                                                    />
+                                                    loading="lazy" />
                                                 </div>
                                                 <div className="avatar-desc">
                                                     <h5>Ron Ray</h5>
@@ -109,7 +110,7 @@ const Testimonial = () => {
                                                     <img
                                                         src={testimonial3}
                                                         alt="Ambika Silvers"
-                                                    />
+                                                    loading="lazy" />
                                                 </div>
                                                 <div className="avatar-desc">
                                                     <h5>Ambika Silvers</h5>

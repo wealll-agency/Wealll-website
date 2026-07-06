@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './marketing-insights.css';
-import insightsImg from '../../../../../assets/images/dm-5.png'; // Mockup of analytics or growth chart
+const insightsImg = mediaUrl("assets/images/dm-5.png"); // Mockup of analytics or growth chart
+import { mediaUrl } from "../../../../../config/media";
 
 const MarketingInsights = () => {
     const sectionRef = useRef(null);
@@ -62,7 +63,7 @@ const MarketingInsights = () => {
                     <div className="col-lg-6 order-lg-1">
                         <div className="mi-visual mi-reveal" style={{ transitionDelay: '0.2s' }}>
                             <div className="mi-img-wrap">
-                                <img src={insightsImg} alt="Marketing Strategy Analytics" className="img-fluid" />
+                                <img src={insightsImg} alt="Marketing Strategy Analytics" className="img-fluid" loading="lazy" />
                                 <div className="mi-glass-overlay mt-4">
                                     <h4 className="mb-3">Strategic Impact</h4>
                                     <div className="progress mb-3 bg-dark" style={{ height: '8px' }}>

@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import './rm-content.css';
 
-import trustBg from '../../../../../assets/images/growthstep2.jpg';
-import roadmapBg from '../../../../../assets/images/growthstep3.jpg';
+const trustBg = mediaUrl("assets/images/growthstep2.jpg");
+const roadmapBg = mediaUrl("assets/images/growthstep3.jpg");
+import { mediaUrl } from "../../../../../config/media";
 
 const RmContent = () => {
     // State for Section 3 (Flipping Cards)
@@ -131,7 +132,7 @@ const RmContent = () => {
                                 viewport={{ once: true }}
                             >
                                 <div className="trust-hub-bg">
-                                    <img src={trustBg} alt="Abstract Trust Concept" className="trust-bg-img" />
+                                    <img src={trustBg} alt="Abstract Trust Concept" className="trust-bg-img" loading="lazy" />
                                     <div className="trust-bg-overlay"></div>
                                 </div>
                                 <div className="trust-floating-cards">
@@ -344,7 +345,7 @@ const RmContent = () => {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
                             >
-                                <img src={roadmapBg} alt="Sustainable Brand Growth" className="img-fluid rounded-4 shadow-lg" />
+                                <img src={roadmapBg} alt="Sustainable Brand Growth" className="img-fluid rounded-4 shadow-lg" loading="lazy" />
                                 <div className="growth-overlay-badge">
                                     <i className="fa-solid fa-lock text-success"></i>
                                     <div>

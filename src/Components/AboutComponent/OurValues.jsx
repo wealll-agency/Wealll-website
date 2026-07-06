@@ -1,9 +1,10 @@
 import React from 'react'
-import ValueIcon1 from "../../assets/images/Creativity.svg";
-import ValueIcon2 from "../../assets/images/Abundance.svg";
-import ValueIcon3 from "../../assets/images/Equality.svg";
-import ValueIcon4 from "../../assets/images/Loyalty.svg";
-import ValueIcon5 from "../../assets/images/Responsibility.svg";
+const ValueIcon1 = mediaUrl("assets/images/Creativity.svg");
+const ValueIcon2 = mediaUrl("assets/images/Abundance.svg");
+const ValueIcon3 = mediaUrl("assets/images/Equality.svg");
+const ValueIcon4 = mediaUrl("assets/images/Loyalty.svg");
+const ValueIcon5 = mediaUrl("assets/images/Responsibility.svg");
+import { mediaUrl } from "../../config/media";
 const OurValues = () => {
     return (
         <>
@@ -27,7 +28,7 @@ const OurValues = () => {
                         <div className="col-lg-4 col-md-6">
                             <div className="nabvalm-box">
                                 <div className="nabvalb-img">
-                                    <img src={ValueIcon1} alt="Creativity " />
+                                    <img src={ValueIcon1} alt="Creativity " loading="lazy" />
                                 </div>
                                 <h3>Creativity</h3>
                                 <p>
@@ -39,7 +40,7 @@ const OurValues = () => {
                         <div className="col-lg-4 col-md-6">
                             <div className="nabvalm-box">
                                 <div className="nabvalb-img">
-                                    <img src={ValueIcon2} alt="Abundance" />
+                                    <img src={ValueIcon2} alt="Abundance" loading="lazy" />
                                 </div>
                                 <h3>Abundance</h3>
                                 <p>
@@ -51,7 +52,7 @@ const OurValues = () => {
                         <div className="col-lg-4 col-md-6">
                             <div className="nabvalm-box">
                                 <div className="nabvalb-img">
-                                    <img src={ValueIcon3} alt="Equality" />
+                                    <img src={ValueIcon3} alt="Equality" loading="lazy" />
                                 </div>
                                 <h3>Equality</h3>
                                 <p>
@@ -63,7 +64,7 @@ const OurValues = () => {
                         <div className="col-lg-4 col-md-6">
                             <div className="nabvalm-box">
                                 <div className="nabvalb-img">
-                                    <img src={ValueIcon4} alt="Loyalty" />
+                                    <img src={ValueIcon4} alt="Loyalty" loading="lazy" />
                                 </div>
                                 <h3>Loyalty</h3>
                                 <p>
@@ -75,7 +76,7 @@ const OurValues = () => {
                         <div className="col-lg-4 col-md-6">
                             <div className="nabvalm-box">
                                 <div className="nabvalb-img">
-                                    <img src={ValueIcon5} alt="Responsibility" />
+                                    <img src={ValueIcon5} alt="Responsibility" loading="lazy" />
                                 </div>
                                 <h3>Responsibility</h3>
                                 <p>

@@ -99,7 +99,7 @@ const PortfolioCorporateFilms = () => {
                                         key={index}
                                         className={`pcf-visual-card ${activeIndex === index ? 'active' : ''} ${activeIndex > index ? 'prev' : ''} ${activeIndex < index ? 'next' : ''}`}
                                     >
-                                        <img src={service.image} alt={service.title} />
+                                        <img src={service.image} alt={service.title} loading="lazy" />
                                         <div className="pcf-visual-overlay">
                                             <div className="pcf-visual-title-tag">{service.title} Film</div>
                                             <div className="pcf-play-btn-large">

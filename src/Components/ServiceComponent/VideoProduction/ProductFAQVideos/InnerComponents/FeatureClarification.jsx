@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './feature-clarification.css';
-import featImg from '../../../../../assets/images/portfolio_brand1.jpeg';
+const featImg = mediaUrl("assets/images/portfolio_brand1.jpeg");
+import { mediaUrl } from "../../../../../config/media";
 
 const FeatureClarification = () => {
     const sectionRef = useRef(null);
@@ -64,7 +65,7 @@ const FeatureClarification = () => {
                     <div className="col-lg-6">
                         <div className="fc-visual-wrapper fc-reveal" style={{ transitionDelay: '0.4s' }}>
                             <div className="fc-image-box">
-                                <img src={featImg} alt="Feature Clarification" className="img-fluid fc-main-img" />
+                                <img src={featImg} alt="Feature Clarification" className="img-fluid fc-main-img" loading="lazy" />
                                 <div className="fc-overlay-card fc-float">
                                     <div className="fc-mini-graph">
                                         <span className="bar b1"></span>

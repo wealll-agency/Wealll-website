@@ -3,18 +3,19 @@ import './press-release.css';
 import CountUp from './CountUp';
 
 // Importing publisher logos
-import pub1 from "../../../../../assets/logos/Hindustan_Times_logo-2.png";
-import pub2 from "../../../../../assets/logos/logo-bajaj-finance.png";
-import pub3 from "../../../../../assets/logos/logo-dharma-production-1.png";
-import pub4 from "../../../../../assets/logos/logo-hamleys-1.png";
-import pub5 from "../../../../../assets/logos/logo-hd.png";
-import pub6 from "../../../../../assets/logos/logo-iima.png";
-import pub7 from "../../../../../assets/logos/logo-luminous-1.png";
-import pub8 from "../../../../../assets/logos/logo-makoons-1.png";
-import pub9 from "../../../../../assets/logos/logo-niwi.png";
-import pub10 from "../../../../../assets/logos/logo-sobha.png";
-import pub11 from "../../../../../assets/logos/logo-tanla-1.png";
-import pub12 from "../../../../../assets/logos/logo-wellness.png";
+const pub1 = mediaUrl("assets/logos/Hindustan_Times_logo-2.png");
+const pub2 = mediaUrl("assets/logos/logo-bajaj-finance.png");
+const pub3 = mediaUrl("assets/logos/logo-dharma-production-1.png");
+const pub4 = mediaUrl("assets/logos/logo-hamleys-1.png");
+const pub5 = mediaUrl("assets/logos/logo-hd.png");
+const pub6 = mediaUrl("assets/logos/logo-iima.png");
+const pub7 = mediaUrl("assets/logos/logo-luminous-1.png");
+const pub8 = mediaUrl("assets/logos/logo-makoons-1.png");
+const pub9 = mediaUrl("assets/logos/logo-niwi.png");
+const pub10 = mediaUrl("assets/logos/logo-sobha.png");
+const pub11 = mediaUrl("assets/logos/logo-tanla-1.png");
+const pub12 = mediaUrl("assets/logos/logo-wellness.png");
+import { mediaUrl } from "../../../../../config/media";
 
 const publisherRow1 = [pub1, pub2, pub3, pub4, pub5, pub6];
 const publisherRow2 = [pub7, pub8, pub9, pub10, pub11, pub12];
@@ -54,7 +55,7 @@ const PrNetwork = () => {
                     {[...publisherRow1, ...publisherRow1, ...publisherRow1].map((logo, index) => (
                         <div className="pr-logo-card" key={`pub1-${index}`} style={{ width: '220px', height: '120px', flexShrink: 0 }}>
                             <div className="pr-logo-glass" style={{ background: 'rgba(255, 255, 255, 1)', boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '12px', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px', transition: 'transform 0.3s ease' }}>
-                                <img src={logo} alt={`Publisher Row 1 - ${index}`} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+                                <img src={logo} alt={`Publisher Row 1 - ${index}`} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} loading="lazy" />
                             </div>
                         </div>
                     ))}
@@ -65,7 +66,7 @@ const PrNetwork = () => {
                     {[...publisherRow2, ...publisherRow2, ...publisherRow2].map((logo, index) => (
                         <div className="pr-logo-card" key={`pub2-${index}`} style={{ width: '220px', height: '120px', flexShrink: 0 }}>
                             <div className="pr-logo-glass" style={{ background: 'rgba(255, 255, 255, 1)', boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.1)', border: '1px solid rgba(255, 255, 255, 0.1)', borderRadius: '12px', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '20px', transition: 'transform 0.3s ease' }}>
-                                <img src={logo} alt={`Publisher Row 2 - ${index}`} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} />
+                                <img src={logo} alt={`Publisher Row 2 - ${index}`} style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }} loading="lazy" />
                             </div>
                         </div>
                     ))}

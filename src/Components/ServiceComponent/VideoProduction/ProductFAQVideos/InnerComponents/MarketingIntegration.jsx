@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import './marketing-integration.css';
-import mktImg from '../../../../../assets/images/social-media-manage.jpeg';
+const mktImg = mediaUrl("assets/images/social-media-manage.jpeg");
+import { mediaUrl } from "../../../../../config/media";
 
 const MarketingIntegration = () => {
     const sectionRef = useRef(null);
@@ -42,7 +43,7 @@ const MarketingIntegration = () => {
                     <div className="col-lg-6 mb-5 mb-lg-0">
                         <div className="mi-visual mi-reveal">
                             <div className="mi-img-box">
-                                <img src={mktImg} alt="Marketing Integration" className="img-fluid mi-img-main" />
+                                <img src={mktImg} alt="Marketing Integration" className="img-fluid mi-img-main" loading="lazy" />
                                 <div className="mi-stats-card">
                                     <div className="stat-row">
                                         <div className="stat-label">Engagement</div>

@@ -4,10 +4,11 @@ import './mern-dark.css';
 import '../../WebsiteDevelopment/InnerComponents/website-dev-dark.css';
 
 // Reusing portfolio images from the theme
-import port1 from '../../../../../assets/images/portfolio_website1.jpeg';
-import port2 from '../../../../../assets/images/portfolio_website2.jpeg';
-import port3 from '../../../../../assets/images/portfolio_website3.jpeg';
-import port4 from '../../../../../assets/images/portfolio_website4.jpeg';
+const port1 = mediaUrl("assets/images/portfolio_website1.jpeg");
+const port2 = mediaUrl("assets/images/portfolio_website2.jpeg");
+const port3 = mediaUrl("assets/images/portfolio_website3.jpeg");
+const port4 = mediaUrl("assets/images/portfolio_website4.jpeg");
+import { mediaUrl } from "../../../../../config/media";
 
 const categories = ["All", "Custom Web App", "Single Page App", "API Integration"];
 
@@ -78,7 +79,7 @@ const MernPortfolio = () => {
                 <div className="portfolio-item d-flex flex-column h-100 gap-3 group">
                   {/* The Image Window with Hover Scroll */}
                   <div className="portfolio-scroll-container">
-                    <img src={item.img} alt={item.title} className="portfolio-scroll-img" />
+                    <img src={item.img} alt={item.title} className="portfolio-scroll-img" loading="lazy" />
                     
                     {/* View Project Overlay */}
                     <div className="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center justify-content-center opacity-0 group-hover-opacity-100 transition-opacity" style={{ background: 'rgba(97, 218, 251, 0.2)', transition: 'opacity 0.3s ease', opacity: 0 }} onMouseEnter={(e) => e.currentTarget.style.opacity = '1'} onMouseLeave={(e) => e.currentTarget.style.opacity = '0'} >
