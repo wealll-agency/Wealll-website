@@ -182,7 +182,7 @@ const Footer = () => {
 
                             <div className="col-lg-4 col-md-5 col-sm-12 col-12 order-lg-1 order-md-1 order-sm-3 order-3">
 
-                                <p className="copyright"> ©2023-{new Date().getFullYear()} We Alll. All Rights Reserved.</p>
+                                <p className="copyright"> ©2023-{new Date().getFullYear()} We Alll. All Rights Reserved. <span style={{ marginLeft: "5px", fontWeight: "600", opacity: 0.8 }}>{__APP_VERSION__}</span></p>
 
                             </div>
 
