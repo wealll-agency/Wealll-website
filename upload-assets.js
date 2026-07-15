@@ -77,6 +77,7 @@ async function syncWithS3() {
           Key: s3Key,
           Body: fileStream,
           ContentType: contentType,
+          ACL: "public-read",
         }),
       );
     }
