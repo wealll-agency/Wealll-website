@@ -2478,11 +2478,14 @@ ul.mega-menu li {
   background-color: #080e32;
   position: relative;
   z-index: 1;
-  padding-bottom: 120px;
+  padding-bottom: 270px;
   padding-top: 210px;
 }
 
 .contact_page_title {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .page-title-content {

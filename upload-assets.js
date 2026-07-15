@@ -19,7 +19,7 @@ const s3 = new S3Client({
   },
 });
 
-const uploadFolder = path.join(process.cwd(), "src", "assets");
+const uploadFolder = path.join(process.cwd(), "public", "assets");
 const bucketName = process.env.AWS_BUCKET_NAME;
 
 // ১. লোকাল ফোল্ডারের সব ফাইলের লিস্ট নেওয়া
