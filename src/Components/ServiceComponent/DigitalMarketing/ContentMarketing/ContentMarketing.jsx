@@ -11,8 +11,9 @@ import ContentMarketingServices from "./InnerComponents/ContentMarketingServices
 import ContentMarketingHire from "./InnerComponents/ContentMarketingHire";
 import ContentMarketingQualities from "./InnerComponents/ContentMarketingQualities";
 import ContentMarketingSpectrum from "./InnerComponents/ContentMarketingSpectrum";
-import ContentMarketingPackages from "./InnerComponents/ContentMarketingPackages";
 import ContentMarketingAddons from "./InnerComponents/ContentMarketingAddons";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiEdit3, FiBookOpen, FiUsers, FiTrendingUp } from "react-icons/fi";
 
 const ContentMarketing = () => {
   return (
@@ -36,7 +37,21 @@ const ContentMarketing = () => {
       <ContentMastery />
       <ContentMarketingQualities />
       <ContentMarketingSpectrum />
-      <ContentMarketingPackages />
+      <ServiceCTA 
+        serviceName="Content Marketing"
+        badgeIcon="⚡"
+        badgeText="RESULTS DRIVEN CONTENT MARKETING"
+        title="Let's Grow Your Brand"
+        titlePreposition="with"
+        titleHighlight="Content Marketing"
+        description="Engage your audience with high-quality content that educates, inspires, and converts. From blogs and social media to website copy and email campaigns, we create content strategies that strengthen your brand and generate measurable business results."
+        features={[
+          { icon: <FiEdit3 />, text: "Content Creation" },
+          { icon: <FiBookOpen />, text: "Brand Storytelling" },
+          { icon: <FiUsers />, text: "Audience Engagement" },
+          { icon: <FiTrendingUp />, text: "Lead Generation" }
+        ]}
+      />
       <ContentMarketingAddons />
 
       <BottomComponents />

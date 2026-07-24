@@ -1,4 +1,6 @@
 import React from "react";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+
 import Intro from "../DigitalMarketing/InnerComponents/Intro";
 import BrandVisibility from "./InnerComponents/BrandVisibility";
 // New Modern Component Imports
@@ -6,7 +8,7 @@ import PlatformsWeManage from "./InnerComponents/PlatformsWeManage";
 import MarketingServices from "./InnerComponents/MarketingServices";
 import GrowthStrategy from "./InnerComponents/GrowthStrategy";
 import SMM_Portfolio from "./InnerComponents/SMM_Portfolio";
-import SMM_Packages from "./InnerComponents/SMM_Packages";
+
 
 import SocialMediaReach from "./InnerComponents/SocialMediaReach";
 import CommercialAd from "./InnerComponents/CommercialAd";
@@ -51,7 +53,7 @@ const SocialMediaMarketing = () => {
       {/* 4. More New Modern Sections */}
       <SMM_Portfolio />
 
-      <SMM_Packages />
+      <ServiceCTA serviceName="Social Media Marketing" />
 
       {/* 5. Existing Bottom Components */}
       <CommercialAd />

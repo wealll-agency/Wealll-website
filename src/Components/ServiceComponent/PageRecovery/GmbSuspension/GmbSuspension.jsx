@@ -10,7 +10,8 @@ import GmbSuspCaseStudy from './InnerComponents/GmbSuspCaseStudy'
 import GmbSuspExpertiseTimeline from './InnerComponents/GmbSuspExpertiseTimeline'
 import GmbSuspWhoWhy from './InnerComponents/GmbSuspWhoWhy'
 import GmbSuspCTA from './InnerComponents/GmbSuspCTA'
-import GmbSuspPricing from './InnerComponents/GmbSuspPricing'
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiRefreshCw, FiMapPin, FiShield, FiZap } from "react-icons/fi";
 
 const GmbSuspension = () => {
     return (
@@ -31,7 +32,20 @@ const GmbSuspension = () => {
                 <GmbSuspExpertiseTimeline />
                 <GmbSuspWhoWhy />
                 <GmbSuspCTA />
-                <GmbSuspPricing />
+                <ServiceCTA 
+                    serviceName="GMB Suspension Recovery"
+                    badgeIcon="⚡"
+                    badgeText="RESULTS DRIVEN GMB SUSPENSION RECOVERY"
+                    title="Recover Your"
+                    titleHighlight="Google Business Profile"
+                    description="Get your suspended Google Business Profile back online with our expert recovery services. We identify suspension issues, resolve Google policy violations, prepare reinstatement requests, and help restore your business listing so you can regain visibility on Google Search and Maps."
+                    features={[
+                        { icon: <FiRefreshCw />, text: "Profile Recovery" },
+                        { icon: <FiMapPin />, text: "Maps Visibility" },
+                        { icon: <FiShield />, text: "Policy Compliance" },
+                        { icon: <FiZap />, text: "Quick Recovery" }
+                    ]}
+                />
 
             </div>
 

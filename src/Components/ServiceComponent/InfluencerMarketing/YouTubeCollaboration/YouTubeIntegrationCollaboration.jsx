@@ -9,7 +9,8 @@ import YouTubeContentIntegration from "./InnerComponents/YouTubeContentIntegrati
 import YouTubeExecution from "./InnerComponents/YouTubeExecution";
 import YouTubeAnalysisDash from "./InnerComponents/YouTubeAnalysisDash";
 import YouTubeBenefits from "./InnerComponents/YouTubeBenefits";
-import YouTubePricing from "./InnerComponents/YouTubePricing";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiPlayCircle, FiUsers, FiShield, FiTrendingUp } from "react-icons/fi";
 import YouTubeAddons from "./InnerComponents/YouTubeAddons";
 
 const YouTubeIntegrationCollaboration = () => {
@@ -25,12 +26,27 @@ const YouTubeIntegrationCollaboration = () => {
 
       {/* Premium YouTube Components */}
       <YouTubeWhyWorks />
+
       <YouTubeStrategy />
       <YouTubeContentIntegration />
       <YouTubeExecution />
       <YouTubeAnalysisDash />
       <YouTubeBenefits />
-      <YouTubePricing />
+      <ServiceCTA
+        serviceName="YouTube Collaboration"
+        badgeIcon="⚡"
+        badgeText="RESULTS DRIVEN YOUTUBE COLLABORATION"
+        title="Grow Your Brand"
+        titlePreposition="Through"
+        titleHighlight="YouTube Creators"
+        description="Expand your brand's reach through strategic YouTube collaborations with trusted creators and influencers. From product reviews and unboxing videos to tutorials, vlogs, and sponsored content, we create authentic partnerships that increase brand awareness, build audience trust, and drive meaningful business growth."
+        features={[
+          { icon: <FiPlayCircle />, text: "Video Campaigns" },
+          { icon: <FiUsers />, text: "Creator Partnerships" },
+          { icon: <FiShield />, text: "Audience Trust" },
+          { icon: <FiTrendingUp />, text: "Brand Growth" }
+        ]}
+      />
       <YouTubeAddons />
 
       <BottomComponents />

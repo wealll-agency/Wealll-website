@@ -6,7 +6,8 @@ import PresentationIncludes from "./InnerComponents/PresentationIncludes";
 import PresentationStrategy from "./InnerComponents/PresentationStrategy";
 import PresentationIndustries from "./InnerComponents/PresentationIndustries";
 import PresentationPortfolio from "./InnerComponents/PresentationPortfolio";
-import PresentationPricing from "./InnerComponents/PresentationPricing";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiPieChart, FiImage, FiTarget, FiTrendingUp } from "react-icons/fi";
 
 const Presentation = () => {
   return (
@@ -23,7 +24,21 @@ const Presentation = () => {
       <PresentationStrategy />
       <PresentationIndustries />
       <PresentationPortfolio />
-      <PresentationPricing />
+      <ServiceCTA 
+        serviceName="Presentation Design"
+        badgeIcon="⚡"
+        badgeText="RESULTS DRIVEN PRESENTATION DESIGN"
+        title="Let's Present Your Brand"
+        titlePreposition="with"
+        titleHighlight="Powerful Designs"
+        description="Deliver your ideas with confidence through professionally designed presentations that captivate audiences and communicate your message clearly. We create visually compelling slides for business meetings, investor pitches, sales presentations, and corporate events that leave a lasting impression."
+        features={[
+          { icon: <FiPieChart />, text: "Professional Slides" },
+          { icon: <FiImage />, text: "Visual Storytelling" },
+          { icon: <FiTarget />, text: "Persuasive Content" },
+          { icon: <FiTrendingUp />, text: "Business Impact" }
+        ]}
+      />
       <BottomComponents />
     </>
   );

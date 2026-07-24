@@ -9,7 +9,8 @@ import AdFilmStrategy from "./InnerComponents/AdFilmStrategy";
 import ProductionExecution from "./InnerComponents/ProductionExecution";
 import PlatformAdaptation from "./InnerComponents/PlatformAdaptation";
 import CampaignPerformance from "./InnerComponents/CampaignPerformance";
-import AdFilmsPricing from "./InnerComponents/AdFilmsPricing";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiVideo, FiEdit3, FiTarget, FiTrendingUp } from "react-icons/fi";
 
 const AdFilms = () => {
   return (
@@ -27,7 +28,21 @@ const AdFilms = () => {
       <ProductionExecution />
       <PlatformAdaptation />
       <CampaignPerformance />
-      <AdFilmsPricing />
+      <ServiceCTA 
+        serviceName="Ad Films"
+        badgeIcon="⚡"
+        badgeText="RESULTS DRIVEN AD FILMS"
+        title="Let's Tell Your Brand"
+        titlePreposition="Story Through"
+        titleHighlight="Ad Films"
+        description="Bring your brand to life with professionally crafted ad films that capture attention, connect emotionally, and inspire action. From creative concepts and scripting to production and editing, we create high-impact commercials that strengthen your brand and drive measurable results."
+        features={[
+          { icon: <FiVideo />, text: "Cinematic Production" },
+          { icon: <FiEdit3 />, text: "Creative Storytelling" },
+          { icon: <FiTarget />, text: "Audience Engagement" },
+          { icon: <FiTrendingUp />, text: "Brand Growth" }
+        ]}
+      />
 
       <BottomComponents />
     </>

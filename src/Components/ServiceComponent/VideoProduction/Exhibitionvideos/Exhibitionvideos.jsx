@@ -9,7 +9,8 @@ import ExhibTestimonials from "./InnerComponents/ExhibTestimonials";
 import ExhibTeaserCampaign from "./InnerComponents/ExhibTeaserCampaign";
 import ExhibPostEvent from "./InnerComponents/ExhibPostEvent";
 import ExhibMarketingStrategy from "./InnerComponents/ExhibMarketingStrategy";
-import ExhibPricing from "./InnerComponents/ExhibPricing";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiVideo, FiMonitor, FiUsers, FiTrendingUp } from "react-icons/fi";
 
 const Exhibitionvideos = () => {
   return (
@@ -27,7 +28,21 @@ const Exhibitionvideos = () => {
       <ExhibTeaserCampaign />
       <ExhibPostEvent />
       <ExhibMarketingStrategy />
-      <ExhibPricing />
+      <ServiceCTA 
+        serviceName="Exhibitionvideos"
+        badgeIcon="⚡"
+        badgeText="RESULTS DRIVEN EXHIBITION VIDEOS"
+        title="Let's Showcase Your Brand"
+        titlePreposition="Through"
+        titleHighlight="Exhibition Videos"
+        description="Bring your exhibitions and trade shows to life with professionally produced videos that capture every key moment. From event highlights and booth showcases to customer interactions and product demonstrations, we create engaging exhibition videos that extend your brand's reach beyond the event floor."
+        features={[
+          { icon: <FiVideo />, text: "Event Coverage" },
+          { icon: <FiMonitor />, text: "Booth Showcase" },
+          { icon: <FiUsers />, text: "Audience Engagement" },
+          { icon: <FiTrendingUp />, text: "Brand Visibility" }
+        ]}
+      />
 
       <BottomComponents />
     </>

@@ -5,6 +5,8 @@ import BottomComponents from "../../CommonComponents/BottomComponents";
 import WhatsappProcess from "./InnerComponents/WhatsappProcess";
 import WhatsappBenefits from "./InnerComponents/WhatsappBenefits";
 import WhatsappStrategy from "./InnerComponents/WhatsappStrategy";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiMessageSquare, FiCpu, FiUsers, FiTrendingUp } from "react-icons/fi";
 
 const dm1 = mediaUrl("assets/images/dm1.jpeg");
 const dm2 = mediaUrl("assets/images/dm2.jpeg");
@@ -28,6 +30,21 @@ const WhatsappMarketing = () => {
       <WhatsappProcess />
       <WhatsappBenefits />
       <WhatsappStrategy />
+      <ServiceCTA 
+        serviceName="WhatsApp Marketing"
+        badgeIcon="⚡"
+        badgeText="RESULTS DRIVEN WHATSAPP MARKETING"
+        title="Let's Grow Your Brand"
+        titlePreposition="with"
+        titleHighlight="WhatsApp Marketing"
+        description="Connect with your audience through personalized WhatsApp campaigns, automated messaging, and real-time engagement. We help you generate quality leads, boost customer retention, and increase conversions with powerful WhatsApp marketing strategies."
+        features={[
+          { icon: <FiMessageSquare />, text: "Broadcast Campaigns" },
+          { icon: <FiCpu />, text: "Smart Automation" },
+          { icon: <FiUsers />, text: "Customer Engagement" },
+          { icon: <FiTrendingUp />, text: "Higher Conversions" }
+        ]}
+      />
       <BottomComponents />
     </>
   );

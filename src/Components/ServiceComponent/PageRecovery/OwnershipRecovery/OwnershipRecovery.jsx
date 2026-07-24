@@ -9,7 +9,8 @@ import GmbRecoveryProcess from './InnerComponents/GmbRecoveryProcess'
 import GmbRecoveryCaseStudy from './InnerComponents/GmbRecoveryCaseStudy'
 import GmbRecoveryTimelineWho from './InnerComponents/GmbRecoveryTimelineWho'
 import GmbRecoveryWhyUs from './InnerComponents/GmbRecoveryWhyUs'
-import GmbRecoveryPricing from './InnerComponents/GmbRecoveryPricing'
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiUser, FiKey, FiShield, FiZap } from "react-icons/fi";
 import GmbRecoveryAddons from './InnerComponents/GmbRecoveryAddons'
 import GmbRecoveryComboCTA from './InnerComponents/GmbRecoveryComboCTA'
 import GmbRecoverySeoMeta from './InnerComponents/GmbRecoverySeoMeta'
@@ -35,7 +36,21 @@ const OwnershipRecovery = () => {
             <GmbRecoveryComboCTA />
             <GmbRecoveryNextSteps />
             <GmbRecoverySeoMeta />
-            <GmbRecoveryPricing />
+            <ServiceCTA
+                serviceName="Ownership Recovery"
+                badgeIcon="⚡"
+                badgeText="RESULTS DRIVEN OWNERSHIP RECOVERY"
+                title="Recover Your"
+                titleHighlight="Google Business Ownership"
+                description="Lost access to your Google Business Profile? We help businesses recover ownership, restore admin access, and resolve ownership conflicts quickly and securely. Our experts guide you through Google's verification process to ensure you regain full control of your business listing and online presence."
+                features={[
+                    { icon: <FiUser />, text: "Ownership Recovery" },
+                    { icon: <FiKey />, text: "Admin Access" },
+                    { icon: <FiShield />, text: "Secure Verification" },
+                    { icon: <FiZap />, text: "Quick Resolution" }
+                ]}
+            />
+
             <GmbRecoveryAddons />
             <BottomComponents />
         </div>

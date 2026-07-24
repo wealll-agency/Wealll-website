@@ -4,7 +4,8 @@ import BottomComponents from "../../CommonComponents/BottomComponents";
 import ArticleServices from "./InnerComponents/ArticleServices";
 import ResearchProcess from "./InnerComponents/ResearchProcess";
 import WritingStyle from "./InnerComponents/WritingStyle";
-import ArticlePricing from "./InnerComponents/ArticlePricing";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiFileText, FiSearch, FiAward, FiTrendingUp } from "react-icons/fi";
 
 const WebContent = () => {
   return (
@@ -18,7 +19,21 @@ const WebContent = () => {
       <ArticleServices />
       <ResearchProcess />
       <WritingStyle />
-      <ArticlePricing />
+      <ServiceCTA 
+        serviceName="Article Writing"
+        badgeIcon="⚡"
+        badgeText="RESULTS DRIVEN ARTICLE WRITING"
+        title="Let's Grow Your Brand"
+        titlePreposition="with"
+        titleHighlight="Article Writing"
+        description="Establish your brand as an industry leader with professionally researched, engaging, and SEO-friendly articles. We create informative content that educates your audience, builds trust, and strengthens your online authority."
+        features={[
+          { icon: <FiFileText />, text: "Research-Based Articles" },
+          { icon: <FiSearch />, text: "SEO Optimized" },
+          { icon: <FiAward />, text: "Industry Authority" },
+          { icon: <FiTrendingUp />, text: "Audience Growth" }
+        ]}
+      />
 
       <BottomComponents />
     </>

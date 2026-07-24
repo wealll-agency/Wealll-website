@@ -13,7 +13,8 @@ import EcommerceSolutions from './InnerComponents/EcommerceSolutions';
 import EcommerceAI from './InnerComponents/EcommerceAI';
 import EcommerceWhyChooseUs from './InnerComponents/EcommerceWhyChooseUs';
 import EcommercePortfolio from './InnerComponents/EcommercePortfolio';
-import EcommercePricing from './InnerComponents/EcommercePricing';
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiShoppingCart, FiCreditCard, FiPackage, FiTrendingUp } from "react-icons/fi";
 
 const EcommerceDevelopment = () => {
     return (
@@ -42,7 +43,20 @@ const EcommerceDevelopment = () => {
                 <EcommerceAI />
                 <EcommerceWhyChooseUs />
                 <EcommercePortfolio />
-                <EcommercePricing />
+                <ServiceCTA 
+                    serviceName="Ecommerce Development"
+                    badgeIcon="⚡"
+                    badgeText="RESULTS DRIVEN ECOMMERCE DEVELOPMENT"
+                    title="Build eCommerce Stores"
+                    titleHighlight="That Drive Sales"
+                    description="Grow your online business with custom eCommerce solutions designed for performance, security, and scalability. From product catalogs and secure payment gateways to inventory management and mobile-friendly shopping experiences, we build online stores that maximize conversions and deliver exceptional customer experiences."
+                    features={[
+                        { icon: <FiShoppingCart />, text: "Custom Store" },
+                        { icon: <FiCreditCard />, text: "Secure Payments" },
+                        { icon: <FiPackage />, text: "Inventory Control" },
+                        { icon: <FiTrendingUp />, text: "Higher Sales" }
+                    ]}
+                />
             </div>
 
             <BottomComponents />

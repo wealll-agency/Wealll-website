@@ -9,7 +9,8 @@ import CorpDocumentary from "./InnerComponents/CorpDocumentary";
 import CorpStrategicPlanning from "./InnerComponents/CorpStrategicPlanning";
 import CorpProduction from "./InnerComponents/CorpProduction";
 import CorpDistribution from "./InnerComponents/CorpDistribution";
-import CorpPricing from "./InnerComponents/CorpPricing";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiBriefcase, FiVideo, FiShield, FiTrendingUp } from "react-icons/fi";
 
 const CorporateFilms = () => {
   return (
@@ -26,7 +27,21 @@ const CorporateFilms = () => {
       <CorpStrategicPlanning />
       <CorpProduction />
       <CorpDistribution />
-      <CorpPricing />
+      <ServiceCTA
+        serviceName="Corporate Films"
+        badgeIcon="⚡"
+        badgeText="RESULTS DRIVEN CORPORATE FILMS"
+        title="Let's Showcase Your Business "
+        titlePreposition="Through"
+        titleHighlight="Corporate Films"
+        description="Tell your company's story with professionally produced corporate films that highlight your vision, values, achievements, and expertise. We create engaging videos that strengthen your brand image, build trust with clients, and communicate your business with confidence."
+        features={[
+          { icon: <FiBriefcase />, text: "Company Story" },
+          { icon: <FiVideo />, text: "Professional Production" },
+          { icon: <FiShield />, text: "Build Trust" },
+          { icon: <FiTrendingUp />, text: "Business Growth" }
+        ]}
+      />
 
       <BottomComponents />
     </>

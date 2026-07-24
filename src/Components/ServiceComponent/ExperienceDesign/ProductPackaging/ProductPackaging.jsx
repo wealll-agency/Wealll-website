@@ -6,7 +6,8 @@ import PackagingIndustries from "./InnerComponents/PackagingIndustries";
 import PackagingStrategy from "./InnerComponents/PackagingStrategy";
 import PackagingInclusions from "./InnerComponents/PackagingInclusions";
 import PackagingPortfolio from "./InnerComponents/PackagingPortfolio";
-import PackagingPricing from "./InnerComponents/PackagingPricing";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiPackage, FiTag, FiStar, FiTrendingUp } from "react-icons/fi";
 
 const ProductPackaging = () => {
   return (
@@ -22,7 +23,21 @@ const ProductPackaging = () => {
       <PackagingStrategy />
       <PackagingInclusions />
       <PackagingPortfolio />
-      <PackagingPricing />
+      <ServiceCTA 
+        serviceName="Product Packaging"
+        badgeIcon="⚡"
+        badgeText="RESULTS DRIVEN PRODUCT PACKAGING"
+        title="Let's Make Your Products"
+        titlePreposition="Stand Out on"
+        titleHighlight="Every Shelf"
+        description="Transform your products with premium packaging that captures attention, communicates your brand story, and influences buying decisions. We design creative, functional, and market-ready packaging that enhances customer experience and helps your products stand out from the competition."
+        features={[
+          { icon: <FiPackage />, text: "Premium Packaging" },
+          { icon: <FiTag />, text: "Brand Identity" },
+          { icon: <FiStar />, text: "Shelf Appeal" },
+          { icon: <FiTrendingUp />, text: "Sales Growth" }
+        ]}
+      />
       <BottomComponents />
     </>
   );

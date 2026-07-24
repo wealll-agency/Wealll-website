@@ -8,7 +8,8 @@ import WebProcess from './InnerComponents/WebProcess';
 import WebPortfolio from './InnerComponents/WebPortfolio';
 import WebWhyChooseUs from './InnerComponents/WebWhyChooseUs';
 import WebTechStack from './InnerComponents/WebTechStack';
-import WebPricing from './InnerComponents/WebPricing';
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiMonitor, FiZap, FiSmartphone, FiTrendingUp } from "react-icons/fi";
 
 const WebsiteDevelopment = () => {
     return (
@@ -25,7 +26,20 @@ const WebsiteDevelopment = () => {
             <WebPortfolio />
             <WebWhyChooseUs />
             <WebTechStack />
-            <WebPricing />
+            <ServiceCTA 
+                serviceName="Website Development"
+                badgeIcon="⚡"
+                badgeText="RESULTS DRIVEN WEBSITE DEVELOPMENT"
+                title="Build High-Performing"
+                titleHighlight="Websites That Convert"
+                description="Transform your online presence with custom website development tailored to your business goals. We build fast, responsive, SEO-friendly, and conversion-focused websites that deliver exceptional user experiences, strengthen your brand, and turn visitors into loyal customers."
+                features={[
+                    { icon: <FiMonitor />, text: "Custom Development" },
+                    { icon: <FiZap />, text: "Fast Performance" },
+                    { icon: <FiSmartphone />, text: "Responsive Design" },
+                    { icon: <FiTrendingUp />, text: "Higher Conversions" }
+                ]}
+            />
 
 
             <BottomComponents />

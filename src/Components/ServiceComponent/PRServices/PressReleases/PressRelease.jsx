@@ -6,6 +6,8 @@ import PrConfidence from './InnerComponents/PrConfidence'
 import PrGlobalize from './InnerComponents/PrGlobalize'
 import PrNetwork from './InnerComponents/PrNetwork'
 import PrClients from './InnerComponents/PrClients'
+import ServiceCTA from '../../CommonComponents/ServiceCTA'
+import { FiFileText, FiGlobe, FiAward, FiTrendingUp } from "react-icons/fi";
 
 const PressRelease = () => {
     return (
@@ -23,6 +25,21 @@ const PressRelease = () => {
                 {/* <PrNetwork /> */}
                 <PrClients />
             </div>
+            <ServiceCTA 
+                serviceName="Press Releases"
+                badgeIcon="⚡"
+                badgeText="RESULTS DRIVEN PRESS RELEASES"
+                title="Make Every Announcement"
+                titlePreposition=""
+                titleHighlight="Newsworthy"
+                description="Share your company's milestones with professionally written press releases that capture media attention and strengthen your brand's credibility. From product launches and business achievements to partnerships and corporate announcements, we craft compelling press releases that maximize visibility and reach the right audience."
+                features={[
+                    { icon: <FiFileText />, text: "News Announcements" },
+                    { icon: <FiGlobe />, text: "Media Distribution" },
+                    { icon: <FiAward />, text: "Brand Authority" },
+                    { icon: <FiTrendingUp />, text: "Greater Reach" }
+                ]}
+            />
             <BottomComponents />
         </>
     )

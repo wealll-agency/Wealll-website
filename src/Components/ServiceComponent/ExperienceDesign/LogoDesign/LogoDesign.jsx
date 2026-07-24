@@ -5,7 +5,8 @@ import LogoServices from "./InnerComponents/LogoServices";
 import LogoProcess from "./InnerComponents/LogoProcess";
 import LogoStyles from "./InnerComponents/LogoStyles";
 import LogoPortfolio from "./InnerComponents/LogoPortfolio";
-import LogoPricing from "./InnerComponents/LogoPricing";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiPenTool, FiEdit3, FiHexagon, FiStar } from "react-icons/fi";
 
 const LogoDesign = () => {
   return (
@@ -21,7 +22,21 @@ const LogoDesign = () => {
       <LogoProcess />
       <LogoStyles />
       <LogoPortfolio />
-      <LogoPricing />
+      <ServiceCTA 
+        serviceName="Logo Design"
+        badgeIcon="⚡"
+        badgeText="RESULTS DRIVEN LOGO DESIGN"
+        title="Let's Build Your Brand"
+        titlePreposition="with"
+        titleHighlight="Logo Design"
+        description="Create a distinctive logo that captures your brand's personality and leaves a lasting impression. Our custom logo designs combine creativity, strategy, and timeless aesthetics to help your business stand out in a competitive market."
+        features={[
+          { icon: <FiPenTool />, text: "Custom Branding" },
+          { icon: <FiEdit3 />, text: "Creative Concepts" },
+          { icon: <FiHexagon />, text: "Unique Designs" },
+          { icon: <FiStar />, text: "Brand Recognition" }
+        ]}
+      />
       <BottomComponents />
     </>
   );

@@ -10,8 +10,9 @@ import Marketing360Framework from './InnerComponents/Marketing360Framework';
 import Marketing360CaseStudy from './InnerComponents/Marketing360CaseStudy';
 import Marketing360WhoNeeds from './InnerComponents/Marketing360WhoNeeds';
 import Marketing360VsTraditional from './InnerComponents/Marketing360VsTraditional';
-import Marketing360Packages from './InnerComponents/Marketing360Packages';
 import Marketing360Addons from './InnerComponents/Marketing360Addons';
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiGlobe, FiVolume2, FiBarChart2, FiTrendingUp } from "react-icons/fi";
 
 const dm1 = mediaUrl("assets/images/dm1.jpeg");
 const dm2 = mediaUrl("assets/images/dm2.jpeg");
@@ -42,7 +43,21 @@ const VideoMarketing = () => {
         <Marketing360CaseStudy />
         <Marketing360WhoNeeds />
         <Marketing360VsTraditional />
-        <Marketing360Packages />
+        <ServiceCTA 
+          serviceName="360° Marketing"
+          badgeIcon="⚡"
+          badgeText="RESULTS DRIVEN 360° MARKETING"
+          title="Let's Grow Your Brand"
+          titlePreposition="with"
+          titleHighlight="360° Marketing"
+          description="Grow your business with a complete 360° marketing strategy that unifies SEO, social media, paid advertising, content, email, and branding. We create integrated campaigns that increase visibility, generate quality leads, and drive sustainable business growth."
+          features={[
+            { icon: <FiGlobe />, text: "Omnichannel Reach" },
+            { icon: <FiVolume2 />, text: "Integrated Campaigns" },
+            { icon: <FiBarChart2 />, text: "Performance Insights" },
+            { icon: <FiTrendingUp />, text: "Business Growth" }
+          ]}
+        />
         <Marketing360Addons />
       </div>
 

@@ -1,5 +1,7 @@
 import Intro from "../../DigitalMarketing/DigitalMarketing/InnerComponents/Intro"
 import BottomComponents from "../../CommonComponents/BottomComponents"
+import ServiceCTA from "../../CommonComponents/ServiceCTA"
+import { FiTag, FiBook, FiStar, FiTrendingUp } from "react-icons/fi";
 
 // Import all inner components for Branding Design
 import BrandIdentityFramework from "./InnerComponents/BrandIdentityFramework";
@@ -17,7 +19,7 @@ import DigitalCommunicationAssets from "./InnerComponents/DigitalCommunicationAs
 import CompanyProfileStrategy from "./InnerComponents/CompanyProfileStrategy";
 import VisualPresentationDesign from "./InnerComponents/VisualPresentationDesign";
 import CompanyProfileMarketing from "./InnerComponents/CompanyProfileMarketing";
-import BrandingPricing from "./InnerComponents/BrandingPricing";
+
 
 const BrandingDesign = () => {
     return (
@@ -54,7 +56,21 @@ const BrandingDesign = () => {
 
             </div>
 
-            <BrandingPricing />
+            <ServiceCTA 
+                serviceName="Branding Design"
+                badgeIcon="⚡"
+                badgeText="RESULTS DRIVEN BRANDING DESIGN"
+                title="Let's Build a Brand"
+                titlePreposition="People"
+                titleHighlight="Remember"
+                description="Build a powerful brand identity that inspires trust and leaves a lasting impression. From brand strategy and visual identity to marketing collateral and brand guidelines, we create cohesive branding solutions that help your business stand out in a competitive market."
+                features={[
+                  { icon: <FiTag />, text: "Brand Identity" },
+                  { icon: <FiBook />, text: "Brand Guidelines" },
+                  { icon: <FiStar />, text: "Visual Consistency" },
+                  { icon: <FiTrendingUp />, text: "Brand Growth" }
+                ]}
+            />
 
             <BottomComponents />
 

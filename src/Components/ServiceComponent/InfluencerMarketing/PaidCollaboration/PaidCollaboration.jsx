@@ -9,7 +9,8 @@ import PaidIntro from "./InnerComponents/PaidIntro";
 import PaidProblem from "./InnerComponents/PaidProblem";
 import PaidProcess from "./InnerComponents/PaidProcess";
 import PaidBenefits from "./InnerComponents/PaidBenefits";
-import PaidPricing from "./InnerComponents/PaidPricing";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiTarget, FiUsers, FiVolume2, FiTrendingUp } from "react-icons/fi";
 
 const PaidCollaboration = () => {
     return (
@@ -27,7 +28,21 @@ const PaidCollaboration = () => {
             <PaidProblem />
             <PaidProcess />
             <PaidBenefits />
-            <PaidPricing />
+            <ServiceCTA 
+                serviceName="Paid Collaboration"
+                badgeIcon="⚡"
+                badgeText="RESULTS DRIVEN PAID COLLABORATION"
+                title="Scale Your Brand"
+                titlePreposition="with"
+                titleHighlight="Paid Collaborations"
+                description="Expand your brand's reach with strategic paid collaborations featuring trusted influencers and content creators. We connect your business with the right voices to create authentic sponsored content that increases brand awareness, drives engagement, and delivers measurable marketing results."
+                features={[
+                    { icon: <FiTarget />, text: "Targeted Creators" },
+                    { icon: <FiUsers />, text: "Sponsored Campaigns" },
+                    { icon: <FiVolume2 />, text: "Audience Reach" },
+                    { icon: <FiTrendingUp />, text: "Campaign ROI" }
+                ]}
+            />
 
             <BottomComponents />
         </div>

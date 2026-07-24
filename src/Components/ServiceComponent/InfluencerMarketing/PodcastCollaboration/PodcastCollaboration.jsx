@@ -6,7 +6,8 @@ import Intro from "../../DigitalMarketing/DigitalMarketing/InnerComponents/Intro
 import PodcastIntro from "./InnerComponents/PodcastIntro";
 import PodcastWhy from "./InnerComponents/PodcastWhy";
 import PodcastStrategy from "./InnerComponents/PodcastStrategy";
-import PodcastPricing from "./InnerComponents/PodcastPricing";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiMic, FiHeadphones, FiMessageCircle, FiTrendingUp } from "react-icons/fi";
 
 // Styles
 import "./InnerComponents/podcast-dark.css";
@@ -25,7 +26,21 @@ const PodcastCollaboration = () => {
                 <PodcastIntro />
                 <PodcastWhy />
                 <PodcastStrategy />
-                <PodcastPricing />
+                <ServiceCTA 
+                    serviceName="Podcast Collaboration"
+                    badgeIcon="⚡"
+                    badgeText="RESULTS DRIVEN PODCAST COLLABORATION"
+                    title="Amplify Your Brand"
+                    titlePreposition="with"
+                    titleHighlight="Podcast Collaborations"
+                    description="Connect with highly engaged audiences through strategic podcast collaborations. We help your brand partner with relevant podcast creators and hosts to share your story, build credibility, and increase brand awareness through authentic conversations that inspire trust and lasting engagement."
+                    features={[
+                        { icon: <FiMic />, text: "Podcast Partnerships" },
+                        { icon: <FiHeadphones />, text: "Engaged Audience" },
+                        { icon: <FiMessageCircle />, text: "Brand Storytelling" },
+                        { icon: <FiTrendingUp />, text: "Industry Authority" }
+                    ]}
+                />
                 <BottomComponents />
             </div>
 

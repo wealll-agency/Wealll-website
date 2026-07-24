@@ -54,6 +54,12 @@ const Header = () => {
         }
       },
     );
+
+    $(".mega-menu-inner .nav-box .menu-item a").on("click", function () {
+      if ($(window).width() <= 991) {
+        $(".nav-close").trigger("click");
+      }
+    });
   }, []);
 
   return (

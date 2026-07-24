@@ -1,9 +1,11 @@
 import React from "react";
+import { FiTarget, FiShare2, FiBarChart2, FiTrendingUp } from "react-icons/fi";
 import Intro from "./InnerComponents/Intro";
 import About from "./InnerComponents/About";
 import BrandVisibility from "../SocialMediaMarketing/InnerComponents/BrandVisibility";
 import GrowthSteps from "./InnerComponents/GrowthSteps";
 import IndustriesWeServe from "./InnerComponents/IndustriesWeServe";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
 import BottomComponents from "../../CommonComponents/BottomComponents";
 
 const dm1 = mediaUrl("assets/images/dm1.jpeg");
@@ -32,6 +34,21 @@ const DigitalMarketing = () => {
       <About />
       <GrowthSteps />
       <IndustriesWeServe />
+      <ServiceCTA 
+        serviceName="Digital Marketing"
+        badgeIcon="⚡"
+        badgeText="RESULTS DRIVEN DIGITAL MARKETING"
+        title="Let's Grow Your Brand"
+        titlePreposition="with"
+        titleHighlight="Digital Marketing"
+        description="Accelerate your business with data-driven digital marketing strategies. From SEO and social media to paid advertising and content marketing, we help you attract the right audience, generate quality leads, and maximize your ROI."
+        features={[
+          { icon: <FiTarget />, text: "Digital Strategy" },
+          { icon: <FiShare2 />, text: "Multi-Channel Reach" },
+          { icon: <FiBarChart2 />, text: "Performance Analytics" },
+          { icon: <FiTrendingUp />, text: "Business Growth" }
+        ]}
+      />
       <BottomComponents />
     </>
   );

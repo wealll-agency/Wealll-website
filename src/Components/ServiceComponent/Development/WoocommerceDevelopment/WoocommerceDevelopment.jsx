@@ -10,7 +10,8 @@ import WoocommerceBenefits from './InnerComponents/WoocommerceBenefits';
 import WoocommerceServices from './InnerComponents/WoocommerceServices';
 import WoocommerceApproach from './InnerComponents/WoocommerceApproach';
 import WoocommercePortfolio from './InnerComponents/WoocommercePortfolio';
-import WoocommercePricing from './InnerComponents/WoocommercePricing';
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiShoppingBag, FiCreditCard, FiSettings, FiTrendingUp } from "react-icons/fi";
 
 const WoocommerceDevelopment = () => {
     return (
@@ -29,7 +30,20 @@ const WoocommerceDevelopment = () => {
                 <WoocommerceServices />
                 <WoocommerceApproach />
                 <WoocommercePortfolio />
-                <WoocommercePricing />
+                <ServiceCTA 
+                    serviceName="Woocommerce Development"
+                    badgeIcon="⚡"
+                    badgeText="RESULTS DRIVEN WOOCOMMERCE DEVELOPMENT"
+                    title="Build Powerful"
+                    titleHighlight="WooCommerce Stores"
+                    description="Grow your online business with custom WooCommerce development tailored to your brand and customers. From theme customization and product management to secure payment gateways and performance optimization, we build scalable WooCommerce stores that deliver seamless shopping experiences and drive higher sales."
+                    features={[
+                        { icon: <FiShoppingBag />, text: "Custom Store" },
+                        { icon: <FiCreditCard />, text: "Secure Checkout" },
+                        { icon: <FiSettings />, text: "WooCommerce Setup" },
+                        { icon: <FiTrendingUp />, text: "Sales Growth" }
+                    ]}
+                />
             </div>
 
             <BannerComponent />

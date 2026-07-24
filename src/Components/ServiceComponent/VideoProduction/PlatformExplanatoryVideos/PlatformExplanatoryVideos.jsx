@@ -7,7 +7,9 @@ import PlatformOnboarding from './InnerComponents/PlatformOnboarding';
 import PlatformAnimation from './InnerComponents/PlatformAnimation';
 import PlatformConversion from './InnerComponents/PlatformConversion';
 import PlatformOptimization from './InnerComponents/PlatformOptimization';
-import PlatformPricing from './InnerComponents/PlatformPricing';
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiMonitor, FiVideo, FiUsers, FiTrendingUp } from "react-icons/fi";
+
 const PlatformExplanatoryVideos = () => {
   return (
     <>
@@ -24,7 +26,21 @@ const PlatformExplanatoryVideos = () => {
       <PlatformAnimation />
       <PlatformConversion />
       <PlatformOptimization />
-      <PlatformPricing />
+      <ServiceCTA 
+        serviceName="Platform Explanatory Videos"
+        badgeIcon="⚡"
+        badgeText="RESULTS DRIVEN PLATFORM EXPLANATORY VIDEOS"
+        title="Let's Simplify Your Platform"
+        titlePreposition="with"
+        titleHighlight="Explainer Videos"
+        description="Help your audience understand your platform with engaging explainer videos that simplify complex features and highlight real value. From SaaS products and mobile apps to websites and digital platforms, we create clear, visually compelling videos that improve user understanding, increase engagement, and drive conversions."
+        features={[
+          { icon: <FiMonitor />, text: "Platform Demo" },
+          { icon: <FiVideo />, text: "Visual Storytelling" },
+          { icon: <FiUsers />, text: "User Engagement" },
+          { icon: <FiTrendingUp />, text: "Product Adoption" }
+        ]}
+      />
 
       <BottomComponents />
     </>

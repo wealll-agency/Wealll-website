@@ -8,7 +8,8 @@ import BottomComponents from "../../CommonComponents/BottomComponents";
 import BlogServices from "./InnerComponents/BlogServices";
 import BlogStrategy from "./InnerComponents/BlogStrategy";
 import BlogQuality from "./InnerComponents/BlogQuality";
-import BlogPricing from "./InnerComponents/BlogPricing";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiEdit, FiSearch, FiUsers, FiTrendingUp } from "react-icons/fi";
 
 const Blogs = () => {
   return (
@@ -25,7 +26,21 @@ const Blogs = () => {
       <BlogServices />
       <BlogStrategy />
       <BlogQuality />
-      <BlogPricing />
+      <ServiceCTA 
+        serviceName="Blog Writing"
+        badgeIcon="⚡"
+        badgeText="RESULTS DRIVEN BLOG WRITING"
+        title="Let's Grow Your Brand"
+        titlePreposition="with"
+        titleHighlight="Blog Writing"
+        description="Boost your online presence with high-quality, SEO-friendly blog content that educates your audience, builds trust, and drives organic traffic. We create engaging blogs that strengthen your brand authority and turn readers into customers."
+        features={[
+          { icon: <FiEdit />, text: "SEO Blog Writing" },
+          { icon: <FiSearch />, text: "Keyword Research" },
+          { icon: <FiUsers />, text: "Audience Engagement" },
+          { icon: <FiTrendingUp />, text: "Organic Traffic" }
+        ]}
+      />
 
       <BottomComponents />
     </>

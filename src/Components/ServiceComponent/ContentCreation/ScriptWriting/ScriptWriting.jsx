@@ -1,11 +1,14 @@
 import React from "react";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiEdit3, FiVideo, FiTarget, FiTrendingUp } from "react-icons/fi";
+
 import Intro from "../../DigitalMarketing/DigitalMarketing/InnerComponents/Intro";
 import BannerComponent from "../../CommonComponents/BannerComponent";
 import BottomComponents from "../../CommonComponents/BottomComponents";
 import ScriptProcess from "./Innercomponents/ScriptProcess";
 import ScriptServices from "./Innercomponents/ScriptServices";
 import ScriptStyles from "./Innercomponents/ScriptStyles";
-import ScriptPricing from "./Innercomponents/ScriptPricing";
+
 
 const ScriptWriting = () => {
   return (
@@ -20,7 +23,21 @@ const ScriptWriting = () => {
       <ScriptServices />
       <ScriptProcess />
       <ScriptStyles />
-      <ScriptPricing />
+      <ServiceCTA 
+        serviceName="Script Writing"
+        badgeIcon="⚡"
+        badgeText="RESULTS DRIVEN SCRIPT WRITING"
+        title="Let's Grow Your Brand"
+        titlePreposition="with"
+        titleHighlight="Script Writing"
+        description="Turn ideas into compelling stories with professionally written scripts for advertisements, corporate films, YouTube videos, social media reels, and promotional campaigns. We create engaging scripts that connect with your audience and inspire action."
+        features={[
+          { icon: <FiEdit3 />, text: "Creative Storytelling" },
+          { icon: <FiVideo />, text: "Video & Ad Scripts" },
+          { icon: <FiTarget />, text: "Audience Engagement" },
+          { icon: <FiTrendingUp />, text: "Conversion Focused" }
+        ]}
+      />
       <BottomComponents />
     </>
   );

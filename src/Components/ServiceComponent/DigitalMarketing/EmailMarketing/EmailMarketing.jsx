@@ -1,11 +1,14 @@
 import React from "react";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiMail, FiSettings, FiUsers, FiTrendingUp } from "react-icons/fi";
+
 import Intro from "../DigitalMarketing/InnerComponents/Intro";
 import EmailHeroSection from "./InnerComponents/EmailHeroSection";
 import EmailWhatWeOffer from "./InnerComponents/EmailWhatWeOffer";
 import EmailHowItWorks from "./InnerComponents/EmailHowItWorks";
 import EmailFeatures from "./InnerComponents/EmailFeatures";
 import EmailBenefits from "./InnerComponents/EmailBenefits";
-import EmailPackages from "./InnerComponents/EmailPackages";
+
 import EmailAddons from "./InnerComponents/EmailAddons";
 import BottomComponents from "../../CommonComponents/BottomComponents";
 import "./InnerComponents/email-dark.css";
@@ -34,7 +37,21 @@ const EmailMarketing = () => {
         <EmailHowItWorks />
         <EmailFeatures />
         <EmailBenefits />
-        <EmailPackages />
+        <ServiceCTA 
+          serviceName="Email Marketing"
+          badgeIcon="⚡"
+          badgeText="RESULTS DRIVEN EMAIL MARKETING"
+          title="Let's Grow Your Brand"
+          titleHighlight="Email Marketing"
+          description="No fixed packages. Just custom email marketing strategies that nurture leads, increase customer retention, and drive measurable revenue for your business."
+          features={[
+            { icon: <FiMail />, text: "Email Campaigns" },
+            { icon: <FiSettings />, text: "Marketing Automation" },
+            { icon: <FiUsers />, text: "Audience Segmentation" },
+            { icon: <FiTrendingUp />, text: "Higher Conversions" }
+          ]}
+        />
+
         <EmailAddons />
       </div>
       <BottomComponents />

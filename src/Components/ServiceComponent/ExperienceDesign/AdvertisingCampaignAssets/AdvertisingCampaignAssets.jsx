@@ -5,8 +5,9 @@ import MultiPlatformFormats from "./InnerComponents/MultiPlatformFormats";
 import CampaignStrategy from "./InnerComponents/CampaignStrategy";
 import BrandConsistency from "./InnerComponents/BrandConsistency";
 import CampaignPortfolio from "./InnerComponents/CampaignPortfolio";
-import CampaignPackages from "./InnerComponents/CampaignPackages";
 import BottomComponents from "../../CommonComponents/BottomComponents";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiPenTool, FiVolume2, FiImage, FiTrendingUp } from "react-icons/fi";
 
 const AdvertisingCampaignAssets = () => {
   return (
@@ -22,7 +23,21 @@ const AdvertisingCampaignAssets = () => {
       <CampaignStrategy />
       <BrandConsistency />
       <CampaignPortfolio />
-      <CampaignPackages />
+      <ServiceCTA 
+        serviceName="Advertising Campaign Assets"
+        badgeIcon="⚡"
+        badgeText="RESULTS DRIVEN ADVERTISING CAMPAIGN ASSETS"
+        title="Let's Power Your Brand"
+        titlePreposition="with"
+        titleHighlight="Campaign Assets"
+        description="Bring every campaign to life with professionally designed advertising assets tailored for digital and print platforms. From social media creatives and display banners to ad visuals and promotional materials, we create compelling designs that capture attention, strengthen your brand, and improve campaign performance."
+        features={[
+          { icon: <FiPenTool />, text: "Creative Assets" },
+          { icon: <FiVolume2 />, text: "Multi-Platform Ads" },
+          { icon: <FiImage />, text: "Brand Consistency" },
+          { icon: <FiTrendingUp />, text: "Campaign Performance" }
+        ]}
+      />
       <BottomComponents />
     </>
   );

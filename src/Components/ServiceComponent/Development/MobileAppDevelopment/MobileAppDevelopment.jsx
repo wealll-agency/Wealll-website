@@ -8,7 +8,8 @@ import MobileAppWhyUs from './InnerComponents/MobileAppWhyUs';
 import MobileAppServices from './InnerComponents/MobileAppServices';
 import MobileAppTechStack from './InnerComponents/MobileAppTechStack';
 import MobileAppPortfolio from './InnerComponents/MobileAppPortfolio';
-import MobileAppPricing from './InnerComponents/MobileAppPricing';
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiSmartphone, FiLayout, FiLock, FiTrendingUp } from "react-icons/fi";
 import './InnerComponents/mobile-dark.css';
 
 const MobileAppDevelopment = () => {
@@ -31,7 +32,20 @@ const MobileAppDevelopment = () => {
                 <MobileAppServices />
                 <MobileAppTechStack />
                 <MobileAppPortfolio />
-                <MobileAppPricing />
+                <ServiceCTA 
+                    serviceName="Mobile App Development"
+                    badgeIcon="⚡"
+                    badgeText="RESULTS DRIVEN MOBILE APP DEVELOPMENT"
+                    title="Build Powerful Mobile Apps"
+                    titleHighlight="That Drive Business Growth"
+                    description="Bring your ideas to life with custom mobile app development for Android and iOS. We design and develop secure, scalable, and user-friendly mobile applications that deliver exceptional user experiences, streamline business operations, and help your brand connect with customers anytime, anywhere."
+                    features={[
+                        { icon: <FiSmartphone />, text: "Cross-Platform Apps" },
+                        { icon: <FiLayout />, text: "Intuitive UI/UX" },
+                        { icon: <FiLock />, text: "Secure Applications" },
+                        { icon: <FiTrendingUp />, text: "Scalable Performance" }
+                    ]}
+                />
             </div>
 
             <BannerComponent />

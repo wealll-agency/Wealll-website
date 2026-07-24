@@ -1,4 +1,6 @@
 import React from "react";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiSearch, FiTrendingUp, FiGlobe, FiBarChart2 } from "react-icons/fi";
 import Intro from "../DigitalMarketing/InnerComponents/Intro";
 import SEOHeroWhoWeAre from "./InnerComponents/SEOHeroWhoWeAre";
 import SEOWhyChoose from "./InnerComponents/SeoWhyChoose";
@@ -9,7 +11,6 @@ import SEORanking from "./InnerComponents/SEORanking";
 import SEOOtherServices from "./InnerComponents/SEOOtherServices";
 import SEOPreferredPartner from "./InnerComponents/SEOPreferredPartner";
 import SEOToolsAndAudit from "./InnerComponents/SEOToolsAndAudit";
-import SEOPackages from "./InnerComponents/SEOPackages";
 // Future imports will go here
 import BottomComponents from "../../CommonComponents/BottomComponents";
 import "./InnerComponents/seo-dark.css";
@@ -44,7 +45,21 @@ const SEO = () => {
         <SEOOtherServices />
         {/* <SEOPreferredPartner /> */}
         <SEOToolsAndAudit />
-        <SEOPackages />
+        <ServiceCTA 
+          serviceName="SEO Services"
+          badgeIcon="⚡"
+          badgeText="RESULTS DRIVEN SEO"
+          title="Let's Grow Your Brand"
+          titlePreposition="with"
+          titleHighlight="SEO"
+          description="Increase your online visibility with data-driven SEO strategies. We optimize your website to rank higher on search engines, attract qualified organic traffic, and convert visitors into loyal customers."
+          features={[
+            { icon: <FiSearch />, text: "Keyword Research" },
+            { icon: <FiTrendingUp />, text: "Higher Rankings" },
+            { icon: <FiGlobe />, text: "Organic Traffic" },
+            { icon: <FiBarChart2 />, text: "Performance Tracking" }
+          ]}
+        />
         {/* Other sections will be added sequentially */}
       </div>
 

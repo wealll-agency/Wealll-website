@@ -10,7 +10,8 @@ import ShopifyApproach from './InnerComponents/ShopifyApproach'
 import ShopifyStats from './InnerComponents/ShopifyStats'
 import ShopifyDifferent from './InnerComponents/ShopifyDifferent'
 import ShopifyPortfolio from './InnerComponents/ShopifyPortfolio'
-import ShopifyPricing from './InnerComponents/ShopifyPricing'
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiShoppingBag, FiLayout, FiCreditCard, FiTrendingUp } from "react-icons/fi";
 
 import './InnerComponents/shopify-dark.css'
 
@@ -34,7 +35,20 @@ const ShopifyDevelopment = () => {
                 <ShopifyStats />
                 <ShopifyDifferent />
                 <ShopifyPortfolio />
-                <ShopifyPricing />
+                <ServiceCTA 
+                    serviceName="Shopify Development"
+                    badgeIcon="⚡"
+                    badgeText="RESULTS DRIVEN SHOPIFY DEVELOPMENT"
+                    title="Launch Powerful"
+                    titleHighlight="Shopify Stores"
+                    description="Launch a high-performing Shopify store designed to deliver exceptional shopping experiences and drive online sales. From custom theme development and store setup to app integrations, payment gateways, and performance optimization, we build scalable Shopify solutions that help your business grow with confidence."
+                    features={[
+                        { icon: <FiShoppingBag />, text: "Custom Store" },
+                        { icon: <FiLayout />, text: "Custom Themes" },
+                        { icon: <FiCreditCard />, text: "Secure Checkout" },
+                        { icon: <FiTrendingUp />, text: "Sales Growth" }
+                    ]}
+                />
             </div>
 
             <div style={{ backgroundColor: '#ffffff' }}>

@@ -4,7 +4,8 @@ import BottomComponents from "../../CommonComponents/BottomComponents";
 import ProductDescriptionServices from "./InnerComponents/ProductDescriptionServices";
 import ProductDescriptionStrategy from "./InnerComponents/ProductDescriptionStrategy";
 import ProductDescriptionStyles from "./InnerComponents/ProductDescriptionStyles";
-import ProductDescriptionPricing from "./InnerComponents/ProductDescriptionPricing";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiShoppingBag, FiSearch, FiStar, FiTrendingUp } from "react-icons/fi";
 
 const EcommerceProductDescription = () => {
   return (
@@ -19,7 +20,21 @@ const EcommerceProductDescription = () => {
       <ProductDescriptionServices />
       <ProductDescriptionStrategy />
       <ProductDescriptionStyles />
-      <ProductDescriptionPricing />
+      <ServiceCTA 
+        serviceName="Ecommerce Product Descriptions"
+        badgeIcon="⚡"
+        badgeText="RESULTS DRIVEN ECOMMERCE PRODUCT DESCRIPTIONS"
+        title="Let's Grow Your Brand"
+        titlePreposition="with"
+        titleHighlight="Ecommerce Product Descriptions"
+        description="Transform product listings into powerful sales tools with compelling, SEO-optimized product descriptions. We create persuasive copy that highlights key features, communicates customer benefits, and inspires confident purchase decisions."
+        features={[
+          { icon: <FiShoppingBag />, text: "Persuasive Copy" },
+          { icon: <FiSearch />, text: "SEO Optimized" },
+          { icon: <FiStar />, text: "Feature Highlights" },
+          { icon: <FiTrendingUp />, text: "More Sales" }
+        ]}
+      />
       <BottomComponents />
     </>
   );

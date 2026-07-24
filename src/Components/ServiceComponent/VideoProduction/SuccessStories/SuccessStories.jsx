@@ -7,7 +7,8 @@ import PerformanceComparison from "./InnerComponents/PerformanceComparison";
 import IndustrySuccess from "./InnerComponents/IndustrySuccess";
 import ClientTestimonials from "./InnerComponents/ClientTestimonials";
 import MarketingInsights from "./InnerComponents/MarketingInsights";
-import SuccessStoryPricing from "./InnerComponents/SuccessStoryPricing";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiVideo, FiStar, FiShield, FiTrendingUp } from "react-icons/fi";
 
 import BottomComponents from "../../CommonComponents/BottomComponents";
 
@@ -28,7 +29,21 @@ const SuccessStories = () => {
         <IndustrySuccess />
         <ClientTestimonials />
         <MarketingInsights />
-        <SuccessStoryPricing />
+        <ServiceCTA 
+          serviceName="Success Stories"
+          badgeIcon="⚡"
+          badgeText="RESULTS DRIVEN SUCCESS STORIES"
+          title="Let's Turn Your Success"
+          titlePreposition="Into Inspiring"
+          titleHighlight="Stories"
+          description="Build credibility with authentic success story videos that highlight real customer experiences and measurable business results. We transform client journeys into compelling stories that inspire trust, strengthen your brand reputation, and encourage potential customers to take action."
+          features={[
+            { icon: <FiVideo />, text: "Customer Stories" },
+            { icon: <FiStar />, text: "Client Testimonials" },
+            { icon: <FiShield />, text: "Build Trust" },
+            { icon: <FiTrendingUp />, text: "Proven Results" }
+          ]}
+        />
       </div>
       <BottomComponents />
     </>

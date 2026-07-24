@@ -8,7 +8,8 @@ import TroubleshootingSupport from "./InnerComponents/TroubleshootingSupport";
 import EcommerceFAQ from "./InnerComponents/EcommerceFAQ";
 import KnowledgeBaseLibrary from "./InnerComponents/KnowledgeBaseLibrary";
 import MarketingIntegration from "./InnerComponents/MarketingIntegration";
-import ProductFAQPricing from "./InnerComponents/ProductFAQPricing";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiHelpCircle, FiVideo, FiShield, FiTrendingUp } from "react-icons/fi";
 
 const ProductFAQVideos = () => {
   return (
@@ -26,7 +27,21 @@ const ProductFAQVideos = () => {
       <EcommerceFAQ />
       <KnowledgeBaseLibrary />
       <MarketingIntegration />
-      <ProductFAQPricing />
+      <ServiceCTA 
+        serviceName="Product FAQ Videos"
+        badgeIcon="⚡"
+        badgeText="RESULTS DRIVEN PRODUCT FAQ VIDEOS"
+        title="Let's Answer Customer"
+        titlePreposition="Questions with"
+        titleHighlight="FAQ Videos"
+        description="Help customers make confident buying decisions with engaging Product FAQ videos. We create clear, informative videos that answer common questions, explain product features, address customer concerns, and reduce support requests while improving trust and conversions."
+        features={[
+          { icon: <FiHelpCircle />, text: "Common Questions" },
+          { icon: <FiVideo />, text: "Product Demos" },
+          { icon: <FiShield />, text: "Build Trust" },
+          { icon: <FiTrendingUp />, text: "Higher Conversions" }
+        ]}
+      />
       <BottomComponents />
     </>
   );

@@ -7,7 +7,8 @@ import "./InnerComponents/affiliate-dark.css";
 import AffiliateContext from "./InnerComponents/AffiliateContext";
 import AffiliateStrategy from "./InnerComponents/AffiliateStrategy";
 import AffiliateBenefits from "./InnerComponents/AffiliateBenefits";
-import AffiliatePricing from "./InnerComponents/AffiliatePricing";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiUsers, FiDollarSign, FiTarget, FiTrendingUp } from "react-icons/fi";
 import AffiliateAddons from "./InnerComponents/AffiliateAddons";
 
 const AffiliateCollaboration = () => {
@@ -25,7 +26,21 @@ const AffiliateCollaboration = () => {
             <AffiliateContext />
             <AffiliateStrategy />
             <AffiliateBenefits />
-            <AffiliatePricing />
+            <ServiceCTA 
+                serviceName="Affiliate Collaboration"
+                badgeIcon="⚡"
+                badgeText="RESULTS DRIVEN AFFILIATE COLLABORATION"
+                title="Grow Your Sales"
+                titlePreposition="with"
+                titleHighlight="Affiliate Partnerships"
+                description="Drive measurable growth through strategic affiliate collaborations that reward performance. We connect your brand with trusted affiliates and creators who promote your products to the right audience, helping you increase sales, generate qualified leads, and maximize your marketing ROI."
+                features={[
+                    { icon: <FiUsers />, text: "Affiliate Network" },
+                    { icon: <FiDollarSign />, text: "Performance Rewards" },
+                    { icon: <FiTarget />, text: "Qualified Leads" },
+                    { icon: <FiTrendingUp />, text: "Sales Growth" }
+                ]}
+            />
             <AffiliateAddons />
 
             <BottomComponents />

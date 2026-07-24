@@ -10,7 +10,8 @@ import WPCompanyStats from './InnerComponents/WPCompanyStats'
 import WPWhyLove from './InnerComponents/WPWhyLove'
 import WPWhyUs from './InnerComponents/WPWhyUs'
 import WPPortfolio from './InnerComponents/WPPortfolio'
-import WPPackages from './InnerComponents/WPPackages'
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiLayout, FiSettings, FiSearch, FiSmartphone } from "react-icons/fi";
 
 const WordPressDeveloper = () => {
     return (
@@ -33,7 +34,20 @@ const WordPressDeveloper = () => {
             <WPWhyLove />
             <WPWhyUs />
             <WPPortfolio />
-            <WPPackages />
+            <ServiceCTA 
+                serviceName="WordPress Developer"
+                badgeIcon="⚡"
+                badgeText="RESULTS DRIVEN WORDPRESS DEVELOPMENT"
+                title="Build Powerful"
+                titleHighlight="WordPress Websites"
+                description="Build a professional WordPress website that's fast, secure, and easy to manage. From custom themes and plugin development to WooCommerce stores and SEO optimization, we create scalable WordPress solutions that enhance your online presence and help your business grow."
+                features={[
+                    { icon: <FiLayout />, text: "Custom Themes" },
+                    { icon: <FiSettings />, text: "Plugin Integration" },
+                    { icon: <FiSearch />, text: "SEO Optimized" },
+                    { icon: <FiSmartphone />, text: "Easy Content Management" }
+                ]}
+            />
             </div>
             
             <BottomComponents />

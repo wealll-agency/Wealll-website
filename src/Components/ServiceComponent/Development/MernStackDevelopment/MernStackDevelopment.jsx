@@ -9,7 +9,8 @@ import MernProcess from "./InnerComponents/MernProcess";
 import MernAppSlider from "./InnerComponents/MernAppSlider";
 import MernCTA from "./InnerComponents/MernCTA";
 import MernPortfolio from "./InnerComponents/MernPortfolio";
-import MernPricing from "./InnerComponents/MernPricing";
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiCode, FiSettings, FiDatabase, FiTrendingUp } from "react-icons/fi";
 import "./InnerComponents/mern-dark.css";
 
 const MernStackDevelopment = () => {
@@ -36,7 +37,21 @@ const MernStackDevelopment = () => {
       </div>
 
       <div className="mern-pricing-area" style={{ backgroundColor: "#070913" }}>
-        <MernPricing />
+        <ServiceCTA 
+            serviceName="MERN Stack Development"
+            badgeIcon="⚡"
+            badgeText="RESULTS DRIVEN MERN STACK DEVELOPMENT"
+            title="Build Modern Web Apps"
+            titlePreposition="with"
+            titleHighlight="MERN Stack"
+            description="Build fast, scalable, and feature-rich web applications with our MERN Stack development services. Using MongoDB, Express.js, React, and Node.js, we create custom web solutions that deliver seamless user experiences, powerful backend functionality, and exceptional performance for businesses of all sizes."
+            features={[
+                { icon: <FiCode />, text: "React Development" },
+                { icon: <FiSettings />, text: "Node.js APIs" },
+                { icon: <FiDatabase />, text: "MongoDB Database" },
+                { icon: <FiTrendingUp />, text: "Scalable Solutions" }
+            ]}
+        />
       </div>
 
       <div style={{ backgroundColor: "#ffffff" }}>

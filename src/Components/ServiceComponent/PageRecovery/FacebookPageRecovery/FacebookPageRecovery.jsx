@@ -5,7 +5,8 @@ import BottomComponents from '../../CommonComponents/BottomComponents'
 import FbRecoveryHero from './InnerComponents/FbRecoveryHero'
 import FbRecoveryProcess from './InnerComponents/FbRecoveryProcess'
 import FbRecoveryTimelineWho from './InnerComponents/FbRecoveryTimelineWho'
-import FbRecoveryPricing from './InnerComponents/FbRecoveryPricing'
+import ServiceCTA from "../../CommonComponents/ServiceCTA";
+import { FiUnlock, FiShield, FiUser, FiZap } from "react-icons/fi";
 import FbRecoveryAddons from './InnerComponents/FbRecoveryAddons'
 import FbRecoveryWhyUs from './InnerComponents/FbRecoveryWhyUs'
 import FbRecoveryCTA from './InnerComponents/FbRecoveryCTA'
@@ -24,7 +25,20 @@ const FacebookPageRecovery = () => {
             <FbRecoveryTimelineWho />
             <FbRecoveryWhyUs />
             <FbRecoveryCTA />
-            <FbRecoveryPricing />
+            <ServiceCTA 
+                serviceName="Facebook Page Recovery"
+                badgeIcon="⚡"
+                badgeText="RESULTS DRIVEN FACEBOOK PAGE RECOVERY"
+                title="Recover Your"
+                titleHighlight="Facebook Business Page"
+                description="Regain control of your Facebook Business Page with our expert recovery services. Whether your page has been hacked, disabled, restricted, or you've lost admin access, we work to restore ownership, recover valuable business assets, and help your brand get back online quickly and securely."
+                features={[
+                    { icon: <FiUnlock />, text: "Page Recovery" },
+                    { icon: <FiShield />, text: "Account Security" },
+                    { icon: <FiUser />, text: "Admin Access" },
+                    { icon: <FiZap />, text: "Quick Recovery" }
+                ]}
+            />
             <FbRecoveryCTA />
             <BottomComponents />
         </div>
