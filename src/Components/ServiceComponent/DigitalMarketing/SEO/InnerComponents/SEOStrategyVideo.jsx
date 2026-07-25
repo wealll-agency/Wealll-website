@@ -4,7 +4,7 @@ import { FiPlay } from 'react-icons/fi';
 import { mediaUrl } from '../../../../../config/media';
 import './seo-dark.css';
 
-const WealllVideo = mediaUrl("assets/video/WEALLL.mp4");
+const WealllVideo = mediaUrl("assets/Video/WEALLL.mp4");
 
 const SEOStrategyVideo = () => {
   const [isPlaying, setIsPlaying] = useState(false);
