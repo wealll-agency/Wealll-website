@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiPlay } from 'react-icons/fi';
-import WealllVideo from '../../../../../assets/video/WEALLL.mp4';
+import { mediaUrl } from '../../../../../config/media';
 import './seo-dark.css';
+
+const WealllVideo = mediaUrl("assets/video/WEALLL.mp4");
 
 const SEOStrategyVideo = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -37,10 +39,10 @@ const SEOStrategyVideo = () => {
             >
               {isPlaying ? (
                 <div className="ratio ratio-16x9 rounded-4 overflow-hidden bg-black">
-                  <video 
-                    src={WealllVideo} 
-                    autoPlay 
-                    controls 
+                  <video
+                    src={WealllVideo}
+                    autoPlay
+                    controls
                     className="w-100 h-100 object-fit-cover"
                   ></video>
                 </div>
