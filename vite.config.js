@@ -14,6 +14,9 @@ const version = `v 1.0.${commitCount}`;
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  build: {
+    target: 'es2015'
+  },
   define: {
     __APP_VERSION__: JSON.stringify(version)
   }
