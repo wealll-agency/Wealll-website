@@ -9,6 +9,7 @@ const AmbitionBox = mediaUrl("assets/images/ambitionbox.png");
 import { mediaUrl } from "../config/media";
 
 
+
 const Footer = () => {
     return (
         <>
@@ -54,33 +55,84 @@ const Footer = () => {
                                 <h5 className="footerTitle">Hire Us</h5>
                                 <div className='hire_links'>
                                     <ul className="footer_menu-1">
-                                        <li><a href="#">Hire Digital Marketing Expert </a></li>
-                                        <li><a href="#">Hire Social Media Expert</a></li>
-                                        <li><a href="#">Hire SEO Expert</a></li>
-                                        <li><a href="#">Hire Logo Designer </a></li>
-                                        <li><a href="#">Hire UI/UX Designer </a></li>
-                                        <li><a href="#">Hire Mern Stack Developer </a></li>
-                                        <li><a href="#">Hire Ecommerce Developer </a></li>
+                                        <li>
+                                            <Link to="/digital-marketing">
+                                                Hire Digital Marketing Expert
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/social-media-marketing">
+                                                Hire Social Media Expert
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/seo-services">
+                                                Hire SEO Expert
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/logo-designing">
+                                                Hire Logo Designer
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/website-development">
+                                                Hire UI/UX Designer
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/mern-stack-development">
+                                                Hire Mern Stack Developer
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/ecommerce-development">
+                                                Hire Ecommerce Developer
+                                            </Link>
+                                        </li>
                                     </ul>
                                     <ul className="footer_menu-1">
-                                        <li><a href="#">Hire Digital Marketing Expert </a></li>
-                                        <li><a href="#">Hire Social Media Expert</a></li>
-                                        <li><a href="#">Hire SEO Expert</a></li>
-                                        <li><a href="#">Hire Logo Designer </a></li>
-                                        <li><a href="#">Hire UI/UX Designer </a></li>
-                                        <li><a href="#">Hire Mern Stack Developer </a></li>
-                                        <li><a href="#">Hire Ecommerce Developer </a></li>
+                                        <li>
+                                            <Link to="/digital-marketing">
+                                                Hire Digital Marketing Expert
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/social-media-marketing">
+                                                Hire Social Media Expert
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/seo-services">
+                                                Hire SEO Expert
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/logo-designing">
+                                                Hire Logo Designer
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/website-development">
+                                                Hire UI/UX Designer
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/mern-stack-development">
+                                                Hire Mern Stack Developer
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/ecommerce-development">
+                                                Hire Ecommerce Developer
+                                            </Link>
+                                        </li>
                                     </ul>
                                 </div>
-
-
-
 
                             </div>
 
                         </div>
-
-
 
                         <div className="col-xl-3 col-lg-3 col-md-4 col-sm-5 col-6 order-xl-4 order-lg-4 order-md-4 order-sm-5 order-5">
 
