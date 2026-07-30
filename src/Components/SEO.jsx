@@ -8,19 +8,19 @@ const SEO = ({ title, description, canonicalPath }) => {
 
   return (
     <Helmet>
-      <title>{title ? `${title} | We Alll` : defaultTitle}</title>
+      <title>{title ? title : defaultTitle}</title>
       <meta name="description" content={description || defaultDesc} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={`${siteUrl}${canonicalPath || ''}`} />
-      <meta property="og:title" content={title ? `${title} | We Alll` : defaultTitle} />
+      <meta property="og:title" content={title ? title : defaultTitle} />
       <meta property="og:description" content={description || defaultDesc} />
       
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content={`${siteUrl}${canonicalPath || ''}`} />
-      <meta property="twitter:title" content={title ? `${title} | We Alll` : defaultTitle} />
+      <meta property="twitter:title" content={title ? title : defaultTitle} />
       <meta property="twitter:description" content={description || defaultDesc} />
 
       {/* Canonical URL */}

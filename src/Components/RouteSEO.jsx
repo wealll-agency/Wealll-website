@@ -12,11 +12,11 @@ const routeData = {
     description: "We Alll is a top-tier digital marketing agency in Kolkata offering SEO, Social Media, Content Creation, and PR services."
   },
   "/about": {
-    title: "About Services | We Alll",
+    title: "About Us | We Alll",
     description: "Expert About services by We Alll. Elevate your brand visibility, reach the right audience, and drive results with our data-driven strategies."
   },
   "/contact": {
-    title: "Contact Services | We Alll",
+    title: "Contact Us | We Alll",
     description: "Expert Contact services by We Alll. Elevate your brand visibility, reach the right audience, and drive results with our data-driven strategies."
   },
   "/digital-marketing": {
@@ -300,27 +300,27 @@ const routeData = {
     description: "Expert Wordpress Developer services by We Alll. Elevate your brand visibility, reach the right audience, and drive results with our data-driven strategies."
   },
   "/blog": {
-    title: "Blog Services | We Alll",
+    title: "Our Blog | We Alll",
     description: "Expert Blog services by We Alll. Elevate your brand visibility, reach the right audience, and drive results with our data-driven strategies."
   },
   "/career": {
-    title: "Career Services | We Alll",
+    title: "Our Career | We Alll",
     description: "Expert Career services by We Alll. Elevate your brand visibility, reach the right audience, and drive results with our data-driven strategies."
   },
   "/career-details": {
-    title: "Career Details Services | We Alll",
+    title: "Career Details | We Alll",
     description: "Expert Career Details services by We Alll. Elevate your brand visibility, reach the right audience, and drive results with our data-driven strategies."
   },
   "/blog-details": {
-    title: "Blog Details Services | We Alll",
+    title: "Blog Details | We Alll",
     description: "Expert Blog Details services by We Alll. Elevate your brand visibility, reach the right audience, and drive results with our data-driven strategies."
   },
   "/terms": {
-    title: "Terms Services | We Alll",
+    title: "Terms And Conditions | We Alll",
     description: "Expert Terms services by We Alll. Elevate your brand visibility, reach the right audience, and drive results with our data-driven strategies."
   },
   "/privacy-policy": {
-    title: "Privacy Policy Services | We Alll",
+    title: "Privacy Policy | We Alll",
     description: "Expert Privacy Policy services by We Alll. Elevate your brand visibility, reach the right audience, and drive results with our data-driven strategies."
   },
 };
