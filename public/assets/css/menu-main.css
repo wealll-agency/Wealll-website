@@ -8,8 +8,20 @@
 
 html ::-webkit-scrollbar {
     width: 7px;
+    height: 5px;
+}
+
+html ::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html ::-webkit-scrollbar-thumb {
+    background: var(--color-1);
     border-radius: 10px;
-    height: 5px
+}
+
+html ::-webkit-scrollbar-thumb:hover {
+    background: #e5a60d;
 }
 
 

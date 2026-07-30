@@ -182,7 +182,7 @@ const Footer = () => {
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="#" target="_blank">
+                                            <a href="https://maps.app.goo.gl/CEv2aUKqmojNRu8n7" target="_blank">
                                                 <img src={ReviewImage3} alt="F Google Review Result" loading="lazy" />
                                                 <div className="replte-inner">
                                                     <div className="replte-star">
