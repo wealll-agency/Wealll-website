@@ -93,8 +93,8 @@ const Footer = () => {
                                     </ul>
                                     <ul className="footer_menu-1">
                                         <li>
-                                            <Link to="/digital-marketing">
-                                                Hire Digital Marketing Manager
+                                            <Link to="/email-marketing">
+                                                Hire Email Marketing Manager
                                             </Link>
                                         </li>
 
