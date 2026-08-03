@@ -454,11 +454,11 @@ const Header = () => {
                   </div>
                 </div>
 
-                <div className="navbar-link-item w-inline-block ">
+                {/* <div className="navbar-link-item w-inline-block ">
                   <Link to="/blog" className="navbar-link-text">
                     Blog
                   </Link>
-                </div>
+                </div> */}
 
                 <div className="navbar-link-item w-inline-block ">
                   <Link to="/career" className="navbar-link-text">
@@ -906,11 +906,11 @@ const Header = () => {
                     </Link>
                   </li>
 
-                  <li className="menu-item">
+                  {/* <li className="menu-item">
                     <Link to="/blog" className="nav-item-link w-inline-block">
                       <div className="nav-item-text">Blog</div>
                     </Link>
-                  </li>
+                  </li> */}
                   <li className="menu-item">
                     <Link to="/career" className="nav-item-link w-inline-block">
                       <div className="nav-item-text">Careers</div>
