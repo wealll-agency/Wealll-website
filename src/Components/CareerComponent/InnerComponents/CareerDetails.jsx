@@ -1,38 +1,54 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { CareerData } from '../../../Data/CareerData';
+import SEOMeta from '../../SEO';
 
 const CareerDetails = () => {
+    const { slug } = useParams();
+    
+    // Find the specific job based on the slug from the URL
+    const job = CareerData.find(item => item.slug === slug);
+
+    if (!job) {
+        return (
+            <div className="career-details-page section-padding text-center">
+                <div className="container">
+                    <h2 className="mb-4">Job Position Not Found</h2>
+                    <p className="mb-4">We're sorry, but the job position you are looking for does not exist or has been removed.</p>
+                    <Link to="/career" className="btn btn-warning cta-btn">Back to Careers</Link>
+                </div>
+            </div>
+        );
+    }
+
     return (
         <div className="career-details-page section-padding">
+            <SEOMeta 
+                title={`${job.title} | We Alll`} 
+                description={`Apply for the ${job.title} position at We Alll in Kolkata. Explore a dynamic career with us.`}
+            />
             <div className="container">
                 <div className="row">
                     <div className="col-lg-12 mx-auto">
                         <div className="job-description-section mb-5">
-                            <h2 className="job-title-large">Full stack Developer</h2>
+                            <h2 className="job-title-large">{job.title}</h2>
 
                             <div className="desc-content mt-4">
                                 <h4 className="desc-heading">Description:</h4>
-                                <p>We Alll is a Kolkata-based full-stack development and marketing company looking for content writers (in-office full-time positions). We are looking for versatile, sincere, and hardworking candidates for the Content Writer positions with our firm. With We Alll, as a Content Writer or Editor, you will get the opportunity to work in a dynamic and fast-growth environment, both professionally and personally rewarding. We are looking for writers at all experience levels.</p>
+                                <p>{job.description}</p>
 
                                 <h4 className="desc-heading">Skill:</h4>
                                 <ul className="desc-list">
-                                    <li>Meeting with clients to discuss website design and function.</li>
-                                    <li>Designing and building the website front-end.</li>
-                                    <li>Creating the website architecture.</li>
-                                    <li>Designing and managing the website back-end including database and server integration.</li>
-                                    <li>Generating WordPress themes and plugins.</li>
-                                    <li>Conducting website performance tests.</li>
-                                    <li>Troubleshooting content issues.</li>
-                                    <li>Conducting WordPress training with the client.</li>
-                                    <li>Monitoring the performance of the live website.</li>
+                                    {job.skillsList.map((skill, index) => (
+                                        <li key={index}>{skill}</li>
+                                    ))}
                                 </ul>
 
                                 <h4 className="desc-heading">Requirement:</h4>
                                 <ul className="desc-list">
-                                    <li>Bachelor's degree in computer science or a similar field.</li>
-                                    <li>Proven work experience as a WordPress developer.</li>
-                                    <li>Knowledge of front-end technologies including CSS3, JavaScript, HTML5, and jQuery.</li>
-                                    <li>Knowledge of code versioning tools including Git, Mercurial, and SVN.</li>
+                                    {job.requirements.map((req, index) => (
+                                        <li key={index}>{req}</li>
+                                    ))}
                                 </ul>
                             </div>
                         </div>
@@ -42,12 +58,11 @@ const CareerDetails = () => {
                             <form className="career-form">
                                 <div className="mb-3">
                                     <label className="form-label">Position<span className="text-danger">*</span></label>
-                                    <select className="form-select" required>
+                                    <select className="form-select" required defaultValue={job.title}>
                                         <option value="">Select Position</option>
-                                        <option value="Full Stack Developer">Full Stack Developer</option>
-                                        <option value="PHP Laravel Developer">PHP Laravel Developer</option>
-                                        <option value="WordPress Developer">WordPress Developer</option>
-                                        <option value="Content Writer">Content Writer</option>
+                                        {CareerData.map((item, index) => (
+                                            <option key={index} value={item.title}>{item.title}</option>
+                                        ))}
                                     </select>
                                 </div>
 

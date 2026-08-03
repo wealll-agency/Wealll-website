@@ -94,37 +94,39 @@ const Footer = () => {
                                     <ul className="footer_menu-1">
                                         <li>
                                             <Link to="/digital-marketing">
-                                                Hire Digital Marketing Expert
+                                                Hire Digital Marketing Manager
+                                            </Link>
+                                        </li>
+
+                                        <li>
+                                            <Link to="/content-marketing">
+                                                Hire Content Writer
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/social-media-marketing">
-                                                Hire Social Media Expert
+                                            <Link to="/ad-films">
+                                                Hire Video ditor
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/seo-services">
-                                                Hire SEO Expert
+                                            <Link to="/shopify-development">
+                                                Hire Shopify Developer
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/logo-designing">
-                                                Hire Logo Designer
+                                            <Link to="/barter-collaboration">
+                                                Hire Influencer Marketer
+                                            </Link>
+                                        </li>
+
+                                        <li>
+                                            <Link to="/laravel-developer">
+                                                Hire Laravel Developer
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/website-development">
-                                                Hire UI/UX Designer
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/mern-stack-development">
-                                                Hire Mern Stack Developer
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/ecommerce-development">
-                                                Hire Ecommerce Developer
+                                            <Link to="/mobile-app-development">
+                                                Hire Mobile App Developer
                                             </Link>
                                         </li>
                                     </ul>

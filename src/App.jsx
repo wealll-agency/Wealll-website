@@ -224,7 +224,7 @@ function App() {
         <Route path="/wordpress-developer" element={<WordPressDeveloper />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/career" element={<Career />} />
-        <Route path="/career-details" element={<CareerDetails />} />
+        <Route path="/career-details/:slug" element={<CareerDetails />} />
         <Route path="/blog-details" element={<BlogDetails />} />
         <Route path="/terms" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />

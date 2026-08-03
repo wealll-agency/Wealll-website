@@ -376,11 +376,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wealll.com/career-details</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.wealll.com/blog-details</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -392,6 +387,36 @@
   </url>
   <url>
     <loc>https://www.wealll.com/privacy-policy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wealll.com/career-details/full-stack-developer-intern</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wealll.com/career-details/php-laravel-developer-intern</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wealll.com/career-details/wordpress-developer-intern</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wealll.com/career-details/content-writers-intern</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wealll.com/career-details/seo-intern</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wealll.com/career-details/digital-marketing-intern</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { CareerData } from './src/Data/CareerData.js';
 
 const APP_JSX_PATH = path.join(process.cwd(), 'src', 'App.jsx');
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
@@ -34,7 +35,10 @@ function generateSitemap() {
     .filter(p => !p.includes(':')); // Exclude dynamic routes like /:id
 
   // Remove duplicates just in case
-  const uniquePaths = [...new Set(validPaths)];
+  let uniquePaths = [...new Set(validPaths)];
+
+  // Inject dynamic career routes
+  uniquePaths.push(...CareerData.map(job => `/career-details/${job.slug}`));
 
   // 1. Generate sitemap.xml
   const sitemapContent = `<?xml version="1.0" encoding="UTF-8"?>
