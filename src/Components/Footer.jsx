@@ -105,7 +105,7 @@ const Footer = () => {
                                         </li>
                                         <li>
                                             <Link to="/ad-films">
-                                                Hire Video ditor
+                                                Hire Video Editor
                                             </Link>
                                         </li>
                                         <li>
