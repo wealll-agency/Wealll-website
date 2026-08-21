@@ -246,6 +246,7 @@ const Footer = () => {
 
                                     <nav>
                                         <ul>
+                                            <li><Link to="https://inventory.wealll.com/" target='_blank'>Inventory</Link></li>
                                             <li className="active"><Link to="/terms">Terms</Link></li>
                                             <li><Link to="/privacy-policy">Privacy</Link></li>
                                         </ul>
