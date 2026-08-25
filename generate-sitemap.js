@@ -7,6 +7,7 @@ const PUBLIC_DIR = path.join(process.cwd(), 'public');
 const SITEMAP_PATH = path.join(PUBLIC_DIR, 'sitemap.xml');
 const ROBOTS_PATH = path.join(PUBLIC_DIR, 'robots.txt');
 const LLM_PATH = path.join(PUBLIC_DIR, 'llm.txt');
+const LLMS_PATH = path.join(PUBLIC_DIR, 'llms.txt');
 
 const DOMAIN = 'https://www.wealll.com';
 
@@ -32,7 +33,7 @@ function generateSitemap() {
   const excludePaths = ['*', '/admin', '/login', '/dashboard'];
   const validPaths = paths
     .filter(p => !excludePaths.includes(p))
-    .filter(p => !p.includes(':')); // Exclude dynamic routes like /:id
+    .filter(p => !p.includes(':') && !p.includes('*')); // Exclude dynamic and wildcard routes
 
   // Remove duplicates just in case
   let uniquePaths = [...new Set(validPaths)];
@@ -62,16 +63,84 @@ Sitemap: ${DOMAIN}/sitemap.xml
   fs.writeFileSync(ROBOTS_PATH, robotsContent, 'utf-8');
   console.log('✅ Generated robots.txt');
 
-  // 3. Generate llm.txt
-  const llmContent = `# We Alll - Results Driven Digital Marketing Agency
+  // 3. Generate llms.txt (following standard llmstxt.org specification)
+  // Categorize paths for better LLM context
+  const mainPages = [];
+  const services = [];
+  const contentCreation = [];
+  const videoProduction = [];
+  const experienceDesign = [];
+  const development = [];
+  const prAndRecovery = [];
+  const influencerMarketing = [];
+  const otherPages = [];
 
-We Alll is a digital marketing agency specializing in SEO, content creation, video production, experience design, development, page recovery, PR services, and influencer marketing.
+  uniquePaths.forEach(p => {
+    if (['/', '/about', '/contact', '/terms', '/privacy-policy', '/career', '/blog'].includes(p)) {
+      mainPages.push(p);
+    } else if (['/digital-marketing', '/seo-services', '/social-media-marketing', '/content-marketing', '/email-marketing', '/360-marketing', '/whatsapp-marketing'].includes(p)) {
+      services.push(p);
+    } else if (['/blogs', '/case-studies', '/content-localisation', '/content-moderation', '/corporate-theme-songs', '/ebooks', '/film-subtitling', '/mailers', '/newsletters', '/press-releases', '/ecommerce-product-description', '/seo-content', '/social-media-management', '/sops', '/script-writing', '/web-content', '/white-papers'].includes(p)) {
+      contentCreation.push(p);
+    } else if (['/ad-films', '/corporate-films', '/exhibition-videos', '/platform-explanatory-videos', '/platform-flagship-videos', '/product-faq-videos', '/success-stories', '/television-commercials', '/testimonial-videos'].includes(p)) {
+      videoProduction.push(p);
+    } else if (['/advertising-campaign-assets', '/brand-manual', '/catalogues', '/communication-collaterals', '/company-profile', '/event-branding-assets', '/exhibition-kiosks', '/investors-deck', '/branding-design', '/logo-design', '/portfolio-design', '/presentation', '/product-packaging'].includes(p)) {
+      experienceDesign.push(p);
+    } else if (['/ecommerce-development', '/woocommerce-development', '/website-development', '/mobile-app-development', '/mern-stack-development', '/shopify-development', '/laravel-developer', '/wordpress-developer'].includes(p)) {
+      development.push(p);
+    } else if (['/facebook-page-recovery', '/gmb-suspension', '/ownership-recovery', '/crisis-management', '/press-release', '/media-relations', '/reputation-management'].includes(p)) {
+      prAndRecovery.push(p);
+    } else if (['/barter-collaboration', '/paid-collaboration', '/podcast-collaboration', '/affiliate-collaboration', '/ugc-collaboration', '/instagram-reel-collaboration', '/youtube-integration-collaboration'].includes(p)) {
+      influencerMarketing.push(p);
+    } else {
+      otherPages.push(p);
+    }
+  });
 
-## Available Pages
-${uniquePaths.map(p => `- [${p === '/' ? 'Home' : p.slice(1).replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}](${DOMAIN}${p})`).join('\n')}
+  const formatLink = (p) => {
+    let title = p === '/' ? 'Home' : p.slice(1).replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+    return `- [${title}](${DOMAIN}${p})`;
+  };
+
+  const llmsContent = `# We Alll
+
+> Results-driven Digital Marketing Agency offering SEO, Content Creation, Video Production, Experience Design, Development, PR, and Influencer Marketing services.
+
+We Alll is a comprehensive digital marketing agency based in Kolkata. This document provides an index of our publicly available services and information.
+
+## Core Pages
+${mainPages.map(formatLink).join('\n')}
+
+## Digital Marketing & SEO Services
+${services.map(formatLink).join('\n')}
+
+## Web & App Development
+${development.map(formatLink).join('\n')}
+
+## Content Creation
+${contentCreation.map(formatLink).join('\n')}
+
+## Video Production
+${videoProduction.map(formatLink).join('\n')}
+
+## Experience Design & Branding
+${experienceDesign.map(formatLink).join('\n')}
+
+## Influencer Marketing
+${influencerMarketing.map(formatLink).join('\n')}
+
+## Page Recovery & PR Services
+${prAndRecovery.map(formatLink).join('\n')}
+
+${otherPages.length > 0 ? `## Additional Resources\n${otherPages.map(formatLink).join('\n')}\n` : ''}
+
+## Contact
+- Main Website: ${DOMAIN}
+- Contact Page: ${DOMAIN}/contact
 `;
-  fs.writeFileSync(LLM_PATH, llmContent, 'utf-8');
-  console.log('✅ Generated llm.txt');
+  
+  fs.writeFileSync(LLMS_PATH, llmsContent, 'utf-8');
+  console.log('✅ Generated llms.txt');
 }
 
 generateSitemap();
