@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import RouteSEO from "./Components/RouteSEO";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
@@ -228,6 +228,10 @@ function App() {
         <Route path="/blog-details" element={<BlogDetails />} />
         <Route path="/terms" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        
+        {/* Redirect False Links to Home */}
+        <Route path="/products/*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
       <Footer />
     </>
