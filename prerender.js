@@ -30,14 +30,17 @@ async function prerender() {
 
   console.log(`Found ${routes.length} routes to prerender.`);
 
+  // Read the original index.html into memory so we don't serve an overwritten version during prerendering
+  const originalIndexHtml = fs.readFileSync(path.join(DIST_DIR, 'index.html'), 'utf-8');
+
   // 2. Start Express Server
   const app = express();
   
   app.use(express.static(DIST_DIR));
   
-  // Fallback to index.html for SPA routing
+  // Fallback to the original index.html for SPA routing
   app.use((req, res) => {
-    res.sendFile(path.join(DIST_DIR, 'index.html'));
+    res.send(originalIndexHtml);
   });
 
   const server = app.listen(PORT, () => {
