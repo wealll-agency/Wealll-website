@@ -2372,10 +2372,14 @@ ul.mega-menu li {
 
 .portfolio_tabs {
   padding-top: 30px;
+  position: relative;
+  z-index: 99;
 }
 
 .portfolio_tabs ul {
   justify-content: center;
+  position: relative;
+  z-index: 10;
 }
 
 .portfolio_tabs ul .nav-item {
@@ -2451,6 +2455,10 @@ ul.mega-menu li {
 
 .portfolio_tab_content {
   padding-top: 30px;
+  min-height: 590px;
+  max-height: 700px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .portfolio_tab_content .col-20 {
@@ -2470,6 +2478,29 @@ ul.mega-menu li {
 .portfolio_tab_content .inner_box img {
   display: inline-block;
   vertical-align: middle;
+}
+
+/* Scrollable Portfolio Images for Home Page */
+.home-portfolio-scroll-container {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 4px;
+  cursor: ns-resize;
+}
+
+.home-portfolio-scroll-img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 6s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.inner_box:hover .home-portfolio-scroll-img {
+  transform: translateY(calc(-100% + 350px));
 }
 
 /* Contact Page CSS */

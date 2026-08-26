@@ -53,24 +53,24 @@ const
                         <div className="portfolio_tabs">
                             <ul className="nav nav-pills" role="tablist">
                                 <li className="nav-item">
-                                    <a className="nav-link active" data-bs-toggle="pill" href="#portfoliomenu1"><i className="fa-solid fa-house"></i> Logo Design</a>
+                                    <a className="nav-link active" data-bs-toggle="pill" data-bs-target="#portfoliomenu1" role="button" style={{ cursor: 'pointer' }}><i className="fa-solid fa-house"></i> Logo Design</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" data-bs-toggle="pill" href="#portfoliomenu2"><i className="fa-solid fa-house"></i> SMP</a>
-                                </li>
-
-                                <li className="nav-item">
-                                    <a className="nav-link" data-bs-toggle="pill" href="#portfoliomenu3"><i className="fa-solid fa-house"></i> Brand</a>
+                                    <a className="nav-link" data-bs-toggle="pill" data-bs-target="#portfoliomenu2" role="button" style={{ cursor: 'pointer' }}><i className="fa-solid fa-house"></i> SMP</a>
                                 </li>
 
                                 <li className="nav-item">
-                                    <a className="nav-link" data-bs-toggle="pill" href="#portfoliomenu4"><i className="fa-solid fa-house"></i> Mobile Apps</a>
+                                    <a className="nav-link" data-bs-toggle="pill" data-bs-target="#portfoliomenu3" role="button" style={{ cursor: 'pointer' }}><i className="fa-solid fa-house"></i> Brand</a>
+                                </li>
+
+                                <li className="nav-item">
+                                    <a className="nav-link" data-bs-toggle="pill" data-bs-target="#portfoliomenu4" role="button" style={{ cursor: 'pointer' }}><i className="fa-solid fa-house"></i> Mobile Apps</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" data-bs-toggle="pill" href="#portfoliomenu5"><i className="fa-solid fa-house"></i> Softwares</a>
+                                    <a className="nav-link" data-bs-toggle="pill" data-bs-target="#portfoliomenu5" role="button" style={{ cursor: 'pointer' }}><i className="fa-solid fa-house"></i> Softwares</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" data-bs-toggle="pill" href="#portfoliomenu6"><i className="fa-solid fa-house"></i> Websites</a>
+                                    <a className="nav-link" data-bs-toggle="pill" data-bs-target="#portfoliomenu6" role="button" style={{ cursor: 'pointer' }}><i className="fa-solid fa-house"></i> Websites</a>
                                 </li>
                             </ul>
 
@@ -252,31 +252,41 @@ const
                                     <div className="row desktop_website_row">
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_website1} alt="" loading="lazy" />
+                                                <div className="home-portfolio-scroll-container">
+                                                    <img src={portfolio_website1} alt="" className="home-portfolio-scroll-img" loading="lazy" />
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_website2} alt="" loading="lazy" />
+                                                <div className="home-portfolio-scroll-container">
+                                                    <img src={portfolio_website2} alt="" className="home-portfolio-scroll-img" loading="lazy" />
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_website3} alt="" loading="lazy" />
+                                                <div className="home-portfolio-scroll-container">
+                                                    <img src={portfolio_website3} alt="" className="home-portfolio-scroll-img" loading="lazy" />
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_website4} alt="" loading="lazy" />
+                                                <div className="home-portfolio-scroll-container">
+                                                    <img src={portfolio_website4} alt="" className="home-portfolio-scroll-img" loading="lazy" />
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_website5} alt="" loading="lazy" />
+                                                <div className="home-portfolio-scroll-container">
+                                                    <img src={portfolio_website5} alt="" className="home-portfolio-scroll-img" loading="lazy" />
+                                                </div>
                                             </div>
                                         </div>
 
@@ -286,13 +296,17 @@ const
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_website3} alt="" loading="lazy" />
+                                                <div className="home-portfolio-scroll-container">
+                                                    <img src={portfolio_website3} alt="" className="home-portfolio-scroll-img" loading="lazy" />
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div className="col-md-3 col-20">
                                             <div className="inner_box">
-                                                <img src={portfolio_website4} alt="" loading="lazy" />
+                                                <div className="home-portfolio-scroll-container">
+                                                    <img src={portfolio_website4} alt="" className="home-portfolio-scroll-img" loading="lazy" />
+                                                </div>
                                             </div>
                                         </div>
 
