@@ -204,7 +204,10 @@ function App() {
         <Route path="/website-development" element={<WebsiteDevelopment />} />
         <Route path="/facebook-page-recovery" element={<FacebookPageRecovery />} />
         <Route path="/gmb-suspension" element={<GmbSuspension />} />
-        <Route path="/ownership-recovery" element={<OwnershipRecovery />} />
+        <Route path="/owne
+        
+        
+        rship-recovery" element={<OwnershipRecovery />} />
         <Route path="/barter-collaboration" element={<BarterCollaboration />} />
         <Route path="/paid-collaboration" element={<PaidCollaboration />} />
         <Route path="/podcast-collaboration" element={<PodcastCollaboration />} />
@@ -228,7 +231,7 @@ function App() {
         <Route path="/blog-details" element={<BlogDetails />} />
         <Route path="/terms" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        
+
         {/* Redirect False Links to Home */}
         <Route path="/products/*" element={<Navigate to="/" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />

@@ -10,6 +10,7 @@ import Casestudy from "./HomeComponent/Casestudy";
 import Testimonial from "./HomeComponent/Testimonial";
 import Portfolio from "./HomeComponent/Portfolio";
 import Hero from "./HomeComponent/Hero";
+import TechnologyPartners from "./HomeComponent/TechnologyPartners";
 
 // const heroBg1 = mediaUrl("assets/images/Hero_Banner_01.webp");
 // const heroBg2 = mediaUrl("assets/images/Hero_Banner_02.webp");
@@ -34,6 +35,7 @@ const Home = () => {
       <Casestudy></Casestudy>
       <Portfolio></Portfolio>
       <Testimonial></Testimonial>
+      <TechnologyPartners></TechnologyPartners>
     </>
   );
 };
