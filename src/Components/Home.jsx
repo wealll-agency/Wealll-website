@@ -35,7 +35,6 @@ const Home = () => {
       <Casestudy></Casestudy>
       <Portfolio></Portfolio>
       <Testimonial></Testimonial>
-      <TechnologyPartners></TechnologyPartners>
     </>
   );
 };

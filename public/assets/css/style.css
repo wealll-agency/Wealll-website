@@ -4161,6 +4161,14 @@ ul.mega-menu li {
   margin-top: 100px; /* Push down to clear the bigger circle from header */
 }
 
+.technology-partners {
+  background-color: #fff;
+  margin-bottom: 30px;
+  border: 1px solid rgb(227 227 227);
+  border-left: 0;
+  border-right: 0;
+}
+
 @media (max-width: 767px) {
   .cta-circle-container {
     width: 180px;

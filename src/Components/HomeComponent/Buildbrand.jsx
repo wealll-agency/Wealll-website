@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import TechnologyPartners from './TechnologyPartners';
 
 const Buildbrand = () => {
 
@@ -49,6 +50,9 @@ const Buildbrand = () => {
                 <div className="container">
                     <div className='row justify-content-center'>
                         <div className='col-lg-12'>
+
+                            <TechnologyPartners />
+
                             <div className="title head-animtion">
                                 <h2>We build brands for
                                     <b> <span className="">Billion-Dollar Goals</span>
