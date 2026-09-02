@@ -4868,4 +4868,18 @@ ul.mega-menu li {
   .mobile_website_row {
     display: block;
   }
+
+  .footer__menu ul li {
+    margin-right: 10px;
+  }
+  .footer-logo a img {
+    width: 120px;
+    margin-left: -12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .footer-logo a img {
+    width: 100px;
+  }
 }

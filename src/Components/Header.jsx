@@ -467,6 +467,12 @@ const Header = () => {
                 </div>
 
                 <div className="navbar-link-item w-inline-block ">
+                  <Link to="https://inventory.wealll.com/" target="_blank" className="navbar-link-text">
+                    Inventory
+                  </Link>
+                </div>
+
+                <div className="navbar-link-item w-inline-block ">
                   <Link to="/contact" className="navbar-link-text">
                     Contact Us
                   </Link>
@@ -897,6 +903,12 @@ const Header = () => {
                   <li className="menu-item">
                     <Link to="/career" className="nav-item-link w-inline-block">
                       <div className="nav-item-text">Careers</div>
+                    </Link>
+                  </li>
+
+                  <li className="menu-item">
+                    <Link to="https://inventory.wealll.com/" target="_blank" className="nav-item-link w-inline-block">
+                      <div className="nav-item-text">Inventory</div>
                     </Link>
                   </li>
 
