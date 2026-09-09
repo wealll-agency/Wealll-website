@@ -248,6 +248,7 @@ const Footer = () => {
                                     <nav>
                                         <ul>
 
+                                            <li><Link to="/white-label-partnerships">Partnerships</Link></li>
                                             <li className="active"><Link to="/terms">Terms</Link></li>
                                             <li><Link to="/privacy-policy">Privacy</Link></li>
                                         </ul>

@@ -83,7 +83,7 @@ import CareerDetails from "./Components/CareerComponent/InnerComponents/CareerDe
 import BlogDetails from "./Components/BlogComponent/BlogDetails";
 import TermsAndConditions from "./Components/TermsAndConditions";
 import PrivacyPolicy from "./Components/PrivacyPolicy";
-
+import WhiteLabelPartnerships from "./Components/WhiteLabelPartnerships/WhiteLabelPartnerships";
 
 function App() {
   useEffect(() => {
@@ -231,6 +231,8 @@ function App() {
         <Route path="/blog-details" element={<BlogDetails />} />
         <Route path="/terms" element={<TermsAndConditions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+
+        <Route path="/white-label-partnerships" element={<WhiteLabelPartnerships />} />
 
         {/* Redirect False Links to Home */}
         <Route path="/products/*" element={<Navigate to="/" replace />} />
