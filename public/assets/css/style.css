@@ -4883,3 +4883,9 @@ ul.mega-menu li {
     width: 100px;
   }
 }
+
+/* Fix for header DISCUSS A PROJECT button collapsing on initial load */
+.btn-wrap.nav-btn {
+  min-width: 195px !important;
+  white-space: nowrap;
+}
