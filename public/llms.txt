@@ -84,7 +84,6 @@ We Alll is a comprehensive digital marketing agency based in Kolkata. This docum
 ## Page Recovery & PR Services
 - [Facebook Page Recovery](https://www.wealll.com/facebook-page-recovery)
 - [Gmb Suspension](https://www.wealll.com/gmb-suspension)
-- [Ownership Recovery](https://www.wealll.com/ownership-recovery)
 - [Crisis Management](https://www.wealll.com/crisis-management)
 - [Media Relations](https://www.wealll.com/media-relations)
 - [Press Release](https://www.wealll.com/press-release)
@@ -97,8 +96,16 @@ We Alll is a comprehensive digital marketing agency based in Kolkata. This docum
 - [Catalogues Brochures](https://www.wealll.com/catalogues-brochures)
 - [Logo Designing](https://www.wealll.com/logo-designing)
 - [Ui Development](https://www.wealll.com/ui-development)
+- [Owne
+        
+        
+        Rship Recovery](https://www.wealll.com/owne
+        
+        
+        rship-recovery)
 - [Html Developers](https://www.wealll.com/html-developers)
 - [Blog Details](https://www.wealll.com/blog-details)
+- [White Label Partnerships](https://www.wealll.com/white-label-partnerships)
 - [Career Details/Full Stack Developer Intern](https://www.wealll.com/career-details/full-stack-developer-intern)
 - [Career Details/Php Laravel Developer Intern](https://www.wealll.com/career-details/php-laravel-developer-intern)
 - [Career Details/Wordpress Developer Intern](https://www.wealll.com/career-details/wordpress-developer-intern)

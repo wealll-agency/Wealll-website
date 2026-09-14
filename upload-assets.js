@@ -19,10 +19,9 @@ const s3 = new S3Client({
   },
 });
 
-const uploadFolder = path.join(process.cwd(), "public", "assets");
+const publicAssetsFolder = path.join(process.cwd(), "public", "assets");
+const srcAssetsFolder = path.join(process.cwd(), "src", "assets");
 const bucketName = process.env.AWS_BUCKET_NAME;
-
-// ১. লোকাল ফোল্ডারের সব ফাইলের লিস্ট নেওয়া
 
 function walkFolders(dir) {
   let files = [];
@@ -40,34 +39,104 @@ function walkFolders(dir) {
   return files;
 }
 
-// ২. S3 বাকেটের সব ফাইলের লিস্ট নেওয়া
+function mirrorSrcToPublic() {
+  if (!fs.existsSync(srcAssetsFolder)) return;
+  const srcFiles = walkFolders(srcAssetsFolder);
+  let mirroredCount = 0;
 
-async function getS3Files() {
-  const command = new ListObjectsV2Command({
-    Bucket: bucketName,
-    Prefix: "assets/",
+  srcFiles.forEach((srcFile) => {
+    const rel = path.relative(srcAssetsFolder, srcFile);
+    const destFile = path.join(publicAssetsFolder, rel);
+    const destDir = path.dirname(destFile);
+
+    if (!fs.existsSync(destDir)) {
+      fs.mkdirSync(destDir, { recursive: true });
+    }
+
+    const srcStat = fs.statSync(srcFile);
+    let shouldCopy = false;
+
+    if (!fs.existsSync(destFile)) {
+      shouldCopy = true;
+    } else {
+      const destStat = fs.statSync(destFile);
+      if (srcStat.size !== destStat.size) {
+        shouldCopy = true;
+      }
+    }
+
+    if (shouldCopy) {
+      fs.copyFileSync(srcFile, destFile);
+      mirroredCount++;
+      console.log(`📋 Mirrored from src/assets to public/assets: ${rel}`);
+    }
   });
-  const response = await s3.send(command);
-  return response.Contents ? response.Contents.map((item) => item.Key) : [];
+
+  if (mirroredCount > 0) {
+    console.log(
+      `✅ Mirrored ${mirroredCount} file(s) from src/assets to public/assets.`,
+    );
+  }
+}
+
+async function getS3FilesMap() {
+  const fileMap = new Map();
+  let continuationToken = undefined;
+
+  do {
+    const command = new ListObjectsV2Command({
+      Bucket: bucketName,
+      Prefix: "assets/",
+      ContinuationToken: continuationToken,
+    });
+    const response = await s3.send(command);
+
+    if (response.Contents) {
+      response.Contents.forEach((item) => {
+        fileMap.set(item.Key, item.Size);
+      });
+    }
+
+    continuationToken = response.NextContinuationToken;
+  } while (continuationToken);
+
+  return fileMap;
 }
 
 async function syncWithS3() {
   try {
     console.log("🔄 Starting full S3 Smart Sync...");
 
-    const localFiles = walkFolders(uploadFolder);
+    mirrorSrcToPublic();
+
+    const localFiles = walkFolders(publicAssetsFolder);
     const localS3Keys = localFiles.map((filePath) => {
       const relativePath = path
-        .relative(uploadFolder, filePath)
+        .relative(publicAssetsFolder, filePath)
         .replace(/\\/g, "/");
       return `assets/${relativePath}`;
     });
 
-    const s3Keys = await getS3Files();
+    console.log(`🔍 Fetching existing files from S3 bucket: ${bucketName}...`);
+    const s3FileMap = await getS3FilesMap();
+    console.log(`📦 Found ${s3FileMap.size} existing items in S3.`);
+
+    let uploadedCount = 0;
+    let skippedCount = 0;
 
     for (let i = 0; i < localFiles.length; i++) {
       const filePath = localFiles[i];
       const s3Key = localS3Keys[i];
+      const localStat = fs.statSync(filePath);
+
+      if (s3FileMap.has(s3Key) && s3FileMap.get(s3Key) === localStat.size) {
+        skippedCount++;
+        continue;
+      }
+
+      console.log(
+        `🚀 Uploading: ${s3Key} (${(localStat.size / 1024 / 1024).toFixed(2)} MB)...`,
+      );
       const fileStream = fs.createReadStream(filePath);
       const contentType = mime.lookup(filePath) || "application/octet-stream";
 
@@ -79,25 +148,35 @@ async function syncWithS3() {
           ContentType: contentType,
         }),
       );
+      uploadedCount++;
+      console.log(`✅ Successfully uploaded: ${s3Key}`);
     }
-    console.log(`✅ Uploaded/Updated ${localFiles.length} local files to S3.`);
 
+    console.log(`\n📊 Sync Summary:`);
+    console.log(`   - Uploaded / Updated: ${uploadedCount} file(s)`);
+    console.log(`   - Already Up-to-date: ${skippedCount} file(s)`);
+
+    const s3Keys = Array.from(s3FileMap.keys());
     const keysToDelete = s3Keys.filter((key) => !localS3Keys.includes(key));
 
     if (keysToDelete.length > 0) {
       console.log(
-        `🗑️ Found ${keysToDelete.length} obsolete files in S3. Deleting...`,
+        `🗑️ Found ${keysToDelete.length} obsolete file(s) in S3. Deleting...`,
       );
-      const deleteParams = {
-        Bucket: bucketName,
-        Delete: { Objects: keysToDelete.map((key) => ({ Key: key })) },
-      };
-      await s3.send(new DeleteObjectsCommand(deleteParams));
-      keysToDelete.forEach((key) => console.log(`❌ Deleted from S3: ${key}`));
+      // S3 DeleteObjects supports max 1000 keys per call
+      for (let i = 0; i < keysToDelete.length; i += 1000) {
+        const batch = keysToDelete.slice(i, i + 1000);
+        const deleteParams = {
+          Bucket: bucketName,
+          Delete: { Objects: batch.map((key) => ({ Key: key })) },
+        };
+        await s3.send(new DeleteObjectsCommand(deleteParams));
+        batch.forEach((key) => console.log(`❌ Deleted from S3: ${key}`));
+      }
     }
 
     console.log(
-      "🚀 S3 Bucket is now 100% in sync with your local assets folder!",
+      "🎉 S3 Bucket is now 100% in sync with your local assets folder!",
     );
   } catch (error) {
     console.error("❌ Sync Error:", error);

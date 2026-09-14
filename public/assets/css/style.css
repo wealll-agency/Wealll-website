@@ -60,8 +60,43 @@ body {
   --indicator-w: 64px;
 }
 
+.navbar {
+  z-index: 99999 !important;
+}
+
 .navbar-menu {
   position: relative;
+  z-index: 99999;
+}
+
+@media (min-width: 992px) {
+  .navbar-menu {
+    width: 100% !important;
+    height: 65px !important;
+  }
+  .navbar-menu-inner {
+    display: flex !important;
+    opacity: 1 !important;
+  }
+  .btn-main.greentowhite.nav-ani {
+    display: flex !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  .btn-wrap.greentowhite.nav-btn {
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .navlogo-full-wrap {
+    width: 140px !important;
+  }
+  .navlogo-full {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .navlogo-mark {
+    display: none !important;
+  }
 }
 
 .mega-menu-inner {
@@ -76,6 +111,7 @@ body {
   transform-origin: top;
   opacity: 0;
   padding-top: 25px;
+  z-index: 999999;
 }
 
 .navbar-menu .menu-item-has-children:hover .mega-menu-inner {
@@ -87,10 +123,11 @@ body {
 
 .mega-menu-inner .mega-menu {
   padding: 10px;
-  background-color: #000000bf;
+  background-color: #0b0f19 !important;
   border-radius: 20px;
-  backdrop-filter: blur(6px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.1);
   position: relative;
+  backdrop-filter: none !important;
 }
 
 .mega-menu .menu-item {
@@ -105,7 +142,7 @@ ul.mega-menu li {
 .mega-menu .nav-tab {
   padding: 0;
   border-radius: 20px 0 0 20px;
-  background: #0f092875;
+  background: #111622 !important;
 }
 
 .navbar-menu .mega-menu li a {
@@ -124,7 +161,7 @@ ul.mega-menu li {
   display: flex;
   align-items: center;
   column-gap: 10px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   text-wrap: nowrap;
 }
 
@@ -147,13 +184,13 @@ ul.mega-menu li {
 }
 
 .mega-menu .nav-box {
-  background: transparent;
+  background: #0b0f19 !important;
   position: absolute;
   left: 243px;
-  top: 20px;
+  top: 15px;
   display: none;
   padding-left: 20px;
-  bottom: 20px;
+  bottom: 15px;
   overflow-y: auto;
   scrollbar-width: thin;
   right: 0;

@@ -1,10 +1,9 @@
-import React from 'react'
-
-// const ctaimg = mediaUrl("assets/images/cta_image.png");
+import React from 'react';
 import VideoBanner from './VideoBanner';
-const myVideo = mediaUrl("assets/Video/WE_ALLL_Video_Final.mp4");
-const thumb = mediaUrl("assets/images/video-thumb-2.webp");
 import { mediaUrl } from "../../config/media";
+
+const myVideo = mediaUrl("assets/Video/WE_ALLL_Video_New.mp4");
+const thumb = mediaUrl("assets/images/video-thumb-2.webp");
 
 const Cta = () => {
     return (

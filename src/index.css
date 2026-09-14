@@ -3,3 +3,34 @@
   height: 750px;
   object-fit: cover;
 }
+
+@media (min-width: 992px) {
+  .navbar-menu {
+    width: 100% !important;
+    height: 65px !important;
+  }
+  .navbar-menu-inner {
+    display: flex !important;
+    opacity: 1 !important;
+  }
+  .btn-main.greentowhite.nav-ani {
+    display: flex !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  .btn-wrap.greentowhite.nav-btn {
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .navlogo-full-wrap {
+    width: 140px !important;
+  }
+  .navlogo-full {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .navlogo-mark {
+    display: none !important;
+  }
+}
+

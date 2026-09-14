@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'public/assets/**'
+      - 'src/assets/**'
       - 'upload-assets.js'
 
 jobs:

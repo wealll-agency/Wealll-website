@@ -39,7 +39,25 @@ const Header = () => {
       $(".menu-item-has-children>.mega-menu-inner .nav-tab > li").removeClass(
         "show",
       );
+    } else {
+      $(".navbar-menu").css({ width: "100%", height: "65px" });
+      $(".navbar-menu-inner").css({ display: "flex", opacity: "1" });
+      $(".btn-main.greentowhite.nav-ani").css({ display: "flex", transform: "none", opacity: "1" });
+      $(".btn-wrap.greentowhite.nav-btn").css({ height: "auto", overflow: "visible" });
+      $(".navlogo-full-wrap").css({ width: "140px" });
+      $(".navlogo-full").css({ opacity: "1", transform: "none" });
+      $(".navlogo-mark").css({ opacity: "0" });
     }
+    $(".menu-item-has-children .mega-menu-inner .nav-tab > li > a").on(
+      "mouseenter",
+      function () {
+        if ($(window).width() > 991) {
+          let $parent = $(this).parent("li");
+          $parent.siblings().removeClass("show");
+          $parent.addClass("show");
+        }
+      },
+    );
     $(".menu-item-has-children .mega-menu-inner .nav-tab > li > a").on(
       "click",
       function (e) {
@@ -64,9 +82,9 @@ const Header = () => {
 
   return (
     <>
-      <div className="container">
-        <div className="nav-group">
-          <div className="navbar">
+      <div className="container" style={{ position: 'relative', zIndex: 99999 }}>
+        <div className="nav-group" style={{ position: 'relative', zIndex: 99999 }}>
+          <div className="navbar" style={{ zIndex: 99999 }}>
             <div className="navlogo-full-wrap w-inline-block">
               <div className="navlogo-full-mask">
                 <Link to="/">

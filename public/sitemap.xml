@@ -276,7 +276,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.wealll.com/ownership-recovery</loc>
+    <loc>https://www.wealll.com/owne
+        
+        
+        rship-recovery</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -387,6 +390,11 @@
   </url>
   <url>
     <loc>https://www.wealll.com/privacy-policy</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wealll.com/white-label-partnerships</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

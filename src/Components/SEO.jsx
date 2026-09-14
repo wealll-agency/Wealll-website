@@ -19,6 +19,7 @@ const SEO = ({ title, description, canonicalPath }) => {
       <meta name="description" content={description || defaultDesc} />
       
       {/* Open Graph / Facebook */}
+      <meta property="og:site_name" content="We Alll" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={`${siteUrl}${currentPath}`} />
       <meta property="og:title" content={title ? title : defaultTitle} />

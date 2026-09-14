@@ -71,7 +71,33 @@ async function prerender() {
       console.log(`Prerendering ${route}...`);
       await page.goto(`http://localhost:${PORT}${route}`, { waitUntil: 'networkidle2', timeout: 30000 });
       
-      const html = await page.content();
+      let html = await page.content();
+      
+      // Deduplicate <title> tags if React Helmet added one alongside the static fallback
+      const titleMatches = html.match(/<title[\s\S]*?<\/title>/gi);
+      if (titleMatches && titleMatches.length > 1) {
+        let first = true;
+        html = html.replace(/<title[\s\S]*?<\/title>/gi, (match) => {
+          if (first) {
+            first = false;
+            return match;
+          }
+          return '';
+        });
+      }
+
+      // Deduplicate og:site_name if both index.html and Helmet injected it
+      const ogSiteNameMatches = html.match(/<meta\s+property=["']og:site_name["'][\s\S]*?>/gi);
+      if (ogSiteNameMatches && ogSiteNameMatches.length > 1) {
+        let first = true;
+        html = html.replace(/<meta\s+property=["']og:site_name["'][\s\S]*?>/gi, (match) => {
+          if (first) {
+            first = false;
+            return match;
+          }
+          return '';
+        });
+      }
       
       // Save HTML to dist directory
       const dirPath = route === '/' ? DIST_DIR : path.join(DIST_DIR, route.slice(1));

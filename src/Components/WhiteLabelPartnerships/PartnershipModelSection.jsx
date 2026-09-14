@@ -1,120 +1,177 @@
 import React from 'react';
 
-const CheckIcon = () => (
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '8px', flexShrink: 0, marginTop: '3px' }}>
-        <polyline points="20 6 9 17 4 12" />
-    </svg>
-);
-
-const DoubleArrow = ({ left }) => (
-    <div className="wlp-model-arrow" style={{ position: 'absolute', top: '75px', left: left, transform: 'translate(-50%, -50%)', zIndex: 1, backgroundColor: '#f8fafc', padding: '0 10px' }}>
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="13 17 18 12 13 7" />
-            <polyline points="6 17 11 12 6 7" />
-        </svg>
-    </div>
-);
-
 const PartnershipModelSection = () => {
     return (
-        <section className="wlp-model-section" style={{ backgroundColor: '#f8fafc' }}>
+        <section className="wlp-model-section" id="partnership-model">
             <div className="container">
-                <div className="row align-items-center">
-                    
-                    {/* Left Column */}
-                    <div className="col-lg-5 mb-5 mb-lg-0">
-                        <div className="wlp-model-text">
-                            <span className="wlp-badge-blue">A PARTNERSHIP MODEL THAT WORKS</span>
-                            <h2 className="wlp-model-h2" style={{ fontWeight: '700' }}>You Win the Client.<br/>We Power the Delivery.</h2>
-                            <p className="wlp-model-p">
-                                You bring the opportunities. We bring the expertise. Together, we create exceptional digital experiences that help your clients grow — and your business too.
-                            </p>
-                            <div className="wlp-handwritten-container" style={{ position: 'relative', marginTop: '20px' }}>
-                                <div className="wlp-handwritten" style={{ transform: 'rotate(-5deg)', textAlign: 'center', marginLeft: '40px' }}>
-                                    Better<br/>Businesses<br/>Together
-                                </div>
-                                <svg style={{ position: 'absolute', top: '10px', right: '-30px', transform: 'rotate(-10deg)' }} width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#6366f1" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M5 22C10 20 18 10 20 4"/>
-                                    <polyline points="14 4 20 4 20 10"/>
-                                </svg>
-                            </div>
+                {/* Section Header */}
+                <div className="wlp-model-header text-center">
+                    <span className="wlp-badge-blue">A PARTNERSHIP MODEL THAT WORKS</span>
+                    <h2 className="wlp-model-h2">
+                        You Win the Client.<br />
+                        <span className="wlp-model-highlight">We Power the Delivery.</span>
+                    </h2>
+                    <p className="wlp-model-p">
+                        You bring the opportunities. We bring the expertise. Together, we create exceptional digital experiences that help your clients grow — and your business scale effortlessly.
+                    </p>
+                </div>
+
+                {/* 3-Pillar Architectural Pipeline */}
+                <div className="wlp-model-pipeline">
+                    {/* Card 1: Your Agency */}
+                    <div className="wlp-model-card wlp-agency-card">
+                        <div className="wlp-card-tag agency-tag">STAGE 01 • CLIENT FACING</div>
+                        <div className="wlp-card-icon-box agency-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                            </svg>
+                        </div>
+                        <h3 className="wlp-card-title">Your Agency</h3>
+                        <p className="wlp-card-desc">Pitch, close deals & manage client relationship</p>
+
+                        <ul className="wlp-card-checklist">
+                            <li>
+                                <span className="wlp-check-icon agency-check">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                </span>
+                                <span>Get clients & pitch opportunities</span>
+                            </li>
+                            <li>
+                                <span className="wlp-check-icon agency-check">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                </span>
+                                <span>Direct client account ownership</span>
+                            </li>
+                            <li>
+                                <span className="wlp-check-icon agency-check">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                </span>
+                                <span>Set vision, goals & project scope</span>
+                            </li>
+                            <li>
+                                <span className="wlp-check-icon agency-check">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                </span>
+                                <span>Focus on growth & revenue scaling</span>
+                            </li>
+                        </ul>
+
+                        <div className="wlp-card-pill agency-pill">100% Your Brand</div>
+                    </div>
+
+                    {/* Animated Flow Connector 1 */}
+                    <div className="wlp-model-flow-connector">
+                        <div className="wlp-flow-line">
+                            <span className="wlp-flow-dot"></span>
+                        </div>
+                        <span className="wlp-flow-label">Brief & NDA ➔</span>
+                    </div>
+
+                    {/* Card 2: WE ALLL (The Centerpiece Powerhouse) */}
+                    <div className="wlp-model-card wlp-centerpiece-card">
+                        <div className="wlp-centerpiece-lightbar"></div>
+                        <div className="wlp-card-tag center-tag">STAGE 02 • BEHIND THE SCENES</div>
+                        <div className="wlp-card-icon-box center-icon">
+                            <span className="wlp-model-infinity">∞</span>
+                        </div>
+                        <h3 className="wlp-card-title center-title">WE ALLL</h3>
+                        <p className="wlp-card-desc center-desc">Silent execution powerhouse delivering under your brand</p>
+
+                        <ul className="wlp-card-checklist center-checklist">
+                            <li>
+                                <span className="wlp-check-icon center-check">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                </span>
+                                <span>Turnkey planning & agile execution</span>
+                            </li>
+                            <li>
+                                <span className="wlp-check-icon center-check">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                </span>
+                                <span>Design, development & marketing</span>
+                            </li>
+                            <li>
+                                <span className="wlp-check-icon center-check">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                </span>
+                                <span>Rigorous QA & maintain top quality</span>
+                            </li>
+                            <li>
+                                <span className="wlp-check-icon center-check">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                </span>
+                                <span>Deliver on time, zero client contact</span>
+                            </li>
+                        </ul>
+
+                        <div className="wlp-card-pill center-pill">
+                            <span className="wlp-live-indicator"></span>
+                            Active Delivery Engine
                         </div>
                     </div>
 
-                    {/* Right Column */}
-                    <div className="col-lg-7 pl-lg-5">
-                        <div className="wlp-model-diagram">
-                            <div className="row position-relative w-100" style={{ margin: 0 }}>
-                                
-                                {/* Connecting Background Line */}
-                                <div style={{ position: 'absolute', top: '75px', left: '16%', right: '16%', height: '2px', backgroundColor: '#dbeafe', zIndex: 0 }}></div>
-
-                                {/* Arrows on the line */}
-                                <DoubleArrow left="33%" />
-                                <DoubleArrow left="66%" />
-
-                                {/* Step 1 */}
-                                <div className="col-4 d-flex flex-column align-items-center" style={{ zIndex: 2 }}>
-                                    <div className="wlp-step-circle light-blue" style={{ width: '150px', height: '150px', backgroundColor: '#eff6ff', border: 'none', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'inset 0 0 0 4px #fff, 0 10px 30px rgba(0,0,0,0.05)', marginBottom: '15px' }}>
-                                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-                                            <rect x="4" y="2" width="16" height="20" rx="2" ry="2"/>
-                                            <line x1="12" y1="18" x2="12" y2="22"/>
-                                            <line x1="8" y1="6" x2="16" y2="6"/>
-                                            <line x1="8" y1="10" x2="16" y2="10"/>
-                                            <line x1="8" y1="14" x2="16" y2="14"/>
-                                        </svg>
-                                    </div>
-                                    <h5 className="wlp-step-title" style={{ fontFamily: 'Montserrat', fontSize: '15px', fontWeight: '900', color: '#0f172a', marginBottom: '24px' }}>YOUR AGENCY</h5>
-                                    
-                                    <ul className="wlp-step-list text-start" style={{ listStyle: 'none', padding: 0, width: '100%', maxWidth: '170px' }}>
-                                        <li style={{ fontSize: '12px', color: '#475569', marginBottom: '10px', display: 'flex' }}><CheckIcon/> <span>Get clients</span></li>
-                                        <li style={{ fontSize: '12px', color: '#475569', marginBottom: '10px', display: 'flex' }}><CheckIcon/> <span>Manage relationship</span></li>
-                                        <li style={{ fontSize: '12px', color: '#475569', marginBottom: '10px', display: 'flex' }}><CheckIcon/> <span>Set the strategy</span></li>
-                                        <li style={{ fontSize: '12px', color: '#475569', display: 'flex' }}><CheckIcon/> <span>Focus on growth</span></li>
-                                    </ul>
-                                </div>
-
-                                {/* Step 2 */}
-                                <div className="col-4 d-flex flex-column align-items-center" style={{ zIndex: 2 }}>
-                                    <div className="wlp-step-circle dark-blue" style={{ width: '170px', height: '170px', backgroundColor: '#0f172a', borderRadius: '50%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 40px rgba(37, 99, 235, 0.4)', marginTop: '-10px', marginBottom: '15px' }}>
-                                        <div style={{ fontSize: '60px', lineHeight: '1', color: '#60a5fa', filter: 'drop-shadow(0 0 10px rgba(96,165,250,0.5))' }}>∞</div>
-                                        <div style={{ fontFamily: 'Montserrat', fontSize: '18px', fontWeight: '900', color: '#fff', letterSpacing: '1px', marginBottom: '4px' }}>WE ALLL</div>
-                                        <div style={{ fontSize: '8px', color: '#94a3b8', letterSpacing: '1px' }}>BEHIND THE SCENES</div>
-                                    </div>
-                                    <h5 className="wlp-step-title" style={{ opacity: 0, userSelect: 'none', marginBottom: '24px' }}>HIDDEN</h5>
-                                    
-                                    <ul className="wlp-step-list text-start" style={{ listStyle: 'none', padding: 0, width: '100%', maxWidth: '170px' }}>
-                                        <li style={{ fontSize: '12px', color: '#475569', marginBottom: '10px', display: 'flex' }}><CheckIcon/> <span>Plan & execute</span></li>
-                                        <li style={{ fontSize: '12px', color: '#475569', marginBottom: '10px', display: 'flex' }}><CheckIcon/> <span>Design, develop & market</span></li>
-                                        <li style={{ fontSize: '12px', color: '#475569', marginBottom: '10px', display: 'flex' }}><CheckIcon/> <span>Maintain quality</span></li>
-                                        <li style={{ fontSize: '12px', color: '#475569', display: 'flex' }}><CheckIcon/> <span>Deliver on time</span></li>
-                                    </ul>
-                                </div>
-
-                                {/* Step 3 */}
-                                <div className="col-4 d-flex flex-column align-items-center" style={{ zIndex: 2 }}>
-                                    <div className="wlp-step-circle light-purple" style={{ width: '150px', height: '150px', backgroundColor: '#fdf4ff', border: 'none', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: 'inset 0 0 0 4px #fff, 0 10px 30px rgba(0,0,0,0.05)', marginBottom: '15px' }}>
-                                        <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="#a855f7" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round">
-                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-                                            <circle cx="9" cy="7" r="4"/>
-                                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                                        </svg>
-                                    </div>
-                                    <h5 className="wlp-step-title" style={{ fontFamily: 'Montserrat', fontSize: '15px', fontWeight: '900', color: '#0f172a', marginBottom: '24px' }}>YOUR CLIENT</h5>
-                                    
-                                    <ul className="wlp-step-list text-start" style={{ listStyle: 'none', padding: 0, width: '100%', maxWidth: '170px' }}>
-                                        <li style={{ fontSize: '12px', color: '#475569', marginBottom: '10px', display: 'flex' }}><CheckIcon/> <span>Happy clients</span></li>
-                                        <li style={{ fontSize: '12px', color: '#475569', marginBottom: '10px', display: 'flex' }}><CheckIcon/> <span>Great results</span></li>
-                                        <li style={{ fontSize: '12px', color: '#475569', marginBottom: '10px', display: 'flex' }}><CheckIcon/> <span>Long-term relationship</span></li>
-                                        <li style={{ fontSize: '12px', color: '#475569', display: 'flex' }}><CheckIcon/> <span>Your brand gets stronger</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-
+                    {/* Animated Flow Connector 2 */}
+                    <div className="wlp-model-flow-connector">
+                        <div className="wlp-flow-line">
+                            <span className="wlp-flow-dot delay-dot"></span>
                         </div>
+                        <span className="wlp-flow-label">➔ Delivery</span>
                     </div>
 
+                    {/* Card 3: Your Client */}
+                    <div className="wlp-model-card wlp-endclient-card">
+                        <div className="wlp-card-tag client-tag">STAGE 03 • THE OUTCOME</div>
+                        <div className="wlp-card-icon-box client-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h3 className="wlp-card-title">Your Client</h3>
+                        <p className="wlp-card-desc">Delighted with exceptional quality & fast turnaround</p>
+
+                        <ul className="wlp-card-checklist">
+                            <li>
+                                <span className="wlp-check-icon client-check">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                </span>
+                                <span>Delighted clients & great ROI</span>
+                            </li>
+                            <li>
+                                <span className="wlp-check-icon client-check">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                </span>
+                                <span>Premium, polished deliverables</span>
+                            </li>
+                            <li>
+                                <span className="wlp-check-icon client-check">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                </span>
+                                <span>Long-term recurring relationship</span>
+                            </li>
+                            <li>
+                                <span className="wlp-check-icon client-check">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                                </span>
+                                <span>Your brand authority gets stronger</span>
+                            </li>
+                        </ul>
+
+                        <div className="wlp-card-pill client-pill">5★ Satisfaction</div>
+                    </div>
+                </div>
+
+                {/* Synergy Bottom Strip */}
+                <div className="wlp-model-bottom-strip">
+                    <div className="wlp-bottom-strip-badge">
+                        <span className="wlp-handwritten-accent">Better Businesses Together</span>
+                    </div>
+                    <div className="wlp-bottom-strip-text">
+                        <strong>True White-Label Synergy:</strong> You own the client relationship. We do the heavy lifting in the background. Your agency scales effortlessly.
+                    </div>
                 </div>
             </div>
         </section>
