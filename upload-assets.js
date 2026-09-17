@@ -2,7 +2,6 @@ import {
   S3Client,
   PutObjectCommand,
   ListObjectsV2Command,
-  DeleteObjectsCommand,
 } from "@aws-sdk/client-s3";
 import { Upload } from "@aws-sdk/lib-storage";
 import fs from "fs";
@@ -206,23 +205,7 @@ export async function syncWithS3() {
     console.log(`   - Uploaded / Updated: ${uploadedCount} file(s)`);
     console.log(`   - Already Up-to-date: ${skippedCount} file(s)`);
 
-    const s3Keys = Array.from(s3FileMap.keys());
-    const keysToDelete = s3Keys.filter((key) => !localS3Keys.includes(key));
-
-    if (keysToDelete.length > 0) {
-      console.log(`🗑️ Found ${keysToDelete.length} obsolete file(s) in S3. Deleting...`);
-      for (let i = 0; i < keysToDelete.length; i += 1000) {
-        const batch = keysToDelete.slice(i, i + 1000);
-        const deleteParams = {
-          Bucket: bucketName,
-          Delete: { Objects: batch.map((key) => ({ Key: key })) },
-        };
-        await s3.send(new DeleteObjectsCommand(deleteParams));
-        batch.forEach((key) => console.log(`❌ Deleted from S3: ${key}`));
-      }
-    }
-
-    console.log("🎉 S3 Bucket is now 100% in sync with your local assets folder!");
+    console.log("🎉 S3 Bucket is now in sync with your assets!");
   } catch (error) {
     console.error("❌ S3 Sync Error:", error);
   }
