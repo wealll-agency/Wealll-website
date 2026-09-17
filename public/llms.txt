@@ -106,6 +106,8 @@ We Alll is a comprehensive digital marketing agency based in Kolkata. This docum
 - [Html Developers](https://www.wealll.com/html-developers)
 - [Blog Details](https://www.wealll.com/blog-details)
 - [White Label Partnerships](https://www.wealll.com/white-label-partnerships)
+- [Landing](https://www.wealll.com/landing)
+- [Digital Marketing Company In Kolkata](https://www.wealll.com/digital-marketing-company-in-kolkata)
 - [Career Details/Full Stack Developer Intern](https://www.wealll.com/career-details/full-stack-developer-intern)
 - [Career Details/Php Laravel Developer Intern](https://www.wealll.com/career-details/php-laravel-developer-intern)
 - [Career Details/Wordpress Developer Intern](https://www.wealll.com/career-details/wordpress-developer-intern)

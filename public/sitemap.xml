@@ -399,6 +399,16 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.wealll.com/landing</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.wealll.com/digital-marketing-company-in-kolkata</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.wealll.com/career-details/full-stack-developer-intern</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

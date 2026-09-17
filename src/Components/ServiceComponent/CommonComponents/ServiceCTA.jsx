@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ServiceCTA.css';
-import { 
-  FiTarget, 
-  FiBarChart2, 
-  FiUsers, 
-  FiTrendingUp, 
+import {
+  FiTarget,
+  FiBarChart2,
+  FiUsers,
+  FiTrendingUp,
   FiMessageSquare,
   FiUser,
   FiBriefcase,
@@ -18,7 +18,7 @@ import {
 } from 'react-icons/fi';
 import { FaRocket } from 'react-icons/fa';
 
-const ServiceCTA = ({ 
+const ServiceCTA = ({
   serviceName,
   badgeIcon,
   badgeText,
@@ -28,75 +28,106 @@ const ServiceCTA = ({
   description,
   features
 }) => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    budget: '',
+    message: ''
+  });
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setSubmitted(true);
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        budget: '',
+        message: ''
+      });
+    }, 800);
+  };
+
   const finalBadgeIcon = badgeIcon || "⚡";
   const finalBadgeText = badgeText || `RESULTS DRIVEN ${serviceName?.toUpperCase() || 'SERVICES'}`;
-  
+
   const finalTitle = title || "Let's Grow Your Brand";
   const finalTitlePreposition = titlePreposition !== undefined ? titlePreposition : "on";
   const finalTitleHighlight = titleHighlight || serviceName || 'Digital Platforms';
-  
+
   const finalDescription = description || "No fixed packages. Just custom strategies designed to deliver real results for your business.";
-  
+
   const defaultFeatures = [
     { icon: <FiTarget />, text: "Custom Strategy" },
     { icon: <FiBarChart2 />, text: "Results Focused" },
     { icon: <FiUsers />, text: "Expert Support" },
     { icon: <FiTrendingUp />, text: "Measurable Growth" }
   ];
-  
+
   const finalFeatures = features || defaultFeatures;
 
   return (
     <section className="scta-container">
-      <div className="scta-bg-glow"></div>
-      
-      <div className="scta-wrapper">
-        <div className="scta-main">
-          
-          {/* Left Side: Content */}
-          <div className="scta-content">
+      <div className="scta-content-wrapper">
+
+        <div className="scta-grid">
+
+          {/* Left Column: Information */}
+          <div className="scta-info-col">
             <div className="scta-badge">
-              <span className="scta-badge-icon">{finalBadgeIcon}</span> {finalBadgeText}
+              <span className="scta-badge-icon">{finalBadgeIcon}</span>
+              <span className="scta-badge-text">{finalBadgeText}</span>
             </div>
-            
+
             <h2 className="scta-title">
-              {finalTitle}<br/>{finalTitlePreposition} <span>{finalTitleHighlight}</span>
+              {finalTitle} {finalTitlePreposition} <span className="scta-gradient-text">{finalTitleHighlight}</span>
             </h2>
-            
-            <p className="scta-desc">
+
+            <p className="scta-description">
               {finalDescription}
             </p>
-            
-            <div className="scta-features">
-              {finalFeatures.map((feat, index) => (
-                <div className="scta-feature-item" key={index}>
-                  <div className="scta-feature-icon">{feat.icon}</div>
-                  <div className="scta-feature-text">{feat.text}</div>
+
+            {/* Features Row */}
+            <div className="scta-features-grid">
+              {finalFeatures.map((feature, idx) => (
+                <div key={idx} className="scta-feature-item">
+                  <div className="scta-feature-icon">
+                    {feature.icon}
+                  </div>
+                  <span className="scta-feature-text">{feature.text}</span>
                 </div>
               ))}
             </div>
-            
+
+            {/* Quick Action Box */}
             <div className="scta-action-box">
               <div className="scta-action-left">
-                <div className="scta-action-icon"><FaRocket /></div>
+                <div className="scta-action-icon">
+                  <FaRocket />
+                </div>
                 <div className="scta-action-text">
-                  <h4>Ready to Get Started?</h4>
-                  <p>Get a custom strategy tailored to your goals.</p>
+                  <h4>Ready for Explosive Growth?</h4>
+                  <p>Book a free 30-min strategy call with our specialists.</p>
                 </div>
               </div>
-              <button className="scta-action-btn">
-                Let's Talk <FiArrowRight />
-              </button>
-              
-              {/* Dotted curved arrow pointing to the form */}
-              <svg className="scta-arrow-svg" width="80" height="60" viewBox="0 0 80 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M 0,45 C 30,45 40,15 75,15" stroke="#a855f7" strokeWidth="1.5" strokeDasharray="4 4" fill="none" strokeLinecap="round"/>
-                  <path d="M 68,9 L 76,15 L 68,21" stroke="#a855f7" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+              <a href="tel:+918240858613" className="scta-action-btn">
+                Call Us <FiArrowRight />
+              </a>
             </div>
           </div>
-          
-          {/* Right Side: Form */}
+
+          {/* Right Column: Lead Form */}
           <div className="scta-form-wrapper">
             <div className="scta-form-card">
               <div className="scta-form-header">
@@ -106,58 +137,96 @@ const ServiceCTA = ({
                 <h3>Get a Custom Strategy</h3>
                 <p>Tell us about your business and we'll take care of the rest.</p>
               </div>
-              
-              <form className="scta-form" onSubmit={(e) => e.preventDefault()}>
-                <div className="scta-form-group">
-                  <FiUser />
-                  <input type="text" placeholder="Name" required />
+
+              {submitted ? (
+                <div className="alert alert-success text-center py-4 my-3" style={{ background: "rgba(5, 168, 92, 0.15)", border: "1px solid #05a85c", color: "#fff", borderRadius: "10px" }} role="alert">
+                  <h4 style={{ color: "#05a85c", marginBottom: "8px" }}>Thank You!</h4>
+                  <p style={{ margin: 0, fontSize: "14px", color: "#e2e8f0" }}>
+                    Your strategy request has been received. Our team will contact you shortly.
+                  </p>
                 </div>
-                <div className="scta-form-group">
-                  <FiPhone />
-                  <input type="tel" placeholder="Phone" required />
-                </div>
-                <div className="scta-form-row">
+              ) : (
+                <form className="scta-form" onSubmit={handleSubmit} noValidate>
                   <div className="scta-form-group">
-                    <select required>
-                      <option value="">Select Service</option>
-                      <option value="Content Creation">Content Creation</option>
-                      <option value="Video Production">Video Production</option>
-                      <option value="Experience Design">Experience Design</option>
-                      <option value="Digital Marketing">Digital Marketing</option>
-                      <option value="Development">Development</option>
-                      <option value="Page Recovery">Page Recovery</option>
-                      <option value="PR Services">PR Services</option>
-                      <option value="Influencer Marketing">Influencer Marketing</option>
-                      <option value="Social Media Marketing">Social Media Marketing</option>
+                    <FiUser />
+                    <input
+                      type="text"
+                      name="fullName"
+                      placeholder="Full Name *"
+                      required
+                      value={formData.fullName}
+                      onChange={handleChange}
+                    />
+                  </div>
+
+                  <div className="scta-form-row">
+                    <div className="scta-form-group">
+                      <FiMail />
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Email Address *"
+                        required
+                        value={formData.email}
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div className="scta-form-group">
+                      <FiPhone />
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Contact Number *"
+                        required
+                        value={formData.phone}
+                        onChange={handleChange}
+                      />
+                    </div>
+                  </div>
+
+                  <div className="scta-form-group">
+                    <select
+                      name="budget"
+                      required
+                      value={formData.budget}
+                      onChange={handleChange}
+                    >
+                      <option value="">What is Your Marketing Budget?</option>
+                      <option value="₹15,000 - ₹50,000">₹15,000 - ₹50,000 / month</option>
+                      <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000 / month</option>
+                      <option value="₹1,00,000 - ₹3,00,000">₹1,00,000 - ₹3,00,000 / month</option>
+                      <option value="Above ₹3,00,000">Above ₹3,00,000 / month</option>
                     </select>
                   </div>
+
                   <div className="scta-form-group">
-                    <select required>
-                      <option value="">Select Budget</option>
-                      <option value="Below 50k">Below 50k</option>
-                      <option value="50k - 1L">50k - 1L</option>
-                      <option value="1L - 5L">1L - 5L</option>
-                      <option value="Above 5L">Above 5L</option>
-                    </select>
+                    <textarea
+                      name="message"
+                      placeholder="Brief us about your business goals or target milestones..."
+                      rows="3"
+                      value={formData.message}
+                      onChange={handleChange}
+                    ></textarea>
                   </div>
-                </div>
-                <div className="scta-form-group">
-                  <textarea placeholder="Your Message" rows="3" required></textarea>
-                </div>
-                
-                <button type="submit" className="scta-submit-btn">
-                  BOOK YOUR FREE CONSULTATION <FiArrowRight className="btn-arrow" />
-                </button>
-                
-                <div className="scta-form-footer">
-                  <FiShield /> 100% Confidential. No Spam. Promise.
-                </div>
-              </form>
+
+                  <button type="submit" className="scta-submit-btn" disabled={loading}>
+                    {loading ? "SUBMITTING..." : (
+                      <>
+                        BOOK YOUR FREE CONSULTATION <FiArrowRight className="btn-arrow" />
+                      </>
+                    )}
+                  </button>
+
+                  <div className="scta-form-footer">
+                    <FiShield /> 100% Confidential. No Spam. Promise.
+                  </div>
+                </form>
+              )}
             </div>
           </div>
-          
+
         </div>
-        
+
         {/* Bottom Stats */}
         <div className="scta-stats-container">
           <div className="scta-stats-title-wrapper">
@@ -189,7 +258,7 @@ const ServiceCTA = ({
             </div>
           </div>
         </div>
-        
+
       </div>
     </section>
   );

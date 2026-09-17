@@ -1,8 +1,9 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import RouteSEO from "./Components/RouteSEO";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
+import Landing from "./Components/Landing";
 import { useEffect } from "react";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
@@ -109,9 +110,14 @@ function App() {
     };
   }, []);
 
+  const location = useLocation();
+  const isLandingPage =
+    location.pathname === "/landing" ||
+    location.pathname === "/digital-marketing-company-in-kolkata";
+
   return (
     <>
-      <Header />
+      {!isLandingPage && <Header />}
       <ScrollToTop />
       <RouteSEO />
       <Routes>
@@ -233,12 +239,14 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
         <Route path="/white-label-partnerships" element={<WhiteLabelPartnerships />} />
+        <Route path="/landing" element={<Landing />} />
+        <Route path="/digital-marketing-company-in-kolkata" element={<Landing />} />
 
         {/* Redirect False Links to Home */}
         <Route path="/products/*" element={<Navigate to="/" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-      <Footer />
+      {!isLandingPage && <Footer />}
     </>
   );
 }

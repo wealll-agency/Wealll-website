@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { execSync } from 'child_process'
+import viteS3WatcherPlugin from './plugins/vite-s3-watcher.js'
 
 let commitCount = 0;
 try {
@@ -13,7 +14,7 @@ const version = `v 1.0.${commitCount}`;
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), viteS3WatcherPlugin()],
   build: {
     target: 'es2015'
   },
