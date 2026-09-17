@@ -52,6 +52,13 @@ const LandingClients = () => {
             </div>
           ))}
         </div>
+
+        <div className="text-center mt-5">
+          <a href="#lead-form" className="wa-btn wa-btn-primary">
+            <i className="fa-regular fa-calendar-check"></i> Book A Free Consultation
+          </a>
+        </div>
+
       </div>
     </section>
   );
