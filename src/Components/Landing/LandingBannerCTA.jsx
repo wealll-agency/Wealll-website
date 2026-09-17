@@ -5,9 +5,7 @@ const LandingBannerCTA = () => {
     <section className="wa-banner-cta">
       <div className="container">
         <h3 className="wa-banner-cta-title">
-          Crafting Your Web Presence with We Alll.
-          <br />
-          Unlock the Power of the Digital World from Kolkata, India.
+          We Are Ready To Make Your <br /> Marketing Work. Are You?
         </h3>
         <div>
           <a href="#lead-form" className="wa-btn wa-btn-dark">

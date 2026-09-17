@@ -18,8 +18,8 @@ const faqs = [
     a: 'Yes. We believe you should know where your investment is going and what it is achieving. Our team will share campaign performance and relevant information with you regularly so you have a clear picture of progress.'
   },
   {
-    q: 'Do you work with startups, SMEs, and enterprise brands?',
-    a: 'Yes, our partnership tiers are engineered to scale with businesses at various maturity stages — from high-growth local businesses looking to establish regional market dominance, to D2C innovators scaling Pan-India, to multinational corporations executing enterprise digital transformation.'
+    q: 'How do I get started with We Alll?',
+    a: 'Simply book a free consultation and tell us about your business, goals and current marketing challenges. We’ll understand where you are today and discuss the opportunities we see for your digital growth.'
   }
 ];
 
