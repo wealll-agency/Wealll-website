@@ -327,7 +327,8 @@ const routeData = {
 
 const RouteSEO = () => {
   const location = useLocation();
-  const data = routeData[location.pathname];
+  const normalizedPath = (location.pathname === "/" ? "/" : location.pathname.replace(/\/+$/, "")).toLowerCase();
+  const data = routeData[location.pathname] || routeData[normalizedPath];
 
   if (!data) return <SEOMeta />;
 

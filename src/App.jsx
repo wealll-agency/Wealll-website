@@ -112,10 +112,14 @@ function App() {
   }, []);
 
   const location = useLocation();
+  const normalizedPath = (location.pathname === "/" ? "/" : location.pathname.replace(/\/+$/, "")).toLowerCase();
   const isLandingPage =
-    location.pathname === "/landing" ||
-    location.pathname === "/digital-marketing-company-in-kolkata" ||
-    location.pathname === "/thank-you";
+    normalizedPath === "/landing" ||
+    normalizedPath === "/digital-marketing-company-in-kolkata" ||
+    normalizedPath === "/thank-you" ||
+    normalizedPath.startsWith("/landing") ||
+    normalizedPath.startsWith("/digital-marketing-company-in-kolkata") ||
+    normalizedPath.startsWith("/thank-you");
 
   return (
     <>
