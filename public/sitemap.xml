@@ -409,6 +409,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.wealll.com/thank-you</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.wealll.com/career-details/full-stack-developer-intern</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

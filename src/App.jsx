@@ -4,6 +4,7 @@ import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Home from "./Components/Home";
 import Landing from "./Components/Landing";
+import LandingThankYou from "./Components/Landing/LandingThankYou";
 import { useEffect } from "react";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
@@ -113,7 +114,8 @@ function App() {
   const location = useLocation();
   const isLandingPage =
     location.pathname === "/landing" ||
-    location.pathname === "/digital-marketing-company-in-kolkata";
+    location.pathname === "/digital-marketing-company-in-kolkata" ||
+    location.pathname === "/thank-you";
 
   return (
     <>
@@ -241,6 +243,7 @@ function App() {
         <Route path="/white-label-partnerships" element={<WhiteLabelPartnerships />} />
         <Route path="/landing" element={<Landing />} />
         <Route path="/digital-marketing-company-in-kolkata" element={<Landing />} />
+        <Route path="/thank-you" element={<LandingThankYou />} />
 
         {/* Redirect False Links to Home */}
         <Route path="/products/*" element={<Navigate to="/" replace />} />

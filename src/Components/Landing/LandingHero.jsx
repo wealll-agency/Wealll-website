@@ -4,7 +4,7 @@ import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import { mediaUrl } from '../../config/media';
 import { submitLeadToSheet } from '../../services/leadService';
-import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 const partner1 = mediaUrl('assets/images/tech-logo1.png');
 const partner2 = mediaUrl('assets/images/tech-logo2.png');
@@ -29,6 +29,7 @@ const techPartners = [
 ];
 
 const LandingHero = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -66,27 +67,14 @@ const LandingHero = () => {
           message: ''
         });
 
-        Swal.fire({
-          icon: 'success',
-          title: 'Thank You!',
-          text: 'Your consultation request has been submitted successfully. Our growth strategist will connect with you within 2 business hours.',
-          confirmButtonColor: '#05a85c',
-          confirmButtonText: 'OK',
-        });
+        navigate('/thank-you');
       } else {
         throw new Error(res ? res.error : 'Submission failed');
       }
     } catch (err) {
       console.error('Lead submission error:', err);
       setLoading(false);
-      setErrorMsg('Something went wrong. Please try again or contact us directly.');
-      Swal.fire({
-        icon: 'error',
-        title: 'Submission Failed',
-        text: 'Something went wrong while submitting. Please try again or contact us directly at +91 82408 58613.',
-        confirmButtonColor: '#d33',
-        confirmButtonText: 'OK',
-      });
+      setErrorMsg('Something went wrong. Please try again or contact us directly at +91 82408 58613.');
     }
   };
 
