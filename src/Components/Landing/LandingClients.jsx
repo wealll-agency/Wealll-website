@@ -29,7 +29,7 @@ const LandingClients = () => {
             When Our <span className="wa-highlight">Clients Win</span>
           </h2>
           <p className="wa-section-subtitle">
-            Over the years, we’ve partnered with visionary leaders, high-growth consumer brands, enterprise corporations, and industry pioneers to build scalable digital engines.
+            Over the years, we’ve partnered with 600+ brands across different industries, helping businesses build a stronger digital presence that brings real sales. And your brand could be next.
           </p>
         </div>
 

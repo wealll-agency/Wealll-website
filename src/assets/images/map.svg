@@ -1,13 +1,16 @@
-<!DOCTYPE html>
-<html style="height:100%">
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<title> 302 Found
-</title><style>@media (prefers-color-scheme:dark){body{background-color:#000!important}}</style></head>
-<body style="color: #444; margin:0;font: normal 14px/20px Arial, Helvetica, sans-serif; height:100%; background-color: #fff;">
-<div style="height:auto; min-height:100%; ">     <div style="text-align: center; width:800px; margin-left: -400px; position:absolute; top: 30%; left:50%;">
-        <h1 style="margin:0; font-size:150px; line-height:150px; font-weight:bold;">302</h1>
-<h2 style="margin-top:20px;font-size: 30px;">Found
-</h2>
-<p>The document has been temporarily moved.</p>
-</div></div></body></html>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 132" width="100%" height="100%">
+  <defs>
+    <filter id="gmbShadow" x="-20%" y="-10%" width="140%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1A73E8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <g filter="url(#gmbShadow)">
+    <path d="M46 4C22.8 4 4 22.8 4 46c0 31.5 42 78 42 78s42-46.5 42-78C88 22.8 69.2 4 46 4z" fill="#4285F4"/>
+    <path d="M46 4C22.8 4 4 22.8 4 46c0 10.4 3.7 20 9.8 27.5L46 40V4z" fill="#EA4335"/>
+    <path d="M13.8 73.5C23.5 85.4 36.5 103.5 46 117V73.5H13.8z" fill="#FBBC04"/>
+    <path d="M46 117c9.5-13.5 22.5-31.6 32.2-43.5H46V117z" fill="#34A853"/>
+    <path d="M78.2 73.5C84.3 66 88 56.4 88 46c0-23.2-18.8-42-42-42v36l32.2 33.5z" fill="#4285F4"/>
+    <circle cx="46" cy="46" r="18" fill="#FFFFFF"/>
+    <circle cx="46" cy="46" r="10" fill="#1A73E8"/>
+  </g>
+</svg>

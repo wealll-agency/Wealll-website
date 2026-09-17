@@ -13,13 +13,13 @@ const services = [
     title: 'SEO (Search Engine Optimization)',
     icon: seoIcon,
     isSvgOrImg: true,
-    desc: 'Technical SEO involves optimizing your website’s core infrastructure to make it easier for search engines to crawl and index your pages. This includes improving site speed, solving architectural issues, implementing rich schema markup, and executing high-intent keyword strategies to dominate page-1 Google rankings.'
+    desc: 'Be there when they search. Your competitors shouldn’t get the customer because they rank higher. We improve your website’s visibility so potential customers can find you when they’re actively looking for what you offer.'
   },
   {
-    title: 'SMO (Social Media Optimization)',
+    title: 'SMO (Social media optimization)',
     icon: smoIcon,
     isSvgOrImg: true,
-    desc: 'Social media optimization involves structuring your social media touchpoints and organic content distribution to maximize engagement, virality, and brand authority. Effective SMO enhances paid ad performance on Meta, amplifies referral traffic, and fosters an active community around your brand.'
+    desc: 'Make your socials worth following. Posting every day but hearing crickets? We turn your social media into a place where people not only engage with it but also remember it.'
   },
   {
     title: 'Google Local Listing (GMB)',
@@ -31,19 +31,19 @@ const services = [
     title: 'Ecommerce Marketing',
     icon: ecomIcon,
     isSvgOrImg: true,
-    desc: 'Our dedicated ecommerce marketing framework helps online stores convert high-intent shoppers through performance-driven campaigns across search, social, and marketplaces. We fine-tune ROAS, optimize product feeds, reduce cart abandonment, and maximize customer lifetime value.'
+    desc: 'We make more people to click “Buy”.Traffic is nothing if your products stay in the cart. We help e-commerce brands attract shoppers, reduce drop-offs and confirm more purchases.'
   },
   {
-    title: 'Google Ads (PPC & Performance Max)',
+    title: 'Google Ads',
     icon: gadsIcon,
     isSvgOrImg: true,
-    desc: 'Run precision programmatic search, display, and Performance Max campaigns targeting buyers at the exact moment of commercial intent. We minimize cost-per-click while driving high-quality inbound inquiries and transparent returns on your media spend.'
+    desc: 'Be the first choice on google. Stop letting competitors capture customers who are searching for your services. We build targeted Google Ads campaigns that put your business in front of high-intent prospects and push them toward action.'
   },
   {
-    title: 'Facebook & Instagram (Meta Ads)',
+    title: 'Facebook & Instagram Ads',
     icon: metaIcon,
     isSvgOrImg: true,
-    desc: 'Promote your brand across Facebook, Instagram, and Messenger with high-converting video and carousel creatives. Through deep behavioral targeting, custom lookalike audiences, and full-funnel retargeting, we scale qualified lead generation and DTC revenue predictably.'
+    desc: 'Your ideal customer could be scrolling reels right now. We use Meta Ads, audience targeting, retargeting and conversion focused creatives to bring your brand into their feed and give them a reason to act.'
   }
 ];
 
@@ -53,11 +53,11 @@ const LandingServices = () => {
       <div className="container">
         <div className="text-center">
           <h2 className="wa-section-title">
-            Grow Your Business Four Times with the Right Marketing Strategy from{' '}
+            Get a Full-Funnel Digital Marketing Ecosystem with {' '}
             <span className="wa-highlight">We Alll</span>
           </h2>
           <p className="wa-section-subtitle">
-            At We Alll, we believe the right strategy makes all the difference between stagnation and explosive growth. With data-backed execution across all key digital channels, we help businesses multiply their sales velocity and dominate market share.
+            Your customers are searching, scrolling, comparing and buying online 24×7. But can they find you? We help you show up at the right moment, with the right message, in the right place.
           </p>
         </div>
 

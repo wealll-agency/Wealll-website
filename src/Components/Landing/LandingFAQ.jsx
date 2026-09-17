@@ -2,20 +2,20 @@ import React, { useState } from 'react';
 
 const faqs = [
   {
-    q: 'What digital marketing services do you offer?',
-    a: 'We provide comprehensive 360-degree digital growth solutions including Search Engine Optimization (SEO), Paid Ads (Google & Meta), Social Media Marketing (SMM), Performance Content Creation, Video & Reel Production, Web Design & Development, and Strategic Page Recovery.'
+    q: 'Do I need to use all your digital marketing services?',
+    a: 'Not at all. More services don’t automatically mean better results. We identify which channels make sense for your business and recommend a combination based on your requirements and budget.'
   },
   {
-    q: 'How long does it take to see measurable results?',
-    a: 'Timelines vary by marketing channel: Paid advertising campaigns (Google Ads & Meta Ads) typically begin driving qualified leads and conversions within the first 7 to 14 days of campaign launch. Comprehensive organic initiatives like SEO and content authority building generally show exponential compounding gains between 3 to 6 months.'
+    q: 'How much should I spend on digital marketing?',
+    a: 'There’s no one-size-fits-all budget. Your ideal investment depends on your industry and your goals. During a consultation, we can help identify a practical starting point based on what you want to achieve.'
   },
   {
-    q: 'How do you track and measure campaign success?',
-    a: 'We focus strictly on commercial outcomes rather than vanity metrics. Our tracking framework monitors Customer Acquisition Cost (CAC), Return on Ad Spend (ROAS), Qualified Pipeline, Conversion Rates, and Lifetime Value (LTV), backed by real-time dashboards and detailed monthly reviews.'
+    q: 'Can you help if my current marketing isn’t generating leads?',
+    a: 'Yes. We can assess your existing website, ad campaigns, social media and conversion funnel to identify where potential customers are dropping off and what can be improved.'
   },
   {
-    q: 'What makes We Alll different from generic marketing agencies?',
-    a: 'Unlike agencies that deliver templated checklists, We Alll acts as your dedicated fractional growth team. We combine rigorous data attribution with high-aesthetic creative execution, backed by in-house video production, transparent reporting, and senior strategist oversight.'
+    q: 'Will I get regular updates about my campaigns?',
+    a: 'Yes. We believe you should know where your investment is going and what it is achieving. Our team will share campaign performance and relevant information with you regularly so you have a clear picture of progress.'
   },
   {
     q: 'Do you work with startups, SMEs, and enterprise brands?',
@@ -38,7 +38,7 @@ const LandingFAQ = () => {
             Frequently Asked <span className="wa-highlight">Questions</span>
           </h2>
           <p className="wa-section-subtitle">
-            Want to take your business to peak performance? Rely on the strategic expertise of We Alll. Review answers to the most common questions below to make an informed, confident decision.
+            Want to know if We Alll is the right growth partner for your business? Here are answers to the questions we hear most often.
           </p>
         </div>
 

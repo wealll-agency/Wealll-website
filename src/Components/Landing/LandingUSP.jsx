@@ -3,33 +3,33 @@ import React from 'react';
 const uspList = [
   {
     icon: 'fa-solid fa-briefcase',
-    title: 'Know Your Website and Business Opportunities',
-    desc: "We believe in thoroughly identifying your website and market opportunities to help you unlock latent revenue. Everything we deliver adheres to the industry's highest performance and conversion standards."
+    title: 'We find the exact problem',
+    desc: "Not getting enough leads? Low website traffic? People visiting but not buying? We identify the gaps in your website, content, SEO and marketing funnel so you know exactly what needs to change."
   },
   {
     icon: 'fa-solid fa-layer-group',
-    title: 'Robust Service Structure',
-    desc: 'Our structured agile marketing framework delivers end-to-end solutions tailored to your objectives, ensuring high campaign velocity and keeping your business miles ahead of competition.'
+    title: '360° marketing in one place',
+    desc: "You don't need of hire different agencies for different services. We bring strategy, content, paid ads, SEO and performance marketing together so your campaigns work as one connected growth system."
   },
   {
     icon: 'fa-solid fa-earth-asia',
-    title: 'Nationwide & Global Clients',
-    desc: 'Our data-backed digital marketing solutions from our specialized team in Kolkata have empowered Pan-India and international clients to accelerate their market expansion.'
+    title: 'Your market isn’t limited to Kolkata',
+    desc: 'Struggling to reach customers beyond your local area? We help brands target the right audiences across India and global markets, using digital strategies built for wherever your next customer is.'
   },
   {
     icon: 'fa-solid fa-bullseye',
-    title: 'Create Remarkable Sales & Leads',
-    desc: 'We construct high-intent acquisition funnels engineered to convert passive browsers into repeat paying customers, driving measurable pipeline and positive ROAS.'
+    title: 'We chase leads instead of likes',
+    desc: 'Getting views and followers but not enough sales? We build lead-generation funnels and conversion-focused campaigns designed to turn attention into enquiries and revenue.'
   },
   {
     icon: 'fa-solid fa-chart-line',
-    title: 'Custom Growth Strategies',
-    desc: 'No cookie-cutter playbooks. Our senior growth strategists conduct exhaustive competitor and audience research to craft tailor-made strategies that maximize CAC-to-LTV ratios.'
+    title: 'No copy-paste marketing strategies',
+    desc: 'What works for another business may not work for yours. That’s why we study your audience, your competitors, market and your personal business goals before creating a customized growth strategy.'
   },
   {
     icon: 'fa-solid fa-chart-pie',
-    title: 'Intelligent & Insightful Analysis',
-    desc: 'With transparent monthly reporting and attribution modeling, we turn raw metrics into actionable growth levers, giving you 100% clarity on where every marketing rupee goes.'
+    title: 'Know exactly where your money is going',
+    desc: 'Spending on marketing without knowing what’s actually working? We track your campaign performance, leads, conversions and key metrics so you can see what’s bringing results and what needs to improve.'
   }
 ];
 
@@ -39,10 +39,10 @@ const LandingUSP = () => {
       <div className="container">
         <div className="text-center">
           <h2 className="wa-section-title">
-            USP of Our <span className="wa-highlight">Digital Marketing</span> Services
+            What Makes <span className="wa-highlight">We Alll </span> Different
           </h2>
           <p className="wa-section-subtitle">
-            We pride ourselves on our core differentiators that set us apart from generic agencies. Our digital marketing services in Kolkata are engineered to maximize your market reach and business valuation through customized growth frameworks, robust delivery workflows, and continuous optimization.
+            We don’t believe in one size fits all marketing. We understand your business, find what’s holding your growth back।and build strategies customised to your requirements.
           </p>
         </div>
 

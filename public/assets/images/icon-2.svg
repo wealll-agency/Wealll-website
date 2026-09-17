@@ -1,1 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 371.52 371.52"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M185.76,0C83.18,0,0,83.18,0,185.76S83.18,371.52,185.76,371.52s185.76-83.18,185.76-185.76S288.34,0,185.76,0"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <defs>
+    <linearGradient id="smoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E1306C"/>
+      <stop offset="50%" stop-color="#FD1D1D"/>
+      <stop offset="100%" stop-color="#F77737"/>
+    </linearGradient>
+  </defs>
+  <line x1="23" y1="28" x2="41" y2="21" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+  <line x1="23" y1="36" x2="41" y2="43" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="48" cy="18" r="9" fill="#1877F2"/>
+  <circle cx="16" cy="32" r="10" fill="url(#smoGrad)"/>
+  <circle cx="48" cy="46" r="9" fill="#05A85C"/>
+  <circle cx="16" cy="32" r="4" fill="#ffffff"/>
+  <circle cx="48" cy="18" r="3.5" fill="#ffffff"/>
+  <circle cx="48" cy="46" r="3.5" fill="#ffffff"/>
+</svg>

@@ -88,10 +88,10 @@ const LandingHero = () => {
           <div className="col-lg-7 col-md-12 mb-4 mb-lg-0">
             <div className="wa-hero-content">
               <span className="wa-hero-tagline">
-                The Power Of An Integrated Digital Outreach Strategy
+                You need a digital strategy that actually sells
               </span>
               <h1 className="wa-hero-title">
-                Scale Your Revenue With Results-Driven Growth
+                STOP PAYING FOR ATTENTION THAT DOESN'T CONVERT
               </h1>
               <h2 className="wa-hero-subtitle">
                 <span className="wa-hero-company">We Alll </span>
@@ -99,7 +99,7 @@ const LandingHero = () => {
                 Digital Marketing Agency in Kolkata
               </h2>
               <p className="wa-hero-desc">
-                In today's fast-paced world, having a commanding online presence is non-negotiable. Whether you're an ambitious startup scaling from scratch or an established brand dominating your niche, our specialized growth strategists deliver multi-channel campaigns engineered to acquire, convert, and retain high-value customers.
+                If your marketing gets attention but not customers, something is missing. We Alll builds result-focused digital strategies using SEO, performance marketing, paid ads, AI automation, conversion-focused content and data-driven audience targeting to turn your online visibility into qualified leads and real business growth.
               </p>
               <div>
                 <a href="#lead-form" className="wa-btn wa-btn-primary">
@@ -150,12 +150,10 @@ const LandingHero = () => {
           <div className="col-lg-5 col-md-12">
             <div className="wa-hero-form-card" id="lead-form">
               <h2 className="wa-hero-form-title">
-                Growing Business Is Harder,
-                <br />
-                <span className="wa-highlight">We Make It A Whole Lot Easier</span>
+                Tell us about your business.
               </h2>
               <p className="wa-hero-form-desc">
-                Your Strategic Growth Partner to Accelerate Sales & Conversions Through Measurable Digital Handshakes.
+                Let’s identify where your growth is getting stuck and build a strategy to move it forward.
               </p>
 
               <form onSubmit={handleSubmit} noValidate>

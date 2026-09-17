@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 371.52 371.52"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M0,371.52V0C205.16,0,371.52,166.35,371.52,371.52Z"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ecomGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#05A85C"/>
+      <stop offset="100%" stop-color="#028245"/>
+    </linearGradient>
+  </defs>
+  <rect x="13" y="19" width="38" height="37" rx="7" fill="url(#ecomGrad)"/>
+  <path d="M23 21V15C23 10.03 27.03 6 32 6C36.97 6 41 10.03 41 15V21" stroke="#FFCC00" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+  <path d="M25 38L29.5 42.5L39 33" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

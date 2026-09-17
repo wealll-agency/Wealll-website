@@ -33,10 +33,10 @@ const LandingResults = () => {
       <div className="container">
         <div className="text-center">
           <h2 className="wa-section-title">
-            We Created <span className="wa-highlight">Our Results</span>
+            DON’T BELIEVE US. <span className="wa-highlight">BELIEVE THE RESULTS.</span>
           </h2>
           <p className="wa-section-subtitle">
-            Our portfolio showcases proven expertise across organic acquisition, high-converting paid funnels, and ROI-centric digital campaigns. Explore direct testimonials from founders who scaled their market footprint with us.
+            Hear directly from business owners about their experience working with We Alll and how our strategies helped turn their digital presence into real business revenue.
           </p>
         </div>
 
