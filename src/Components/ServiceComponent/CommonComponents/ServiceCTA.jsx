@@ -79,27 +79,27 @@ const ServiceCTA = ({
 
   return (
     <section className="scta-container">
-      <div className="scta-content-wrapper">
+      <div className="scta-wrapper">
 
-        <div className="scta-grid">
+        <div className="scta-main">
 
           {/* Left Column: Information */}
-          <div className="scta-info-col">
+          <div className="scta-content">
             <div className="scta-badge">
               <span className="scta-badge-icon">{finalBadgeIcon}</span>
               <span className="scta-badge-text">{finalBadgeText}</span>
             </div>
 
             <h2 className="scta-title">
-              {finalTitle} {finalTitlePreposition} <span className="scta-gradient-text">{finalTitleHighlight}</span>
+              {finalTitle} {finalTitlePreposition} <span>{finalTitleHighlight}</span>
             </h2>
 
-            <p className="scta-description">
+            <p className="scta-desc">
               {finalDescription}
             </p>
 
             {/* Features Row */}
-            <div className="scta-features-grid">
+            <div className="scta-features">
               {finalFeatures.map((feature, idx) => (
                 <div key={idx} className="scta-feature-item">
                   <div className="scta-feature-icon">
