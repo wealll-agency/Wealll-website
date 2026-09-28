@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import { mediaUrl } from '../../config/media';
-import { submitLeadToSheet } from '../../services/leadService';
+import { submitLeadToCRM } from '../../services/leadService';
 import { useNavigate } from 'react-router-dom';
 
 const partner1 = mediaUrl('assets/images/tech-logo1.png');
@@ -47,8 +47,8 @@ const LandingHero = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!formData.fullName.trim() || !formData.email.trim() || !formData.phone.trim()) {
-      setErrorMsg('Please fill in all required fields (Name, Email, and Phone).');
+    if (!formData.fullName.trim() || !formData.phone.trim()) {
+      setErrorMsg('Please fill in all required fields (Name and Contact Number).');
       return;
     }
 
@@ -56,17 +56,16 @@ const LandingHero = () => {
     setLoading(true);
 
     try {
-      const res = await submitLeadToSheet(formData);
-      if (res && res.success) {
-        setLoading(false);
-        setFormData({
-          fullName: '',
-          email: '',
-          phone: '',
-          budget: '',
-          message: ''
-        });
+      const res = await submitLeadToCRM({
+        ...formData,
+        source:    'Landing Page - Digital Marketing',
+        reference: 'WeAlll Landing Page',
+      });
 
+      if (res && res.success) {
+        // 201 = new lead, 200 = existing lead updated (duplicate) — both are success
+        setLoading(false);
+        setFormData({ fullName: '', email: '', phone: '', budget: '', message: '' });
         navigate('/thank-you');
       } else {
         throw new Error(res ? res.error : 'Submission failed');
@@ -157,6 +156,8 @@ const LandingHero = () => {
               </p>
 
               <form onSubmit={handleSubmit} noValidate>
+                {/* Honeypot field — must stay empty; bots fill it and get rejected by the API */}
+                <input type="text" name="_hp" value="" readOnly style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
                 {errorMsg && (
                   <div className="wa-form-error">
                     <i className="fa-solid fa-triangle-exclamation" style={{ marginRight: '6px' }}></i>

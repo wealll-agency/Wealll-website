@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { mediaUrl } from "../../config/media";
-import { submitLeadToSheet } from "../../services/leadService";
+import { submitLeadToCRM } from "../../services/leadService";
 const map1 = mediaUrl("assets/images/bg-map.png");
 
 const ContactForm = () => {
@@ -14,6 +14,7 @@ const ContactForm = () => {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,14 +23,28 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!formData.fullName.trim() || !formData.phone.trim()) {
+      setErrorMsg('Please fill in your Name and Contact Number.');
+      return;
+    }
+    setErrorMsg('');
     setLoading(true);
     try {
-      await submitLeadToSheet(formData);
+      const res = await submitLeadToCRM({
+        ...formData,
+        source:    'Contact Page',
+        reference: 'WeAlll Contact Form',
+      });
+      if (res && res.success) {
+        navigate("/thank-you");
+      } else {
+        throw new Error(res ? res.error : 'Submission failed');
+      }
     } catch (err) {
       console.error("Contact form submission error:", err);
+      setErrorMsg('Something went wrong. Please try again or call +91 82408 58613.');
     } finally {
       setLoading(false);
-      navigate("/thank-you");
     }
   };
 
@@ -84,7 +99,23 @@ const ContactForm = () => {
               </div>
 
               <div className="contact-form">
-                <form id="contactForm" onSubmit={handleSubmit} noValidate>
+              <form id="contactForm" onSubmit={handleSubmit} noValidate>
+                  {/* Honeypot field — must stay empty; bots fill it and get rejected by the API */}
+                  <input type="text" name="_hp" value="" readOnly style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
+
+                  {errorMsg && (
+                    <div className="alert" style={{
+                      background: 'rgba(220,53,69,0.1)',
+                      border: '1px solid #dc3545',
+                      color: '#dc3545',
+                      borderRadius: '8px',
+                      padding: '10px 16px',
+                      marginBottom: '16px',
+                      fontSize: '14px'
+                    }}>
+                      {errorMsg}
+                    </div>
+                  )}
                   <div className="row">
                     <div className="col-lg-12 col-md-12">
                       <div className="form-group">

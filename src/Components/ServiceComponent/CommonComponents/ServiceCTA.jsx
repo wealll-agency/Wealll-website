@@ -17,6 +17,8 @@ import {
   FiShield
 } from 'react-icons/fi';
 import { FaRocket } from 'react-icons/fa';
+import { submitLeadToCRM } from '../../../services/leadService';
+import { useNavigate } from 'react-router-dom';
 
 const ServiceCTA = ({
   serviceName,
@@ -28,6 +30,7 @@ const ServiceCTA = ({
   description,
   features
 }) => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -37,26 +40,40 @@ const ServiceCTA = ({
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!formData.fullName.trim() || !formData.phone.trim()) {
+      setErrorMsg('Please fill in your Name and Contact Number.');
+      return;
+    }
+    setErrorMsg('');
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-      setFormData({
-        fullName: '',
-        email: '',
-        phone: '',
-        budget: '',
-        message: ''
+    try {
+      const res = await submitLeadToCRM({
+        ...formData,
+        // source is built from the serviceName prop so CRM knows which service page sent the lead
+        source:    serviceName ? `Service Page - ${serviceName}` : 'Service Page',
+        reference: serviceName ? `${serviceName} CTA Form` : 'Service CTA Form',
       });
-    }, 800);
+      if (res && res.success) {
+        setLoading(false);
+        setFormData({ fullName: '', email: '', phone: '', budget: '', message: '' });
+        setSubmitted(true);
+      } else {
+        throw new Error(res ? res.error : 'Submission failed');
+      }
+    } catch (err) {
+      console.error('[ServiceCTA] Lead submission error:', err);
+      setLoading(false);
+      setErrorMsg('Something went wrong. Please call us directly at +91 82408 58613.');
+    }
   };
 
   const finalBadgeIcon = badgeIcon || "⚡";
@@ -147,6 +164,22 @@ const ServiceCTA = ({
                 </div>
               ) : (
                 <form className="scta-form" onSubmit={handleSubmit} noValidate>
+                  {/* Honeypot field — must stay empty; bots fill it and get rejected by the API */}
+                  <input type="text" name="_hp" value="" readOnly style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
+
+                  {errorMsg && (
+                    <div style={{
+                      background: 'rgba(220,53,69,0.13)',
+                      border: '1px solid #dc3545',
+                      color: '#ff6b7a',
+                      borderRadius: '8px',
+                      padding: '10px 14px',
+                      marginBottom: '12px',
+                      fontSize: '13px'
+                    }}>
+                      {errorMsg}
+                    </div>
+                  )}
                   <div className="scta-form-group">
                     <FiUser />
                     <input
