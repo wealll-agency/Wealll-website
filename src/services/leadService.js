@@ -16,7 +16,7 @@
  *   429 — Rate limit (20 requests / 15 min per IP)
  */
 
-const CRM_API_URL = import.meta.env.VITE_CRM_API_URL;
+const CRM_API_URL = import.meta.env.VITE_CRM_API_URL || "https://wealll.cloud/api/leads/website";
 
 /**
  * Submit a lead to the We Alll Office CRM.
