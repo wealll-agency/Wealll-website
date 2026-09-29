@@ -32,7 +32,7 @@ const ContactForm = () => {
     try {
       const res = await submitLeadToCRM({
         ...formData,
-        source:    'Contact Page',
+        source: 'Contact Page',
         reference: 'WeAlll Contact Form',
       });
       if (res && res.success) {
@@ -99,7 +99,7 @@ const ContactForm = () => {
               </div>
 
               <div className="contact-form">
-              <form id="contactForm" onSubmit={handleSubmit} noValidate>
+                <form id="contactForm" onSubmit={handleSubmit} noValidate>
                   {/* Honeypot field — must stay empty; bots fill it and get rejected by the API */}
                   <input type="text" name="_hp" value="" readOnly style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
 
