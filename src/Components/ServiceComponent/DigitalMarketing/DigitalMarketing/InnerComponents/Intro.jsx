@@ -16,6 +16,7 @@ const dm3 = mediaUrl("assets/images/dm3.jpeg");
 const dm4 = mediaUrl("assets/images/dm4.jpeg");
 const dm5 = mediaUrl("assets/images/dm5.jpeg");
 import { mediaUrl } from "../../../../../config/media";
+import { submitLeadToCRM } from "../../../../../services/leadService";
 
 const Intro = ({ title, desc, defaultService, defaultBudget, sliderImages }) => {
   const [formData, setFormData] = useState({
@@ -27,26 +28,47 @@ const Intro = ({ title, desc, defaultService, defaultBudget, sliderImages }) => 
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!formData.fullName.trim() || !formData.phone.trim()) {
+      setErrorMsg("Please fill in your Name and Contact Number.");
+      return;
+    }
+    setErrorMsg("");
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-      setFormData({
-        fullName: "",
-        email: "",
-        phone: "",
-        budget: "",
-        message: "",
+
+    try {
+      const res = await submitLeadToCRM({
+        ...formData,
+        source: title ? `Service Page Intro - ${title}` : "Service Page Intro",
+        reference: "Hero Intro Form",
       });
-    }, 800);
+
+      if (res && res.success) {
+        setLoading(false);
+        setFormData({
+          fullName: "",
+          email: "",
+          phone: "",
+          budget: "",
+          message: "",
+        });
+        setSubmitted(true);
+      } else {
+        throw new Error(res ? res.error : "Submission failed");
+      }
+    } catch (err) {
+      console.error("Lead submission error:", err);
+      setLoading(false);
+      setErrorMsg("Something went wrong. Please try again or call us at +91 82408 58613.");
+    }
   };
 
   const bgStyle = {
@@ -98,6 +120,14 @@ const Intro = ({ title, desc, defaultService, defaultBudget, sliderImages }) => 
                   </div>
                 ) : (
                   <form id="contactForm" onSubmit={handleSubmit} noValidate>
+                    {/* Honeypot field for bot protection */}
+                    <input type="text" name="_hp" value="" readOnly style={{ display: 'none' }} tabIndex="-1" autoComplete="off" />
+                    
+                    {errorMsg && (
+                      <div className="alert alert-danger py-2 mb-3" style={{ fontSize: '14px' }}>
+                        {errorMsg}
+                      </div>
+                    )}
                     <div className="row">
                       <div className="col-lg-12 col-md-12">
                         <div className="form-group">
