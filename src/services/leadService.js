@@ -16,7 +16,8 @@
  *   429 — Rate limit (20 requests / 15 min per IP)
  */
 
-const CRM_API_URL = import.meta.env.VITE_CRM_API_URL || "https://wealll.cloud/api/leads/website";
+const CRM_API_URL =
+  import.meta.env.VITE_CRM_API_URL || "https://wealll.cloud/api/leads/website";
 
 /**
  * Submit a lead to the We Alll Office CRM.
@@ -25,6 +26,7 @@ const CRM_API_URL = import.meta.env.VITE_CRM_API_URL || "https://wealll.cloud/ap
  * @param {string} leadData.fullName    — Required
  * @param {string} leadData.phone       — Required
  * @param {string} leadData.email       — Optional
+ *
  * @param {string} leadData.budget      — Optional
  * @param {string} leadData.message     — Optional (maps to CRM "notes" field)
  * @param {string} leadData.source      — Recommended. Unique per campaign/page.
@@ -39,21 +41,21 @@ export const submitLeadToCRM = async (leadData) => {
   }
 
   const payload = {
-    fullName:    (leadData.fullName || "").trim(),
-    phone:       (leadData.phone || "").trim(),
-    email:       (leadData.email || "").trim(),
-    budget:      leadData.budget || "",
-    notes:       (leadData.message || "").trim(),   // "message" in form → "notes" in CRM
-    source:      leadData.source || "Website",
-    reference:   leadData.reference || "",
-    _hp:         "",                                 // Honeypot — always empty string
+    fullName: (leadData.fullName || "").trim(),
+    phone: (leadData.phone || "").trim(),
+    email: (leadData.email || "").trim(),
+    budget: leadData.budget || "",
+    notes: (leadData.message || "").trim(), // "message" in form → "notes" in CRM
+    source: leadData.source || "Website",
+    reference: leadData.reference || "",
+    _hp: "", // Honeypot — always empty string
   };
 
   try {
     const response = await fetch(CRM_API_URL, {
-      method:  "POST",
+      method: "POST",
       headers: { "Content-Type": "application/json" },
-      body:    JSON.stringify(payload),
+      body: JSON.stringify(payload),
     });
 
     // 201 — New lead created
@@ -69,7 +71,9 @@ export const submitLeadToCRM = async (leadData) => {
       try {
         const errData = await response.json();
         errMsg = errData.message || errMsg;
-      } catch (_) { /* ignore JSON parse error */ }
+      } catch (_) {
+        /* ignore JSON parse error */
+      }
       console.error("[CRM] 400 Validation error:", errMsg);
       return { success: false, error: errMsg };
     }
@@ -77,26 +81,36 @@ export const submitLeadToCRM = async (leadData) => {
     // 403 — CORS / Origin not allowed
     if (response.status === 403) {
       console.error("[CRM] 403 Origin not allowed by CRM API.");
-      return { success: false, error: "Origin not permitted. Please contact support." };
+      return {
+        success: false,
+        error: "Origin not permitted. Please contact support.",
+      };
     }
 
     // 429 — Rate limit exceeded
     if (response.status === 429) {
       console.error("[CRM] 429 Rate limit exceeded.");
-      return { success: false, error: "Too many submissions. Please try again after a few minutes." };
+      return {
+        success: false,
+        error: "Too many submissions. Please try again after a few minutes.",
+      };
     }
 
     // Other unexpected status
     console.error("[CRM] Unexpected response status:", response.status);
-    return { success: false, error: `Unexpected error (${response.status}). Please try again.` };
-
+    return {
+      success: false,
+      error: `Unexpected error (${response.status}). Please try again.`,
+    };
   } catch (err) {
     // Network error, fetch failed, etc.
     console.error("[CRM] Network error during lead submission:", err);
-    return { success: false, error: "Network error. Please check your connection and try again." };
+    return {
+      success: false,
+      error: "Network error. Please check your connection and try again.",
+    };
   }
 };
-
 
 /**
  * Legacy: Submit lead to Google Sheets via Apps Script.
@@ -110,19 +124,19 @@ const GOOGLE_SHEET_ENDPOINT =
 
 export const submitLeadToSheet = async (leadData) => {
   const payload = {
-    name:    leadData.fullName || leadData.name || "",
-    email:   leadData.email || "",
-    phone:   leadData.phone || leadData.phoneNo || "",
-    budget:  leadData.budget || "",
+    name: leadData.fullName || leadData.name || "",
+    email: leadData.email || "",
+    phone: leadData.phone || leadData.phoneNo || "",
+    budget: leadData.budget || "",
     message: leadData.message || "",
   };
 
   try {
     const fetchPromise = fetch(GOOGLE_SHEET_ENDPOINT, {
-      method:  "POST",
-      mode:    "no-cors",
+      method: "POST",
+      mode: "no-cors",
       headers: { "Content-Type": "text/plain;charset=utf-8" },
-      body:    JSON.stringify(payload),
+      body: JSON.stringify(payload),
     });
     const timeoutPromise = new Promise((resolve) => setTimeout(resolve, 800));
     await Promise.race([fetchPromise, timeoutPromise]);
