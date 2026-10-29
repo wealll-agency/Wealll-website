@@ -199,12 +199,7 @@ const LandingHero = () => {
                 </div>
 
                 <div className="wa-form-group">
-                  <input
-                    type="text"
-                    name="marketingBudget"
-                    className="wa-input"
-                    placeholder="What is Your Marketing Budget?"
-                  />
+                  <p className='wa-hero-form-desc' style={{ fontWeight: '600', marginBottom: '0' }}>What is Your Marketing Budget?</p>
                 </div>
 
 
