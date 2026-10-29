@@ -58,7 +58,7 @@ const LandingHero = () => {
     try {
       const res = await submitLeadToCRM({
         ...formData,
-        source:    'Landing Page - Digital Marketing',
+        source: 'Landing Page - Digital Marketing',
         reference: 'WeAlll Landing Page',
       });
 
@@ -82,15 +82,15 @@ const LandingHero = () => {
       <div className="wa-hero-glow-1"></div>
       <div className="wa-hero-glow-2"></div>
       <div className="container">
-        <div className="row align-items-center">
+        <div className="row align-items-end">
           {/* LEFT COLUMN: HEADLINE & PITCH */}
-          <div className="col-lg-7 col-md-12 mb-4 mb-lg-0">
+          <div className="col-lg-7 col-md-12 mb-4 mb-lg-0 hero-col-1">
             <div className="wa-hero-content">
               <span className="wa-hero-tagline">
                 You need a digital strategy that actually sells
               </span>
               <h1 className="wa-hero-title">
-                STOP PAYING FOR ATTENTION THAT DOESN'T CONVERT
+                Get <span className='text-highlight'>8X ROAS</span> on Your Ad Spend – Grow Your Business Faster! 🚀
               </h1>
               <h2 className="wa-hero-subtitle">
                 <span className="wa-hero-company">We Alll </span>
@@ -146,7 +146,7 @@ const LandingHero = () => {
           </div>
 
           {/* RIGHT COLUMN: LEAD CAPTURE FORM */}
-          <div className="col-lg-5 col-md-12">
+          <div className="col-lg-5 col-md-12 hero-col-2">
             <div className="wa-hero-form-card" id="lead-form">
               <h2 className="wa-hero-form-title">
                 Tell us about your business.
@@ -197,6 +197,17 @@ const LandingHero = () => {
                     onChange={handleChange}
                   />
                 </div>
+
+                <div className="wa-form-group">
+                  <input
+                    type="text"
+                    name="marketingBudget"
+                    className="wa-input"
+                    placeholder="What is Your Marketing Budget?"
+                  />
+                </div>
+
+
                 <div className="wa-form-group">
                   <select
                     name="budget"
@@ -205,11 +216,9 @@ const LandingHero = () => {
                     onChange={handleChange}
                     required
                   >
-                    <option value="">What is Your Marketing Budget?</option>
-                    <option value="₹15,000 - ₹50,000">₹15,000 - ₹50,000 / month</option>
-                    <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000 / month</option>
-                    <option value="₹1,00,000 - ₹3,00,000">₹1,00,000 - ₹3,00,000 / month</option>
-                    <option value="Above ₹3,00,000">Above ₹3,00,000 / month</option>
+                    <option value="₹50,000">₹50,000+ / month</option>
+                    <option value="₹1,00,000">₹1,00,000+ / month</option>
+                    <option value="₹3,00,000">₹3,00,000+ / month</option>
                   </select>
                 </div>
                 <div className="wa-form-group">
@@ -228,6 +237,11 @@ const LandingHero = () => {
               </form>
             </div>
           </div>
+
+          <div className='hero-col-3'>
+            <p class="wa-hero-subtitle">Our Partners</p>
+          </div>
+
         </div>
       </div>
     </section>

@@ -4,26 +4,26 @@ const reelList = [
   {
     id: 'DU5q-znATwo',
     title: 'We Alll Client Result 1',
-    embedUrl: 'https://www.instagram.com/reel/DU5q-znATwo/embed/',
-    permalink: 'https://www.instagram.com/reel/DU5q-znATwo/'
+    embedUrl: 'https://www.instagram.com/reel/DYFAlMWjaDv/embed/',
+    permalink: 'https://www.instagram.com/reel/DYFAlMWjaDv/'
   },
   {
     id: 'DUneybAkgrK',
     title: 'We Alll Client Result 2',
-    embedUrl: 'https://www.instagram.com/reel/DUneybAkgrK/embed/',
-    permalink: 'https://www.instagram.com/reel/DUneybAkgrK/'
+    embedUrl: 'https://www.instagram.com/reel/DNklesUuEeH/embed/',
+    permalink: 'https://www.instagram.com/reel/DNklesUuEeH/'
   },
   {
     id: 'DUk9q5-EsWn',
     title: 'We Alll Client Result 3',
-    embedUrl: 'https://www.instagram.com/reel/DUk9q5-EsWn/embed/',
-    permalink: 'https://www.instagram.com/reel/DUk9q5-EsWn/'
+    embedUrl: 'https://www.instagram.com/reel/C8Fgy8iBzkC/embed/',
+    permalink: 'https://www.instagram.com/reel/C8Fgy8iBzkC/'
   },
   {
     id: 'DUkETnFEqXS',
     title: 'We Alll Client Result 4',
-    embedUrl: 'https://www.instagram.com/reel/DUkETnFEqXS/embed/',
-    permalink: 'https://www.instagram.com/reel/DUkETnFEqXS/'
+    embedUrl: 'https://www.instagram.com/reel/C8v6KXMyszU/embed/',
+    permalink: 'https://www.instagram.com/reel/C8v6KXMyszU/'
   }
 ];
 

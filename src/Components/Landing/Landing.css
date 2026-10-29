@@ -305,12 +305,23 @@
   margin-bottom: 18px;
 }
 
+.wa-hero-title .text-highlight {
+  background-color: var(--wa-accent);
+  color: #000;
+  display: inline-block;
+  padding: 0 5px;
+}
+
 .wa-hero h2,
 .wa-hero .wa-hero-subtitle {
   font-size: 26px;
   font-weight: 700;
   color: #e2e8f0 !important;
   margin-bottom: 18px;
+}
+
+.hero-col-3 p.wa-hero-subtitle {
+  margin: 15px 0 0;
 }
 
 .wa-hero-form-card h2 {
@@ -1756,9 +1767,17 @@
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.22);
   position: relative;
   overflow: hidden;
-  background-image: 
-    radial-gradient(circle at 12% 15%, rgba(255, 255, 255, 0.04) 0%, transparent 55%),
-    radial-gradient(circle at 88% 85%, rgba(5, 168, 92, 0.1) 0%, transparent 55%);
+  background-image:
+    radial-gradient(
+      circle at 12% 15%,
+      rgba(255, 255, 255, 0.04) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 88% 85%,
+      rgba(5, 168, 92, 0.1) 0%,
+      transparent 55%
+    );
 }
 
 .wa-thankyou-simple-icon {
@@ -1827,5 +1846,13 @@
   .wa-thankyou-simple-msg {
     font-size: 14.5px;
   }
+  .hero-col-3 {
+    order: 2;
+  }
+  .hero-col-2 {
+    order: 3;
+  }
+  .hero-col-3 p.wa-hero-subtitle {
+    margin: 0;
+  }
 }
-
