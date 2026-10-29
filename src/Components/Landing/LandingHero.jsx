@@ -34,7 +34,7 @@ const LandingHero = () => {
     fullName: '',
     email: '',
     phone: '',
-    budget: '',
+    budget: '₹50,000',
     message: ''
   });
   const [loading, setLoading] = useState(false);
@@ -65,7 +65,7 @@ const LandingHero = () => {
       if (res && res.success) {
         // 201 = new lead, 200 = existing lead updated (duplicate) — both are success
         setLoading(false);
-        setFormData({ fullName: '', email: '', phone: '', budget: '', message: '' });
+        setFormData({ fullName: '', email: '', phone: '', budget: '₹50,000', message: '' });
         navigate('/thank-you');
       } else {
         throw new Error(res ? res.error : 'Submission failed');

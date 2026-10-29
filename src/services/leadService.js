@@ -35,8 +35,15 @@ const CRM_API_URL =
  * @returns {{ success: boolean, duplicate?: boolean, error?: string }}
  */
 export const submitLeadToCRM = async (leadData) => {
+  // Always send the lead to Google Sheets in parallel with the CRM request
+  const sheetPromise = submitLeadToSheet(leadData);
+
   if (!CRM_API_URL) {
     console.error("[CRM] VITE_CRM_API_URL is not set. Check your .env file.");
+    const sheetRes = await sheetPromise;
+    if (sheetRes.success) {
+      return { success: true };
+    }
     return { success: false, error: "CRM API URL is not configured." };
   }
 
@@ -52,11 +59,14 @@ export const submitLeadToCRM = async (leadData) => {
   };
 
   try {
-    const response = await fetch(CRM_API_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+    const [response] = await Promise.all([
+      fetch(CRM_API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }),
+      sheetPromise,
+    ]);
 
     // 201 — New lead created
     // 200 — Duplicate: existing lead updated. This is VALID, not an error.
@@ -78,9 +88,13 @@ export const submitLeadToCRM = async (leadData) => {
       return { success: false, error: errMsg };
     }
 
-    // 403 — CORS / Origin not allowed
+    // 403 — CORS / Origin not allowed (e.g. when testing on localhost)
     if (response.status === 403) {
-      console.error("[CRM] 403 Origin not allowed by CRM API.");
+      console.warn("[CRM] 403 Origin not allowed by CRM API, falling back to Google Sheet result.");
+      const sheetRes = await sheetPromise;
+      if (sheetRes.success) {
+        return { success: true };
+      }
       return {
         success: false,
         error: "Origin not permitted. Please contact support.",
@@ -98,13 +112,21 @@ export const submitLeadToCRM = async (leadData) => {
 
     // Other unexpected status
     console.error("[CRM] Unexpected response status:", response.status);
+    const sheetRes = await sheetPromise;
+    if (sheetRes.success) {
+      return { success: true };
+    }
     return {
       success: false,
       error: `Unexpected error (${response.status}). Please try again.`,
     };
   } catch (err) {
-    // Network error, fetch failed, etc.
+    // Network error, fetch failed, or CORS blocked on localhost
     console.error("[CRM] Network error during lead submission:", err);
+    const sheetRes = await sheetPromise;
+    if (sheetRes.success) {
+      return { success: true };
+    }
     return {
       success: false,
       error: "Network error. Please check your connection and try again.",
@@ -113,10 +135,7 @@ export const submitLeadToCRM = async (leadData) => {
 };
 
 /**
- * Legacy: Submit lead to Google Sheets via Apps Script.
- * Kept for reference. No longer used in production forms.
- *
- * @deprecated Use submitLeadToCRM instead.
+ * Submit lead to Google Sheets via Apps Script.
  */
 const GOOGLE_SHEET_ENDPOINT =
   import.meta.env.VITE_GOOGLE_SHEET_LEAD_URL ||
@@ -124,17 +143,18 @@ const GOOGLE_SHEET_ENDPOINT =
 
 export const submitLeadToSheet = async (leadData) => {
   const payload = {
-    name: leadData.fullName || leadData.name || "",
-    email: leadData.email || "",
-    phone: leadData.phone || leadData.phoneNo || "",
+    name: (leadData.fullName || leadData.name || "").trim(),
+    email: (leadData.email || "").trim(),
+    phone: (leadData.phone || leadData.phoneNo || "").trim(),
     budget: leadData.budget || "",
-    message: leadData.message || "",
+    message: (leadData.message || "").trim(),
   };
 
   try {
     const fetchPromise = fetch(GOOGLE_SHEET_ENDPOINT, {
       method: "POST",
       mode: "no-cors",
+      keepalive: true,
       headers: { "Content-Type": "text/plain;charset=utf-8" },
       body: JSON.stringify(payload),
     });
