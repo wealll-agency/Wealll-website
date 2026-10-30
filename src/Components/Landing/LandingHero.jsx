@@ -100,11 +100,11 @@ const LandingHero = () => {
               <p className="wa-hero-desc">
                 If your marketing gets attention but not customers, something is missing. We Alll builds result-focused digital strategies using SEO, performance marketing, paid ads, AI automation, conversion-focused content and data-driven audience targeting to turn your online visibility into qualified leads and real business growth.
               </p>
-              <div>
+              {/* <div>
                 <a href="#lead-form" className="wa-btn wa-btn-primary">
                   <i className="fa-solid fa-bolt"></i> Contact Us
                 </a>
-              </div>
+              </div> */}
 
               {/* Technology Partners Auto Slider in Hero Banner */}
               <div className="wa-hero-slider-wrap mt-4 pt-1">
@@ -188,7 +188,7 @@ const LandingHero = () => {
                 </div>
                 <div className="wa-form-group">
                   <input
-                    type="tel"
+                    type="number"
                     name="phone"
                     className="wa-input"
                     placeholder="Contact Number *"
@@ -234,7 +234,7 @@ const LandingHero = () => {
           </div>
 
           <div className='hero-col-3'>
-            <p class="wa-hero-subtitle">Our Partners</p>
+            <p class="wa-hero-subtitle">Official Partners</p>
           </div>
 
         </div>
